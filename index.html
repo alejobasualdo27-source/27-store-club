@@ -46,6 +46,7 @@
       <a href="#keys">Keys</a>
       <a href="#social">Social</a>
       <a href="#canjes">Canjes</a>
+      <a href="#mis-pedidos">Mis pedidos</a>
       <a href="#pedi-tu-juego">Pedí tu juego</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -63,10 +64,10 @@
 
       <div class="hero-content">
         <p class="eyebrow"><span></span> Comunidad digital de 27 Store</p>
-        <h1>27 Store<span>.club</span></h1>
+        <h1>27 Store</h1>
         <p class="hero-copy">Sumate a nosotros, compra y junta puntos para canjear por juegos, servicios de streaming, keys, beneficios sociales y recompensas exclusivas.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Unirme al club</a>
+          <a class="btn primary" href="https://discord.gg/4fGnpyt9Me" target="_blank" rel="noreferrer">Unirme al club</a>
           <a class="btn ghost" href="https://www.instagram.com/27.sttore/" target="_blank" rel="noreferrer">Ver Instagram</a>
         </div>
       </div>
@@ -74,19 +75,19 @@
 
     <section class="stats" aria-label="Resumen del club">
       <article>
-        <span>Comunidad</span>
-        <strong>+1.2k</strong>
-        <p>miembros activos</p>
+        <span>Clientes Satifeschos</span>
+        <strong>+250</strong>
+        <p>Pedidos Realizados</p>
       </article>
       <article>
-        <span>Drops</span>
-        <strong>72h</strong>
-        <p>nuevos beneficios</p>
+        <span>Sorteos Activos</span>
+        <strong>0</strong>
+        <p>Se vendran nuevos</p>
       </article>
       <article>
-        <span>Puntos</span>
-        <strong>27k</strong>
-        <p>objetivo semanal</p>
+        <span>Puntos Canjeados</span>
+        <strong>50k</strong>
+        <p>Desde el inicio</p>
       </article>
     </section>
 
@@ -267,7 +268,7 @@
     <section id="juegos" class="section">
       <div class="section-title">
         <span>› Juegos</span>
-        <h2>Títulos para sumar a tu biblioteca</h2>
+        <h2>Juegos Para tu biblioteca</h2>
       </div>
       <div class="category-grid">
         <article class="category-card">
@@ -420,7 +421,7 @@
     <section id="keys" class="section">
       <div class="section-title">
         <span>› Random keys</span>
-        <h2>Llaves sorpresa y drops especiales</h2>
+        <h2>Keys sorpresas</h2>
       </div>
       <div class="category-grid">
         <article class="category-card">
@@ -537,7 +538,7 @@
     <section id="social" class="section">
       <div class="section-title">
         <span>› Social</span>
-        <h2>Boosts para perfiles y creadores</h2>
+        <h2>Boosts para creadores</h2>
       </div>
       <div class="category-grid">
         <article class="category-card">
@@ -639,6 +640,25 @@
       </div>
     </section>
 
+    <section id="canjes" class="section">
+      <div class="section-title">
+        <span>› Canje de puntos</span>
+        <h2>Usá tus puntos para descontar en tu compra</h2>
+      </div>
+      <div class="reward-grid" id="reward-grid"></div>
+      <p class="redeem-status" id="redeem-status">Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.</p>
+    </section>
+
+    <section id="mis-pedidos" class="section">
+      <div class="section-title">
+        <span>› Mi actividad</span>
+        <h2>Seguí el estado de tus pedidos</h2>
+      </div>
+      <div class="admin-list" id="user-orders-list">
+        <p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>
+      </div>
+    </section>
+
     <section id="pedi-tu-juego" class="section">
       <div class="section-title">
         <span>› Pedido especial</span>
@@ -687,15 +707,6 @@
         <div><strong>02</strong><span>AgusDrop</span><em>15.900 pts</em></div>
         <div><strong>03</strong><span>FacuKeys</span><em>13.250 pts</em></div>
       </div>
-    </section>
-
-    <section id="canjes" class="section">
-      <div class="section-title">
-        <span>› Canje de puntos</span>
-        <h2>Usá tus puntos para descontar en tu compra</h2>
-      </div>
-      <div class="reward-grid" id="reward-grid"></div>
-      <p class="redeem-status" id="redeem-status">Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.</p>
     </section>
 
     <section id="faq" class="section">
@@ -800,6 +811,7 @@
     const adminList = document.querySelector("#admin-list");
     const rewardGrid = document.querySelector("#reward-grid");
     const redeemStatus = document.querySelector("#redeem-status");
+    const userOrdersList = document.querySelector("#user-orders-list");
     const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
     const rewards = [
       { id: "discount-5", name: "5% de descuento", cost: 10, percent: 5, description: "Usá 10 puntos y bajá el total de tu carrito un 5%." },
@@ -831,6 +843,9 @@
       logoutBtn.disabled = false;
       adminPanel.classList.remove("open");
       accountNote.textContent = message;
+      if (userOrdersList) {
+        userOrdersList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>';
+      }
       renderRewards();
     };
 
@@ -876,6 +891,10 @@
 
       if (code === "auth/configuration-not-found") {
         return "Falta activar Email/Password en Firebase Authentication.";
+      }
+
+      if (code === "auth/unauthorized-domain") {
+        return "Falta autorizar este dominio en Firebase Authentication.";
       }
 
       if (code === "auth/api-key-not-valid.-please-pass-a-valid-api-key." || code === "auth/invalid-api-key" || lowerMessage.includes("api-key-not-valid")) {
@@ -1092,6 +1111,7 @@
       logoutBtn.hidden = false;
       accountNote.textContent = profile.is_admin ? "Modo admin activo." : "Tus compras quedan pendientes hasta que 27 Store confirme el pago.";
       renderRewards();
+      await loadUserOrders();
 
       if (profile.is_admin) {
         adminPanel.classList.add("open");
@@ -1107,6 +1127,62 @@
         profileLoadPromise = null;
       });
       return profileLoadPromise;
+    };
+
+    const getStatusLabel = (status) => ({
+      pending: "Pendiente",
+      confirmed: "Confirmado",
+      rejected: "Rechazado"
+    })[status] || status || "Sin estado";
+
+    const loadUserOrders = async () => {
+      if (!userOrdersList) return;
+
+      if (!firebaseDb || !currentUser) {
+        userOrdersList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>';
+        return;
+      }
+
+      let snapshot;
+      try {
+        snapshot = await firebaseDb
+          .collection("orders")
+          .where("user_id", "==", currentUser.uid)
+          .get();
+      } catch (error) {
+        userOrdersList.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
+        return;
+      }
+
+      const orders = snapshot.docs
+        .map((doc) => ({ id: doc.id, ...doc.data() }))
+        .sort((a, b) => {
+          const dateA = a.created_at?.toMillis?.() || 0;
+          const dateB = b.created_at?.toMillis?.() || 0;
+          return dateB - dateA;
+        });
+
+      if (!orders.length) {
+        userOrdersList.innerHTML = '<p class="cart-empty">Todavía no tenés pedidos guardados.</p>';
+        return;
+      }
+
+      userOrdersList.innerHTML = orders.map((order) => {
+        const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
+        const discount = order.discount_percent ? ` · ${order.discount_percent}% off · ${order.points_to_redeem || 0} pts usados` : "";
+        const status = getStatusLabel(order.status);
+        const pointsText = order.status === "confirmed"
+          ? `${order.points_to_add || 0} pts sumados`
+          : `${order.points_to_add || 0} pts si se confirma`;
+
+        return `
+          <article class="admin-order">
+            <strong>${status} · ${money.format(order.total || 0)} · ${pointsText}${discount}</strong>
+            <p>${items || "Pedido sin items"}${order.subtotal ? ` · Subtotal ${money.format(order.subtotal)}` : ""}</p>
+            <p>ID: ${escapeHtml(order.id)}</p>
+          </article>
+        `;
+      }).join("");
     };
 
     const loadPendingOrders = async () => {
@@ -1254,8 +1330,8 @@
       try {
         const result = await withTimeout(
           action === "signup" ? signUpWithPassword(email, password) : signInWithPassword(email, password),
-          12000,
-          "Firebase tardó demasiado en responder. Revisá internet, recargá la página y probá de nuevo."
+          30000,
+          "Firebase tardó demasiado en responder. Probá recargar con Ctrl + F5. Si sigue igual, revisá que 27-store-club.vercel.app esté en dominios autorizados."
         );
 
         if (result.error) {
@@ -1404,6 +1480,7 @@
         try {
           const order = await createPendingOrder(message);
           accountNote.textContent = `Pedido pendiente creado: ${order.id}`;
+          await loadUserOrders();
         } catch (error) {
           accountNote.textContent = error.message;
           return;
