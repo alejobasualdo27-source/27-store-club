@@ -8,19 +8,27 @@
   <style>
     :root{--bg:#07080a;--line:rgba(255,255,255,.09);--text:#f4f7f2;--muted:#8b948e;--accent:#52ff73;--blue:#21c7ff;--warn:#ffce52}
     [hidden]{display:none!important}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.side-nav{position:fixed;inset:0 auto 0 0;z-index:20;width:240px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#050608;padding:18px 14px}.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 16px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}.brand img{width:34px;height:34px;border-radius:8px;border:1px solid rgba(82,255,115,.45);object-fit:cover}.brand span span,h1 span,.eyebrow,.stats span,.section-title span,.tag{color:var(--accent)}.side-nav nav{display:grid;gap:4px}.side-nav nav a,.side-cta{border-radius:8px;padding:10px 12px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.side-nav nav a:hover,.side-nav nav a.active{background:rgba(82,255,115,.1);color:var(--accent)}.side-cta{margin-top:auto;text-align:center;color:#071008;background:var(--accent)}main{margin-left:240px}.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 24px 116px;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(82,255,115,.2),transparent 28%),radial-gradient(circle at 20% 80%,rgba(33,199,255,.14),transparent 26%),linear-gradient(180deg,#090b0d 0%,#07080a 100%)}.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop") center/cover;opacity:.16;filter:saturate(1.25) contrast(1.15)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0,transparent 70%)}.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.035) 8px);pointer-events:none}.corner{position:absolute;width:25px;height:25px;border-color:rgba(82,255,115,.7)}.top-left{top:24px;left:24px;border-top:2px solid;border-left:2px solid}.top-right{top:24px;right:24px;border-top:2px solid;border-right:2px solid}.bottom-left{bottom:24px;left:24px;border-bottom:2px solid;border-left:2px solid}.bottom-right{bottom:24px;right:24px;border-bottom:2px solid;border-right:2px solid}.hero-content{position:relative;z-index:1;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px;font-weight:900;text-transform:uppercase}.eyebrow span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}h1{margin:0;font-size:clamp(64px,12vw,150px);line-height:.82;font-weight:1000;text-shadow:0 14px 45px rgba(0,0,0,.65)}h1 span{font-size:.36em;vertical-align:top}.hero-copy{max-width:680px;margin:28px auto 0;color:rgba(244,247,242,.78);font-size:clamp(16px,2vw,21px);line-height:1.45}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;padding:0 22px;font-size:13px;font-weight:950;text-transform:uppercase}.btn.primary{background:var(--text);color:#071008}.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}.stats{width:min(860px,calc(100% - 40px));margin:-64px auto 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);backdrop-filter:blur(16px)}.stats article{padding:28px;border-right:1px solid var(--line)}.stats article:last-child{border-right:0}.stats span,.section-title span,.tag{font-size:11px;font-weight:900;text-transform:uppercase}.stats strong{display:block;margin-top:8px;font-size:42px;font-weight:1000}.stats p,.category-card p,details p{margin:0;color:var(--muted);line-height:1.55}.section{width:min(1080px,calc(100% - 48px));margin:0 auto 86px;scroll-margin-top:30px}.section-title{display:grid;gap:10px;margin-bottom:24px}.section-title h2{margin:0;max-width:760px;font-size:clamp(30px,5vw,56px);line-height:.98}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.category-card.wide{grid-column:span 2}.category-card img{width:100%;height:130px;object-fit:contain;border-radius:10px;margin-bottom:16px;background:rgba(255,255,255,.04)}.category-card h3{margin:6px 0 8px;font-size:24px}.category-card strong{display:inline-flex;width:max-content;margin-top:16px;color:var(--blue);font-size:13px;font-weight:900}.offer-card{min-height:360px;background:linear-gradient(180deg,rgba(7,8,10,.05),rgba(7,8,10,.92)),url("https://27sttore.netlify.app/images/S4.png") center/contain no-repeat,#151820}.ticker-section{overflow:hidden;border-block:1px solid var(--line);margin-bottom:86px}.ticker{display:flex;gap:38px;width:max-content;padding:18px 0;animation:ticker 18s linear infinite}.ticker span{color:rgba(244,247,242,.78);font-size:13px;font-weight:1000;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-35%)}}.leaderboard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.leaderboard div{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;min-height:68px;padding:0 22px;border-bottom:1px solid var(--line)}.leaderboard div:last-child{border-bottom:0}.leaderboard strong{color:var(--warn)}.leaderboard span{font-weight:900}.leaderboard em{color:var(--accent);font-style:normal;font-weight:800}details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}summary{cursor:pointer;font-weight:900}details p{padding-top:12px}.bottom-nav{display:none}@media (max-width:860px){.side-nav{display:none}main{margin-left:0;padding-bottom:74px}.hero{min-height:70vh;padding-top:52px}.stats,.category-grid{grid-template-columns:1fr}.stats article{border-right:0;border-bottom:1px solid var(--line);padding:22px}.stats article:last-child{border-bottom:0}.category-card.wide{grid-column:auto}.leaderboard div{grid-template-columns:1fr}.bottom-nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:rgba(5,6,8,.94);backdrop-filter:blur(14px)}.bottom-nav a{min-height:58px;display:grid;place-items:center;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.bottom-nav a:last-child{color:var(--accent)}}@media (max-width:520px){.section{width:min(100% - 28px,1080px);margin-bottom:64px}.hero-actions{display:grid}.stats{width:calc(100% - 28px)}h1{font-size:68px}.category-card img{height:112px}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.side-nav{position:fixed;inset:0 auto 0 0;z-index:20;width:240px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#050608;padding:18px 14px}.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 16px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}.brand img{width:34px;height:34px;border-radius:8px;border:1px solid rgba(82,255,115,.45);object-fit:cover}.brand span span,h1 span,.eyebrow,.stats span,.section-title span,.tag{color:var(--accent)}.side-nav nav{display:grid;gap:4px}.side-nav nav a,.side-cta{border-radius:8px;padding:10px 12px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.side-nav nav a:hover{background:rgba(255,255,255,.045);color:var(--text)}.side-nav nav a.active{background:rgba(82,255,115,.1);color:var(--accent)}.side-cta{margin-top:auto;text-align:center;color:#071008;background:var(--accent)}main{margin-left:240px}.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 24px 116px;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(82,255,115,.2),transparent 28%),radial-gradient(circle at 20% 80%,rgba(33,199,255,.14),transparent 26%),linear-gradient(180deg,#090b0d 0%,#07080a 100%)}.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop") center/cover;opacity:.16;filter:saturate(1.25) contrast(1.15)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0,transparent 70%)}.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.035) 8px);pointer-events:none}.corner{position:absolute;width:25px;height:25px;border-color:rgba(82,255,115,.7)}.top-left{top:24px;left:24px;border-top:2px solid;border-left:2px solid}.top-right{top:24px;right:24px;border-top:2px solid;border-right:2px solid}.bottom-left{bottom:24px;left:24px;border-bottom:2px solid;border-left:2px solid}.bottom-right{bottom:24px;right:24px;border-bottom:2px solid;border-right:2px solid}.hero-content{position:relative;z-index:1;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px;font-weight:900;text-transform:uppercase}.eyebrow span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}h1{margin:0;font-size:clamp(64px,12vw,150px);line-height:.82;font-weight:1000;text-shadow:0 14px 45px rgba(0,0,0,.65)}h1 span{font-size:.36em;vertical-align:top}.hero-copy{max-width:680px;margin:28px auto 0;color:rgba(244,247,242,.78);font-size:clamp(16px,2vw,21px);line-height:1.45}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;padding:0 22px;font-size:13px;font-weight:950;text-transform:uppercase}.btn.primary{background:var(--text);color:#071008}.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}.stats{width:min(860px,calc(100% - 40px));margin:-64px auto 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);backdrop-filter:blur(16px)}.stats article{padding:28px;border-right:1px solid var(--line)}.stats article:last-child{border-right:0}.stats span,.section-title span,.tag{font-size:11px;font-weight:900;text-transform:uppercase}.stats strong{display:block;margin-top:8px;font-size:42px;font-weight:1000}.stats p,.category-card p,details p{margin:0;color:var(--muted);line-height:1.55}.section{width:min(1080px,calc(100% - 48px));margin:0 auto 86px;scroll-margin-top:30px}.section-title{display:grid;gap:10px;margin-bottom:24px}.section-title h2{margin:0;max-width:760px;font-size:clamp(30px,5vw,56px);line-height:.98}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.category-card.wide{grid-column:span 2}.category-card img{width:100%;height:130px;object-fit:contain;border-radius:10px;margin-bottom:16px;background:rgba(255,255,255,.04)}.category-card h3{margin:6px 0 8px;font-size:24px}.category-card strong{display:inline-flex;width:max-content;margin-top:16px;color:var(--blue);font-size:13px;font-weight:900}.offer-card{min-height:360px;background:linear-gradient(180deg,rgba(7,8,10,.05),rgba(7,8,10,.92)),url("https://27sttore.netlify.app/images/S4.png") center/contain no-repeat,#151820}.ticker-section{overflow:hidden;border-block:1px solid var(--line);margin-bottom:86px}.ticker{display:flex;gap:38px;width:max-content;padding:18px 0;animation:ticker 18s linear infinite}.ticker span{color:rgba(244,247,242,.78);font-size:13px;font-weight:1000;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-35%)}}.leaderboard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.leaderboard div{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;min-height:68px;padding:0 22px;border-bottom:1px solid var(--line)}.leaderboard div:last-child{border-bottom:0}.leaderboard strong{color:var(--warn)}.leaderboard span{font-weight:900}.leaderboard em{color:var(--accent);font-style:normal;font-weight:800}details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}summary{cursor:pointer;font-weight:900}details p{padding-top:12px}.bottom-nav{display:none}@media (max-width:860px){.side-nav{display:none}main{margin-left:0;padding-bottom:74px}.hero{min-height:70vh;padding-top:52px}.stats,.category-grid{grid-template-columns:1fr}.stats article{border-right:0;border-bottom:1px solid var(--line);padding:22px}.stats article:last-child{border-bottom:0}.category-card.wide{grid-column:auto}.leaderboard div{grid-template-columns:1fr}.bottom-nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:rgba(5,6,8,.94);backdrop-filter:blur(14px)}.bottom-nav a{min-height:58px;display:grid;place-items:center;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.bottom-nav a:last-child{color:var(--accent)}}@media (max-width:520px){.section{width:min(100% - 28px,1080px);margin-bottom:64px}.hero-actions{display:grid}.stats{width:calc(100% - 28px)}h1{font-size:68px}.category-card img{height:112px}}
     .product-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}.product-actions strong{margin-top:0}.product-actions small{margin-left:6px;color:var(--muted);font-size:11px;text-decoration:line-through}.cart-add,.cart-open,.cart-close,.qty-btn,.remove-btn,.checkout-btn,.account-btn,.admin-btn{border:0;cursor:pointer;font:inherit}.cart-add,.account-btn,.admin-btn{min-height:38px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:11px;font-weight:950;text-transform:uppercase}.account-box{position:fixed;top:18px;right:18px;z-index:45;width:min(360px,calc(100% - 36px));border:1px solid var(--line);border-radius:14px;background:rgba(5,6,8,.92);backdrop-filter:blur(14px);padding:14px;box-shadow:0 12px 34px rgba(0,0,0,.35)}.account-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.account-info strong{display:block;font-size:13px}.account-info span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.account-form{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.account-form input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.account-note{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.admin-panel{display:none;width:min(1080px,calc(100% - 48px));margin:0 auto 86px;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);padding:18px}.admin-panel.open{display:block}.admin-panel h2{margin:0 0 12px}.admin-list{display:grid;gap:10px}.admin-order{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-order p{margin:0;color:var(--muted);font-size:13px}.admin-order-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-btn.reject{background:#ff7a7a;color:#170707}.cart-open{position:fixed;right:22px;bottom:22px;z-index:40;min-height:54px;border-radius:14px;padding:0 18px;background:var(--accent);color:#071008;font-size:13px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.42)}.cart-count{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:8px;border-radius:999px;background:#071008;color:var(--accent);font-size:12px}.cart-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.72);backdrop-filter:blur(12px)}.cart-modal.open{display:flex}.cart-panel{width:min(520px,100%);max-height:88vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}.cart-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}.cart-head h2{margin:0;font-size:24px}.cart-close{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);font-size:24px}.cart-items{display:grid;gap:10px;padding:16px 20px;overflow:auto}.cart-empty{color:var(--muted);font-size:14px}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.cart-item h3{margin:0 0 4px;font-size:15px}.cart-item p{margin:0;color:var(--muted);font-size:12px}.qty-row{display:flex;align-items:center;gap:8px}.qty-btn,.remove-btn{border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);font-weight:900}.qty-btn{width:30px;height:30px}.remove-btn{padding:7px 9px;color:#ff7a7a}.cart-foot{padding:18px 20px;border-top:1px solid var(--line);background:rgba(255,255,255,.035)}.cart-total{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:22px;font-weight:1000}.checkout-btn{width:100%;min-height:52px;border-radius:10px;background:var(--accent);color:#071008;font-size:14px;font-weight:1000;text-transform:uppercase}.checkout-btn:disabled{opacity:.45;cursor:not-allowed}@media (max-width:860px){.account-box{position:static;width:calc(100% - 28px);margin:14px auto 0}.cart-open{right:12px;bottom:72px}.product-actions{align-items:stretch;flex-direction:column}.cart-add{width:100%}.admin-panel{width:calc(100% - 28px)}}
+    .category-card{position:relative;gap:14px;cursor:pointer;transition:transform 160ms ease,border-color 160ms ease,background 160ms ease}.category-card:hover{transform:translateY(-2px);border-color:rgba(82,255,115,.34);background:linear-gradient(180deg,rgba(255,255,255,.062),rgba(255,255,255,.025))}.category-card img{height:156px;object-fit:contain;padding:12px;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.11),rgba(255,255,255,.035) 58%,rgba(0,0,0,.12));border:1px solid rgba(255,255,255,.06)}.category-card h3{line-height:1.05}.category-card p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.product-actions{min-height:44px}.product-actions strong{font-size:16px;color:var(--blue)}.product-detail-modal{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.74);backdrop-filter:blur(14px)}.product-detail-modal.open{display:flex}.product-detail-panel{width:min(860px,100%);max-height:90vh;display:grid;grid-template-columns:minmax(260px,.95fr) 1fr;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.58);overflow:hidden}.product-detail-media{min-height:420px;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,rgba(82,255,115,.12),rgba(33,199,255,.08) 42%,rgba(255,255,255,.035));padding:26px}.product-detail-media img{width:100%;max-height:360px;object-fit:contain}.product-detail-body{display:flex;flex-direction:column;gap:14px;padding:24px}.product-detail-body h2{margin:0;font-size:clamp(28px,4vw,44px);line-height:1}.product-detail-body p{margin:0;color:var(--muted);line-height:1.55}.product-detail-price{color:var(--blue);font-size:28px;font-weight:1000}.product-detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}.product-detail-close{width:38px;height:38px;border:0;border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);cursor:pointer;font:inherit;font-size:24px}.product-detail-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}@media (max-width:860px){.category-card img{height:148px}.product-detail-panel{grid-template-columns:1fr;overflow:auto}.product-detail-media{min-height:260px}.product-detail-media img{max-height:230px}.product-detail-actions{display:grid}.product-detail-actions .cart-add,.product-detail-actions .btn{width:100%}}
     .reward-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reward-card{display:grid;gap:14px;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(82,255,115,.08),rgba(255,255,255,.018))}.reward-card h3{margin:0;font-size:22px}.reward-card p{margin:0;color:var(--muted);line-height:1.45}.reward-card strong{color:var(--warn);font-size:26px}.reward-btn{min-height:42px;border:0;border-radius:8px;background:var(--accent);color:#071008;cursor:pointer;font:inherit;font-size:12px;font-weight:950;text-transform:uppercase}.reward-btn:disabled{opacity:.45;cursor:not-allowed}.admin-subtitle{margin:16px 0 8px;color:var(--accent);font-size:12px;text-transform:uppercase}.redeem-status{margin-top:8px;color:var(--muted);font-size:13px}@media (max-width:860px){.reward-grid{grid-template-columns:1fr}}
+    .club-grid,.draw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.club-card,.receipt-card{border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.club-card.active{border-color:rgba(82,255,115,.75);box-shadow:0 0 0 1px rgba(82,255,115,.16) inset}.club-card h3,.receipt-card h3{margin:8px 0;font-size:22px}.club-card p,.receipt-card p{margin:0;color:var(--muted);line-height:1.45}.code-pill{display:inline-flex;align-items:center;min-height:34px;border:1px solid var(--line);border-radius:8px;padding:0 10px;background:rgba(255,255,255,.05);font-weight:900}.cart-tools{display:grid;gap:8px;margin-bottom:12px}.cart-tools-row{display:grid;grid-template-columns:1fr auto;gap:8px}.cart-tools input,.admin-field input,.admin-field select{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}.admin-tool{display:grid;gap:10px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-field{display:grid;gap:6px}.admin-field label{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.status-select{min-height:36px;border:1px solid var(--line);border-radius:8px;background:#101216;color:var(--text);padding:0 8px}.receipt-card{margin-top:14px;border-color:rgba(33,199,255,.45)}@media (max-width:860px){.club-grid,.draw-grid,.admin-grid,.cart-tools-row{grid-template-columns:1fr}}
+    @media (max-width:860px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.category-card{min-height:0;padding:12px;border-radius:10px}.category-card.wide{grid-column:auto}.category-card img{height:118px;margin-bottom:4px;padding:8px;border-radius:8px}.category-card h3{margin:4px 0 6px;font-size:17px;line-height:1.08}.category-card p{font-size:12px;line-height:1.35;-webkit-line-clamp:2}.product-actions{min-height:0;gap:8px;margin-top:10px;align-items:stretch;flex-direction:column}.product-actions strong{font-size:14px;line-height:1.2}.product-actions small{display:block;margin:2px 0 0}.cart-add{width:100%;min-height:34px;padding:0 8px;font-size:10px}.section-title h2{font-size:clamp(28px,8vw,42px)}}@media (max-width:380px){.category-grid{gap:8px}.category-card{padding:10px}.category-card img{height:104px}.category-card h3{font-size:15px}.category-card p{font-size:11px}.cart-add{font-size:9px}}
+    .account-toggle{position:fixed;top:18px;right:18px;z-index:46;min-height:42px;border:1px solid rgba(82,255,115,.32);border-radius:999px;background:rgba(5,6,8,.9);color:var(--accent);cursor:pointer;padding:0 16px;font:inherit;font-size:12px;font-weight:950;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.35);backdrop-filter:blur(14px)}.account-box{display:none}.account-box.open{display:block}.account-close{width:34px;height:34px;border:0;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);cursor:pointer;font:inherit;font-size:22px}.account-row{align-items:flex-start}.account-order-actions{display:flex;align-items:center;gap:8px}@media (max-width:860px){.account-toggle{top:12px;right:12px;min-height:38px;padding:0 12px}.account-box{position:fixed;top:60px;right:12px;width:min(360px,calc(100% - 24px));margin:0}.account-box.open{display:block}}
   </style>
 </head>
 <body>
-  <div class="account-box">
+  <button class="account-toggle" id="account-toggle" type="button" aria-expanded="false" aria-controls="account-box">Mi cuenta</button>
+  <div class="account-box" id="account-box">
     <div class="account-row">
       <div class="account-info">
         <strong id="account-title">Mi cuenta</strong>
         <span id="account-status">Iniciá sesión para guardar pedidos y puntos.</span>
       </div>
-      <button class="account-btn" id="logout-btn" type="button" hidden>Salir</button>
+      <div class="account-order-actions">
+        <button class="account-btn" id="logout-btn" type="button" hidden>Salir</button>
+        <button class="account-close" id="account-close" type="button" aria-label="Cerrar cuenta">&times;</button>
+      </div>
     </div>
     <form class="account-form" id="auth-form">
       <input id="auth-email" type="email" placeholder="Email" autocomplete="email" required>
@@ -30,7 +38,7 @@
         <button class="account-btn" type="submit" data-auth-action="signup">Crear cuenta</button>
       </div>
     </form>
-    <p class="account-note" id="account-note">Cuando conectes Firebase, los pedidos quedarán pendientes y vos podrás aprobarlos.</p>
+    <p class="account-note" id="account-note">Cuando conectes la base de datos, los pedidos quedarán pendientes y vos podrás aprobarlos.</p>
   </div>
 
   <aside class="side-nav" aria-label="Navegacion principal">
@@ -45,7 +53,9 @@
       <a href="#juegos">Juegos</a>
       <a href="#keys">Keys</a>
       <a href="#social">Social</a>
+      <a href="#club">Club</a>
       <a href="#canjes">Canjes</a>
+      <a href="#sorteos">Sorteos</a>
       <a href="#mis-pedidos">Mis pedidos</a>
       <a href="#pedi-tu-juego">Pedí tu juego</a>
       <a href="#faq">FAQ</a>
@@ -86,7 +96,7 @@
       </article>
       <article>
         <span>Puntos Canjeados</span>
-        <strong>50k</strong>
+        <strong>1200</strong>
         <p>Desde el inicio</p>
       </article>
     </section>
@@ -640,6 +650,25 @@
       </div>
     </section>
 
+    <section id="club" class="section">
+      <div class="section-title">
+        <span>› Niveles y referidos</span>
+        <h2>Tu progreso dentro del club</h2>
+      </div>
+      <div class="club-grid" id="club-level-grid"></div>
+      <div class="receipt-card">
+        <span class="tag">Referidos</span>
+        <h3>Tu código</h3>
+        <p>Compartilo. Si alguien se registra con tu código y hace una compra pagada, ganás puntos extra.</p>
+        <p class="code-pill" id="referral-code">Iniciá sesión</p>
+        <div class="cart-tools-row" style="margin-top:12px">
+          <input id="referral-input" type="text" placeholder="Código de quien te invitó">
+          <button class="admin-btn" id="save-referral-btn" type="button">Guardar referido</button>
+        </div>
+        <p class="redeem-status" id="referral-status">Solo se puede guardar una vez por cuenta.</p>
+      </div>
+    </section>
+
     <section id="canjes" class="section">
       <div class="section-title">
         <span>› Canje de puntos</span>
@@ -647,6 +676,15 @@
       </div>
       <div class="reward-grid" id="reward-grid"></div>
       <p class="redeem-status" id="redeem-status">Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.</p>
+    </section>
+
+    <section id="sorteos" class="section">
+      <div class="section-title">
+        <span>› Sorteos</span>
+        <h2>Convertí puntos en tickets</h2>
+      </div>
+      <div class="draw-grid" id="draw-grid"></div>
+      <p class="redeem-status" id="draw-status">20 puntos equivalen a 1 ticket.</p>
     </section>
 
     <section id="mis-pedidos" class="section">
@@ -706,9 +744,11 @@
         <h2>Los que más participaron</h2>
       </div>
       <div class="leaderboard">
-        <div><strong>01</strong><span>Lucas_M27</span><em>18.400 pts</em></div>
-        <div><strong>02</strong><span>AgusDrop</span><em>15.900 pts</em></div>
-        <div><strong>03</strong><span>FacuKeys</span><em>13.250 pts</em></div>
+        <div><strong>01</strong><span>Tutee</span><em>450 pts</em></div>
+        <div><strong>02</strong><span>MaxiSch</span><em>325 pts</em></div>
+        <div><strong>03</strong><span>JuanAn</span><em>300 pts</em></div>
+        <div><strong>03</strong><span>Aguss</span><em>280 pts</em></div>
+        <div><strong>03</strong><span>Faku</span><em>220 pts</em></div>
       </div>
     </section>
 
@@ -727,13 +767,39 @@
       </details>
       <details>
         <summary>¿Esta página ya tiene carrito?</summary>
-        <p>Sí. Podés armar tu pedido, enviarlo por WhatsApp y, si iniciás sesión, queda pendiente en Firebase para sumar puntos cuando se confirme el pago.</p>
+        <p>Sí. Podés armar tu pedido, enviarlo por WhatsApp y, si iniciás sesión, queda pendiente para sumar puntos cuando se confirme el pago.</p>
       </details>
     </section>
 
     <section class="admin-panel" id="admin-panel">
       <h2>Panel admin</h2>
       <p class="account-note">Pedidos y canjes pendientes. Al confirmar compras se suman puntos; al aprobar canjes se descuentan.</p>
+      <div class="admin-grid">
+        <div class="admin-tool">
+          <h3 class="admin-subtitle">Buscar usuario</h3>
+          <div class="admin-field">
+            <label for="admin-user-email">Email</label>
+            <input id="admin-user-email" type="email" placeholder="cliente@email.com">
+          </div>
+          <div class="admin-order-actions">
+            <button class="admin-btn" id="admin-search-user-btn" type="button">Buscar</button>
+            <button class="admin-btn" id="admin-add-points-btn" type="button">Sumar/restar</button>
+          </div>
+          <div class="admin-field">
+            <label for="admin-points-delta">Puntos</label>
+            <input id="admin-points-delta" type="number" value="10">
+          </div>
+          <div id="admin-user-result" class="admin-list"></div>
+        </div>
+        <div class="admin-tool">
+          <h3 class="admin-subtitle">Producto del catálogo</h3>
+          <div class="admin-field"><label for="admin-product-name">Nombre</label><input id="admin-product-name" type="text" placeholder="Netflix Premium"></div>
+          <div class="admin-field"><label for="admin-product-price">Precio</label><input id="admin-product-price" type="number" placeholder="7400"></div>
+          <div class="admin-field"><label for="admin-product-image">Imagen URL</label><input id="admin-product-image" type="url" placeholder="https://..."></div>
+          <div class="admin-field"><label for="admin-product-category">Categoría</label><input id="admin-product-category" type="text" placeholder="Streaming"></div>
+          <button class="admin-btn" id="admin-save-product-btn" type="button">Guardar producto</button>
+        </div>
+      </div>
       <div class="admin-list" id="admin-list"></div>
     </section>
   </main>
@@ -750,11 +816,40 @@
       </div>
       <div class="cart-items" id="cart-items"></div>
       <div class="cart-foot">
+        <div class="cart-tools">
+          <div class="cart-tools-row">
+            <input id="coupon-code" type="text" placeholder="Cupón 27STORE10">
+            <button class="admin-btn" id="apply-coupon-btn" type="button">Aplicar</button>
+          </div>
+          <p class="redeem-status" id="coupon-status">Los cupones no usan puntos.</p>
+        </div>
         <div class="cart-total">
           <span>Total</span>
           <strong id="cart-total">$0</strong>
         </div>
         <button class="checkout-btn" id="checkout-btn" type="button" disabled>Finalizar por WhatsApp</button>
+        <div id="order-receipt"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-detail-modal" id="product-detail-modal" aria-hidden="true">
+    <div class="product-detail-panel" role="dialog" aria-modal="true" aria-labelledby="product-detail-title">
+      <div class="product-detail-media">
+        <img id="product-detail-image" src="" alt="">
+      </div>
+      <div class="product-detail-body">
+        <div class="product-detail-top">
+          <span class="tag" id="product-detail-category">Producto</span>
+          <button class="product-detail-close" type="button" aria-label="Cerrar detalle">&times;</button>
+        </div>
+        <h2 id="product-detail-title">Producto</h2>
+        <p id="product-detail-description"></p>
+        <strong class="product-detail-price" id="product-detail-price">$0</strong>
+        <div class="product-detail-actions">
+          <button class="cart-add" id="product-detail-add" type="button" data-name="" data-price="0">Agregar al carrito</button>
+          <a class="btn ghost" id="product-detail-whatsapp" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Consultar</a>
+        </div>
       </div>
     </div>
   </div>
@@ -780,6 +875,8 @@
       measurementId: "G-SZNBP1DXGS"
     };
     const POINTS_DIVISOR = 1000;
+    const REFERRAL_BONUS_POINTS = 30;
+    const DRAW_TICKET_COST = 20;
     const firebaseConfigured = window.firebase
       && FIREBASE_CONFIG.apiKey
       && !FIREBASE_CONFIG.apiKey.startsWith("PEGA_")
@@ -788,15 +885,33 @@
     const firebaseApp = firebaseConfigured ? firebase.initializeApp(FIREBASE_CONFIG) : null;
     const firebaseAuth = firebaseConfigured ? firebase.auth() : null;
     const firebaseDb = firebaseConfigured ? firebase.firestore() : null;
+    if (location.hash === "#productos-firebase") {
+      history.replaceState(null, "", "#club");
+    }
 
     const navLinks = [...document.querySelectorAll(".side-nav nav a")];
-    const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean)
+      .sort((a, b) => a.offsetTop - b.offsetTop);
     const setActiveLink = () => {
-      const current = sections.reduce((active, section) => section.getBoundingClientRect().top < 180 ? section : active, sections[0]);
+      const marker = window.scrollY + 190;
+      let current = sections.reduce((active, section) => section.offsetTop <= marker ? section : active, sections[0]);
+      const hashTarget = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+      if (hashTarget && Math.abs(hashTarget.getBoundingClientRect().top) < window.innerHeight * 1.5) {
+        current = hashTarget;
+      }
       navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`));
     };
+    const refreshActiveLink = () => {
+      setActiveLink();
+      [80, 260, 700, 1400].forEach((delay) => setTimeout(setActiveLink, delay));
+    };
     window.addEventListener("scroll", setActiveLink, { passive: true });
-    setActiveLink();
+    window.addEventListener("hashchange", refreshActiveLink);
+    window.addEventListener("load", refreshActiveLink);
+    window.addEventListener("resize", setActiveLink);
+    refreshActiveLink();
 
     const WHATSAPP_NUMBER = "5493513743859";
     const cart = [];
@@ -805,10 +920,21 @@
     const cartTotal = document.querySelector("#cart-total");
     const cartCount = document.querySelector(".cart-count");
     const checkoutBtn = document.querySelector("#checkout-btn");
+    const productDetailModal = document.querySelector("#product-detail-modal");
+    const productDetailImage = document.querySelector("#product-detail-image");
+    const productDetailCategory = document.querySelector("#product-detail-category");
+    const productDetailTitle = document.querySelector("#product-detail-title");
+    const productDetailDescription = document.querySelector("#product-detail-description");
+    const productDetailPrice = document.querySelector("#product-detail-price");
+    const productDetailAdd = document.querySelector("#product-detail-add");
+    const productDetailWhatsapp = document.querySelector("#product-detail-whatsapp");
     const authForm = document.querySelector("#auth-form");
     const accountTitle = document.querySelector("#account-title");
     const accountStatus = document.querySelector("#account-status");
     const accountNote = document.querySelector("#account-note");
+    const accountBox = document.querySelector("#account-box");
+    const accountToggle = document.querySelector("#account-toggle");
+    const accountClose = document.querySelector("#account-close");
     const logoutBtn = document.querySelector("#logout-btn");
     const adminPanel = document.querySelector("#admin-panel");
     const adminList = document.querySelector("#admin-list");
@@ -816,7 +942,44 @@
     const redeemStatus = document.querySelector("#redeem-status");
     const userOrdersList = document.querySelector("#user-orders-list");
     const pointsHistoryList = document.querySelector("#points-history-list");
+    const firebaseProductGrid = document.querySelector("#firebase-product-grid");
+    const clubLevelGrid = document.querySelector("#club-level-grid");
+    const referralCode = document.querySelector("#referral-code");
+    const referralInput = document.querySelector("#referral-input");
+    const referralStatus = document.querySelector("#referral-status");
+    const saveReferralBtn = document.querySelector("#save-referral-btn");
+    const drawGrid = document.querySelector("#draw-grid");
+    const drawStatus = document.querySelector("#draw-status");
+    const couponCodeInput = document.querySelector("#coupon-code");
+    const couponStatus = document.querySelector("#coupon-status");
+    const applyCouponBtn = document.querySelector("#apply-coupon-btn");
+    const orderReceipt = document.querySelector("#order-receipt");
+    const adminUserEmail = document.querySelector("#admin-user-email");
+    const adminPointsDelta = document.querySelector("#admin-points-delta");
+    const adminUserResult = document.querySelector("#admin-user-result");
+    const adminSearchUserBtn = document.querySelector("#admin-search-user-btn");
+    const adminAddPointsBtn = document.querySelector("#admin-add-points-btn");
+    const adminProductName = document.querySelector("#admin-product-name");
+    const adminProductPrice = document.querySelector("#admin-product-price");
+    const adminProductImage = document.querySelector("#admin-product-image");
+    const adminProductCategory = document.querySelector("#admin-product-category");
+    const adminSaveProductBtn = document.querySelector("#admin-save-product-btn");
     const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
+    const clubLevels = [
+      { id: "bronze", name: "Bronze", min: 0, benefit: "Acceso al club y descuentos base." },
+      { id: "silver", name: "Silver", min: 50, benefit: "Mejores canjes y badge visual." },
+      { id: "gold", name: "Gold", min: 150, benefit: "Prioridad en promos especiales." },
+      { id: "elite", name: "Elite", min: 350, benefit: "Beneficios máximos y sorteos destacados." }
+    ];
+    const coupons = [
+      { code: "27STORE10", percent: 10, description: "Promo especial 10% off" },
+      { code: "CLUB15", percent: 15, description: "Promo club 15% off" }
+    ];
+    const draws = [
+      { id: "monthly-game", name: "Sorteo juego mensual", prize: "Un juego a elección", ticketCost: DRAW_TICKET_COST },
+      { id: "streaming-pack", name: "Pack streaming", prize: "Un mes de streaming", ticketCost: DRAW_TICKET_COST },
+      { id: "elite-bonus", name: "Bonus Elite", prize: "Cupón especial para miembros activos", ticketCost: DRAW_TICKET_COST }
+    ];
     const rewards = [
       { id: "discount-5", name: "5% de descuento", cost: 10, percent: 5, description: "Usá 10 puntos y bajá el total de tu carrito un 5%." },
       { id: "discount-10", name: "10% de descuento", cost: 25, percent: 10, description: "Usá 25 puntos para compras medianas de streaming, juegos o keys." },
@@ -827,6 +990,8 @@
     let currentUser = null;
     let currentProfile = null;
     let activeReward = null;
+    let activeCoupon = null;
+    let selectedAdminProfile = null;
     let pendingAuthAction = "login";
     let profileLoadPromise = null;
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -836,12 +1001,123 @@
       '"': "&quot;",
       "'": "&#039;"
     })[char]);
+    const getReferralCode = (profile) => (profile?.referral_code || profile?.id || "club").slice(0, 8).toUpperCase();
+    const getClubLevel = (points = 0) => [...clubLevels].reverse().find((level) => points >= level.min) || clubLevels[0];
+    const openAccountPanel = () => {
+      accountBox.classList.add("open");
+      accountToggle.setAttribute("aria-expanded", "true");
+    };
+    const closeAccountPanel = () => {
+      accountBox.classList.remove("open");
+      accountToggle.setAttribute("aria-expanded", "false");
+    };
+    const updateAccountToggle = () => {
+      if (!accountToggle) return;
+      accountToggle.textContent = currentProfile
+        ? `${currentProfile.points || 0} pts`
+        : "Mi cuenta";
+    };
+
+    const renderClubLevels = () => {
+      if (!clubLevelGrid) return;
+      const points = currentProfile?.points || 0;
+      const activeLevel = getClubLevel(points);
+      clubLevelGrid.innerHTML = clubLevels.map((level) => `
+        <article class="club-card ${activeLevel.id === level.id ? "active" : ""}">
+          <span class="tag">${level.min} pts</span>
+          <h3>${escapeHtml(level.name)}</h3>
+          <p>${escapeHtml(level.benefit)}</p>
+        </article>
+      `).join("");
+
+      if (referralCode) referralCode.textContent = currentProfile ? getReferralCode(currentProfile) : "Iniciá sesión";
+      if (referralInput) {
+        referralInput.disabled = !currentUser || Boolean(currentProfile?.referred_by);
+        referralInput.value = currentProfile?.referred_by || "";
+      }
+      if (saveReferralBtn) saveReferralBtn.disabled = !currentUser || Boolean(currentProfile?.referred_by);
+      if (referralStatus) {
+        referralStatus.textContent = currentProfile?.referred_by
+          ? `Ya guardaste el referido ${currentProfile.referred_by}.`
+          : "Solo se puede guardar una vez por cuenta.";
+      }
+    };
+
+    const renderDraws = () => {
+      if (!drawGrid) return;
+      const points = currentProfile?.points || 0;
+      drawGrid.innerHTML = draws.map((draw) => {
+        const canEnter = currentUser && points >= draw.ticketCost;
+        return `
+          <article class="reward-card">
+            <span class="tag">${draw.ticketCost} pts = 1 ticket</span>
+            <h3>${escapeHtml(draw.name)}</h3>
+            <p>${escapeHtml(draw.prize)}</p>
+            <button class="reward-btn" type="button" data-draw-id="${draw.id}" ${canEnter ? "" : "disabled"}>${currentUser ? "Usar puntos" : "Iniciá sesión"}</button>
+          </article>
+        `;
+      }).join("");
+      if (drawStatus) drawStatus.textContent = currentUser
+        ? `Tenés ${points} puntos. Cada ticket descuenta ${DRAW_TICKET_COST} puntos.`
+        : "Iniciá sesión para entrar a sorteos.";
+    };
+
+    const renderReceipt = (order) => {
+      if (!orderReceipt || !order) return;
+      orderReceipt.innerHTML = `
+        <article class="receipt-card">
+          <span class="tag">Comprobante</span>
+          <h3>Pedido ${escapeHtml(order.id)}</h3>
+          <p>Total: ${money.format(order.total || 0)} · Puntos: ${order.points_to_add || 0}</p>
+          <p>Descuento: ${order.discount_percent || 0}% · Estado: ${getStatusLabel(order.status)}</p>
+        </article>
+      `;
+    };
+
+    const loadFirebaseProducts = async () => {
+      if (!firebaseProductGrid) return;
+      if (!firebaseDb) {
+        firebaseProductGrid.innerHTML = '<p class="cart-empty">Conectá la base de datos para cargar productos editables.</p>';
+        return;
+      }
+
+      try {
+        const snapshot = await firebaseDb.collection("products").where("active", "==", true).get();
+        const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+        if (!products.length) {
+          firebaseProductGrid.innerHTML = '<p class="cart-empty">Todavía no hay productos activos en el catálogo.</p>';
+          return;
+        }
+
+        firebaseProductGrid.innerHTML = products.map((product) => `
+          <article class="category-card">
+            <img src="${escapeHtml(product.image_url || "https://27sttore.netlify.app/images/0.png")}" alt="${escapeHtml(product.name)}">
+            <div>
+              <span class="tag">${escapeHtml(product.category || "Producto")}</span>
+              <h3>${escapeHtml(product.name)}</h3>
+              <p>${escapeHtml(product.description || "Producto editable desde el panel admin.")}</p>
+            </div>
+            <div class="product-actions">
+              <strong>${money.format(product.price || 0)}</strong>
+              <button class="cart-add" type="button" data-name="${escapeHtml(product.name)}" data-price="${Number(product.price || 0)}">Agregar</button>
+            </div>
+          </article>
+        `).join("");
+      } catch (error) {
+        firebaseProductGrid.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
+      }
+    };
+
     const resetAccountUi = (message = "Sesión cerrada.") => {
       currentUser = null;
       currentProfile = null;
       activeReward = null;
+      activeCoupon = null;
+      selectedAdminProfile = null;
       accountTitle.textContent = "Mi cuenta";
       accountStatus.textContent = "Iniciá sesión para guardar pedidos y puntos.";
+      updateAccountToggle();
       authForm.hidden = false;
       logoutBtn.hidden = true;
       logoutBtn.disabled = false;
@@ -854,6 +1130,9 @@
         pointsHistoryList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>';
       }
       renderRewards();
+      renderClubLevels();
+      renderDraws();
+      renderCart();
     };
 
     const clearFirebaseStorage = () => {
@@ -936,16 +1215,58 @@
       cartModal.setAttribute("aria-hidden", "true");
     };
 
+    const getProductFromCard = (card) => {
+      const button = card.querySelector(".cart-add");
+      const image = card.querySelector("img");
+      const name = button?.dataset.name || card.querySelector("h3")?.textContent?.trim() || "Producto";
+      const price = Number(button?.dataset.price || 0);
+      const category = card.querySelector(".tag")?.textContent?.trim() || "Producto";
+      const description = card.querySelector("p")?.textContent?.trim() || "Consultá disponibilidad, entrega y garantía con 27 Store.";
+
+      return {
+        name,
+        price,
+        category,
+        description,
+        image: image?.getAttribute("src") || "https://27sttore.netlify.app/images/0.png",
+        alt: image?.getAttribute("alt") || name
+      };
+    };
+
+    const openProductDetail = (product) => {
+      if (!productDetailModal) return;
+      productDetailImage.src = product.image;
+      productDetailImage.alt = product.alt || product.name;
+      productDetailCategory.textContent = product.category;
+      productDetailTitle.textContent = product.name;
+      productDetailDescription.textContent = product.description;
+      productDetailPrice.textContent = money.format(product.price || 0);
+      productDetailAdd.dataset.name = product.name;
+      productDetailAdd.dataset.price = String(product.price || 0);
+      productDetailWhatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola 27 Store, quiero consultar por ${product.name}.`)}`;
+      productDetailModal.classList.add("open");
+      productDetailModal.setAttribute("aria-hidden", "false");
+    };
+
+    const closeProductDetail = () => {
+      if (!productDetailModal) return;
+      productDetailModal.classList.remove("open");
+      productDetailModal.setAttribute("aria-hidden", "true");
+    };
+
     const getSubtotal = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
-    const getDiscountAmount = () => activeReward ? Math.floor(getSubtotal() * activeReward.percent / 100) : 0;
+    const getPointsDiscountAmount = () => activeReward ? Math.floor(getSubtotal() * activeReward.percent / 100) : 0;
+    const getCouponDiscountAmount = () => activeCoupon ? Math.floor((getSubtotal() - getPointsDiscountAmount()) * activeCoupon.percent / 100) : 0;
+    const getDiscountAmount = () => getPointsDiscountAmount() + getCouponDiscountAmount();
     const getTotal = () => Math.max(0, getSubtotal() - getDiscountAmount());
     const getCount = () => cart.reduce((total, item) => total + item.qty, 0);
 
     const renderCart = () => {
       cartCount.textContent = getCount();
       const points = Math.floor(getTotal() / POINTS_DIVISOR);
-      cartTotal.textContent = activeReward
-        ? `${money.format(getTotal())} · ${points} pts · -${activeReward.percent}%`
+      const discountPercent = (activeReward?.percent || 0) + (activeCoupon?.percent || 0);
+      cartTotal.textContent = discountPercent
+        ? `${money.format(getTotal())} · ${points} pts · -${discountPercent}%`
         : `${money.format(getTotal())} · ${points} pts`;
       checkoutBtn.disabled = cart.length === 0;
 
@@ -962,7 +1283,16 @@
             <h3>${escapeHtml(activeReward.name)}</h3>
             <p>Canje de ${activeReward.cost} puntos aplicado al subtotal ${money.format(getSubtotal())}</p>
           </div>
-          <strong>-${money.format(getDiscountAmount())}</strong>
+          <strong>-${money.format(getPointsDiscountAmount())}</strong>
+        </article>
+      ` : "";
+      const couponRow = activeCoupon ? `
+        <article class="cart-item">
+          <div>
+            <h3>Cupón ${escapeHtml(activeCoupon.code)}</h3>
+            <p>${escapeHtml(activeCoupon.description)}. No descuenta puntos.</p>
+          </div>
+          <strong>-${money.format(getCouponDiscountAmount())}</strong>
         </article>
       ` : "";
 
@@ -979,7 +1309,7 @@
             <button class="remove-btn" type="button" data-action="remove" data-name="${item.name}">Quitar</button>
           </div>
         </article>
-      `).join("") + discountRow;
+      `).join("") + discountRow + couponRow;
     };
 
     const addToCart = (name, price) => {
@@ -1041,10 +1371,19 @@
       renderCart();
     };
 
-    document.querySelectorAll(".cart-add").forEach((button) => {
-      button.addEventListener("click", () => {
-        addToCart(button.dataset.name, Number(button.dataset.price));
-      });
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest(".cart-add");
+      if (!button) return;
+      event.stopPropagation();
+      addToCart(button.dataset.name, Number(button.dataset.price));
+      if (button.id === "product-detail-add") closeProductDetail();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest("button,a,input,select,textarea")) return;
+      const card = event.target.closest(".category-card");
+      if (!card || !card.querySelector(".cart-add")) return;
+      openProductDetail(getProductFromCard(card));
     });
 
     rewardGrid.addEventListener("click", async (event) => {
@@ -1060,6 +1399,28 @@
     cartModal.addEventListener("click", (event) => {
       if (event.target === cartModal) closeCart();
     });
+    document.querySelector(".product-detail-close")?.addEventListener("click", closeProductDetail);
+    productDetailModal?.addEventListener("click", (event) => {
+      if (event.target === productDetailModal) closeProductDetail();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeProductDetail();
+      if (event.key === "Escape") closeAccountPanel();
+    });
+
+    accountToggle?.addEventListener("click", () => {
+      if (accountBox.classList.contains("open")) {
+        closeAccountPanel();
+      } else {
+        openAccountPanel();
+      }
+    });
+    accountClose?.addEventListener("click", closeAccountPanel);
+    document.addEventListener("click", (event) => {
+      if (!accountBox?.classList.contains("open")) return;
+      if (event.target.closest("#account-box") || event.target.closest("#account-toggle")) return;
+      closeAccountPanel();
+    });
 
     cartItems.addEventListener("click", (event) => {
       const button = event.target.closest("button");
@@ -1073,6 +1434,89 @@
         cart.splice(cart.indexOf(item), 1);
       }
       renderCart();
+    });
+
+    applyCouponBtn?.addEventListener("click", () => {
+      const code = couponCodeInput.value.trim().toUpperCase();
+      const coupon = coupons.find((item) => item.code === code);
+
+      if (!coupon) {
+        activeCoupon = null;
+        couponStatus.textContent = "Cupón inválido o vencido.";
+        renderCart();
+        return;
+      }
+
+      activeCoupon = coupon;
+      couponStatus.textContent = `${coupon.description} aplicado.`;
+      renderCart();
+    });
+
+    saveReferralBtn?.addEventListener("click", async () => {
+      if (!firebaseDb || !currentUser || !currentProfile) {
+        referralStatus.textContent = "Iniciá sesión para guardar un referido.";
+        return;
+      }
+
+      const code = referralInput.value.trim().toUpperCase();
+      if (!code || code === getReferralCode(currentProfile)) {
+        referralStatus.textContent = "Ingresá un código válido de otra cuenta.";
+        return;
+      }
+
+      try {
+        const snapshot = await firebaseDb.collection("profiles").where("referral_code", "==", code).limit(1).get();
+        if (snapshot.empty) {
+          referralStatus.textContent = "No encontramos ese código.";
+          return;
+        }
+
+        await firebaseDb.collection("profiles").doc(currentUser.uid).update({
+          referred_by: code,
+          referred_by_uid: snapshot.docs[0].id
+        });
+        referralStatus.textContent = "Referido guardado. El bonus se acredita cuando hagas una compra pagada.";
+        await loadProfile();
+      } catch (error) {
+        referralStatus.textContent = error.message;
+      }
+    });
+
+    drawGrid?.addEventListener("click", async (event) => {
+      const button = event.target.closest("[data-draw-id]");
+      if (!button || !firebaseDb || !currentUser || !currentProfile) return;
+      const draw = draws.find((item) => item.id === button.dataset.drawId);
+      if (!draw) return;
+
+      try {
+        await firebaseDb.runTransaction(async (transaction) => {
+          const profileRef = firebaseDb.collection("profiles").doc(currentUser.uid);
+          const profileSnap = await transaction.get(profileRef);
+          const availablePoints = profileSnap.data()?.points || 0;
+
+          if (availablePoints < draw.ticketCost) {
+            throw new Error("No tenés puntos suficientes para este ticket.");
+          }
+
+          const ticketRef = firebaseDb.collection("draw_entries").doc();
+          transaction.set(ticketRef, {
+            user_id: currentUser.uid,
+            user_email: currentUser.email,
+            draw_id: draw.id,
+            draw_name: draw.name,
+            points_spent: draw.ticketCost,
+            created_at: firebase.firestore.FieldValue.serverTimestamp()
+          });
+          transaction.update(profileRef, {
+            points: firebase.firestore.FieldValue.increment(-draw.ticketCost)
+          });
+        });
+
+        drawStatus.textContent = `Ticket creado para ${draw.name}.`;
+        await loadProfile();
+      } catch (error) {
+        drawStatus.textContent = error.message;
+      }
     });
 
     const loadProfileNow = async () => {
@@ -1098,12 +1542,17 @@
           email: currentUser.email,
           display_name: currentUser.displayName || currentUser.email.split("@")[0],
           points: 0,
+          referral_code: currentUser.uid.slice(0, 8).toUpperCase(),
+          referred_by: null,
           is_admin: false
         };
         await profileRef.set({
           email: profile.email,
           display_name: profile.display_name,
           points: profile.points,
+          referral_code: profile.referral_code,
+          referred_by: profile.referred_by,
+          club_level: getClubLevel(profile.points).id,
           is_admin: profile.is_admin,
           created_at: firebase.firestore.FieldValue.serverTimestamp()
         });
@@ -1113,11 +1562,15 @@
 
       currentProfile = profile;
       accountTitle.textContent = profile.display_name || profile.email;
-      accountStatus.textContent = `${profile.points || 0} puntos disponibles`;
+      const level = getClubLevel(profile.points || 0);
+      accountStatus.textContent = `${profile.points || 0} puntos · ${level.name}`;
+      updateAccountToggle();
       authForm.hidden = true;
       logoutBtn.hidden = false;
       accountNote.textContent = profile.is_admin ? "Modo admin activo." : "Tus compras quedan pendientes hasta que 27 Store confirme el pago.";
       renderRewards();
+      renderClubLevels();
+      renderDraws();
       await loadUserOrders();
 
       if (profile.is_admin) {
@@ -1138,8 +1591,12 @@
 
     const getStatusLabel = (status) => ({
       pending: "Pendiente",
-      confirmed: "Confirmado",
-      rejected: "Rechazado"
+      paid: "Pagado",
+      delivered: "Entregado",
+      problem: "Problema",
+      cancelled: "Cancelado",
+      confirmed: "Pagado",
+      rejected: "Cancelado"
     })[status] || status || "Sin estado";
 
     const formatOrderDate = (value) => {
@@ -1150,7 +1607,7 @@
     const renderPointsHistory = (orders) => {
       if (!pointsHistoryList) return;
 
-      const confirmedOrders = orders.filter((order) => order.status === "confirmed");
+      const confirmedOrders = orders.filter((order) => ["paid", "delivered", "confirmed"].includes(order.status));
       const pointsEarned = confirmedOrders.reduce((total, order) => total + (order.points_to_add || 0), 0);
       const pointsRedeemed = confirmedOrders.reduce((total, order) => total + (order.points_to_redeem || 0), 0);
       const movements = confirmedOrders.flatMap((order) => {
@@ -1243,7 +1700,7 @@
         const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
         const discount = order.discount_percent ? ` · ${order.discount_percent}% off · ${order.points_to_redeem || 0} pts usados` : "";
         const status = getStatusLabel(order.status);
-        const pointsText = order.status === "confirmed"
+        const pointsText = ["paid", "delivered", "confirmed"].includes(order.status)
           ? `${order.points_to_add || 0} pts sumados`
           : `${order.points_to_add || 0} pts si se confirma`;
 
@@ -1265,7 +1722,6 @@
       try {
         ordersSnapshot = await firebaseDb
           .collection("orders")
-          .where("status", "==", "pending")
           .get();
         redemptionsSnapshot = await firebaseDb
           .collection("redemptions")
@@ -1310,11 +1766,13 @@
         const discount = order.discount_percent ? ` · ${order.discount_percent}% off · usa ${order.points_to_redeem || 0} pts` : "";
         return `
           <article class="admin-order">
-            <strong>${user} · ${money.format(order.total)} · suma ${order.points_to_add} pts${discount}</strong>
+            <strong>${user} · ${getStatusLabel(order.status)} · ${money.format(order.total)} · suma ${order.points_to_add} pts${discount}</strong>
             <p>${items}${order.subtotal ? ` · Subtotal ${money.format(order.subtotal)}` : ""}</p>
             <div class="admin-order-actions">
-              <button class="admin-btn" type="button" data-admin-type="order" data-admin-action="confirm" data-order-id="${order.id}">Confirmar compra</button>
-              <button class="admin-btn reject" type="button" data-admin-type="order" data-admin-action="reject" data-order-id="${order.id}">Rechazar</button>
+              <select class="status-select" data-status-order-id="${order.id}">
+                ${["pending", "paid", "delivered", "problem", "cancelled"].map((status) => `<option value="${status}" ${order.status === status ? "selected" : ""}>${getStatusLabel(status)}</option>`).join("")}
+              </select>
+              <button class="admin-btn" type="button" data-admin-type="order" data-admin-action="set-status" data-order-id="${order.id}">Actualizar estado</button>
             </div>
           </article>
         `;
@@ -1361,9 +1819,13 @@
         points_to_add: points,
         points_to_redeem: activeReward?.cost || 0,
         discount_percent: activeReward?.percent || 0,
+        coupon_code: activeCoupon?.code || null,
+        coupon_percent: activeCoupon?.percent || 0,
         discount_amount: getDiscountAmount(),
         reward_id: activeReward?.id || null,
         reward_name: activeReward?.name || null,
+        referred_by: currentProfile?.referred_by || null,
+        referred_by_uid: currentProfile?.referred_by_uid || null,
         status: "pending",
         whatsapp_message: message,
         items,
@@ -1371,7 +1833,7 @@
         confirmed_at: null
       });
 
-      return { id: orderRef.id };
+      return { id: orderRef.id, total, points_to_add: points, discount_percent: (activeReward?.percent || 0) + (activeCoupon?.percent || 0), status: "pending" };
     };
 
     authForm.querySelectorAll("[data-auth-action]").forEach((button) => {
@@ -1445,6 +1907,99 @@
       resetAccountUi();
     });
 
+    const renderAdminUser = async (email) => {
+      if (!firebaseDb || !currentProfile?.is_admin) return;
+      const cleanEmail = email.trim().toLowerCase();
+      if (!cleanEmail) {
+        adminUserResult.innerHTML = '<p class="cart-empty">Ingresá un email.</p>';
+        return;
+      }
+
+      const profileSnapshot = await firebaseDb.collection("profiles").where("email", "==", cleanEmail).limit(1).get();
+      if (profileSnapshot.empty) {
+        selectedAdminProfile = null;
+        adminUserResult.innerHTML = '<p class="cart-empty">No encontramos ese usuario.</p>';
+        return;
+      }
+
+      selectedAdminProfile = { id: profileSnapshot.docs[0].id, ...profileSnapshot.docs[0].data() };
+      const ordersSnapshot = await firebaseDb.collection("orders").where("user_id", "==", selectedAdminProfile.id).get();
+      const orders = ordersSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      const usedDiscounts = orders.filter((order) => order.discount_amount || order.coupon_code || order.reward_name).length;
+      const totalOrders = orders.length;
+      const lastOrders = orders
+        .sort((a, b) => (b.created_at?.toMillis?.() || 0) - (a.created_at?.toMillis?.() || 0))
+        .slice(0, 4)
+        .map((order) => `<p>${getStatusLabel(order.status)} · ${money.format(order.total || 0)} · ${escapeHtml(order.id)}</p>`)
+        .join("");
+
+      adminUserResult.innerHTML = `
+        <article class="admin-order">
+          <strong>${escapeHtml(selectedAdminProfile.email)} · ${selectedAdminProfile.points || 0} pts · ${getClubLevel(selectedAdminProfile.points || 0).name}</strong>
+          <p>Pedidos: ${totalOrders} · Descuentos usados: ${usedDiscounts} · Referido: ${escapeHtml(selectedAdminProfile.referred_by || "sin referido")}</p>
+          ${lastOrders || "<p>Sin pedidos.</p>"}
+        </article>
+      `;
+    };
+
+    adminSearchUserBtn?.addEventListener("click", async () => {
+      try {
+        await renderAdminUser(adminUserEmail.value);
+      } catch (error) {
+        adminUserResult.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
+      }
+    });
+
+    adminAddPointsBtn?.addEventListener("click", async () => {
+      if (!firebaseDb || !currentProfile?.is_admin) return;
+      if (!selectedAdminProfile) {
+        await renderAdminUser(adminUserEmail.value);
+      }
+      if (!selectedAdminProfile) return;
+
+      const delta = Number(adminPointsDelta.value || 0);
+      const nextPoints = Math.max(0, (selectedAdminProfile.points || 0) + delta);
+      try {
+        await firebaseDb.collection("profiles").doc(selectedAdminProfile.id).update({
+          points: nextPoints,
+          club_level: getClubLevel(nextPoints).id
+        });
+        await renderAdminUser(selectedAdminProfile.email);
+      } catch (error) {
+        adminUserResult.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
+      }
+    });
+
+    adminSaveProductBtn?.addEventListener("click", async () => {
+      if (!firebaseDb || !currentProfile?.is_admin) return;
+      const name = adminProductName.value.trim();
+      const price = Number(adminProductPrice.value || 0);
+
+      if (!name || price <= 0) {
+        accountNote.textContent = "Completá nombre y precio del producto.";
+        return;
+      }
+
+      try {
+        await firebaseDb.collection("products").add({
+          name,
+          price,
+          image_url: adminProductImage.value.trim(),
+          category: adminProductCategory.value.trim() || "Producto",
+          description: "Producto cargado desde panel admin.",
+          active: true,
+          created_at: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        adminProductName.value = "";
+        adminProductPrice.value = "";
+        adminProductImage.value = "";
+        adminProductCategory.value = "";
+        accountNote.textContent = "Producto guardado en Firebase.";
+      } catch (error) {
+        accountNote.textContent = error.message;
+      }
+    });
+
     adminList.addEventListener("click", async (event) => {
       const button = event.target.closest("button");
       if (!button || !firebaseDb || !currentProfile?.is_admin) return;
@@ -1488,35 +2043,47 @@
         } else {
           const orderRef = firebaseDb.collection("orders").doc(button.dataset.orderId);
 
-          if (button.dataset.adminAction === "confirm") {
-            await firebaseDb.runTransaction(async (transaction) => {
-              const orderSnap = await transaction.get(orderRef);
-              if (!orderSnap.exists) throw new Error("Pedido no encontrado.");
-              const order = orderSnap.data();
-              if (order.status !== "pending") return;
-              const profileRef = firebaseDb.collection("profiles").doc(order.user_id);
-              const pointsToRedeem = order.points_to_redeem || 0;
+          if (button.dataset.adminAction !== "set-status") return;
+          const select = adminList.querySelector(`[data-status-order-id="${button.dataset.orderId}"]`);
+          const nextStatus = select?.value || "pending";
 
-              if (pointsToRedeem > 0) {
-                const profileSnap = await transaction.get(profileRef);
-                const availablePoints = profileSnap.data()?.points || 0;
+          await firebaseDb.runTransaction(async (transaction) => {
+            const orderSnap = await transaction.get(orderRef);
+            if (!orderSnap.exists) throw new Error("Pedido no encontrado.");
+            const order = orderSnap.data();
+            const profileRef = firebaseDb.collection("profiles").doc(order.user_id);
+            const wasPending = order.status === "pending";
+            const becomesPaid = ["paid", "delivered"].includes(nextStatus);
+            const pointsToRedeem = order.points_to_redeem || 0;
 
-                if (availablePoints < pointsToRedeem) {
-                  throw new Error("El cliente ya no tiene puntos suficientes para aplicar este descuento.");
-                }
+            if (wasPending && becomesPaid && pointsToRedeem > 0) {
+              const profileSnap = await transaction.get(profileRef);
+              const availablePoints = profileSnap.data()?.points || 0;
+
+              if (availablePoints < pointsToRedeem) {
+                throw new Error("El cliente ya no tiene puntos suficientes para aplicar este descuento.");
               }
+            }
 
-              transaction.update(orderRef, {
-                status: "confirmed",
-                confirmed_at: firebase.firestore.FieldValue.serverTimestamp()
-              });
-              transaction.update(profileRef, {
-                points: firebase.firestore.FieldValue.increment((order.points_to_add || 0) - pointsToRedeem)
-              });
+            transaction.update(orderRef, {
+              status: nextStatus,
+              resolved_at: firebase.firestore.FieldValue.serverTimestamp(),
+              confirmed_at: becomesPaid ? firebase.firestore.FieldValue.serverTimestamp() : (order.confirmed_at || null)
             });
-          } else {
-            await orderRef.update({ status: "rejected" });
-          }
+
+            if (wasPending && becomesPaid) {
+              const pointDelta = (order.points_to_add || 0) - pointsToRedeem;
+              transaction.update(profileRef, {
+                points: firebase.firestore.FieldValue.increment(pointDelta)
+              });
+
+              if (order.referred_by_uid) {
+                transaction.update(firebaseDb.collection("profiles").doc(order.referred_by_uid), {
+                    points: firebase.firestore.FieldValue.increment(REFERRAL_BONUS_POINTS)
+                });
+              }
+            }
+          });
         }
       } catch (error) {
         accountNote.textContent = error.message;
@@ -1532,8 +2099,12 @@
       const points = Math.floor(getTotal() / POINTS_DIVISOR);
       const discountLines = activeReward ? [
         `Subtotal: ${money.format(getSubtotal())}`,
-        `Descuento por puntos: ${activeReward.name} (-${money.format(getDiscountAmount())})`,
+        `Descuento por puntos: ${activeReward.name} (-${money.format(getPointsDiscountAmount())})`,
         `Puntos a descontar si se confirma el pago: ${activeReward.cost} pts`
+      ] : [];
+      const couponLines = activeCoupon ? [
+        `Cupón: ${activeCoupon.code} (${activeCoupon.percent}% off, sin usar puntos)`,
+        `Descuento cupón: -${money.format(getCouponDiscountAmount())}`
       ] : [];
       const message = [
         "Hola 27 Store, quiero hacer este pedido:",
@@ -1541,17 +2112,20 @@
         ...lines,
         "",
         ...discountLines,
+        ...couponLines,
         `Total: ${money.format(getTotal())}`,
         `Puntos a sumar si se confirma el pago: ${points} pts`,
+        currentProfile?.referred_by ? `Referido por: ${currentProfile.referred_by}` : "",
         currentUser ? `Cuenta: ${currentUser.email}` : "Cuenta: sin iniciar sesión",
         "",
         "Me pasas los datos para finalizar?"
-      ].join("\n");
+      ].filter(Boolean).join("\n");
 
       if (firebaseDb && currentUser) {
         try {
           const order = await createPendingOrder(message);
           accountNote.textContent = `Pedido pendiente creado: ${order.id}`;
+          renderReceipt(order);
           await loadUserOrders();
         } catch (error) {
           accountNote.textContent = error.message;
@@ -1570,6 +2144,8 @@
     loadProfile();
     renderCart();
     renderRewards();
+    renderClubLevels();
+    renderDraws();
   </script>
 </body>
 </html>
