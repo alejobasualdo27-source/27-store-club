@@ -7,8 +7,9 @@
   <link rel="preconnect" href="https://27sttore.netlify.app">
   <style>
     :root{--bg:#07080a;--line:rgba(255,255,255,.09);--text:#f4f7f2;--muted:#8b948e;--accent:#52ff73;--blue:#21c7ff;--warn:#ffce52}
+    [hidden]{display:none!important}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.side-nav{position:fixed;inset:0 auto 0 0;z-index:20;width:240px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#050608;padding:18px 14px}.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 16px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}.brand img{width:34px;height:34px;border-radius:8px;border:1px solid rgba(82,255,115,.45);object-fit:cover}.brand span span,h1 span,.eyebrow,.stats span,.section-title span,.tag{color:var(--accent)}.side-nav nav{display:grid;gap:4px}.side-nav nav a,.side-cta{border-radius:8px;padding:10px 12px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.side-nav nav a:hover,.side-nav nav a.active{background:rgba(82,255,115,.1);color:var(--accent)}.side-cta{margin-top:auto;text-align:center;color:#071008;background:var(--accent)}main{margin-left:240px}.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 24px 116px;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(82,255,115,.2),transparent 28%),radial-gradient(circle at 20% 80%,rgba(33,199,255,.14),transparent 26%),linear-gradient(180deg,#090b0d 0%,#07080a 100%)}.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop") center/cover;opacity:.16;filter:saturate(1.25) contrast(1.15)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0,transparent 70%)}.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.035) 8px);pointer-events:none}.corner{position:absolute;width:25px;height:25px;border-color:rgba(82,255,115,.7)}.top-left{top:24px;left:24px;border-top:2px solid;border-left:2px solid}.top-right{top:24px;right:24px;border-top:2px solid;border-right:2px solid}.bottom-left{bottom:24px;left:24px;border-bottom:2px solid;border-left:2px solid}.bottom-right{bottom:24px;right:24px;border-bottom:2px solid;border-right:2px solid}.hero-content{position:relative;z-index:1;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px;font-weight:900;text-transform:uppercase}.eyebrow span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}h1{margin:0;font-size:clamp(64px,12vw,150px);line-height:.82;font-weight:1000;text-shadow:0 14px 45px rgba(0,0,0,.65)}h1 span{font-size:.36em;vertical-align:top}.hero-copy{max-width:680px;margin:28px auto 0;color:rgba(244,247,242,.78);font-size:clamp(16px,2vw,21px);line-height:1.45}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;padding:0 22px;font-size:13px;font-weight:950;text-transform:uppercase}.btn.primary{background:var(--text);color:#071008}.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}.stats{width:min(860px,calc(100% - 40px));margin:-64px auto 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);backdrop-filter:blur(16px)}.stats article{padding:28px;border-right:1px solid var(--line)}.stats article:last-child{border-right:0}.stats span,.section-title span,.tag{font-size:11px;font-weight:900;text-transform:uppercase}.stats strong{display:block;margin-top:8px;font-size:42px;font-weight:1000}.stats p,.category-card p,details p{margin:0;color:var(--muted);line-height:1.55}.section{width:min(1080px,calc(100% - 48px));margin:0 auto 86px;scroll-margin-top:30px}.section-title{display:grid;gap:10px;margin-bottom:24px}.section-title h2{margin:0;max-width:760px;font-size:clamp(30px,5vw,56px);line-height:.98}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.category-card.wide{grid-column:span 2}.category-card img{width:100%;height:130px;object-fit:contain;border-radius:10px;margin-bottom:16px;background:rgba(255,255,255,.04)}.category-card h3{margin:6px 0 8px;font-size:24px}.category-card strong{display:inline-flex;width:max-content;margin-top:16px;color:var(--blue);font-size:13px;font-weight:900}.offer-card{min-height:360px;background:linear-gradient(180deg,rgba(7,8,10,.05),rgba(7,8,10,.92)),url("https://27sttore.netlify.app/images/S4.png") center/contain no-repeat,#151820}.ticker-section{overflow:hidden;border-block:1px solid var(--line);margin-bottom:86px}.ticker{display:flex;gap:38px;width:max-content;padding:18px 0;animation:ticker 18s linear infinite}.ticker span{color:rgba(244,247,242,.78);font-size:13px;font-weight:1000;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-35%)}}.leaderboard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.leaderboard div{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;min-height:68px;padding:0 22px;border-bottom:1px solid var(--line)}.leaderboard div:last-child{border-bottom:0}.leaderboard strong{color:var(--warn)}.leaderboard span{font-weight:900}.leaderboard em{color:var(--accent);font-style:normal;font-weight:800}details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}summary{cursor:pointer;font-weight:900}details p{padding-top:12px}.bottom-nav{display:none}@media (max-width:860px){.side-nav{display:none}main{margin-left:0;padding-bottom:74px}.hero{min-height:70vh;padding-top:52px}.stats,.category-grid{grid-template-columns:1fr}.stats article{border-right:0;border-bottom:1px solid var(--line);padding:22px}.stats article:last-child{border-bottom:0}.category-card.wide{grid-column:auto}.leaderboard div{grid-template-columns:1fr}.bottom-nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:rgba(5,6,8,.94);backdrop-filter:blur(14px)}.bottom-nav a{min-height:58px;display:grid;place-items:center;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.bottom-nav a:last-child{color:var(--accent)}}@media (max-width:520px){.section{width:min(100% - 28px,1080px);margin-bottom:64px}.hero-actions{display:grid}.stats{width:calc(100% - 28px)}h1{font-size:68px}.category-card img{height:112px}}
-    .product-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}.product-actions strong{margin-top:0}.cart-add,.cart-open,.cart-close,.qty-btn,.remove-btn,.checkout-btn,.account-btn,.admin-btn{border:0;cursor:pointer;font:inherit}.cart-add,.account-btn,.admin-btn{min-height:38px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:11px;font-weight:950;text-transform:uppercase}.account-box{position:fixed;top:18px;right:18px;z-index:45;width:min(360px,calc(100% - 36px));border:1px solid var(--line);border-radius:14px;background:rgba(5,6,8,.92);backdrop-filter:blur(14px);padding:14px;box-shadow:0 12px 34px rgba(0,0,0,.35)}.account-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.account-info strong{display:block;font-size:13px}.account-info span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.account-form{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.account-form input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.account-note{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.admin-panel{display:none;width:min(1080px,calc(100% - 48px));margin:0 auto 86px;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);padding:18px}.admin-panel.open{display:block}.admin-panel h2{margin:0 0 12px}.admin-list{display:grid;gap:10px}.admin-order{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-order p{margin:0;color:var(--muted);font-size:13px}.admin-order-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-btn.reject{background:#ff7a7a;color:#170707}.cart-open{position:fixed;right:22px;bottom:22px;z-index:40;min-height:54px;border-radius:14px;padding:0 18px;background:var(--accent);color:#071008;font-size:13px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.42)}.cart-count{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:8px;border-radius:999px;background:#071008;color:var(--accent);font-size:12px}.cart-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.72);backdrop-filter:blur(12px)}.cart-modal.open{display:flex}.cart-panel{width:min(520px,100%);max-height:88vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}.cart-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}.cart-head h2{margin:0;font-size:24px}.cart-close{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);font-size:24px}.cart-items{display:grid;gap:10px;padding:16px 20px;overflow:auto}.cart-empty{color:var(--muted);font-size:14px}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.cart-item h3{margin:0 0 4px;font-size:15px}.cart-item p{margin:0;color:var(--muted);font-size:12px}.qty-row{display:flex;align-items:center;gap:8px}.qty-btn,.remove-btn{border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);font-weight:900}.qty-btn{width:30px;height:30px}.remove-btn{padding:7px 9px;color:#ff7a7a}.cart-foot{padding:18px 20px;border-top:1px solid var(--line);background:rgba(255,255,255,.035)}.cart-total{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:22px;font-weight:1000}.checkout-btn{width:100%;min-height:52px;border-radius:10px;background:var(--accent);color:#071008;font-size:14px;font-weight:1000;text-transform:uppercase}.checkout-btn:disabled{opacity:.45;cursor:not-allowed}@media (max-width:860px){.account-box{position:static;width:calc(100% - 28px);margin:14px auto 0}.cart-open{right:12px;bottom:72px}.product-actions{align-items:stretch;flex-direction:column}.cart-add{width:100%}.admin-panel{width:calc(100% - 28px)}}
+    .product-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}.product-actions strong{margin-top:0}.product-actions small{margin-left:6px;color:var(--muted);font-size:11px;text-decoration:line-through}.cart-add,.cart-open,.cart-close,.qty-btn,.remove-btn,.checkout-btn,.account-btn,.admin-btn{border:0;cursor:pointer;font:inherit}.cart-add,.account-btn,.admin-btn{min-height:38px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:11px;font-weight:950;text-transform:uppercase}.account-box{position:fixed;top:18px;right:18px;z-index:45;width:min(360px,calc(100% - 36px));border:1px solid var(--line);border-radius:14px;background:rgba(5,6,8,.92);backdrop-filter:blur(14px);padding:14px;box-shadow:0 12px 34px rgba(0,0,0,.35)}.account-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.account-info strong{display:block;font-size:13px}.account-info span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.account-form{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.account-form input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.account-note{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.admin-panel{display:none;width:min(1080px,calc(100% - 48px));margin:0 auto 86px;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);padding:18px}.admin-panel.open{display:block}.admin-panel h2{margin:0 0 12px}.admin-list{display:grid;gap:10px}.admin-order{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-order p{margin:0;color:var(--muted);font-size:13px}.admin-order-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-btn.reject{background:#ff7a7a;color:#170707}.cart-open{position:fixed;right:22px;bottom:22px;z-index:40;min-height:54px;border-radius:14px;padding:0 18px;background:var(--accent);color:#071008;font-size:13px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.42)}.cart-count{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:8px;border-radius:999px;background:#071008;color:var(--accent);font-size:12px}.cart-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.72);backdrop-filter:blur(12px)}.cart-modal.open{display:flex}.cart-panel{width:min(520px,100%);max-height:88vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}.cart-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}.cart-head h2{margin:0;font-size:24px}.cart-close{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);font-size:24px}.cart-items{display:grid;gap:10px;padding:16px 20px;overflow:auto}.cart-empty{color:var(--muted);font-size:14px}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.cart-item h3{margin:0 0 4px;font-size:15px}.cart-item p{margin:0;color:var(--muted);font-size:12px}.qty-row{display:flex;align-items:center;gap:8px}.qty-btn,.remove-btn{border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);font-weight:900}.qty-btn{width:30px;height:30px}.remove-btn{padding:7px 9px;color:#ff7a7a}.cart-foot{padding:18px 20px;border-top:1px solid var(--line);background:rgba(255,255,255,.035)}.cart-total{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:22px;font-weight:1000}.checkout-btn{width:100%;min-height:52px;border-radius:10px;background:var(--accent);color:#071008;font-size:14px;font-weight:1000;text-transform:uppercase}.checkout-btn:disabled{opacity:.45;cursor:not-allowed}@media (max-width:860px){.account-box{position:static;width:calc(100% - 28px);margin:14px auto 0}.cart-open{right:12px;bottom:72px}.product-actions{align-items:stretch;flex-direction:column}.cart-add{width:100%}.admin-panel{width:calc(100% - 28px)}}
   </style>
 </head>
 <body>
@@ -16,19 +17,19 @@
     <div class="account-row">
       <div class="account-info">
         <strong id="account-title">Mi cuenta</strong>
-        <span id="account-status">Inicia sesion para guardar pedidos y puntos.</span>
+        <span id="account-status">Iniciá sesión para guardar pedidos y puntos.</span>
       </div>
       <button class="account-btn" id="logout-btn" type="button" hidden>Salir</button>
     </div>
     <form class="account-form" id="auth-form">
       <input id="auth-email" type="email" placeholder="Email" autocomplete="email" required>
-      <input id="auth-password" type="password" placeholder="ContraseÃ±a" autocomplete="current-password" required>
+      <input id="auth-password" type="password" placeholder="Contraseña" autocomplete="current-password" required>
       <div class="account-actions">
         <button class="account-btn" type="submit" data-auth-action="login">Entrar</button>
         <button class="account-btn" type="submit" data-auth-action="signup">Crear cuenta</button>
       </div>
     </form>
-    <p class="account-note" id="account-note">Cuando conectes Supabase, los pedidos quedaran pendientes y vos podras aprobarlos.</p>
+    <p class="account-note" id="account-note">Cuando conectes Firebase, los pedidos quedarán pendientes y vos podrás aprobarlos.</p>
   </div>
 
   <aside class="side-nav" aria-label="Navegacion principal">
@@ -43,7 +44,7 @@
       <a href="#juegos">Juegos</a>
       <a href="#keys">Keys</a>
       <a href="#social">Social</a>
-      <a href="#pedi-tu-juego">Pedi tu juego</a>
+      <a href="#pedi-tu-juego">Pedí tu juego</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="side-cta" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Entrar por WhatsApp</a>
@@ -89,48 +90,28 @@
 
     <section id="ofertas" class="section">
       <div class="section-title">
-        <span>â€º Ofertas destacadas</span>
+        <span>› Ofertas destacadas</span>
         <h2>Beneficios activos para miembros del club</h2>
       </div>
       <div class="category-grid">
-        <article class="category-card offer-card wide">
+        <article class="category-card wide">
+          <img src="https://27sttore.netlify.app/images/S1.png" alt="Paramount">
           <div>
-            <span class="tag">Top semanal</span>
-            <h3>Streaming premium</h3>
-            <p>Beneficios y sorteos relacionados con plataformas populares, con prioridad para miembros activos.</p>
+            <span class="tag">OFERTA</span>
+            <h3>Paramount</h3>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
           </div>
           <div class="product-actions">
-            <strong>$7.400</strong>
-            <button class="cart-add" data-name="Streaming premium" data-price="7400">Agregar</button>
+            <strong>$4.000</strong>
+            <button class="cart-add" data-name="Paramount" data-price="4000">Agregar</button>
           </div>
         </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/K3.png" alt="Random keys">
-          <div>
-            <span class="tag">Mystery</span>
-            <h3>Cajas random</h3>
-            <p>Llaves sorpresa, drops y premios por participacion semanal.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$20.000</strong>
-            <button class="cart-add" data-name="Cajas random" data-price="20000">Agregar</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="suscripciones" class="section">
-      <div class="section-title">
-        <span>â€º Suscripciones</span>
-        <h2>Streaming y herramientas digitales</h2>
-      </div>
-      <div class="category-grid">
         <article class="category-card">
           <img src="https://27sttore.netlify.app/images/S4.png" alt="Netflix Premium">
           <div>
-            <span class="tag">Streaming</span>
+            <span class="tag">TOP VENTAS</span>
             <h3>Netflix Premium</h3>
-            <p>Acceso a beneficios y activaciones con soporte directo por WhatsApp.</p>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
           </div>
           <div class="product-actions">
             <strong>$7.400</strong>
@@ -138,11 +119,80 @@
           </div>
         </article>
         <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/S7.png" alt="Canva Pro 1 año">
+          <div>
+            <span class="tag">Suscripciones</span>
+            <h3>Canva Pro 1 año</h3>
+            <p>365 dias de acceso Premium con garantia oficial de 27 Store.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$45.000 <small>$70.000</small></strong>
+            <button class="cart-add" data-name="Canva Pro 1 año" data-price="45000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/8.png" alt="Cyberpunk 2077">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Cyberpunk 2077</h3>
+            <p>Metete de lleno en Night City, una megalopolis futurista obsesionada con el poder y las modificaciones corporales.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$75.000 <small>$90.000</small></strong>
+            <button class="cart-add" data-name="Cyberpunk 2077" data-price="75000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/11.png" alt="EA SPORTS FC 26">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>EA SPORTS FC 26</h3>
+            <p>La entrega mas reciente del simulador de futbol, con plantillas actualizadas y gameplay realista.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$65.000 <small>$90.000</small></strong>
+            <button class="cart-add" data-name="EA SPORTS FC 26" data-price="65000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/2.png" alt="The Last Of Us Part I">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>The Last Of Us Part I</h3>
+            <p>Acompaña a Joel y Ellie en un viaje brutal de supervivencia por un mundo devastado.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$65.000 <small>$90.000</small></strong>
+            <button class="cart-add" data-name="The Last Of Us Part I" data-price="65000">Agregar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="suscripciones" class="section">
+      <div class="section-title">
+        <span>› Suscripciones</span>
+        <h2>Streaming y herramientas digitales</h2>
+      </div>
+      <div class="category-grid">
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/S1.png" alt="Paramount">
+          <div>
+            <span class="tag">OFERTA</span>
+            <h3>Paramount</h3>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$4.000</strong>
+            <button class="cart-add" data-name="Paramount" data-price="4000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
           <img src="https://27sttore.netlify.app/images/S2.png" alt="HBO Max">
           <div>
-            <span class="tag">Streaming</span>
+            <span class="tag">Suscripciones</span>
             <h3>HBO Max</h3>
-            <p>Opciones mensuales para entretenimiento, series y peliculas.</p>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
           </div>
           <div class="product-actions">
             <strong>$4.000</strong>
@@ -150,15 +200,63 @@
           </div>
         </article>
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S7.png" alt="Canva Pro">
+          <img src="https://27sttore.netlify.app/images/S3.png" alt="Prime">
           <div>
-            <span class="tag">Herramientas</span>
-            <h3>Canva Pro</h3>
-            <p>Beneficios para creadores, estudiantes y proyectos visuales.</p>
+            <span class="tag">Suscripciones</span>
+            <h3>Prime</h3>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
           </div>
           <div class="product-actions">
-            <strong>$45.000</strong>
-            <button class="cart-add" data-name="Canva Pro" data-price="45000">Agregar</button>
+            <strong>$4.000</strong>
+            <button class="cart-add" data-name="Prime" data-price="4000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/S5.png" alt="Crunchyroll">
+          <div>
+            <span class="tag">Suscripciones</span>
+            <h3>Crunchyroll</h3>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$4.000</strong>
+            <button class="cart-add" data-name="Crunchyroll" data-price="4000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/S4.png" alt="Netflix Premium">
+          <div>
+            <span class="tag">TOP VENTAS</span>
+            <h3>Netflix Premium</h3>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$7.400</strong>
+            <button class="cart-add" data-name="Netflix Premium" data-price="7400">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/S6.png" alt="Disney+ Premium">
+          <div>
+            <span class="tag">Suscripciones</span>
+            <h3>Disney+ Premium</h3>
+            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$5.000</strong>
+            <button class="cart-add" data-name="Disney+ Premium" data-price="5000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/S7.png" alt="Canva Pro 1 año">
+          <div>
+            <span class="tag">Suscripciones</span>
+            <h3>Canva Pro 1 año</h3>
+            <p>365 dias de acceso Premium con garantia oficial de 27 Store.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$45.000 <small>$70.000</small></strong>
+            <button class="cart-add" data-name="Canva Pro 1 año" data-price="45000">Agregar</button>
           </div>
         </article>
       </div>
@@ -166,16 +264,136 @@
 
     <section id="juegos" class="section">
       <div class="section-title">
-        <span>â€º Juegos</span>
-        <h2>Titles para sumar a tu biblioteca</h2>
+        <span>› Juegos</span>
+        <h2>Títulos para sumar a tu biblioteca</h2>
       </div>
       <div class="category-grid">
         <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/8.png" alt="Cyberpunk 2077">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Cyberpunk 2077</h3>
+            <p>Metete de lleno en Night City, una megalopolis futurista obsesionada con el poder y las modificaciones corporales.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$75.000 <small>$90.000</small></strong>
+            <button class="cart-add" data-name="Cyberpunk 2077" data-price="75000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/7.png" alt="Resident Evil 4 (2023)">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Resident Evil 4 (2023)</h3>
+            <p>El regreso de un clasico absoluto, recreado desde cero con graficos brutales y jugabilidad moderna.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$40.000</strong>
+            <button class="cart-add" data-name="Resident Evil 4 (2023)" data-price="40000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/6.png" alt="Dead by Daylight">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Dead by Daylight</h3>
+            <p>Terror multijugador asimetrico para jugar con amigos: un asesino contra cuatro sobrevivientes.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$15.000</strong>
+            <button class="cart-add" data-name="Dead by Daylight" data-price="15000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/5.png" alt="Assetto Corsa">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Assetto Corsa</h3>
+            <p>Simulador de conduccion con fisica hiperrealista, circuitos escaneados con laser y precision total.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$17.000</strong>
+            <button class="cart-add" data-name="Assetto Corsa" data-price="17000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/9.png" alt="DayZ">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>DayZ</h3>
+            <p>Supervivencia extrema en un mundo abierto postapocaliptico infectado por zombies.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$37.000</strong>
+            <button class="cart-add" data-name="DayZ" data-price="37000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/12.png" alt="Ready or Not">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Ready or Not</h3>
+            <p>Shooter tactico realista donde el trabajo en equipo y el equipamiento correcto son clave.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$30.000</strong>
+            <button class="cart-add" data-name="Ready or Not" data-price="30000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/11.png" alt="EA SPORTS FC 26">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>EA SPORTS FC 26</h3>
+            <p>La entrega mas reciente del simulador de futbol, con plantillas actualizadas y gameplay realista.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$65.000 <small>$90.000</small></strong>
+            <button class="cart-add" data-name="EA SPORTS FC 26" data-price="65000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/13.png" alt="Gta V Enhanced">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Gta V Enhanced</h3>
+            <p>La version definitiva del clasico de Rockstar, optimizada con graficos de nueva generacion.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$30.000</strong>
+            <button class="cart-add" data-name="Gta V Enhanced" data-price="30000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/4.png" alt="ARC Raider">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>ARC Raider</h3>
+            <p>Shooter de extraccion en tercera persona con accion, recursos y maquinas ARC.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$65.000</strong>
+            <button class="cart-add" data-name="ARC Raider" data-price="65000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/10.png" alt="Assassins Creed Valhalla">
+          <div>
+            <span class="tag">Juegos</span>
+            <h3>Assassins Creed Valhalla</h3>
+            <p>Convertite en Eivor, lidera tu clan vikingo y conquista territorios en una aventura RPG enorme.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$30.000</strong>
+            <button class="cart-add" data-name="Assassins Creed Valhalla" data-price="30000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
           <img src="https://27sttore.netlify.app/images/3.png" alt="Red Dead Redemption 2">
           <div>
-            <span class="tag">Rockstar</span>
+            <span class="tag">Juegos</span>
             <h3>Red Dead Redemption 2</h3>
-            <p>Un clasico de mundo abierto para quienes buscan historia y exploracion.</p>
+            <p>Una obra maestra de Rockstar en el salvaje oeste, con mundo abierto e historia memorable.</p>
           </div>
           <div class="product-actions">
             <strong>$55.000</strong>
@@ -183,26 +401,14 @@
           </div>
         </article>
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/8.png" alt="Cyberpunk 2077">
-          <div>
-            <span class="tag">RPG</span>
-            <h3>Cyberpunk 2077</h3>
-            <p>Accion futurista, mundo abierto y una experiencia visual potente.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$75.000</strong>
-            <button class="cart-add" data-name="Cyberpunk 2077" data-price="75000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
           <img src="https://27sttore.netlify.app/images/2.png" alt="The Last Of Us Part I">
           <div>
-            <span class="tag">Historia</span>
+            <span class="tag">Juegos</span>
             <h3>The Last Of Us Part I</h3>
-            <p>Supervivencia, narrativa y una aventura intensa para PC.</p>
+            <p>Acompaña a Joel y Ellie en un viaje brutal de supervivencia por un mundo devastado.</p>
           </div>
           <div class="product-actions">
-            <strong>$65.000</strong>
+            <strong>$65.000 <small>$90.000</small></strong>
             <button class="cart-add" data-name="The Last Of Us Part I" data-price="65000">Agregar</button>
           </div>
         </article>
@@ -211,16 +417,28 @@
 
     <section id="keys" class="section">
       <div class="section-title">
-        <span>â€º Random keys</span>
+        <span>› Random keys</span>
         <h2>Llaves sorpresa y drops especiales</h2>
       </div>
       <div class="category-grid">
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/K2.png" alt="Random VIP keys">
+          <img src="https://27sttore.netlify.app/images/K1.png" alt="RE Requiem Random 1 Key">
           <div>
-            <span class="tag">VIP</span>
+            <span class="tag">Keys</span>
+            <h3>RE Requiem Random 1 Key</h3>
+            <p>Intenta conseguir Resident Evil con esta clave especial.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$7.000</strong>
+            <button class="cart-add" data-name="RE Requiem Random 1 Key" data-price="7000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/K2.png" alt="Random VIP 5 Keys">
+          <div>
+            <span class="tag">Keys</span>
             <h3>Random VIP 5 Keys</h3>
-            <p>Pack de claves para miembros que quieren probar suerte con varios juegos.</p>
+            <p>Al menos 2 juegos valen 30 euros y el resto valen 20 euros o mas.</p>
           </div>
           <div class="product-actions">
             <strong>$25.000</strong>
@@ -228,27 +446,87 @@
           </div>
         </article>
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k5.png" alt="Tier S random key">
+          <img src="https://27sttore.netlify.app/images/K3.png" alt="Random DIAMOND 5 Keys">
           <div>
-            <span class="tag">Tier S</span>
-            <h3>1 Key Random</h3>
-            <p>Una llave especial con foco en juegos de categoria alta.</p>
+            <span class="tag">Keys</span>
+            <h3>Random DIAMOND 5 Keys</h3>
+            <p>Al menos 2 juegos valen 15 euros y el resto valen 5 euros o mas.</p>
           </div>
           <div class="product-actions">
-            <strong>$17.000</strong>
-            <button class="cart-add" data-name="1 Key Random Tier S" data-price="17000">Agregar</button>
+            <strong>$20.000 <small>$55.000</small></strong>
+            <button class="cart-add" data-name="Random DIAMOND 5 Keys" data-price="20000">Agregar</button>
           </div>
         </article>
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k7.png" alt="Elite random keys">
+          <img src="https://27sttore.netlify.app/images/k4.png" alt="AAA Random 5 Keys">
           <div>
-            <span class="tag">Elite</span>
-            <h3>5 Random Keys</h3>
-            <p>Beneficio pensado para quienes quieren sumar variedad a su biblioteca.</p>
+            <span class="tag">Keys</span>
+            <h3>AAA Random 5 Keys</h3>
+            <p>5 llaves con juegos de presupuesto AAA garantizados.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$30.000 <small>$70.000</small></strong>
+            <button class="cart-add" data-name="AAA Random 5 Keys" data-price="30000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/k5.png" alt="TIER S Random 1 Key">
+          <div>
+            <span class="tag">Keys</span>
+            <h3>TIER S Random 1 Key</h3>
+            <p>Una llave maestra con un juego de maxima categoria Tier S.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$17.000</strong>
+            <button class="cart-add" data-name="TIER S Random 1 Key" data-price="17000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/k6.png" alt="5 Ramdoms Keys (Grand)">
+          <div>
+            <span class="tag">Keys</span>
+            <h3>5 Ramdoms Keys (Grand)</h3>
+            <p>5 keys aleatorias de Steam con juegos.</p>
           </div>
           <div class="product-actions">
             <strong>$15.000</strong>
-            <button class="cart-add" data-name="5 Random Keys Elite" data-price="15000">Agregar</button>
+            <button class="cart-add" data-name="5 Ramdoms Keys (Grand)" data-price="15000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/k7.png" alt="5 Ramdoms Keys (Elite)">
+          <div>
+            <span class="tag">OFERTA</span>
+            <h3>5 Ramdoms Keys (Elite)</h3>
+            <p>5 keys aleatorias de Steam con juegos valorados en mas de 20 euros.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$15.000</strong>
+            <button class="cart-add" data-name="5 Ramdoms Keys (Elite)" data-price="15000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/k9.png" alt="1 Key Ramdom (GOTY)">
+          <div>
+            <span class="tag">Keys</span>
+            <h3>1 Key Ramdom (GOTY)</h3>
+            <p>Key aleatoria con titulos destacados de juegos del año.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$15.000</strong>
+            <button class="cart-add" data-name="1 Key Ramdom (GOTY)" data-price="15000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/k8.png" alt="1 Key Ramdom (Grand)">
+          <div>
+            <span class="tag">Keys</span>
+            <h3>1 Key Ramdom (Grand)</h3>
+            <p>Key aleatoria con juego random.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$5.000</strong>
+            <button class="cart-add" data-name="1 Key Ramdom (Grand)" data-price="5000">Agregar</button>
           </div>
         </article>
       </div>
@@ -256,16 +534,16 @@
 
     <section id="social" class="section">
       <div class="section-title">
-        <span>â€º Social</span>
+        <span>› Social</span>
         <h2>Boosts para perfiles y creadores</h2>
       </div>
       <div class="category-grid">
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F2.png" alt="Instagram">
+          <img src="https://27sttore.netlify.app/images/F2.png" alt="Seguidores IG">
           <div>
-            <span class="tag">Instagram</span>
+            <span class="tag">Social</span>
             <h3>Seguidores IG</h3>
-            <p>Opciones para impulsar presencia social con atencion personalizada.</p>
+            <p>Seguidores de alta calidad. Minima compra 100.</p>
           </div>
           <div class="product-actions">
             <strong>$2.500</strong>
@@ -273,11 +551,23 @@
           </div>
         </article>
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F4.png" alt="TikTok">
+          <img src="https://27sttore.netlify.app/images/F1.png" alt="Likes IG">
           <div>
-            <span class="tag">TikTok</span>
+            <span class="tag">Social</span>
+            <h3>Likes IG</h3>
+            <p>Aumenta la interaccion de tus posts con likes reales. Minima compra 100.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$2.000</strong>
+            <button class="cart-add" data-name="Likes IG" data-price="2000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/F4.png" alt="Seguidores TikTok">
+          <div>
+            <span class="tag">Social</span>
             <h3>Seguidores TikTok</h3>
-            <p>Beneficios para perfiles, creadores y cuentas en crecimiento.</p>
+            <p>Seguidores de alta calidad. Minima compra 100.</p>
           </div>
           <div class="product-actions">
             <strong>$2.500</strong>
@@ -285,15 +575,63 @@
           </div>
         </article>
         <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F6.png" alt="Kick">
+          <img src="https://27sttore.netlify.app/images/F3.png" alt="Likes TikTok">
           <div>
-            <span class="tag">Kick</span>
+            <span class="tag">Social</span>
+            <h3>Likes TikTok</h3>
+            <p>Impulsa tus videos con likes de perfiles activos. Minima compra 100.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$2.000</strong>
+            <button class="cart-add" data-name="Likes TikTok" data-price="2000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/F5.png" alt="Seguidores Twitch">
+          <div>
+            <span class="tag">Social</span>
+            <h3>Seguidores Twitch</h3>
+            <p>Seguidores de alta calidad. Minima compra 100.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$2.500</strong>
+            <button class="cart-add" data-name="Seguidores Twitch" data-price="2500">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/F6.png" alt="Seguidores Kick">
+          <div>
+            <span class="tag">Social</span>
             <h3>Seguidores Kick</h3>
-            <p>Ideal para streamers y comunidades que quieren sumar alcance.</p>
+            <p>Seguidores de alta calidad. Minima compra 100.</p>
           </div>
           <div class="product-actions">
             <strong>$2.500</strong>
             <button class="cart-add" data-name="Seguidores Kick" data-price="2500">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://27sttore.netlify.app/images/F7.png" alt="Suscriptores Youtube">
+          <div>
+            <span class="tag">Social</span>
+            <h3>Suscriptores Youtube</h3>
+            <p>Suscriptores reales para tu canal. Minima compra 100.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$4.000</strong>
+            <button class="cart-add" data-name="Suscriptores Youtube" data-price="4000">Agregar</button>
+          </div>
+        </article>
+        <article class="category-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Likes Youtube">
+          <div>
+            <span class="tag">Social</span>
+            <h3>Likes Youtube</h3>
+            <p>Mejora el posicionamiento de tus videos con likes. Minima compra 100.</p>
+          </div>
+          <div class="product-actions">
+            <strong>$2.000</strong>
+            <button class="cart-add" data-name="Likes Youtube" data-price="2000">Agregar</button>
           </div>
         </article>
       </div>
@@ -301,45 +639,46 @@
 
     <section id="pedi-tu-juego" class="section">
       <div class="section-title">
-        <span>â€º Pedido especial</span>
-        <h2>Â¿No encontraste lo que buscabas?</h2>
+        <span>› Pedido especial</span>
+        <h2>¿No encontraste lo que buscabas?</h2>
       </div>
       <div class="category-grid">
-        <article class="category-card wide">
+        <article class="category-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/41/41943.png" alt="PEDI TU JUEGO AQUI">
           <div>
             <span class="tag">A pedido</span>
-            <h3>Pedi tu juego o servicio</h3>
-            <p>Mandanos el nombre por WhatsApp o Instagram y te respondemos con disponibilidad, precio y forma de entrega.</p>
+            <h3>PEDI TU JUEGO AQUI</h3>
+            <p>Buscas un titulo especifico? 27 Store te lo consigue.</p>
           </div>
-          <a class="btn primary" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Consultar ahora</a>
+          <div class="product-actions">
+            <a class="btn primary" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Consultar</a>
+          </div>
         </article>
         <article class="category-card">
           <img src="https://cdn-icons-png.flaticon.com/512/41/41943.png" alt="Pedido especial">
           <div>
             <span class="tag">Soporte</span>
-            <h3>Atencion directa</h3>
-            <p>Te guiamos por mensaje para encontrar exactamente lo que necesitas.</p>
+            <h3>Atención directa</h3>
+            <p>Mandanos el nombre por WhatsApp o Instagram y te respondemos con disponibilidad, precio y entrega.</p>
           </div>
           <strong>Respuesta por WhatsApp</strong>
         </article>
       </div>
     </section>
-
-    <section class="ticker-section" aria-label="Categorias disponibles">
+    <section class="ticker-section" aria-label="Categorías disponibles">
       <div class="ticker">
         <span>Streaming</span>
         <span>Juegos</span>
         <span>Keys</span>
         <span>Social</span>
-        <span>Discord</span>
         <span>Pedidos especiales</span>
       </div>
     </section>
 
     <section class="section">
       <div class="section-title">
-        <span>â€º Ranking semanal</span>
-        <h2>Los que mas participaron</h2>
+        <span>› Ranking semanal</span>
+        <h2>Los que más participaron</h2>
       </div>
       <div class="leaderboard">
         <div><strong>01</strong><span>Lucas_M27</span><em>18.400 pts</em></div>
@@ -350,20 +689,20 @@
 
     <section id="faq" class="section">
       <div class="section-title">
-        <span>â€º Preguntas</span>
+        <span>› Preguntas</span>
         <h2>Antes de entrar</h2>
       </div>
       <details open>
-        <summary>Â¿Como se juntan puntos?</summary>
-        <p>Los puntos se pueden asociar a compras, participacion, referidos, sorteos o acciones que definas para tu comunidad.</p>
+        <summary>¿Cómo se juntan puntos?</summary>
+        <p>Los puntos se pueden asociar a compras, participación, referidos, sorteos o acciones que definas para tu comunidad.</p>
       </details>
       <details>
-        <summary>Â¿Como reclamo un beneficio?</summary>
-        <p>El contacto principal sigue siendo WhatsApp o Instagram. Desde ahi confirmas disponibilidad, entrega y soporte.</p>
+        <summary>¿Cómo reclamo un beneficio?</summary>
+        <p>El contacto principal sigue siendo WhatsApp o Instagram. Desde ahí confirmás disponibilidad, entrega y soporte.</p>
       </details>
       <details>
-        <summary>Â¿Esta pagina ya tiene carrito?</summary>
-        <p>No. Esta version funciona como landing tipo comunidad. Si queres, despues se puede conectar con carrito, login o panel de puntos real.</p>
+        <summary>¿Esta página ya tiene carrito?</summary>
+        <p>Sí. Podés armar tu pedido, enviarlo por WhatsApp y, si iniciás sesión, queda pendiente en Firebase para sumar puntos cuando se confirme el pago.</p>
       </details>
     </section>
 
@@ -402,14 +741,28 @@
     <a href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Entrar</a>
   </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
   <script>
-    const SUPABASE_URL = "https://utyoiyerbzykbdyhsfar.supabase.co";
-    const SUPABASE_ANON_KEY = "sb_publishable_uFfuLJnm2DjvU5CRqxl9vw_BT5V0pGE";
+    const FIREBASE_CONFIG = {
+      apiKey: "AIzaSyDrMwG_Tdau3IETjiolHamu-bIgVuSZ-1A",
+      authDomain: "store-adcaf.firebaseapp.com",
+      projectId: "store-adcaf",
+      storageBucket: "store-adcaf.firebasestorage.app",
+      messagingSenderId: "832978331861",
+      appId: "1:832978331861:web:0b9ee7e418b817ab841a5c",
+      measurementId: "G-SZNBP1DXGS"
+    };
     const POINTS_DIVISOR = 1000;
-    const supabaseClient = SUPABASE_URL && SUPABASE_ANON_KEY
-      ? supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-      : null;
+    const firebaseConfigured = window.firebase
+      && FIREBASE_CONFIG.apiKey
+      && !FIREBASE_CONFIG.apiKey.startsWith("PEGA_")
+      && FIREBASE_CONFIG.projectId
+      && !FIREBASE_CONFIG.projectId.startsWith("PEGA_");
+    const firebaseApp = firebaseConfigured ? firebase.initializeApp(FIREBASE_CONFIG) : null;
+    const firebaseAuth = firebaseConfigured ? firebase.auth() : null;
+    const firebaseDb = firebaseConfigured ? firebase.firestore() : null;
 
     const navLinks = [...document.querySelectorAll(".side-nav nav a")];
     const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
@@ -437,6 +790,92 @@
     const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
     let currentUser = null;
     let currentProfile = null;
+    let pendingAuthAction = "login";
+    let profileLoadPromise = null;
+    const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    })[char]);
+    const resetAccountUi = (message = "Sesión cerrada.") => {
+      currentUser = null;
+      currentProfile = null;
+      accountTitle.textContent = "Mi cuenta";
+      accountStatus.textContent = "Iniciá sesión para guardar pedidos y puntos.";
+      authForm.hidden = false;
+      logoutBtn.hidden = true;
+      logoutBtn.disabled = false;
+      adminPanel.classList.remove("open");
+      accountNote.textContent = message;
+    };
+
+    const clearFirebaseStorage = () => {
+      const clearStorage = (storage) => {
+        if (!storage) return;
+        Object.keys(storage)
+          .filter((key) => key.startsWith("firebase:") || key.includes("firebase"))
+          .forEach((key) => storage.removeItem(key));
+      };
+
+      clearStorage(window.localStorage);
+      clearStorage(window.sessionStorage);
+    };
+
+    const withTimeout = (promise, ms, timeoutMessage) => Promise.race([
+      promise,
+      new Promise((_, reject) => {
+        setTimeout(() => reject(new Error(timeoutMessage)), ms);
+      })
+    ]);
+
+    const getFriendlyAuthError = (error) => {
+      const message = error?.message || "";
+      const code = error?.code || "";
+      const lowerMessage = message.toLowerCase();
+
+      if (code === "auth/invalid-credential" || code === "auth/wrong-password" || lowerMessage.includes("invalid login credentials")) {
+        return "Email o contraseña incorrectos.";
+      }
+
+      if (code === "auth/user-not-found") {
+        return "No existe una cuenta con ese email.";
+      }
+
+      if (code === "auth/email-already-in-use" || lowerMessage.includes("user already registered") || lowerMessage.includes("already registered")) {
+        return "Ese email ya tiene cuenta. Probá entrar en vez de crear una cuenta nueva.";
+      }
+
+      if (code === "auth/weak-password" || lowerMessage.includes("password should be")) {
+        return "La contraseña es muy corta. Usá al menos 6 caracteres.";
+      }
+
+      if (code === "auth/configuration-not-found") {
+        return "Falta activar Email/Password en Firebase Authentication.";
+      }
+
+      if (code === "auth/api-key-not-valid.-please-pass-a-valid-api-key." || code === "auth/invalid-api-key" || lowerMessage.includes("api-key-not-valid")) {
+        return "La API key de Firebase no es válida. Copiá de nuevo la configuración web desde Firebase y pegala exacta.";
+      }
+
+      if (lowerMessage.includes("email not confirmed")) {
+        return "Falta confirmar el email. Revisá tu correo y después volvé a entrar.";
+      }
+
+      return message || "No se pudo conectar con el login.";
+    };
+
+    const signInWithPassword = async (email, password) => {
+      await firebaseAuth.signInWithEmailAndPassword(email, password);
+      return { data: { user: firebaseAuth.currentUser }, error: null };
+    };
+
+    const signUpWithPassword = async (email, password) => {
+      const credential = await firebaseAuth.createUserWithEmailAndPassword(email, password);
+      await credential.user.updateProfile({ displayName: email.split("@")[0] });
+      return { data: { user: credential.user, session: true }, error: null };
+    };
 
     const openCart = () => {
       cartModal.classList.add("open");
@@ -454,11 +893,11 @@
     const renderCart = () => {
       cartCount.textContent = getCount();
       const points = Math.floor(getTotal() / POINTS_DIVISOR);
-      cartTotal.textContent = `${money.format(getTotal())} Â· ${points} pts`;
+      cartTotal.textContent = `${money.format(getTotal())} · ${points} pts`;
       checkoutBtn.disabled = cart.length === 0;
 
       if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="cart-empty">Todavia no agregaste productos.</p>';
+        cartItems.innerHTML = '<p class="cart-empty">Todavía no agregaste productos.</p>';
         return;
       }
 
@@ -515,34 +954,40 @@
       renderCart();
     });
 
-    const loadProfile = async () => {
-      if (!supabaseClient) {
-        accountNote.textContent = "Falta conectar Supabase: pega tu Project URL y anon public key en el codigo.";
+    const loadProfileNow = async () => {
+      if (!firebaseAuth || !firebaseDb) {
+        accountNote.textContent = "Falta conectar Firebase: pegá la configuración web del proyecto en el código.";
         return;
       }
 
-      const { data: { session } } = await supabaseClient.auth.getSession();
-      currentUser = session?.user || null;
+      currentUser = firebaseAuth.currentUser || null;
 
       if (!currentUser) {
-        currentProfile = null;
-        accountTitle.textContent = "Mi cuenta";
-        accountStatus.textContent = "Inicia sesion para guardar pedidos y puntos.";
-        authForm.hidden = false;
-        logoutBtn.hidden = true;
-        adminPanel.classList.remove("open");
+        resetAccountUi("Iniciá sesión para guardar pedidos y puntos.");
         return;
       }
 
-      const { data: profile, error } = await supabaseClient
-        .from("profiles")
-        .select("*")
-        .eq("id", currentUser.id)
-        .single();
+      const profileRef = firebaseDb.collection("profiles").doc(currentUser.uid);
+      let profileSnap = await profileRef.get();
+      let profile;
 
-      if (error) {
-        accountNote.textContent = error.message;
-        return;
+      if (!profileSnap.exists) {
+        profile = {
+          id: currentUser.uid,
+          email: currentUser.email,
+          display_name: currentUser.displayName || currentUser.email.split("@")[0],
+          points: 0,
+          is_admin: false
+        };
+        await profileRef.set({
+          email: profile.email,
+          display_name: profile.display_name,
+          points: profile.points,
+          is_admin: profile.is_admin,
+          created_at: firebase.firestore.FieldValue.serverTimestamp()
+        });
+      } else {
+        profile = { id: currentUser.uid, ...profileSnap.data() };
       }
 
       currentProfile = profile;
@@ -560,30 +1005,55 @@
       }
     };
 
-    const loadPendingOrders = async () => {
-      if (!supabaseClient || !currentProfile?.is_admin) return;
-      const { data, error } = await supabaseClient
-        .from("orders")
-        .select("id,total,points_to_add,status,created_at,profiles(email,display_name),order_items(product_name,price,quantity)")
-        .eq("status", "pending")
-        .order("created_at", { ascending: false });
+    const loadProfile = () => {
+      if (profileLoadPromise) return profileLoadPromise;
+      profileLoadPromise = loadProfileNow().finally(() => {
+        profileLoadPromise = null;
+      });
+      return profileLoadPromise;
+    };
 
-      if (error) {
-        adminList.innerHTML = `<p class="cart-empty">${error.message}</p>`;
+    const loadPendingOrders = async () => {
+      if (!firebaseDb || !currentProfile?.is_admin) return;
+
+      let snapshot;
+      try {
+        snapshot = await firebaseDb
+          .collection("orders")
+          .where("status", "==", "pending")
+          .get();
+      } catch (error) {
+        adminList.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
         return;
       }
+
+      const data = snapshot.docs
+        .map((doc) => ({ id: doc.id, ...doc.data() }))
+        .sort((a, b) => {
+          const dateA = a.created_at?.toMillis?.() || 0;
+          const dateB = b.created_at?.toMillis?.() || 0;
+          return dateB - dateA;
+        });
 
       if (!data.length) {
         adminList.innerHTML = '<p class="cart-empty">No hay pedidos pendientes.</p>';
         return;
       }
 
+      const userIds = [...new Set(data.map((order) => order.user_id).filter(Boolean))];
+      const profiles = await Promise.all(userIds.map(async (id) => {
+        const profileSnap = await firebaseDb.collection("profiles").doc(id).get();
+        return profileSnap.exists ? { id, ...profileSnap.data() } : { id };
+      }));
+      const profilesById = new Map(profiles.map((profile) => [profile.id, profile]));
+
       adminList.innerHTML = data.map((order) => {
-        const items = order.order_items.map((item) => `${item.product_name} x${item.quantity}`).join(", ");
-        const user = order.profiles?.display_name || order.profiles?.email || "Cliente";
+        const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
+        const profile = profilesById.get(order.user_id);
+        const user = escapeHtml(profile?.display_name || profile?.email || "Cliente");
         return `
           <article class="admin-order">
-            <strong>${user} Â· ${money.format(order.total)} Â· ${order.points_to_add} pts</strong>
+            <strong>${user} · ${money.format(order.total)} · ${order.points_to_add} pts</strong>
             <p>${items}</p>
             <div class="admin-order-actions">
               <button class="admin-btn" type="button" data-admin-action="confirm" data-order-id="${order.id}">Confirmar y sumar puntos</button>
@@ -595,68 +1065,126 @@
     };
 
     const createPendingOrder = async (message) => {
-      if (!supabaseClient || !currentUser) return null;
+      if (!firebaseDb || !currentUser) return null;
       const total = getTotal();
       const points = Math.floor(total / POINTS_DIVISOR);
-
-      const { data: order, error: orderError } = await supabaseClient
-        .from("orders")
-        .insert({
-          user_id: currentUser.id,
-          total,
-          points_to_add: points,
-          whatsapp_message: message
-        })
-        .select()
-        .single();
-
-      if (orderError) throw orderError;
-
       const items = cart.map((item) => ({
-        order_id: order.id,
         product_name: item.name,
         price: item.price,
         quantity: item.qty
       }));
 
-      const { error: itemsError } = await supabaseClient.from("order_items").insert(items);
-      if (itemsError) throw itemsError;
-      return order;
+      const orderRef = await firebaseDb.collection("orders").add({
+        user_id: currentUser.uid,
+        user_email: currentUser.email,
+        total,
+        points_to_add: points,
+        status: "pending",
+        whatsapp_message: message,
+        items,
+        created_at: firebase.firestore.FieldValue.serverTimestamp(),
+        confirmed_at: null
+      });
+
+      return { id: orderRef.id };
     };
+
+    authForm.querySelectorAll("[data-auth-action]").forEach((button) => {
+      button.addEventListener("click", () => {
+        pendingAuthAction = button.dataset.authAction || "login";
+      });
+    });
 
     authForm.addEventListener("submit", async (event) => {
       event.preventDefault();
-      if (!supabaseClient) {
-        accountNote.textContent = "Primero hay que pegar las claves publicas de Supabase en el codigo.";
+      if (!firebaseAuth || !firebaseDb) {
+        accountNote.textContent = "Primero hay que pegar la configuración web de Firebase en el código.";
         return;
       }
-      const action = event.submitter?.dataset.authAction;
-      const email = document.querySelector("#auth-email").value;
+      const action = event.submitter?.dataset.authAction || pendingAuthAction;
+      const email = document.querySelector("#auth-email").value.trim().toLowerCase();
       const password = document.querySelector("#auth-password").value;
-      const result = action === "signup"
-        ? await supabaseClient.auth.signUp({ email, password })
-        : await supabaseClient.auth.signInWithPassword({ email, password });
 
-      if (result.error) {
-        accountNote.textContent = result.error.message;
+      if (!email || !password) {
+        accountNote.textContent = "Completá email y contraseña.";
         return;
       }
-      accountNote.textContent = action === "signup" ? "Cuenta creada. Si Supabase pide confirmar email, revisa tu correo." : "Sesion iniciada.";
-      await loadProfile();
+
+      const buttons = [...authForm.querySelectorAll("button")];
+      buttons.forEach((button) => button.disabled = true);
+      accountNote.textContent = action === "signup" ? "Creando cuenta..." : "Iniciando sesión...";
+
+      try {
+        const result = await withTimeout(
+          action === "signup" ? signUpWithPassword(email, password) : signInWithPassword(email, password),
+          12000,
+          "Firebase tardó demasiado en responder. Revisá internet, recargá la página y probá de nuevo."
+        );
+
+        if (result.error) {
+          accountNote.textContent = getFriendlyAuthError(result.error);
+          return;
+        }
+
+        if (action === "signup" && !result.data?.session) {
+          accountNote.textContent = "Cuenta creada. Ya podés usar tu cuenta para guardar pedidos y puntos.";
+          return;
+        }
+
+        accountNote.textContent = action === "signup" ? "Cuenta creada. Cargando perfil..." : "Sesión iniciada. Cargando perfil...";
+        await withTimeout(
+          loadProfile(),
+          10000,
+          "La sesión entró, pero el perfil tardó demasiado. Recargá la página."
+        );
+      } catch (error) {
+        accountNote.textContent = getFriendlyAuthError(error);
+      } finally {
+        buttons.forEach((button) => button.disabled = false);
+      }
     });
 
     logoutBtn.addEventListener("click", async () => {
-      if (supabaseClient) await supabaseClient.auth.signOut();
-      await loadProfile();
+      logoutBtn.disabled = true;
+      accountNote.textContent = "Cerrando sesión...";
+
+      try {
+        if (firebaseAuth) {
+          await firebaseAuth.signOut();
+        }
+      } catch (error) {
+        accountNote.textContent = error.message;
+      }
+
+      clearFirebaseStorage();
+      resetAccountUi();
     });
 
     adminList.addEventListener("click", async (event) => {
       const button = event.target.closest("button");
-      if (!button || !supabaseClient) return;
-      const { error } = button.dataset.adminAction === "confirm"
-        ? await supabaseClient.rpc("confirm_order", { order_id_to_confirm: button.dataset.orderId })
-        : await supabaseClient.rpc("reject_order", { order_id_to_reject: button.dataset.orderId });
-      if (error) {
+      if (!button || !firebaseDb || !currentProfile?.is_admin) return;
+      try {
+        const orderRef = firebaseDb.collection("orders").doc(button.dataset.orderId);
+
+        if (button.dataset.adminAction === "confirm") {
+          await firebaseDb.runTransaction(async (transaction) => {
+            const orderSnap = await transaction.get(orderRef);
+            if (!orderSnap.exists) throw new Error("Pedido no encontrado.");
+            const order = orderSnap.data();
+            if (order.status !== "pending") return;
+
+            transaction.update(orderRef, {
+              status: "confirmed",
+              confirmed_at: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            transaction.update(firebaseDb.collection("profiles").doc(order.user_id), {
+              points: firebase.firestore.FieldValue.increment(order.points_to_add || 0)
+            });
+          });
+        } else {
+          await orderRef.update({ status: "rejected" });
+        }
+      } catch (error) {
         accountNote.textContent = error.message;
         return;
       }
@@ -674,12 +1202,12 @@
         "",
         `Total: ${money.format(getTotal())}`,
         `Puntos a sumar si se confirma el pago: ${points} pts`,
-        currentUser ? `Cuenta: ${currentUser.email}` : "Cuenta: sin iniciar sesion",
+        currentUser ? `Cuenta: ${currentUser.email}` : "Cuenta: sin iniciar sesión",
         "",
         "Me pasas los datos para finalizar?"
       ].join("\n");
 
-      if (supabaseClient && currentUser) {
+      if (firebaseDb && currentUser) {
         try {
           const order = await createPendingOrder(message);
           accountNote.textContent = `Pedido pendiente creado: ${order.id}`;
@@ -687,15 +1215,15 @@
           accountNote.textContent = error.message;
           return;
         }
-      } else if (supabaseClient && !currentUser) {
-        accountNote.textContent = "Pedido enviado por WhatsApp sin cuenta. Para sumar puntos, inicia sesion antes de finalizar.";
+      } else if (firebaseDb && !currentUser) {
+        accountNote.textContent = "Pedido enviado por WhatsApp sin cuenta. Para sumar puntos, iniciá sesión antes de finalizar.";
       }
 
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
     });
 
-    if (supabaseClient) {
-      supabaseClient.auth.onAuthStateChange(() => loadProfile());
+    if (firebaseAuth) {
+      firebaseAuth.onAuthStateChanged(() => loadProfile());
     }
     loadProfile();
     renderCart();
