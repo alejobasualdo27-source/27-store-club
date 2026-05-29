@@ -692,10 +692,10 @@
     <section id="canjes" class="section">
       <div class="section-title">
         <span>› Canje de puntos</span>
-        <h2>Usá tus puntos para pedir recompensas</h2>
+        <h2>Usá tus puntos para descontar en tu compra</h2>
       </div>
       <div class="reward-grid" id="reward-grid"></div>
-      <p class="redeem-status" id="redeem-status">Iniciá sesión para ver tus puntos disponibles y pedir canjes.</p>
+      <p class="redeem-status" id="redeem-status">Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.</p>
     </section>
 
     <section id="faq" class="section">
@@ -802,15 +802,15 @@
     const redeemStatus = document.querySelector("#redeem-status");
     const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
     const rewards = [
-      { id: "discount-1000", name: "$1.000 de descuento", cost: 10, description: "Descuento directo para tu próxima compra confirmada." },
-      { id: "discount-3000", name: "$3.000 de descuento", cost: 25, description: "Ideal para usar en streaming, juegos o keys." },
-      { id: "priority-support", name: "Prioridad en pedidos", cost: 15, description: "Tu consulta queda marcada para atención prioritaria por WhatsApp." },
-      { id: "mystery-drop", name: "Drop sorpresa", cost: 40, description: "Beneficio especial sujeto a disponibilidad del club." },
-      { id: "free-key-raffle", name: "Entrada a sorteo de key", cost: 20, description: "Participación para sorteos internos de keys y beneficios." },
-      { id: "custom-benefit", name: "Beneficio personalizado", cost: 60, description: "Canje especial coordinado con 27 Store según disponibilidad." }
+      { id: "discount-5", name: "5% de descuento", cost: 10, percent: 5, description: "Usá 10 puntos y bajá el total de tu carrito un 5%." },
+      { id: "discount-10", name: "10% de descuento", cost: 25, percent: 10, description: "Usá 25 puntos para compras medianas de streaming, juegos o keys." },
+      { id: "discount-17", name: "17% de descuento", cost: 50, percent: 17, description: "Canje fuerte para ahorrar más en compras grandes." },
+      { id: "discount-25", name: "25% de descuento", cost: 80, percent: 25, description: "Beneficio premium para miembros que juntan muchos puntos." },
+      { id: "discount-35", name: "35% de descuento", cost: 120, percent: 35, description: "El mejor canje del club para compras especiales." }
     ];
     let currentUser = null;
     let currentProfile = null;
+    let activeReward = null;
     let pendingAuthAction = "login";
     let profileLoadPromise = null;
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -823,6 +823,7 @@
     const resetAccountUi = (message = "Sesión cerrada.") => {
       currentUser = null;
       currentProfile = null;
+      activeReward = null;
       accountTitle.textContent = "Mi cuenta";
       accountStatus.textContent = "Iniciá sesión para guardar pedidos y puntos.";
       authForm.hidden = false;
@@ -909,19 +910,35 @@
       cartModal.setAttribute("aria-hidden", "true");
     };
 
-    const getTotal = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
+    const getSubtotal = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
+    const getDiscountAmount = () => activeReward ? Math.floor(getSubtotal() * activeReward.percent / 100) : 0;
+    const getTotal = () => Math.max(0, getSubtotal() - getDiscountAmount());
     const getCount = () => cart.reduce((total, item) => total + item.qty, 0);
 
     const renderCart = () => {
       cartCount.textContent = getCount();
       const points = Math.floor(getTotal() / POINTS_DIVISOR);
-      cartTotal.textContent = `${money.format(getTotal())} · ${points} pts`;
+      cartTotal.textContent = activeReward
+        ? `${money.format(getTotal())} · ${points} pts · -${activeReward.percent}%`
+        : `${money.format(getTotal())} · ${points} pts`;
       checkoutBtn.disabled = cart.length === 0;
 
       if (cart.length === 0) {
-        cartItems.innerHTML = '<p class="cart-empty">Todavía no agregaste productos.</p>';
+        cartItems.innerHTML = activeReward
+          ? `<p class="cart-empty">Todavía no agregaste productos. Tenés activo ${activeReward.name}.</p>`
+          : '<p class="cart-empty">Todavía no agregaste productos.</p>';
         return;
       }
+
+      const discountRow = activeReward ? `
+        <article class="cart-item">
+          <div>
+            <h3>${escapeHtml(activeReward.name)}</h3>
+            <p>Canje de ${activeReward.cost} puntos aplicado al subtotal ${money.format(getSubtotal())}</p>
+          </div>
+          <strong>-${money.format(getDiscountAmount())}</strong>
+        </article>
+      ` : "";
 
       cartItems.innerHTML = cart.map((item) => `
         <article class="cart-item">
@@ -936,7 +953,7 @@
             <button class="remove-btn" type="button" data-action="remove" data-name="${item.name}">Quitar</button>
           </div>
         </article>
-      `).join("");
+      `).join("") + discountRow;
     };
 
     const addToCart = (name, price) => {
@@ -956,29 +973,32 @@
 
       rewardGrid.innerHTML = rewards.map((reward) => {
         const canRedeem = currentUser && availablePoints >= reward.cost;
+        const isActive = activeReward?.id === reward.id;
         return `
           <article class="reward-card">
-            <span class="tag">Canje</span>
+            <span class="tag">${isActive ? "Activo" : "Descuento"}</span>
             <h3>${escapeHtml(reward.name)}</h3>
             <p>${escapeHtml(reward.description)}</p>
             <strong>${reward.cost} pts</strong>
             <button class="reward-btn" type="button" data-reward-id="${reward.id}" ${canRedeem ? "" : "disabled"}>
-              ${currentUser ? "Pedir canje" : "Iniciá sesión"}
+              ${currentUser ? (isActive ? "Descuento activo" : "Usar en carrito") : "Iniciá sesión"}
             </button>
           </article>
         `;
       }).join("");
 
       if (!currentUser) {
-        redeemStatus.textContent = "Iniciá sesión para ver tus puntos disponibles y pedir canjes.";
+        redeemStatus.textContent = "Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.";
       } else {
-        redeemStatus.textContent = `Tenés ${availablePoints} puntos disponibles. Los canjes quedan pendientes hasta que 27 Store los apruebe.`;
+        redeemStatus.textContent = activeReward
+          ? `Tenés ${availablePoints} puntos. Se aplicó ${activeReward.name}; al confirmar la compra se descuentan ${activeReward.cost} puntos.`
+          : `Tenés ${availablePoints} puntos disponibles. Elegí un descuento y se aplica al carrito.`;
       }
     };
 
-    const requestRedemption = async (rewardId) => {
-      if (!firebaseDb || !currentUser || !currentProfile) {
-        redeemStatus.textContent = "Iniciá sesión para pedir un canje.";
+    const applyRewardDiscount = (rewardId) => {
+      if (!currentUser || !currentProfile) {
+        redeemStatus.textContent = "Iniciá sesión para aplicar un descuento.";
         return;
       }
 
@@ -986,22 +1006,13 @@
       if (!reward) return;
 
       if ((currentProfile.points || 0) < reward.cost) {
-        redeemStatus.textContent = `Te faltan ${reward.cost - (currentProfile.points || 0)} puntos para pedir este canje.`;
+        redeemStatus.textContent = `Te faltan ${reward.cost - (currentProfile.points || 0)} puntos para usar este descuento.`;
         return;
       }
 
-      await firebaseDb.collection("redemptions").add({
-        user_id: currentUser.uid,
-        user_email: currentUser.email,
-        reward_id: reward.id,
-        reward_name: reward.name,
-        reward_cost: reward.cost,
-        status: "pending",
-        created_at: firebase.firestore.FieldValue.serverTimestamp(),
-        resolved_at: null
-      });
-
-      redeemStatus.textContent = `Canje solicitado: ${reward.name}. Queda pendiente de aprobación.`;
+      activeReward = reward;
+      redeemStatus.textContent = `${reward.name} aplicado al carrito.`;
+      renderCart();
     };
 
     document.querySelectorAll(".cart-add").forEach((button) => {
@@ -1014,16 +1025,8 @@
       const button = event.target.closest("[data-reward-id]");
       if (!button) return;
 
-      button.disabled = true;
-      redeemStatus.textContent = "Creando solicitud de canje...";
-
-      try {
-        await requestRedemption(button.dataset.rewardId);
-      } catch (error) {
-        redeemStatus.textContent = error.message;
-      } finally {
-        renderRewards();
-      }
+      applyRewardDiscount(button.dataset.rewardId);
+      renderRewards();
     });
 
     document.querySelector(".cart-open").addEventListener("click", openCart);
@@ -1156,12 +1159,13 @@
         const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
         const profile = profilesById.get(order.user_id);
         const user = escapeHtml(profile?.display_name || profile?.email || "Cliente");
+        const discount = order.discount_percent ? ` · ${order.discount_percent}% off · usa ${order.points_to_redeem || 0} pts` : "";
         return `
           <article class="admin-order">
-            <strong>${user} · ${money.format(order.total)} · ${order.points_to_add} pts</strong>
-            <p>${items}</p>
+            <strong>${user} · ${money.format(order.total)} · suma ${order.points_to_add} pts${discount}</strong>
+            <p>${items}${order.subtotal ? ` · Subtotal ${money.format(order.subtotal)}` : ""}</p>
             <div class="admin-order-actions">
-              <button class="admin-btn" type="button" data-admin-type="order" data-admin-action="confirm" data-order-id="${order.id}">Confirmar y sumar puntos</button>
+              <button class="admin-btn" type="button" data-admin-type="order" data-admin-action="confirm" data-order-id="${order.id}">Confirmar compra</button>
               <button class="admin-btn reject" type="button" data-admin-type="order" data-admin-action="reject" data-order-id="${order.id}">Rechazar</button>
             </div>
           </article>
@@ -1192,6 +1196,7 @@
 
     const createPendingOrder = async (message) => {
       if (!firebaseDb || !currentUser) return null;
+      const subtotal = getSubtotal();
       const total = getTotal();
       const points = Math.floor(total / POINTS_DIVISOR);
       const items = cart.map((item) => ({
@@ -1203,8 +1208,14 @@
       const orderRef = await firebaseDb.collection("orders").add({
         user_id: currentUser.uid,
         user_email: currentUser.email,
+        subtotal,
         total,
         points_to_add: points,
+        points_to_redeem: activeReward?.cost || 0,
+        discount_percent: activeReward?.percent || 0,
+        discount_amount: getDiscountAmount(),
+        reward_id: activeReward?.id || null,
+        reward_name: activeReward?.name || null,
         status: "pending",
         whatsapp_message: message,
         items,
@@ -1335,13 +1346,24 @@
               if (!orderSnap.exists) throw new Error("Pedido no encontrado.");
               const order = orderSnap.data();
               if (order.status !== "pending") return;
+              const profileRef = firebaseDb.collection("profiles").doc(order.user_id);
+              const pointsToRedeem = order.points_to_redeem || 0;
+
+              if (pointsToRedeem > 0) {
+                const profileSnap = await transaction.get(profileRef);
+                const availablePoints = profileSnap.data()?.points || 0;
+
+                if (availablePoints < pointsToRedeem) {
+                  throw new Error("El cliente ya no tiene puntos suficientes para aplicar este descuento.");
+                }
+              }
 
               transaction.update(orderRef, {
                 status: "confirmed",
                 confirmed_at: firebase.firestore.FieldValue.serverTimestamp()
               });
-              transaction.update(firebaseDb.collection("profiles").doc(order.user_id), {
-                points: firebase.firestore.FieldValue.increment(order.points_to_add || 0)
+              transaction.update(profileRef, {
+                points: firebase.firestore.FieldValue.increment((order.points_to_add || 0) - pointsToRedeem)
               });
             });
           } else {
@@ -1360,11 +1382,17 @@
       if (cart.length === 0) return;
       const lines = cart.map((item) => `- ${item.name} x${item.qty}: ${money.format(item.price * item.qty)}`);
       const points = Math.floor(getTotal() / POINTS_DIVISOR);
+      const discountLines = activeReward ? [
+        `Subtotal: ${money.format(getSubtotal())}`,
+        `Descuento por puntos: ${activeReward.name} (-${money.format(getDiscountAmount())})`,
+        `Puntos a descontar si se confirma el pago: ${activeReward.cost} pts`
+      ] : [];
       const message = [
         "Hola 27 Store, quiero hacer este pedido:",
         "",
         ...lines,
         "",
+        ...discountLines,
         `Total: ${money.format(getTotal())}`,
         `Puntos a sumar si se confirma el pago: ${points} pts`,
         currentUser ? `Cuenta: ${currentUser.email}` : "Cuenta: sin iniciar sesión",
