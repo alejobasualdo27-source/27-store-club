@@ -652,7 +652,10 @@
     <section id="mis-pedidos" class="section">
       <div class="section-title">
         <span>› Mi actividad</span>
-        <h2>Seguí el estado de tus pedidos</h2>
+        <h2>Seguí tus pedidos y puntos</h2>
+      </div>
+      <div class="admin-list" id="points-history-list">
+        <p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>
       </div>
       <div class="admin-list" id="user-orders-list">
         <p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>
@@ -812,6 +815,7 @@
     const rewardGrid = document.querySelector("#reward-grid");
     const redeemStatus = document.querySelector("#redeem-status");
     const userOrdersList = document.querySelector("#user-orders-list");
+    const pointsHistoryList = document.querySelector("#points-history-list");
     const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
     const rewards = [
       { id: "discount-5", name: "5% de descuento", cost: 10, percent: 5, description: "Usá 10 puntos y bajá el total de tu carrito un 5%." },
@@ -845,6 +849,9 @@
       accountNote.textContent = message;
       if (userOrdersList) {
         userOrdersList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>';
+      }
+      if (pointsHistoryList) {
+        pointsHistoryList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>';
       }
       renderRewards();
     };
@@ -1135,11 +1142,73 @@
       rejected: "Rechazado"
     })[status] || status || "Sin estado";
 
+    const formatOrderDate = (value) => {
+      const date = value?.toDate?.();
+      return date ? date.toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit", year: "numeric" }) : "Sin fecha";
+    };
+
+    const renderPointsHistory = (orders) => {
+      if (!pointsHistoryList) return;
+
+      const confirmedOrders = orders.filter((order) => order.status === "confirmed");
+      const pointsEarned = confirmedOrders.reduce((total, order) => total + (order.points_to_add || 0), 0);
+      const pointsRedeemed = confirmedOrders.reduce((total, order) => total + (order.points_to_redeem || 0), 0);
+      const movements = confirmedOrders.flatMap((order) => {
+        const date = formatOrderDate(order.confirmed_at || order.created_at);
+        const items = (order.items || []).map((item) => item.product_name).filter(Boolean).join(", ") || "Compra confirmada";
+        const rows = [];
+
+        if (order.points_to_add) {
+          rows.push({
+            date,
+            title: `+${order.points_to_add} pts`,
+            detail: `${items} · ${money.format(order.total || 0)}`
+          });
+        }
+
+        if (order.points_to_redeem) {
+          rows.push({
+            date,
+            title: `-${order.points_to_redeem} pts`,
+            detail: `${order.discount_percent || 0}% de descuento usado`
+          });
+        }
+
+        return rows;
+      });
+
+      if (!movements.length) {
+        pointsHistoryList.innerHTML = `
+          <article class="admin-order">
+            <strong>${currentProfile?.points || 0} puntos disponibles</strong>
+            <p>Todavía no tenés movimientos confirmados. Cuando una compra se confirme, acá vas a ver los puntos ganados y usados.</p>
+          </article>
+        `;
+        return;
+      }
+
+      pointsHistoryList.innerHTML = `
+        <article class="admin-order">
+          <strong>${currentProfile?.points || 0} puntos disponibles</strong>
+          <p>Ganados: ${pointsEarned} pts · Usados en descuentos: ${pointsRedeemed} pts</p>
+        </article>
+        ${movements.map((movement) => `
+          <article class="admin-order">
+            <strong>${escapeHtml(movement.title)} · ${escapeHtml(movement.date)}</strong>
+            <p>${escapeHtml(movement.detail)}</p>
+          </article>
+        `).join("")}
+      `;
+    };
+
     const loadUserOrders = async () => {
       if (!userOrdersList) return;
 
       if (!firebaseDb || !currentUser) {
         userOrdersList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>';
+        if (pointsHistoryList) {
+          pointsHistoryList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>';
+        }
         return;
       }
 
@@ -1164,8 +1233,11 @@
 
       if (!orders.length) {
         userOrdersList.innerHTML = '<p class="cart-empty">Todavía no tenés pedidos guardados.</p>';
+        renderPointsHistory([]);
         return;
       }
+
+      renderPointsHistory(orders);
 
       userOrdersList.innerHTML = orders.map((order) => {
         const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
