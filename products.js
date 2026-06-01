@@ -3,7 +3,7 @@ window.STORE_PRODUCTS = [
     "id": "gt7",
     "category": "ps",
     "name": "Gran Turismo 7",
-    "tag": "ps5/ps5",
+    "tag": "PS4/PS5",
     "type": "Cuenta",
     "stock": "Disponible",
     "price": 35000,
@@ -24,8 +24,8 @@ window.STORE_PRODUCTS = [
   {
     "id": "psplus-3meses",
     "category": "suscripciones",
-    "name": "Ps Plus 3Meses",
-    "tag": "Ps5/ps5",
+    "name": "PS Plus 3 meses",
+    "tag": "PS4/PS5",
     "type": "Cuenta",
     "stock": "Disponible",
     "price": 35000,
@@ -60,7 +60,7 @@ window.STORE_PRODUCTS = [
   {
     "id": "canva-pro-1-ano",
     "category": "suscripciones",
-    "name": "Canva Pro 1 ano",
+    "name": "Canva Pro 1 año",
     "tag": "Suscripciones",
     "type": "Cuenta",
     "stock": "Disponible",
@@ -77,7 +77,7 @@ window.STORE_PRODUCTS = [
     "type": "Cuenta",
     "stock": "Disponible",
     "price": 4000,
-    "image": "images/Canva.png",
+    "image": "images/Max.png",
     "description": "30 dias de acceso Premium con garantia oficial de 27 Store."
   },
   {
@@ -114,7 +114,7 @@ window.STORE_PRODUCTS = [
     "description": "30 dias de acceso Premium con garantia oficial de 27 Store."
   },
   {
-    "id": "cyberpunk-2077",
+    "id": "cyberpunk-2077-pc",
     "category": "juegos",
     "name": "Cyberpunk 2077",
     "tag": "PC",
@@ -287,13 +287,13 @@ window.STORE_PRODUCTS = [
   {
     "id": "juego-ps-a-pedido",
     "category": "ps",
-    "name": "Pedi tu juego PS4/PS5",
+    "name": "Pedí tu juego PS4/PS5",
     "tag": "A pedido",
     "type": "Cuenta",
     "stock": "A cotizar",
     "price": 0,
     "image": "images/atencion.png",
-    "description": "Mandanos el titulo, edicion y consola. Te respondemos precio, stock y forma de activacion."
+    "description": "Mandanos el título, edición y consola. Te respondemos precio, stock y forma de activación."
   },
   {
     "id": "re-requiem-random-1-key",
@@ -383,7 +383,7 @@ window.STORE_PRODUCTS = [
     "stock": "Disponible",
     "price": 15000,
     "image": "images/k8.png",
-    "description": "Key aleatoria con titulos destacados de juegos del ano."
+    "description": "Key aleatoria con títulos destacados de juegos del año."
   },
   {
     "id": "1-key-random-grand",
@@ -485,3 +485,11 @@ window.STORE_PRODUCTS = [
     "description": "Mejora el posicionamiento de tus videos con likes. Minima compra 100."
   }
 ];
+
+window.STORE_COUPONS = {
+  "27STORE": { "label": "27STORE", "percent": 10 },
+  "AMIGO27": { "label": "AMIGO27", "percent": 15 },
+  "STREAMING": { "label": "STREAMING", "percent": 5 },
+  "MILOFF": { "label": "MILOFF", "amount": 1000 },
+  "5000OFF": { "label": "5000OFF", "amount": 5000 }
+};

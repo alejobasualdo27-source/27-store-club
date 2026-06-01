@@ -19,4 +19,6 @@ Pagina estatica de 27 Store con catalogo, carrito y pedido directo por WhatsApp.
 
 ## Publicacion
 
-Se puede publicar con GitHub Pages, Netlify o cualquier hosting estatico. Para GitHub Pages, subir `index.html`, `products.js`, `admin.html` y la carpeta `images` a la raiz del repositorio y activar Pages desde `Settings > Pages`.
+Se puede publicar con GitHub Pages, Netlify o cualquier hosting estatico. Para publicar la tienda, subir `index.html`, `products.js` y la carpeta `images`.
+
+Mantené `admin.html` como herramienta local para editar productos y cupones. No hace falta publicarlo online.
