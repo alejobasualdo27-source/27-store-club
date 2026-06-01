@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -8,55 +8,30 @@
   <style>
     :root{--bg:#07080a;--line:rgba(255,255,255,.09);--text:#f4f7f2;--muted:#8b948e;--accent:#52ff73;--blue:#21c7ff;--warn:#ffce52}
     [hidden]{display:none!important}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.side-nav{position:fixed;inset:0 auto 0 0;z-index:20;width:240px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#050608;padding:18px 14px}.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 16px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}.brand img{width:34px;height:34px;border-radius:8px;border:1px solid rgba(82,255,115,.45);object-fit:cover}.brand span span,h1 span,.eyebrow,.stats span,.section-title span,.tag{color:var(--accent)}.side-nav nav{display:grid;gap:4px}.side-nav nav a,.side-cta{border-radius:8px;padding:10px 12px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.side-nav nav a:hover{background:rgba(255,255,255,.045);color:var(--text)}.side-nav nav a.active{background:rgba(82,255,115,.1);color:var(--accent)}.side-cta{margin-top:auto;text-align:center;color:#071008;background:var(--accent)}main{margin-left:240px}.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 24px 116px;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(82,255,115,.2),transparent 28%),radial-gradient(circle at 20% 80%,rgba(33,199,255,.14),transparent 26%),linear-gradient(180deg,#090b0d 0%,#07080a 100%)}.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop") center/cover;opacity:.16;filter:saturate(1.25) contrast(1.15)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0,transparent 70%)}.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.035) 8px);pointer-events:none}.corner{position:absolute;width:25px;height:25px;border-color:rgba(82,255,115,.7)}.top-left{top:24px;left:24px;border-top:2px solid;border-left:2px solid}.top-right{top:24px;right:24px;border-top:2px solid;border-right:2px solid}.bottom-left{bottom:24px;left:24px;border-bottom:2px solid;border-left:2px solid}.bottom-right{bottom:24px;right:24px;border-bottom:2px solid;border-right:2px solid}.hero-content{position:relative;z-index:1;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px;font-weight:900;text-transform:uppercase}.eyebrow span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}h1{margin:0;font-size:clamp(64px,12vw,150px);line-height:.82;font-weight:1000;text-shadow:0 14px 45px rgba(0,0,0,.65)}h1 span{font-size:.36em;vertical-align:top}.hero-copy{max-width:680px;margin:28px auto 0;color:rgba(244,247,242,.78);font-size:clamp(16px,2vw,21px);line-height:1.45}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;padding:0 22px;font-size:13px;font-weight:950;text-transform:uppercase}.btn.primary{background:var(--text);color:#071008}.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}.stats{width:min(860px,calc(100% - 40px));margin:-64px auto 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);backdrop-filter:blur(16px)}.stats article{padding:28px;border-right:1px solid var(--line)}.stats article:last-child{border-right:0}.stats span,.section-title span,.tag{font-size:11px;font-weight:900;text-transform:uppercase}.stats strong{display:block;margin-top:8px;font-size:42px;font-weight:1000}.stats p,.category-card p,details p{margin:0;color:var(--muted);line-height:1.55}.section{width:min(1080px,calc(100% - 48px));margin:0 auto 86px;scroll-margin-top:30px}.section-title{display:grid;gap:10px;margin-bottom:24px}.section-title h2{margin:0;max-width:760px;font-size:clamp(30px,5vw,56px);line-height:.98}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.category-card.wide{grid-column:span 2}.category-card img{width:100%;height:130px;object-fit:contain;border-radius:10px;margin-bottom:16px;background:rgba(255,255,255,.04)}.category-card h3{margin:6px 0 8px;font-size:24px}.category-card strong{display:inline-flex;width:max-content;margin-top:16px;color:var(--blue);font-size:13px;font-weight:900}.offer-card{min-height:360px;background:linear-gradient(180deg,rgba(7,8,10,.05),rgba(7,8,10,.92)),url("https://27sttore.netlify.app/images/S4.png") center/contain no-repeat,#151820}.ticker-section{overflow:hidden;border-block:1px solid var(--line);margin-bottom:86px}.ticker{display:flex;gap:38px;width:max-content;padding:18px 0;animation:ticker 18s linear infinite}.ticker span{color:rgba(244,247,242,.78);font-size:13px;font-weight:1000;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-35%)}}.leaderboard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.leaderboard div{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;min-height:68px;padding:0 22px;border-bottom:1px solid var(--line)}.leaderboard div:last-child{border-bottom:0}.leaderboard strong{color:var(--warn)}.leaderboard span{font-weight:900}.leaderboard em{color:var(--accent);font-style:normal;font-weight:800}details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}summary{cursor:pointer;font-weight:900}details p{padding-top:12px}.bottom-nav{display:none}@media (max-width:860px){.side-nav{display:none}main{margin-left:0;padding-bottom:74px}.hero{min-height:70vh;padding-top:52px}.stats,.category-grid{grid-template-columns:1fr}.stats article{border-right:0;border-bottom:1px solid var(--line);padding:22px}.stats article:last-child{border-bottom:0}.category-card.wide{grid-column:auto}.leaderboard div{grid-template-columns:1fr}.bottom-nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:rgba(5,6,8,.94);backdrop-filter:blur(14px)}.bottom-nav a{min-height:58px;display:grid;place-items:center;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.bottom-nav a:last-child{color:var(--accent)}}@media (max-width:520px){.section{width:min(100% - 28px,1080px);margin-bottom:64px}.hero-actions{display:grid}.stats{width:calc(100% - 28px)}h1{font-size:68px}.category-card img{height:112px}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.side-nav{position:fixed;inset:0 auto 0 0;z-index:20;width:240px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#050608;padding:18px 14px}.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 16px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}.brand img{width:34px;height:34px;border-radius:8px;border:1px solid rgba(82,255,115,.45);object-fit:cover}.brand span span,h1 span,.eyebrow,.stats span,.section-title span,.tag{color:var(--accent)}.side-nav nav{display:grid;gap:4px}.side-nav nav a,.side-cta{border-radius:8px;padding:10px 12px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.side-nav nav a:hover,.side-nav nav a.active{background:rgba(82,255,115,.1);color:var(--accent)}.side-cta{margin-top:auto;text-align:center;color:#071008;background:var(--accent)}main{margin-left:240px}.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 24px 116px;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(82,255,115,.2),transparent 28%),radial-gradient(circle at 20% 80%,rgba(33,199,255,.14),transparent 26%),linear-gradient(180deg,#090b0d 0%,#07080a 100%)}.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop") center/cover;opacity:.16;filter:saturate(1.25) contrast(1.15)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0,transparent 70%)}.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.035) 8px);pointer-events:none}.corner{position:absolute;width:25px;height:25px;border-color:rgba(82,255,115,.7)}.top-left{top:24px;left:24px;border-top:2px solid;border-left:2px solid}.top-right{top:24px;right:24px;border-top:2px solid;border-right:2px solid}.bottom-left{bottom:24px;left:24px;border-bottom:2px solid;border-left:2px solid}.bottom-right{bottom:24px;right:24px;border-bottom:2px solid;border-right:2px solid}.hero-content{position:relative;z-index:1;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px;font-weight:900;text-transform:uppercase}.eyebrow span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}h1{margin:0;font-size:clamp(64px,12vw,150px);line-height:.82;font-weight:1000;text-shadow:0 14px 45px rgba(0,0,0,.65)}h1 span{font-size:.36em;vertical-align:top}.hero-copy{max-width:680px;margin:28px auto 0;color:rgba(244,247,242,.78);font-size:clamp(16px,2vw,21px);line-height:1.45}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;padding:0 22px;font-size:13px;font-weight:950;text-transform:uppercase}.btn.primary{background:var(--text);color:#071008}.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}.stats{width:min(860px,calc(100% - 40px));margin:-64px auto 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);backdrop-filter:blur(16px)}.stats article{padding:28px;border-right:1px solid var(--line)}.stats article:last-child{border-right:0}.stats span,.section-title span,.tag{font-size:11px;font-weight:900;text-transform:uppercase}.stats strong{display:block;margin-top:8px;font-size:42px;font-weight:1000}.stats p,.category-card p,details p{margin:0;color:var(--muted);line-height:1.55}.section{width:min(1080px,calc(100% - 48px));margin:0 auto 86px;scroll-margin-top:30px}.section-title{display:grid;gap:10px;margin-bottom:24px}.section-title h2{margin:0;max-width:760px;font-size:clamp(30px,5vw,56px);line-height:.98}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.category-card.wide{grid-column:span 2}.category-card img{width:100%;height:130px;object-fit:contain;border-radius:10px;margin-bottom:16px;background:rgba(255,255,255,.04)}.category-card h3{margin:6px 0 8px;font-size:24px}.category-card strong{display:inline-flex;width:max-content;margin-top:16px;color:var(--blue);font-size:13px;font-weight:900}.offer-card{min-height:360px;background:linear-gradient(180deg,rgba(7,8,10,.05),rgba(7,8,10,.92)),url("images/S4.png") center/contain no-repeat,#151820}.ticker-section{overflow:hidden;border-block:1px solid var(--line);margin-bottom:86px}.ticker{display:flex;gap:38px;width:max-content;padding:18px 0;animation:ticker 18s linear infinite}.ticker span{color:rgba(244,247,242,.78);font-size:13px;font-weight:1000;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-35%)}}.leaderboard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.leaderboard div{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;min-height:68px;padding:0 22px;border-bottom:1px solid var(--line)}.leaderboard div:last-child{border-bottom:0}.leaderboard strong{color:var(--warn)}.leaderboard span{font-weight:900}.leaderboard em{color:var(--accent);font-style:normal;font-weight:800}details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}summary{cursor:pointer;font-weight:900}details p{padding-top:12px}.bottom-nav{display:none}@media (max-width:860px){.side-nav{display:none}main{margin-left:0;padding-bottom:74px}.hero{min-height:70vh;padding-top:52px}.stats,.category-grid{grid-template-columns:1fr}.stats article{border-right:0;border-bottom:1px solid var(--line);padding:22px}.stats article:last-child{border-bottom:0}.category-card.wide{grid-column:auto}.leaderboard div{grid-template-columns:1fr}.bottom-nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);background:rgba(5,6,8,.94);backdrop-filter:blur(14px)}.bottom-nav a{min-height:58px;display:grid;place-items:center;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.bottom-nav a:last-child{color:var(--accent)}}@media (max-width:520px){.section{width:min(100% - 28px,1080px);margin-bottom:64px}.hero-actions{display:grid}.stats{width:calc(100% - 28px)}h1{font-size:68px}.category-card img{height:112px}}
     .product-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}.product-actions strong{margin-top:0}.product-actions small{margin-left:6px;color:var(--muted);font-size:11px;text-decoration:line-through}.cart-add,.cart-open,.cart-close,.qty-btn,.remove-btn,.checkout-btn,.account-btn,.admin-btn{border:0;cursor:pointer;font:inherit}.cart-add,.account-btn,.admin-btn{min-height:38px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:11px;font-weight:950;text-transform:uppercase}.account-box{position:fixed;top:18px;right:18px;z-index:45;width:min(360px,calc(100% - 36px));border:1px solid var(--line);border-radius:14px;background:rgba(5,6,8,.92);backdrop-filter:blur(14px);padding:14px;box-shadow:0 12px 34px rgba(0,0,0,.35)}.account-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.account-info strong{display:block;font-size:13px}.account-info span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.account-form{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.account-form input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.account-note{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.admin-panel{display:none;width:min(1080px,calc(100% - 48px));margin:0 auto 86px;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);padding:18px}.admin-panel.open{display:block}.admin-panel h2{margin:0 0 12px}.admin-list{display:grid;gap:10px}.admin-order{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-order p{margin:0;color:var(--muted);font-size:13px}.admin-order-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-btn.reject{background:#ff7a7a;color:#170707}.cart-open{position:fixed;right:22px;bottom:22px;z-index:40;min-height:54px;border-radius:14px;padding:0 18px;background:var(--accent);color:#071008;font-size:13px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.42)}.cart-count{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:8px;border-radius:999px;background:#071008;color:var(--accent);font-size:12px}.cart-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.72);backdrop-filter:blur(12px)}.cart-modal.open{display:flex}.cart-panel{width:min(520px,100%);max-height:88vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}.cart-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}.cart-head h2{margin:0;font-size:24px}.cart-close{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);font-size:24px}.cart-items{display:grid;gap:10px;padding:16px 20px;overflow:auto}.cart-empty{color:var(--muted);font-size:14px}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.cart-item h3{margin:0 0 4px;font-size:15px}.cart-item p{margin:0;color:var(--muted);font-size:12px}.qty-row{display:flex;align-items:center;gap:8px}.qty-btn,.remove-btn{border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);font-weight:900}.qty-btn{width:30px;height:30px}.remove-btn{padding:7px 9px;color:#ff7a7a}.cart-foot{padding:18px 20px;border-top:1px solid var(--line);background:rgba(255,255,255,.035)}.cart-total{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:22px;font-weight:1000}.checkout-btn{width:100%;min-height:52px;border-radius:10px;background:var(--accent);color:#071008;font-size:14px;font-weight:1000;text-transform:uppercase}.checkout-btn:disabled{opacity:.45;cursor:not-allowed}@media (max-width:860px){.account-box{position:static;width:calc(100% - 28px);margin:14px auto 0}.cart-open{right:12px;bottom:72px}.product-actions{align-items:stretch;flex-direction:column}.cart-add{width:100%}.admin-panel{width:calc(100% - 28px)}}
-    .category-card{position:relative;gap:14px;cursor:pointer;transition:transform 160ms ease,border-color 160ms ease,background 160ms ease}.category-card:hover{transform:translateY(-2px);border-color:rgba(82,255,115,.34);background:linear-gradient(180deg,rgba(255,255,255,.062),rgba(255,255,255,.025))}.category-card img{height:156px;object-fit:contain;padding:12px;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.11),rgba(255,255,255,.035) 58%,rgba(0,0,0,.12));border:1px solid rgba(255,255,255,.06)}.category-card h3{line-height:1.05}.category-card p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.product-actions{min-height:44px}.product-actions strong{font-size:16px;color:var(--blue)}.product-detail-modal{position:fixed;inset:0;z-index:70;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.74);backdrop-filter:blur(14px)}.product-detail-modal.open{display:flex}.product-detail-panel{width:min(860px,100%);max-height:90vh;display:grid;grid-template-columns:minmax(260px,.95fr) 1fr;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.58);overflow:hidden}.product-detail-media{min-height:420px;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,rgba(82,255,115,.12),rgba(33,199,255,.08) 42%,rgba(255,255,255,.035));padding:26px}.product-detail-media img{width:100%;max-height:360px;object-fit:contain}.product-detail-body{display:flex;flex-direction:column;gap:14px;padding:24px}.product-detail-body h2{margin:0;font-size:clamp(28px,4vw,44px);line-height:1}.product-detail-body p{margin:0;color:var(--muted);line-height:1.55}.product-detail-price{color:var(--blue);font-size:28px;font-weight:1000}.product-detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}.product-detail-close{width:38px;height:38px;border:0;border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);cursor:pointer;font:inherit;font-size:24px}.product-detail-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}@media (max-width:860px){.category-card img{height:148px}.product-detail-panel{grid-template-columns:1fr;overflow:auto}.product-detail-media{min-height:260px}.product-detail-media img{max-height:230px}.product-detail-actions{display:grid}.product-detail-actions .cart-add,.product-detail-actions .btn{width:100%}}
     .reward-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reward-card{display:grid;gap:14px;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(82,255,115,.08),rgba(255,255,255,.018))}.reward-card h3{margin:0;font-size:22px}.reward-card p{margin:0;color:var(--muted);line-height:1.45}.reward-card strong{color:var(--warn);font-size:26px}.reward-btn{min-height:42px;border:0;border-radius:8px;background:var(--accent);color:#071008;cursor:pointer;font:inherit;font-size:12px;font-weight:950;text-transform:uppercase}.reward-btn:disabled{opacity:.45;cursor:not-allowed}.admin-subtitle{margin:16px 0 8px;color:var(--accent);font-size:12px;text-transform:uppercase}.redeem-status{margin-top:8px;color:var(--muted);font-size:13px}@media (max-width:860px){.reward-grid{grid-template-columns:1fr}}
-    .club-grid,.draw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.club-card,.receipt-card{border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.club-card.active{border-color:rgba(82,255,115,.75);box-shadow:0 0 0 1px rgba(82,255,115,.16) inset}.club-card h3,.receipt-card h3{margin:8px 0;font-size:22px}.club-card p,.receipt-card p{margin:0;color:var(--muted);line-height:1.45}.code-pill{display:inline-flex;align-items:center;min-height:34px;border:1px solid var(--line);border-radius:8px;padding:0 10px;background:rgba(255,255,255,.05);font-weight:900}.cart-tools{display:grid;gap:8px;margin-bottom:12px}.cart-tools-row{display:grid;grid-template-columns:1fr auto;gap:8px}.cart-tools input,.admin-field input,.admin-field select{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}.admin-tool{display:grid;gap:10px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-field{display:grid;gap:6px}.admin-field label{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.status-select{min-height:36px;border:1px solid var(--line);border-radius:8px;background:#101216;color:var(--text);padding:0 8px}.receipt-card{margin-top:14px;border-color:rgba(33,199,255,.45)}@media (max-width:860px){.club-grid,.draw-grid,.admin-grid,.cart-tools-row{grid-template-columns:1fr}}
-    @media (max-width:860px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.category-card{min-height:0;padding:12px;border-radius:10px}.category-card.wide{grid-column:auto}.category-card img{height:118px;margin-bottom:4px;padding:8px;border-radius:8px}.category-card h3{margin:4px 0 6px;font-size:17px;line-height:1.08}.category-card p{font-size:12px;line-height:1.35;-webkit-line-clamp:2}.product-actions{min-height:0;gap:8px;margin-top:10px;align-items:stretch;flex-direction:column}.product-actions strong{font-size:14px;line-height:1.2}.product-actions small{display:block;margin:2px 0 0}.cart-add{width:100%;min-height:34px;padding:0 8px;font-size:10px}.section-title h2{font-size:clamp(28px,8vw,42px)}}@media (max-width:380px){.category-grid{gap:8px}.category-card{padding:10px}.category-card img{height:104px}.category-card h3{font-size:15px}.category-card p{font-size:11px}.cart-add{font-size:9px}}
-    .account-toggle{position:fixed;top:18px;right:18px;z-index:46;min-height:42px;border:1px solid rgba(82,255,115,.32);border-radius:999px;background:rgba(5,6,8,.9);color:var(--accent);cursor:pointer;padding:0 16px;font:inherit;font-size:12px;font-weight:950;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.35);backdrop-filter:blur(14px)}.account-box{display:none}.account-box.open{display:block}.account-close{width:34px;height:34px;border:0;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);cursor:pointer;font:inherit;font-size:22px}.account-row{align-items:flex-start}.account-order-actions{display:flex;align-items:center;gap:8px}@media (max-width:860px){.account-toggle{top:12px;right:12px;min-height:38px;padding:0 12px}.account-box{position:fixed;top:60px;right:12px;width:min(360px,calc(100% - 24px));margin:0}.account-box.open{display:block}}
+    .delivery-options{display:grid;gap:8px;margin:0 0 14px}.delivery-options label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:rgba(255,255,255,.035);color:var(--text);font-size:13px;font-weight:800}.delivery-options input{accent-color:var(--accent);margin-top:2px}.delivery-options span{display:block;color:var(--muted);font-size:12px;font-weight:600;line-height:1.35}.order-status{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.4}
+    .category-card{padding:12px;border-radius:10px}.category-card img{height:148px;padding:7px;object-fit:contain;object-position:center;border:1px solid var(--line);border-radius:8px;background:#0b0d11}.category-card.wide img{height:170px}.product-actions{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:8px}.product-type{justify-self:start;display:inline-flex;align-items:center;min-height:26px;border:1px solid rgba(82,255,115,.28);border-radius:999px;padding:0 9px;background:rgba(82,255,115,.08);color:var(--accent);font-size:10px;font-weight:1000;text-transform:uppercase;letter-spacing:.04em}.cart-type{display:inline-flex;margin-top:4px;border:1px solid rgba(82,255,115,.24);border-radius:999px;padding:3px 8px;color:var(--accent);font-size:10px;font-weight:900;text-transform:uppercase}@media (max-width:860px){.product-actions{grid-template-columns:1fr 1fr}.product-type{grid-column:1 / 2}.info-btn{grid-column:2 / 3}.cart-add{grid-column:1 / -1}.category-card img{height:138px}.category-card.wide img{height:150px}}
+    .category-card{cursor:pointer;transition:border-color .18s ease,transform .18s ease,background .18s ease}.category-card:hover{border-color:rgba(82,255,115,.36);transform:translateY(-2px);background:linear-gradient(180deg,rgba(82,255,115,.07),rgba(255,255,255,.02))}.product-detail-modal{position:fixed;inset:0;z-index:65;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.76);backdrop-filter:blur(12px)}.product-detail-modal.open{display:flex}.product-detail-panel{width:min(760px,100%);max-height:90vh;display:grid;grid-template-columns:minmax(220px,320px) 1fr;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.58);overflow:hidden}.product-detail-media{display:grid;place-items:center;background:#080a0d;padding:18px}.product-detail-media img{width:100%;max-height:360px;object-fit:contain;object-position:center;border-radius:10px}.product-detail-body{padding:20px;display:flex;flex-direction:column;gap:12px}.product-detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.product-detail-head h2{margin:0;font-size:28px;line-height:1}.product-detail-close{width:36px;height:36px;border:0;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);cursor:pointer;font-size:24px}.product-detail-description{margin:0;color:var(--muted);line-height:1.55}.product-detail-meta{display:flex;gap:8px;flex-wrap:wrap}.product-detail-meta span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--accent);font-size:11px;font-weight:1000;text-transform:uppercase}.product-detail-actions{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.product-detail-price{color:var(--blue);font-size:20px;font-weight:1000}.product-detail-add{min-height:44px;border:0;border-radius:9px;padding:0 16px;background:var(--accent);color:#071008;cursor:pointer;font:inherit;font-size:12px;font-weight:1000;text-transform:uppercase}@media (max-width:700px){.product-detail-panel{grid-template-columns:1fr}.product-detail-media img{max-height:260px}.product-detail-head h2{font-size:24px}}
+    .catalog-tools{width:min(1080px,calc(100% - 48px));margin:0 auto 44px;display:grid;gap:12px}.catalog-search{min-height:48px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.055);color:var(--text);padding:0 14px;font:inherit}.catalog-search::placeholder{color:var(--muted)}.filter-row{display:flex;gap:8px;flex-wrap:wrap}.filter-btn,.info-btn{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);color:var(--muted);cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase}.filter-btn{min-height:34px;padding:0 12px}.filter-btn.active{border-color:rgba(82,255,115,.5);background:rgba(82,255,115,.12);color:var(--accent)}.info-btn{justify-self:end;min-height:30px;padding:0 10px;color:var(--text)}.stock-badge{position:absolute;top:20px;left:20px;z-index:1;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 9px;background:rgba(5,6,8,.82);color:var(--accent);font-size:10px;font-weight:1000;text-transform:uppercase}.category-card{position:relative}.category-card.is-hidden{display:none}.empty-results{display:none;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:16px;background:rgba(255,255,255,.035)}.empty-results.show{display:block}.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.how-step{border:1px solid var(--line);border-radius:10px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.how-step strong{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:var(--accent);color:#071008;font-weight:1000}.how-step h3{margin:14px 0 8px}.how-step p{margin:0;color:var(--muted);line-height:1.45}.coupon-box{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:12px}.coupon-box input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.coupon-box button{border:0;border-radius:8px;background:var(--text);color:#071008;cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase;padding:0 12px}.coupon-note{margin:0 0 12px;color:var(--muted);font-size:12px}.cart-discount{display:flex;align-items:center;justify-content:space-between;margin:-4px 0 12px;color:var(--accent);font-size:13px;font-weight:900}@media (max-width:860px){.catalog-tools{width:calc(100% - 28px);margin-bottom:34px}.how-grid{grid-template-columns:1fr}.info-btn{grid-column:1 / -1;justify-self:stretch}.coupon-box{grid-template-columns:1fr}.coupon-box button{min-height:40px}}
   </style>
 </head>
 <body>
-  <button class="account-toggle" id="account-toggle" type="button" aria-expanded="false" aria-controls="account-box">Mi cuenta</button>
-  <div class="account-box" id="account-box">
-    <div class="account-row">
-      <div class="account-info">
-        <strong id="account-title">Mi cuenta</strong>
-        <span id="account-status">Iniciá sesión para guardar pedidos y puntos.</span>
-      </div>
-      <div class="account-order-actions">
-        <button class="account-btn" id="logout-btn" type="button" hidden>Salir</button>
-        <button class="account-close" id="account-close" type="button" aria-label="Cerrar cuenta">&times;</button>
-      </div>
-    </div>
-    <form class="account-form" id="auth-form">
-      <input id="auth-email" type="email" placeholder="Email" autocomplete="email" required>
-      <input id="auth-password" type="password" placeholder="Contraseña" autocomplete="current-password" required>
-      <div class="account-actions">
-        <button class="account-btn" type="submit" data-auth-action="login">Entrar</button>
-        <button class="account-btn" type="submit" data-auth-action="signup">Crear cuenta</button>
-      </div>
-    </form>
-    <p class="account-note" id="account-note">Cuando conectes la base de datos, los pedidos quedarán pendientes y vos podrás aprobarlos.</p>
-  </div>
-
   <aside class="side-nav" aria-label="Navegacion principal">
     <a class="brand" href="#inicio" aria-label="27 Store Club">
-      <img src="https://27sttore.netlify.app/images/0.png" alt="27 Store">
+      <img src="images/0.png" alt="27 Store">
       <span>27<span>Club</span></span>
     </a>
     <nav>
       <a class="active" href="#inicio">Inicio</a>
+      <a href="#como-comprar">Cómo comprar</a>
       <a href="#ofertas">Ofertas</a>
       <a href="#suscripciones">Suscripciones</a>
-      <a href="#juegos">Juegos</a>
+      <a href="#juegos">PC</a>
+      <a href="#ps">PS4/PS5</a>
       <a href="#keys">Keys</a>
       <a href="#social">Social</a>
-      <a href="#club">Club</a>
-      <a href="#canjes">Canjes</a>
-      <a href="#sorteos">Sorteos</a>
-      <a href="#mis-pedidos">Mis pedidos</a>
       <a href="#pedi-tu-juego">Pedí tu juego</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -74,10 +49,10 @@
 
       <div class="hero-content">
         <p class="eyebrow"><span></span> Comunidad digital de 27 Store</p>
-        <h1>27 Store</h1>
-        <p class="hero-copy">Sumate a nosotros, compra y junta puntos para canjear por juegos, servicios de streaming, keys, beneficios sociales y recompensas exclusivas.</p>
+        <h1>27 Store<span>.club</span></h1>
+        <p class="hero-copy">Streaming, PC, PS4/PS5, keys y servicios digitales en un solo carrito. Elegís, mandás el pedido por WhatsApp y coordinamos si va como clave para tu cuenta o como cuenta lista para usar.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="https://discord.gg/4fGnpyt9Me" target="_blank" rel="noreferrer">Unirme al club</a>
+          <a class="btn primary" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Unirme al club</a>
           <a class="btn ghost" href="https://www.instagram.com/27.sttore/" target="_blank" rel="noreferrer">Ver Instagram</a>
         </div>
       </div>
@@ -85,101 +60,77 @@
 
     <section class="stats" aria-label="Resumen del club">
       <article>
-        <span>Clientes Satifeschos</span>
-        <strong>+250</strong>
-        <p>Pedidos Realizados</p>
+        <span>Comunidad</span>
+        <strong>+1.2k</strong>
+        <p>miembros activos</p>
       </article>
       <article>
-        <span>Sorteos Activos</span>
-        <strong>0</strong>
-        <p>Se vendran nuevos</p>
+        <span>Entrega</span>
+        <strong>24/7</strong>
+        <p>atención por WhatsApp</p>
       </article>
       <article>
-        <span>Puntos Canjeados</span>
-        <strong>1200</strong>
-        <p>Desde el inicio</p>
+        <span>Modalidad</span>
+        <strong>2</strong>
+        <p>clave o cuenta lista</p>
       </article>
+    </section>
+
+    <section id="como-comprar" class="section">
+      <div class="section-title">
+        <span>› Cómo comprar</span>
+        <h2>Elegís, consultás stock y cerramos por WhatsApp</h2>
+      </div>
+      <div class="how-grid">
+        <article class="how-step">
+          <strong>1</strong>
+          <h3>Elegí productos</h3>
+          <p>Buscá por nombre, filtrá por categoría y tocá una tarjeta para ver más información.</p>
+        </article>
+        <article class="how-step">
+          <strong>2</strong>
+          <h3>Armá el carrito</h3>
+          <p>Agregá productos, revisá cantidades y cargá un cupón si tenés uno.</p>
+        </article>
+        <article class="how-step">
+          <strong>3</strong>
+          <h3>Confirmamos stock</h3>
+          <p>Te respondemos disponibilidad, modalidad de entrega y precio final.</p>
+        </article>
+        <article class="how-step">
+          <strong>4</strong>
+          <h3>Pagás y recibís</h3>
+          <p>Coordinamos pago, entrega y soporte por el mismo chat.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog-tools" aria-label="Buscar y filtrar catálogo">
+      <input class="catalog-search" id="catalog-search" type="search" placeholder="Buscar Netflix, GTA, PS5, Canva...">
+      <div class="filter-row" id="filter-row">
+        <button class="filter-btn active" type="button" data-filter="all">Todo</button>
+        <button class="filter-btn" type="button" data-filter="ofertas">Ofertas</button>
+        <button class="filter-btn" type="button" data-filter="suscripciones">Streaming</button>
+        <button class="filter-btn" type="button" data-filter="juegos">PC</button>
+        <button class="filter-btn" type="button" data-filter="ps">PS4/PS5</button>
+        <button class="filter-btn" type="button" data-filter="keys">Keys</button>
+        <button class="filter-btn" type="button" data-filter="social">Social</button>
+      </div>
+      <select class="catalog-search" id="sort-select" aria-label="Ordenar productos">
+        <option value="default">Orden original</option>
+        <option value="price-asc">Menor precio primero</option>
+        <option value="price-desc">Mayor precio primero</option>
+        <option value="consult">A consultar primero</option>
+      </select>
+      <p class="empty-results" id="empty-results">No encontré productos con ese filtro. Probá con otro nombre o categoría.</p>
     </section>
 
     <section id="ofertas" class="section">
       <div class="section-title">
         <span>› Ofertas destacadas</span>
-        <h2>Beneficios activos para miembros del club</h2>
+        <h2>Ofertas activas para comprar directo por WhatsApp</h2>
       </div>
-      <div class="category-grid">
-        <article class="category-card wide">
-          <img src="https://27sttore.netlify.app/images/S1.png" alt="Paramount">
-          <div>
-            <span class="tag">OFERTA</span>
-            <h3>Paramount</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$4.000</strong>
-            <button class="cart-add" data-name="Paramount" data-price="4000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S4.png" alt="Netflix Premium">
-          <div>
-            <span class="tag">TOP VENTAS</span>
-            <h3>Netflix Premium</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$7.400</strong>
-            <button class="cart-add" data-name="Netflix Premium" data-price="7400">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S7.png" alt="Canva Pro 1 año">
-          <div>
-            <span class="tag">Suscripciones</span>
-            <h3>Canva Pro 1 año</h3>
-            <p>365 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$45.000 <small>$70.000</small></strong>
-            <button class="cart-add" data-name="Canva Pro 1 año" data-price="45000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/8.png" alt="Cyberpunk 2077">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Cyberpunk 2077</h3>
-            <p>Metete de lleno en Night City, una megalopolis futurista obsesionada con el poder y las modificaciones corporales.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$75.000 <small>$90.000</small></strong>
-            <button class="cart-add" data-name="Cyberpunk 2077" data-price="75000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/11.png" alt="EA SPORTS FC 26">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>EA SPORTS FC 26</h3>
-            <p>La entrega mas reciente del simulador de futbol, con plantillas actualizadas y gameplay realista.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$65.000 <small>$90.000</small></strong>
-            <button class="cart-add" data-name="EA SPORTS FC 26" data-price="65000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/2.png" alt="The Last Of Us Part I">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>The Last Of Us Part I</h3>
-            <p>Acompaña a Joel y Ellie en un viaje brutal de supervivencia por un mundo devastado.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$65.000 <small>$90.000</small></strong>
-            <button class="cart-add" data-name="The Last Of Us Part I" data-price="65000">Agregar</button>
-          </div>
-        </article>
-      </div>
+      <div class="category-grid" data-products="ofertas"></div>
     </section>
 
     <section id="suscripciones" class="section">
@@ -187,517 +138,39 @@
         <span>› Suscripciones</span>
         <h2>Streaming y herramientas digitales</h2>
       </div>
-      <div class="category-grid">
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S1.png" alt="Paramount">
-          <div>
-            <span class="tag">OFERTA</span>
-            <h3>Paramount</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$4.000</strong>
-            <button class="cart-add" data-name="Paramount" data-price="4000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S2.png" alt="HBO Max">
-          <div>
-            <span class="tag">Suscripciones</span>
-            <h3>HBO Max</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$4.000</strong>
-            <button class="cart-add" data-name="HBO Max" data-price="4000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S3.png" alt="Prime">
-          <div>
-            <span class="tag">Suscripciones</span>
-            <h3>Prime</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$4.000</strong>
-            <button class="cart-add" data-name="Prime" data-price="4000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S5.png" alt="Crunchyroll">
-          <div>
-            <span class="tag">Suscripciones</span>
-            <h3>Crunchyroll</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$4.000</strong>
-            <button class="cart-add" data-name="Crunchyroll" data-price="4000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S4.png" alt="Netflix Premium">
-          <div>
-            <span class="tag">TOP VENTAS</span>
-            <h3>Netflix Premium</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$7.400</strong>
-            <button class="cart-add" data-name="Netflix Premium" data-price="7400">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S6.png" alt="Disney+ Premium">
-          <div>
-            <span class="tag">Suscripciones</span>
-            <h3>Disney+ Premium</h3>
-            <p>30 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$5.000</strong>
-            <button class="cart-add" data-name="Disney+ Premium" data-price="5000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/S7.png" alt="Canva Pro 1 año">
-          <div>
-            <span class="tag">Suscripciones</span>
-            <h3>Canva Pro 1 año</h3>
-            <p>365 dias de acceso Premium con garantia oficial de 27 Store.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$45.000 <small>$70.000</small></strong>
-            <button class="cart-add" data-name="Canva Pro 1 año" data-price="45000">Agregar</button>
-          </div>
-        </article>
-      </div>
+      <div class="category-grid" data-products="suscripciones"></div>
     </section>
 
     <section id="juegos" class="section">
       <div class="section-title">
-        <span>› Juegos</span>
-        <h2>Juegos Para tu biblioteca</h2>
+        <span>› PC</span>
+        <h2>Juegos para PC y lanzamientos</h2>
       </div>
-      <div class="category-grid">
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/8.png" alt="Cyberpunk 2077">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Cyberpunk 2077</h3>
-            <p>Metete de lleno en Night City, una megalopolis futurista obsesionada con el poder y las modificaciones corporales.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$75.000 <small>$90.000</small></strong>
-            <button class="cart-add" data-name="Cyberpunk 2077" data-price="75000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/7.png" alt="Resident Evil 4 (2023)">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Resident Evil 4 (2023)</h3>
-            <p>El regreso de un clasico absoluto, recreado desde cero con graficos brutales y jugabilidad moderna.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$40.000</strong>
-            <button class="cart-add" data-name="Resident Evil 4 (2023)" data-price="40000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/6.png" alt="Dead by Daylight">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Dead by Daylight</h3>
-            <p>Terror multijugador asimetrico para jugar con amigos: un asesino contra cuatro sobrevivientes.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$15.000</strong>
-            <button class="cart-add" data-name="Dead by Daylight" data-price="15000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/5.png" alt="Assetto Corsa">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Assetto Corsa</h3>
-            <p>Simulador de conduccion con fisica hiperrealista, circuitos escaneados con laser y precision total.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$17.000</strong>
-            <button class="cart-add" data-name="Assetto Corsa" data-price="17000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/9.png" alt="DayZ">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>DayZ</h3>
-            <p>Supervivencia extrema en un mundo abierto postapocaliptico infectado por zombies.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$37.000</strong>
-            <button class="cart-add" data-name="DayZ" data-price="37000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/12.png" alt="Ready or Not">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Ready or Not</h3>
-            <p>Shooter tactico realista donde el trabajo en equipo y el equipamiento correcto son clave.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$30.000</strong>
-            <button class="cart-add" data-name="Ready or Not" data-price="30000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/11.png" alt="EA SPORTS FC 26">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>EA SPORTS FC 26</h3>
-            <p>La entrega mas reciente del simulador de futbol, con plantillas actualizadas y gameplay realista.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$65.000 <small>$90.000</small></strong>
-            <button class="cart-add" data-name="EA SPORTS FC 26" data-price="65000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/13.png" alt="Gta V Enhanced">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Gta V Enhanced</h3>
-            <p>La version definitiva del clasico de Rockstar, optimizada con graficos de nueva generacion.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$30.000</strong>
-            <button class="cart-add" data-name="Gta V Enhanced" data-price="30000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/4.png" alt="ARC Raider">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>ARC Raider</h3>
-            <p>Shooter de extraccion en tercera persona con accion, recursos y maquinas ARC.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$65.000</strong>
-            <button class="cart-add" data-name="ARC Raider" data-price="65000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/10.png" alt="Assassins Creed Valhalla">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Assassins Creed Valhalla</h3>
-            <p>Convertite en Eivor, lidera tu clan vikingo y conquista territorios en una aventura RPG enorme.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$30.000</strong>
-            <button class="cart-add" data-name="Assassins Creed Valhalla" data-price="30000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/3.png" alt="Red Dead Redemption 2">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>Red Dead Redemption 2</h3>
-            <p>Una obra maestra de Rockstar en el salvaje oeste, con mundo abierto e historia memorable.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$55.000</strong>
-            <button class="cart-add" data-name="Red Dead Redemption 2" data-price="55000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/2.png" alt="The Last Of Us Part I">
-          <div>
-            <span class="tag">Juegos</span>
-            <h3>The Last Of Us Part I</h3>
-            <p>Acompaña a Joel y Ellie en un viaje brutal de supervivencia por un mundo devastado.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$65.000 <small>$90.000</small></strong>
-            <button class="cart-add" data-name="The Last Of Us Part I" data-price="65000">Agregar</button>
-          </div>
-        </article>
+      <div class="category-grid" data-products="juegos"></div>
+    </section>
+
+    <section id="ps" class="section">
+      <div class="section-title">
+        <span>› PS4/PS5</span>
+        <h2>Juegos y cuentas para PlayStation</h2>
       </div>
+      <div class="category-grid" data-products="ps"></div>
     </section>
 
     <section id="keys" class="section">
       <div class="section-title">
         <span>› Random keys</span>
-        <h2>Keys sorpresas</h2>
+        <h2>Llaves sorpresa y drops especiales</h2>
       </div>
-      <div class="category-grid">
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/K1.png" alt="RE Requiem Random 1 Key">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>RE Requiem Random 1 Key</h3>
-            <p>Intenta conseguir Resident Evil con esta clave especial.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$7.000</strong>
-            <button class="cart-add" data-name="RE Requiem Random 1 Key" data-price="7000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/K2.png" alt="Random VIP 5 Keys">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>Random VIP 5 Keys</h3>
-            <p>Al menos 2 juegos valen 30 euros y el resto valen 20 euros o mas.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$25.000</strong>
-            <button class="cart-add" data-name="Random VIP 5 Keys" data-price="25000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/K3.png" alt="Random DIAMOND 5 Keys">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>Random DIAMOND 5 Keys</h3>
-            <p>Al menos 2 juegos valen 15 euros y el resto valen 5 euros o mas.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$20.000 <small>$55.000</small></strong>
-            <button class="cart-add" data-name="Random DIAMOND 5 Keys" data-price="20000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k4.png" alt="AAA Random 5 Keys">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>AAA Random 5 Keys</h3>
-            <p>5 llaves con juegos de presupuesto AAA garantizados.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$30.000 <small>$70.000</small></strong>
-            <button class="cart-add" data-name="AAA Random 5 Keys" data-price="30000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k5.png" alt="TIER S Random 1 Key">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>TIER S Random 1 Key</h3>
-            <p>Una llave maestra con un juego de maxima categoria Tier S.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$17.000</strong>
-            <button class="cart-add" data-name="TIER S Random 1 Key" data-price="17000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k6.png" alt="5 Ramdoms Keys (Grand)">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>5 Ramdoms Keys (Grand)</h3>
-            <p>5 keys aleatorias de Steam con juegos.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$15.000</strong>
-            <button class="cart-add" data-name="5 Ramdoms Keys (Grand)" data-price="15000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k7.png" alt="5 Ramdoms Keys (Elite)">
-          <div>
-            <span class="tag">OFERTA</span>
-            <h3>5 Ramdoms Keys (Elite)</h3>
-            <p>5 keys aleatorias de Steam con juegos valorados en mas de 20 euros.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$15.000</strong>
-            <button class="cart-add" data-name="5 Ramdoms Keys (Elite)" data-price="15000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k9.png" alt="1 Key Ramdom (GOTY)">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>1 Key Ramdom (GOTY)</h3>
-            <p>Key aleatoria con titulos destacados de juegos del año.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$15.000</strong>
-            <button class="cart-add" data-name="1 Key Ramdom (GOTY)" data-price="15000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/k8.png" alt="1 Key Ramdom (Grand)">
-          <div>
-            <span class="tag">Keys</span>
-            <h3>1 Key Ramdom (Grand)</h3>
-            <p>Key aleatoria con juego random.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$5.000</strong>
-            <button class="cart-add" data-name="1 Key Ramdom (Grand)" data-price="5000">Agregar</button>
-          </div>
-        </article>
-      </div>
+      <div class="category-grid" data-products="keys"></div>
     </section>
 
     <section id="social" class="section">
       <div class="section-title">
         <span>› Social</span>
-        <h2>Boosts para creadores</h2>
+        <h2>Boosts para perfiles y creadores</h2>
       </div>
-      <div class="category-grid">
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F2.png" alt="Seguidores IG">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Seguidores IG</h3>
-            <p>Seguidores de alta calidad. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.500</strong>
-            <button class="cart-add" data-name="Seguidores IG" data-price="2500">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F1.png" alt="Likes IG">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Likes IG</h3>
-            <p>Aumenta la interaccion de tus posts con likes reales. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.000</strong>
-            <button class="cart-add" data-name="Likes IG" data-price="2000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F4.png" alt="Seguidores TikTok">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Seguidores TikTok</h3>
-            <p>Seguidores de alta calidad. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.500</strong>
-            <button class="cart-add" data-name="Seguidores TikTok" data-price="2500">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F3.png" alt="Likes TikTok">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Likes TikTok</h3>
-            <p>Impulsa tus videos con likes de perfiles activos. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.000</strong>
-            <button class="cart-add" data-name="Likes TikTok" data-price="2000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F5.png" alt="Seguidores Twitch">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Seguidores Twitch</h3>
-            <p>Seguidores de alta calidad. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.500</strong>
-            <button class="cart-add" data-name="Seguidores Twitch" data-price="2500">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F6.png" alt="Seguidores Kick">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Seguidores Kick</h3>
-            <p>Seguidores de alta calidad. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.500</strong>
-            <button class="cart-add" data-name="Seguidores Kick" data-price="2500">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://27sttore.netlify.app/images/F7.png" alt="Suscriptores Youtube">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Suscriptores Youtube</h3>
-            <p>Suscriptores reales para tu canal. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$4.000</strong>
-            <button class="cart-add" data-name="Suscriptores Youtube" data-price="4000">Agregar</button>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Likes Youtube">
-          <div>
-            <span class="tag">Social</span>
-            <h3>Likes Youtube</h3>
-            <p>Mejora el posicionamiento de tus videos con likes. Minima compra 100.</p>
-          </div>
-          <div class="product-actions">
-            <strong>$2.000</strong>
-            <button class="cart-add" data-name="Likes Youtube" data-price="2000">Agregar</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="club" class="section">
-      <div class="section-title">
-        <span>› Niveles y referidos</span>
-        <h2>Tu progreso dentro del club</h2>
-      </div>
-      <div class="club-grid" id="club-level-grid"></div>
-      <div class="receipt-card">
-        <span class="tag">Referidos</span>
-        <h3>Tu código</h3>
-        <p>Compartilo. Si alguien se registra con tu código y hace una compra pagada, ganás puntos extra.</p>
-        <p class="code-pill" id="referral-code">Iniciá sesión</p>
-        <div class="cart-tools-row" style="margin-top:12px">
-          <input id="referral-input" type="text" placeholder="Código de quien te invitó">
-          <button class="admin-btn" id="save-referral-btn" type="button">Guardar referido</button>
-        </div>
-        <p class="redeem-status" id="referral-status">Solo se puede guardar una vez por cuenta.</p>
-      </div>
-    </section>
-
-    <section id="canjes" class="section">
-      <div class="section-title">
-        <span>› Canje de puntos</span>
-        <h2>Usá tus puntos para descontar en tu compra</h2>
-      </div>
-      <div class="reward-grid" id="reward-grid"></div>
-      <p class="redeem-status" id="redeem-status">Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.</p>
-    </section>
-
-    <section id="sorteos" class="section">
-      <div class="section-title">
-        <span>› Sorteos</span>
-        <h2>Convertí puntos en tickets</h2>
-      </div>
-      <div class="draw-grid" id="draw-grid"></div>
-      <p class="redeem-status" id="draw-status">20 puntos equivalen a 1 ticket.</p>
-    </section>
-
-    <section id="mis-pedidos" class="section">
-      <div class="section-title">
-        <span>› Mi actividad</span>
-        <h2>Seguí tus pedidos y puntos</h2>
-      </div>
-      <div class="admin-list" id="points-history-list">
-        <p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>
-      </div>
-      <div class="admin-list" id="user-orders-list">
-        <p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>
-      </div>
+      <div class="category-grid" data-products="social"></div>
     </section>
 
     <section id="pedi-tu-juego" class="section">
@@ -731,24 +204,11 @@
     <section class="ticker-section" aria-label="Categorías disponibles">
       <div class="ticker">
         <span>Streaming</span>
-        <span>Juegos</span>
+        <span>PC</span>
+        <span>PS4/PS5</span>
         <span>Keys</span>
         <span>Social</span>
         <span>Pedidos especiales</span>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title">
-        <span>› Ranking semanal</span>
-        <h2>Los que más participaron</h2>
-      </div>
-      <div class="leaderboard">
-        <div><strong>01</strong><span>Tutee</span><em>450 pts</em></div>
-        <div><strong>02</strong><span>MaxiSch</span><em>325 pts</em></div>
-        <div><strong>03</strong><span>JuanAn</span><em>300 pts</em></div>
-        <div><strong>03</strong><span>Aguss</span><em>280 pts</em></div>
-        <div><strong>03</strong><span>Faku</span><em>220 pts</em></div>
       </div>
     </section>
 
@@ -758,49 +218,37 @@
         <h2>Antes de entrar</h2>
       </div>
       <details open>
-        <summary>¿Cómo se juntan puntos?</summary>
-        <p>Los puntos se pueden asociar a compras, participación, referidos, sorteos o acciones que definas para tu comunidad.</p>
+        <summary>¿Tengo que registrarme?</summary>
+        <p>No. La página funciona sin login: agregás productos al carrito y el pedido se envía por WhatsApp.</p>
       </details>
       <details>
-        <summary>¿Cómo reclamo un beneficio?</summary>
+        <summary>¿Cómo coordino la entrega?</summary>
         <p>El contacto principal sigue siendo WhatsApp o Instagram. Desde ahí confirmás disponibilidad, entrega y soporte.</p>
       </details>
       <details>
         <summary>¿Esta página ya tiene carrito?</summary>
-        <p>Sí. Podés armar tu pedido, enviarlo por WhatsApp y, si iniciás sesión, queda pendiente para sumar puntos cuando se confirme el pago.</p>
+        <p>Sí. Podés armar tu pedido, revisar el total y enviarlo por WhatsApp sin usar Firebase, Supabase ni cuentas de usuario.</p>
       </details>
-    </section>
-
-    <section class="admin-panel" id="admin-panel">
-      <h2>Panel admin</h2>
-      <p class="account-note">Pedidos y canjes pendientes. Al confirmar compras se suman puntos; al aprobar canjes se descuentan.</p>
-      <div class="admin-grid">
-        <div class="admin-tool">
-          <h3 class="admin-subtitle">Buscar usuario</h3>
-          <div class="admin-field">
-            <label for="admin-user-email">Email</label>
-            <input id="admin-user-email" type="email" placeholder="cliente@email.com">
-          </div>
-          <div class="admin-order-actions">
-            <button class="admin-btn" id="admin-search-user-btn" type="button">Buscar</button>
-            <button class="admin-btn" id="admin-add-points-btn" type="button">Sumar/restar</button>
-          </div>
-          <div class="admin-field">
-            <label for="admin-points-delta">Puntos</label>
-            <input id="admin-points-delta" type="number" value="10">
-          </div>
-          <div id="admin-user-result" class="admin-list"></div>
-        </div>
-        <div class="admin-tool">
-          <h3 class="admin-subtitle">Producto del catálogo</h3>
-          <div class="admin-field"><label for="admin-product-name">Nombre</label><input id="admin-product-name" type="text" placeholder="Netflix Premium"></div>
-          <div class="admin-field"><label for="admin-product-price">Precio</label><input id="admin-product-price" type="number" placeholder="7400"></div>
-          <div class="admin-field"><label for="admin-product-image">Imagen URL</label><input id="admin-product-image" type="url" placeholder="https://..."></div>
-          <div class="admin-field"><label for="admin-product-category">Categoría</label><input id="admin-product-category" type="text" placeholder="Streaming"></div>
-          <button class="admin-btn" id="admin-save-product-btn" type="button">Guardar producto</button>
-        </div>
-      </div>
-      <div class="admin-list" id="admin-list"></div>
+      <details>
+        <summary>¿Qué diferencia hay entre cuenta y key?</summary>
+        <p>Key significa que se entrega una clave o activación para usar en tu cuenta. Cuenta significa que se entrega una cuenta lista para usar, según disponibilidad del producto.</p>
+      </details>
+      <details>
+        <summary>¿Puedo pedir un juego que no aparece?</summary>
+        <p>Sí. Usá “Pedí tu juego”, agregalo al carrito o escribinos por WhatsApp con nombre, plataforma y edición que buscás.</p>
+      </details>
+      <details>
+        <summary>¿Los precios pueden cambiar?</summary>
+        <p>Puede pasar en productos digitales, keys o cuentas con stock limitado. El precio final se confirma por WhatsApp antes de pagar.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se paga?</summary>
+        <p>Después de enviar el pedido te pasamos los datos de pago disponibles y confirmamos la entrega.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si tengo un problema?</summary>
+        <p>El soporte se coordina por el mismo chat de compra. Guardá el comprobante y el mensaje del pedido para resolverlo más rápido.</p>
+      </details>
     </section>
   </main>
 
@@ -816,19 +264,22 @@
       </div>
       <div class="cart-items" id="cart-items"></div>
       <div class="cart-foot">
-        <div class="cart-tools">
-          <div class="cart-tools-row">
-            <input id="coupon-code" type="text" placeholder="Cupón 27STORE10">
-            <button class="admin-btn" id="apply-coupon-btn" type="button">Aplicar</button>
-          </div>
-          <p class="redeem-status" id="coupon-status">Los cupones no usan puntos.</p>
+        <p class="order-status" id="order-status">Cada producto ya indica si se entrega como cuenta, key o servicio.</p>
+        <div class="coupon-box">
+          <input id="coupon-input" type="text" placeholder="Cupón de descuento" autocomplete="off">
+          <button id="coupon-btn" type="button">Aplicar</button>
+        </div>
+        <p class="coupon-note" id="coupon-note">Si tenés un cupón, escribilo antes de finalizar.</p>
+        <div class="cart-discount" id="cart-discount" hidden>
+          <span>Descuento</span>
+          <strong id="cart-discount-amount">-$0</strong>
         </div>
         <div class="cart-total">
           <span>Total</span>
           <strong id="cart-total">$0</strong>
         </div>
+        <button class="checkout-btn" id="clear-cart-btn" type="button" disabled>Vaciar carrito</button>
         <button class="checkout-btn" id="checkout-btn" type="button" disabled>Finalizar por WhatsApp</button>
-        <div id="order-receipt"></div>
       </div>
     </div>
   </div>
@@ -839,16 +290,19 @@
         <img id="product-detail-image" src="" alt="">
       </div>
       <div class="product-detail-body">
-        <div class="product-detail-top">
-          <span class="tag" id="product-detail-category">Producto</span>
+        <div class="product-detail-head">
+          <h2 id="product-detail-title"></h2>
           <button class="product-detail-close" type="button" aria-label="Cerrar detalle">&times;</button>
         </div>
-        <h2 id="product-detail-title">Producto</h2>
-        <p id="product-detail-description"></p>
-        <strong class="product-detail-price" id="product-detail-price">$0</strong>
+        <div class="product-detail-meta">
+          <span id="product-detail-type"></span>
+          <span id="product-detail-section"></span>
+        </div>
+        <p class="product-detail-description" id="product-detail-description"></p>
         <div class="product-detail-actions">
-          <button class="cart-add" id="product-detail-add" type="button" data-name="" data-price="0">Agregar al carrito</button>
-          <a class="btn ghost" id="product-detail-whatsapp" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Consultar</a>
+          <strong class="product-detail-price" id="product-detail-price"></strong>
+          <button class="product-detail-add" id="product-detail-share" type="button">Compartir</button>
+          <button class="product-detail-add" id="product-detail-add" type="button">Agregar al carrito</button>
         </div>
       </div>
     </div>
@@ -857,1295 +311,265 @@
   <nav class="bottom-nav" aria-label="Navegacion movil">
     <a href="#inicio">Inicio</a>
     <a href="#ofertas">Ofertas</a>
-    <a href="#juegos">Juegos</a>
+    <a href="#juegos">PC</a>
+    <a href="#ps">PS</a>
     <a href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Entrar</a>
   </nav>
 
-  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="products.js"></script>
   <script>
-    const FIREBASE_CONFIG = {
-      apiKey: "AIzaSyDrMwG_Tdau3IETjiolHamu-bIgVuSZ-1A",
-      authDomain: "store-adcaf.firebaseapp.com",
-      projectId: "store-adcaf",
-      storageBucket: "store-adcaf.firebasestorage.app",
-      messagingSenderId: "832978331861",
-      appId: "1:832978331861:web:0b9ee7e418b817ab841a5c",
-      measurementId: "G-SZNBP1DXGS"
+    const PRODUCTS_KEY = "27store-products-v1";
+    const loadProducts = () => {
+      try {
+        const savedProducts = JSON.parse(localStorage.getItem(PRODUCTS_KEY) || "null");
+        if (Array.isArray(savedProducts) && savedProducts.length > 0) return savedProducts;
+      } catch { localStorage.removeItem(PRODUCTS_KEY); }
+      return window.STORE_PRODUCTS || [];
     };
-    const POINTS_DIVISOR = 1000;
-    const REFERRAL_BONUS_POINTS = 30;
-    const DRAW_TICKET_COST = 20;
-    const firebaseConfigured = window.firebase
-      && FIREBASE_CONFIG.apiKey
-      && !FIREBASE_CONFIG.apiKey.startsWith("PEGA_")
-      && FIREBASE_CONFIG.projectId
-      && !FIREBASE_CONFIG.projectId.startsWith("PEGA_");
-    const firebaseApp = firebaseConfigured ? firebase.initializeApp(FIREBASE_CONFIG) : null;
-    const firebaseAuth = firebaseConfigured ? firebase.auth() : null;
-    const firebaseDb = firebaseConfigured ? firebase.firestore() : null;
-    if (location.hash === "#productos-firebase") {
-      history.replaceState(null, "", "#club");
-    }
+    const PRODUCTS = loadProducts();
+    const WHATSAPP_NUMBER = "5493513743859";
+    const CART_KEY = "27store-cart-v2";
+    const COUPON_KEY = "27store-coupon-v1";
+    const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
+    const coupons = {
+      "27STORE": { label: "27STORE", percent: 10 },
+      "AMIGO27": { label: "AMIGO27", percent: 15 },
+      "STREAMING": { label: "STREAMING", percent: 5 },
+      "MILOFF": { label: "MILOFF", amount: 1000 },
+      "5000OFF": { label: "5000OFF", amount: 5000 }
+    };
+
+    const cart = [];
+    let activeDetailProduct = null;
+    let activeFilter = "all";
+    let activeCoupon = null;
 
     const navLinks = [...document.querySelectorAll(".side-nav nav a")];
-    const sections = navLinks
-      .map((link) => document.querySelector(link.getAttribute("href")))
-      .filter(Boolean)
-      .sort((a, b) => a.offsetTop - b.offsetTop);
-    const setActiveLink = () => {
-      const marker = window.scrollY + 190;
-      let current = sections.reduce((active, section) => section.offsetTop <= marker ? section : active, sections[0]);
-      const hashTarget = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
-      if (hashTarget && Math.abs(hashTarget.getBoundingClientRect().top) < window.innerHeight * 1.5) {
-        current = hashTarget;
-      }
-      navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`));
-    };
-    const refreshActiveLink = () => {
-      setActiveLink();
-      [80, 260, 700, 1400].forEach((delay) => setTimeout(setActiveLink, delay));
-    };
-    window.addEventListener("scroll", setActiveLink, { passive: true });
-    window.addEventListener("hashchange", refreshActiveLink);
-    window.addEventListener("load", refreshActiveLink);
-    window.addEventListener("resize", setActiveLink);
-    refreshActiveLink();
-
-    const WHATSAPP_NUMBER = "5493513743859";
-    const cart = [];
     const cartModal = document.querySelector("#cart-modal");
     const cartItems = document.querySelector("#cart-items");
     const cartTotal = document.querySelector("#cart-total");
     const cartCount = document.querySelector(".cart-count");
     const checkoutBtn = document.querySelector("#checkout-btn");
+    const clearCartBtn = document.querySelector("#clear-cart-btn");
+    const orderStatus = document.querySelector("#order-status");
+    const couponInput = document.querySelector("#coupon-input");
+    const couponBtn = document.querySelector("#coupon-btn");
+    const couponNote = document.querySelector("#coupon-note");
+    const cartDiscount = document.querySelector("#cart-discount");
+    const cartDiscountAmount = document.querySelector("#cart-discount-amount");
+    const catalogSearch = document.querySelector("#catalog-search");
+    const sortSelect = document.querySelector("#sort-select");
+    const filterButtons = [...document.querySelectorAll(".filter-btn")];
+    const emptyResults = document.querySelector("#empty-results");
     const productDetailModal = document.querySelector("#product-detail-modal");
     const productDetailImage = document.querySelector("#product-detail-image");
-    const productDetailCategory = document.querySelector("#product-detail-category");
     const productDetailTitle = document.querySelector("#product-detail-title");
+    const productDetailType = document.querySelector("#product-detail-type");
+    const productDetailSection = document.querySelector("#product-detail-section");
     const productDetailDescription = document.querySelector("#product-detail-description");
     const productDetailPrice = document.querySelector("#product-detail-price");
     const productDetailAdd = document.querySelector("#product-detail-add");
-    const productDetailWhatsapp = document.querySelector("#product-detail-whatsapp");
-    const authForm = document.querySelector("#auth-form");
-    const accountTitle = document.querySelector("#account-title");
-    const accountStatus = document.querySelector("#account-status");
-    const accountNote = document.querySelector("#account-note");
-    const accountBox = document.querySelector("#account-box");
-    const accountToggle = document.querySelector("#account-toggle");
-    const accountClose = document.querySelector("#account-close");
-    const logoutBtn = document.querySelector("#logout-btn");
-    const adminPanel = document.querySelector("#admin-panel");
-    const adminList = document.querySelector("#admin-list");
-    const rewardGrid = document.querySelector("#reward-grid");
-    const redeemStatus = document.querySelector("#redeem-status");
-    const userOrdersList = document.querySelector("#user-orders-list");
-    const pointsHistoryList = document.querySelector("#points-history-list");
-    const firebaseProductGrid = document.querySelector("#firebase-product-grid");
-    const clubLevelGrid = document.querySelector("#club-level-grid");
-    const referralCode = document.querySelector("#referral-code");
-    const referralInput = document.querySelector("#referral-input");
-    const referralStatus = document.querySelector("#referral-status");
-    const saveReferralBtn = document.querySelector("#save-referral-btn");
-    const drawGrid = document.querySelector("#draw-grid");
-    const drawStatus = document.querySelector("#draw-status");
-    const couponCodeInput = document.querySelector("#coupon-code");
-    const couponStatus = document.querySelector("#coupon-status");
-    const applyCouponBtn = document.querySelector("#apply-coupon-btn");
-    const orderReceipt = document.querySelector("#order-receipt");
-    const adminUserEmail = document.querySelector("#admin-user-email");
-    const adminPointsDelta = document.querySelector("#admin-points-delta");
-    const adminUserResult = document.querySelector("#admin-user-result");
-    const adminSearchUserBtn = document.querySelector("#admin-search-user-btn");
-    const adminAddPointsBtn = document.querySelector("#admin-add-points-btn");
-    const adminProductName = document.querySelector("#admin-product-name");
-    const adminProductPrice = document.querySelector("#admin-product-price");
-    const adminProductImage = document.querySelector("#admin-product-image");
-    const adminProductCategory = document.querySelector("#admin-product-category");
-    const adminSaveProductBtn = document.querySelector("#admin-save-product-btn");
-    const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
-    const clubLevels = [
-      { id: "bronze", name: "Bronze", min: 0, benefit: "Acceso al club y descuentos base." },
-      { id: "silver", name: "Silver", min: 50, benefit: "Mejores canjes y badge visual." },
-      { id: "gold", name: "Gold", min: 150, benefit: "Prioridad en promos especiales." },
-      { id: "elite", name: "Elite", min: 350, benefit: "Beneficios máximos y sorteos destacados." }
-    ];
-    const coupons = [
-      { code: "27STORE10", percent: 10, description: "Promo especial 10% off" },
-      { code: "CLUB15", percent: 15, description: "Promo club 15% off" }
-    ];
-    const draws = [
-      { id: "monthly-game", name: "Sorteo juego mensual", prize: "Un juego a elección", ticketCost: DRAW_TICKET_COST },
-      { id: "streaming-pack", name: "Pack streaming", prize: "Un mes de streaming", ticketCost: DRAW_TICKET_COST },
-      { id: "elite-bonus", name: "Bonus Elite", prize: "Cupón especial para miembros activos", ticketCost: DRAW_TICKET_COST }
-    ];
-    const rewards = [
-      { id: "discount-5", name: "5% de descuento", cost: 10, percent: 5, description: "Usá 10 puntos y bajá el total de tu carrito un 5%." },
-      { id: "discount-10", name: "10% de descuento", cost: 25, percent: 10, description: "Usá 25 puntos para compras medianas de streaming, juegos o keys." },
-      { id: "discount-17", name: "17% de descuento", cost: 50, percent: 17, description: "Canje fuerte para ahorrar más en compras grandes." },
-      { id: "discount-25", name: "25% de descuento", cost: 80, percent: 25, description: "Beneficio premium para miembros que juntan muchos puntos." },
-      { id: "discount-35", name: "35% de descuento", cost: 120, percent: 35, description: "El mejor canje del club para compras especiales." }
-    ];
-    let currentUser = null;
-    let currentProfile = null;
-    let activeReward = null;
-    let activeCoupon = null;
-    let selectedAdminProfile = null;
-    let pendingAuthAction = "login";
-    let profileLoadPromise = null;
-    const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#039;"
-    })[char]);
-    const getReferralCode = (profile) => (profile?.referral_code || profile?.id || "club").slice(0, 8).toUpperCase();
-    const getClubLevel = (points = 0) => [...clubLevels].reverse().find((level) => points >= level.min) || clubLevels[0];
-    const openAccountPanel = () => {
-      accountBox.classList.add("open");
-      accountToggle.setAttribute("aria-expanded", "true");
-    };
-    const closeAccountPanel = () => {
-      accountBox.classList.remove("open");
-      accountToggle.setAttribute("aria-expanded", "false");
-    };
-    const updateAccountToggle = () => {
-      if (!accountToggle) return;
-      accountToggle.textContent = currentProfile
-        ? `${currentProfile.points || 0} pts`
-        : "Mi cuenta";
-    };
+    const productDetailShare = document.querySelector("#product-detail-share");
 
-    const renderClubLevels = () => {
-      if (!clubLevelGrid) return;
-      const points = currentProfile?.points || 0;
-      const activeLevel = getClubLevel(points);
-      clubLevelGrid.innerHTML = clubLevels.map((level) => `
-        <article class="club-card ${activeLevel.id === level.id ? "active" : ""}">
-          <span class="tag">${level.min} pts</span>
-          <h3>${escapeHtml(level.name)}</h3>
-          <p>${escapeHtml(level.benefit)}</p>
-        </article>
-      `).join("");
-
-      if (referralCode) referralCode.textContent = currentProfile ? getReferralCode(currentProfile) : "Iniciá sesión";
-      if (referralInput) {
-        referralInput.disabled = !currentUser || Boolean(currentProfile?.referred_by);
-        referralInput.value = currentProfile?.referred_by || "";
-      }
-      if (saveReferralBtn) saveReferralBtn.disabled = !currentUser || Boolean(currentProfile?.referred_by);
-      if (referralStatus) {
-        referralStatus.textContent = currentProfile?.referred_by
-          ? `Ya guardaste el referido ${currentProfile.referred_by}.`
-          : "Solo se puede guardar una vez por cuenta.";
-      }
-    };
-
-    const renderDraws = () => {
-      if (!drawGrid) return;
-      const points = currentProfile?.points || 0;
-      drawGrid.innerHTML = draws.map((draw) => {
-        const canEnter = currentUser && points >= draw.ticketCost;
-        return `
-          <article class="reward-card">
-            <span class="tag">${draw.ticketCost} pts = 1 ticket</span>
-            <h3>${escapeHtml(draw.name)}</h3>
-            <p>${escapeHtml(draw.prize)}</p>
-            <button class="reward-btn" type="button" data-draw-id="${draw.id}" ${canEnter ? "" : "disabled"}>${currentUser ? "Usar puntos" : "Iniciá sesión"}</button>
-          </article>
-        `;
-      }).join("");
-      if (drawStatus) drawStatus.textContent = currentUser
-        ? `Tenés ${points} puntos. Cada ticket descuenta ${DRAW_TICKET_COST} puntos.`
-        : "Iniciá sesión para entrar a sorteos.";
-    };
-
-    const renderReceipt = (order) => {
-      if (!orderReceipt || !order) return;
-      orderReceipt.innerHTML = `
-        <article class="receipt-card">
-          <span class="tag">Comprobante</span>
-          <h3>Pedido ${escapeHtml(order.id)}</h3>
-          <p>Total: ${money.format(order.total || 0)} · Puntos: ${order.points_to_add || 0}</p>
-          <p>Descuento: ${order.discount_percent || 0}% · Estado: ${getStatusLabel(order.status)}</p>
-        </article>
-      `;
-    };
-
-    const loadFirebaseProducts = async () => {
-      if (!firebaseProductGrid) return;
-      if (!firebaseDb) {
-        firebaseProductGrid.innerHTML = '<p class="cart-empty">Conectá la base de datos para cargar productos editables.</p>';
-        return;
-      }
-
-      try {
-        const snapshot = await firebaseDb.collection("products").where("active", "==", true).get();
-        const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-
-        if (!products.length) {
-          firebaseProductGrid.innerHTML = '<p class="cart-empty">Todavía no hay productos activos en el catálogo.</p>';
-          return;
-        }
-
-        firebaseProductGrid.innerHTML = products.map((product) => `
-          <article class="category-card">
-            <img src="${escapeHtml(product.image_url || "https://27sttore.netlify.app/images/0.png")}" alt="${escapeHtml(product.name)}">
-            <div>
-              <span class="tag">${escapeHtml(product.category || "Producto")}</span>
-              <h3>${escapeHtml(product.name)}</h3>
-              <p>${escapeHtml(product.description || "Producto editable desde el panel admin.")}</p>
-            </div>
-            <div class="product-actions">
-              <strong>${money.format(product.price || 0)}</strong>
-              <button class="cart-add" type="button" data-name="${escapeHtml(product.name)}" data-price="${Number(product.price || 0)}">Agregar</button>
-            </div>
-          </article>
-        `).join("");
-      } catch (error) {
-        firebaseProductGrid.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
-      }
-    };
-
-    const resetAccountUi = (message = "Sesión cerrada.") => {
-      currentUser = null;
-      currentProfile = null;
-      activeReward = null;
-      activeCoupon = null;
-      selectedAdminProfile = null;
-      accountTitle.textContent = "Mi cuenta";
-      accountStatus.textContent = "Iniciá sesión para guardar pedidos y puntos.";
-      updateAccountToggle();
-      authForm.hidden = false;
-      logoutBtn.hidden = true;
-      logoutBtn.disabled = false;
-      adminPanel.classList.remove("open");
-      accountNote.textContent = message;
-      if (userOrdersList) {
-        userOrdersList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>';
-      }
-      if (pointsHistoryList) {
-        pointsHistoryList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>';
-      }
-      renderRewards();
-      renderClubLevels();
-      renderDraws();
-      renderCart();
-    };
-
-    const clearFirebaseStorage = () => {
-      const clearStorage = (storage) => {
-        if (!storage) return;
-        Object.keys(storage)
-          .filter((key) => key.startsWith("firebase:") || key.includes("firebase"))
-          .forEach((key) => storage.removeItem(key));
-      };
-
-      clearStorage(window.localStorage);
-      clearStorage(window.sessionStorage);
-    };
-
-    const withTimeout = (promise, ms, timeoutMessage) => Promise.race([
-      promise,
-      new Promise((_, reject) => {
-        setTimeout(() => reject(new Error(timeoutMessage)), ms);
-      })
-    ]);
-
-    const getFriendlyAuthError = (error) => {
-      const message = error?.message || "";
-      const code = error?.code || "";
-      const lowerMessage = message.toLowerCase();
-
-      if (code === "auth/invalid-credential" || code === "auth/wrong-password" || lowerMessage.includes("invalid login credentials")) {
-        return "Email o contraseña incorrectos.";
-      }
-
-      if (code === "auth/user-not-found") {
-        return "No existe una cuenta con ese email.";
-      }
-
-      if (code === "auth/email-already-in-use" || lowerMessage.includes("user already registered") || lowerMessage.includes("already registered")) {
-        return "Ese email ya tiene cuenta. Probá entrar en vez de crear una cuenta nueva.";
-      }
-
-      if (code === "auth/weak-password" || lowerMessage.includes("password should be")) {
-        return "La contraseña es muy corta. Usá al menos 6 caracteres.";
-      }
-
-      if (code === "auth/configuration-not-found") {
-        return "Falta activar Email/Password en Firebase Authentication.";
-      }
-
-      if (code === "auth/unauthorized-domain") {
-        return "Falta autorizar este dominio en Firebase Authentication.";
-      }
-
-      if (code === "auth/api-key-not-valid.-please-pass-a-valid-api-key." || code === "auth/invalid-api-key" || lowerMessage.includes("api-key-not-valid")) {
-        return "La API key de Firebase no es válida. Copiá de nuevo la configuración web desde Firebase y pegala exacta.";
-      }
-
-      if (lowerMessage.includes("email not confirmed")) {
-        return "Falta confirmar el email. Revisá tu correo y después volvé a entrar.";
-      }
-
-      return message || "No se pudo conectar con el login.";
-    };
-
-    const signInWithPassword = async (email, password) => {
-      await firebaseAuth.signInWithEmailAndPassword(email, password);
-      return { data: { user: firebaseAuth.currentUser }, error: null };
-    };
-
-    const signUpWithPassword = async (email, password) => {
-      const credential = await firebaseAuth.createUserWithEmailAndPassword(email, password);
-      await credential.user.updateProfile({ displayName: email.split("@")[0] });
-      return { data: { user: credential.user, session: true }, error: null };
-    };
-
-    const openCart = () => {
-      cartModal.classList.add("open");
-      cartModal.setAttribute("aria-hidden", "false");
-    };
-
-    const closeCart = () => {
-      cartModal.classList.remove("open");
-      cartModal.setAttribute("aria-hidden", "true");
-    };
-
-    const getProductFromCard = (card) => {
-      const button = card.querySelector(".cart-add");
-      const image = card.querySelector("img");
-      const name = button?.dataset.name || card.querySelector("h3")?.textContent?.trim() || "Producto";
-      const price = Number(button?.dataset.price || 0);
-      const category = card.querySelector(".tag")?.textContent?.trim() || "Producto";
-      const description = card.querySelector("p")?.textContent?.trim() || "Consultá disponibilidad, entrega y garantía con 27 Store.";
-
-      return {
-        name,
-        price,
-        category,
-        description,
-        image: image?.getAttribute("src") || "https://27sttore.netlify.app/images/0.png",
-        alt: image?.getAttribute("alt") || name
-      };
-    };
-
-    const openProductDetail = (product) => {
-      if (!productDetailModal) return;
-      productDetailImage.src = product.image;
-      productDetailImage.alt = product.alt || product.name;
-      productDetailCategory.textContent = product.category;
-      productDetailTitle.textContent = product.name;
-      productDetailDescription.textContent = product.description;
-      productDetailPrice.textContent = money.format(product.price || 0);
-      productDetailAdd.dataset.name = product.name;
-      productDetailAdd.dataset.price = String(product.price || 0);
-      productDetailWhatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola 27 Store, quiero consultar por ${product.name}.`)}`;
-      productDetailModal.classList.add("open");
-      productDetailModal.setAttribute("aria-hidden", "false");
-    };
-
-    const closeProductDetail = () => {
-      if (!productDetailModal) return;
-      productDetailModal.classList.remove("open");
-      productDetailModal.setAttribute("aria-hidden", "true");
-    };
-
-    const getSubtotal = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
-    const getPointsDiscountAmount = () => activeReward ? Math.floor(getSubtotal() * activeReward.percent / 100) : 0;
-    const getCouponDiscountAmount = () => activeCoupon ? Math.floor((getSubtotal() - getPointsDiscountAmount()) * activeCoupon.percent / 100) : 0;
-    const getDiscountAmount = () => getPointsDiscountAmount() + getCouponDiscountAmount();
-    const getTotal = () => Math.max(0, getSubtotal() - getDiscountAmount());
+    const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[char]);
+    const formatPrice = (value) => value > 0 ? money.format(value) : "A consultar";
+    const getTotal = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
     const getCount = () => cart.reduce((total, item) => total + item.qty, 0);
+    const getDiscountAmount = () => {
+      if (!activeCoupon) return 0;
+      if (activeCoupon.amount) return Math.min(getTotal(), activeCoupon.amount);
+      return Math.floor(getTotal() * (activeCoupon.percent || 0) / 100);
+    };
+    const getFinalTotal = () => Math.max(0, getTotal() - getDiscountAmount());
+
+    const sectionLabels = { ofertas: "Ofertas destacadas", suscripciones: "Suscripciones", juegos: "PC", ps: "PS4/PS5", keys: "Random keys", social: "Social" };
+    const findProduct = (id) => PRODUCTS.find((product) => product.id === id);
+
+    const getProductsForGrid = (gridName) => {
+      const list = gridName === "ofertas" ? PRODUCTS.filter((product) => product.featured) : PRODUCTS.filter((product) => product.category === gridName);
+      return [...list].sort((a, b) => {
+        if (sortSelect.value === "price-asc") return (a.price || Infinity) - (b.price || Infinity);
+        if (sortSelect.value === "price-desc") return (b.price || 0) - (a.price || 0);
+        if (sortSelect.value === "consult") return (a.price > 0) - (b.price > 0);
+        return 0;
+      });
+    };
+
+    const productCardTemplate = (product, gridName) => `
+      <article class="category-card${product.featured && gridName === "ofertas" ? " wide" : ""}" data-id="${escapeHtml(product.id)}" data-category="${escapeHtml(gridName)}" data-search="${escapeHtml(`${product.name} ${product.description} ${product.tag} ${product.type}`.toLowerCase())}" data-stock="${escapeHtml(product.stock)}">
+        <span class="stock-badge">${escapeHtml(product.stock)}</span>
+        <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}">
+        <div><span class="tag">${escapeHtml(product.tag)}</span><h3>${escapeHtml(product.name)}</h3><p>${escapeHtml(product.description)}</p></div>
+        <div class="product-actions">
+          <strong>${formatPrice(product.price)}${product.oldPrice ? ` <small>${formatPrice(product.oldPrice)}</small>` : ""}</strong>
+          <span class="product-type">${escapeHtml(product.type)}</span>
+          <button class="cart-add" data-id="${escapeHtml(product.id)}" type="button">Agregar</button>
+          <button class="info-btn" data-id="${escapeHtml(product.id)}" type="button">Ver info</button>
+        </div>
+      </article>`;
+
+    const renderProductSections = () => {
+      document.querySelectorAll("[data-products]").forEach((grid) => {
+        const gridName = grid.dataset.products;
+        grid.innerHTML = getProductsForGrid(gridName).map((product) => productCardTemplate(product, gridName)).join("");
+      });
+    };
+
+    const saveCart = () => {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart.map(({ id, qty }) => ({ id, qty }))));
+      localStorage.setItem(COUPON_KEY, activeCoupon?.label || "");
+    };
+
+    const loadCart = () => {
+      try {
+        JSON.parse(localStorage.getItem(CART_KEY) || "[]").forEach((item) => {
+          const product = findProduct(item.id);
+          if (product) cart.push({ id: product.id, name: product.name, price: product.price, type: product.type, qty: Math.max(1, Number(item.qty) || 1) });
+        });
+        const savedCoupon = localStorage.getItem(COUPON_KEY);
+        if (savedCoupon && coupons[savedCoupon]) {
+          activeCoupon = coupons[savedCoupon];
+          couponInput.value = savedCoupon;
+          couponNote.textContent = activeCoupon.amount ? `Cupón ${activeCoupon.label} aplicado: ${money.format(activeCoupon.amount)} de descuento.` : `Cupón ${activeCoupon.label} aplicado: ${activeCoupon.percent}% de descuento.`;
+        }
+      } catch { localStorage.removeItem(CART_KEY); }
+    };
+
+    const openCart = () => { cartModal.classList.add("open"); cartModal.setAttribute("aria-hidden", "false"); };
+    const closeCart = () => { cartModal.classList.remove("open"); cartModal.setAttribute("aria-hidden", "true"); };
 
     const renderCart = () => {
       cartCount.textContent = getCount();
-      const points = Math.floor(getTotal() / POINTS_DIVISOR);
-      const discountPercent = (activeReward?.percent || 0) + (activeCoupon?.percent || 0);
-      cartTotal.textContent = discountPercent
-        ? `${money.format(getTotal())} · ${points} pts · -${discountPercent}%`
-        : `${money.format(getTotal())} · ${points} pts`;
+      const discount = getDiscountAmount();
+      cartTotal.textContent = getTotal() > 0 ? money.format(getFinalTotal()) : "A consultar";
+      cartDiscount.hidden = discount <= 0;
+      cartDiscountAmount.textContent = `-${money.format(discount)}`;
       checkoutBtn.disabled = cart.length === 0;
-
+      clearCartBtn.disabled = cart.length === 0;
       if (cart.length === 0) {
-        cartItems.innerHTML = activeReward
-          ? `<p class="cart-empty">Todavía no agregaste productos. Tenés activo ${activeReward.name}.</p>`
-          : '<p class="cart-empty">Todavía no agregaste productos.</p>';
+        cartItems.innerHTML = '<p class="cart-empty">Todavía no agregaste productos.</p>';
+        saveCart();
         return;
       }
-
-      const discountRow = activeReward ? `
-        <article class="cart-item">
-          <div>
-            <h3>${escapeHtml(activeReward.name)}</h3>
-            <p>Canje de ${activeReward.cost} puntos aplicado al subtotal ${money.format(getSubtotal())}</p>
-          </div>
-          <strong>-${money.format(getPointsDiscountAmount())}</strong>
-        </article>
-      ` : "";
-      const couponRow = activeCoupon ? `
-        <article class="cart-item">
-          <div>
-            <h3>Cupón ${escapeHtml(activeCoupon.code)}</h3>
-            <p>${escapeHtml(activeCoupon.description)}. No descuenta puntos.</p>
-          </div>
-          <strong>-${money.format(getCouponDiscountAmount())}</strong>
-        </article>
-      ` : "";
-
       cartItems.innerHTML = cart.map((item) => `
-        <article class="cart-item">
-          <div>
-            <h3>${item.name}</h3>
-            <p>${money.format(item.price)} x ${item.qty}</p>
-          </div>
-          <div class="qty-row">
-            <button class="qty-btn" type="button" data-action="minus" data-name="${item.name}">-</button>
-            <strong>${item.qty}</strong>
-            <button class="qty-btn" type="button" data-action="plus" data-name="${item.name}">+</button>
-            <button class="remove-btn" type="button" data-action="remove" data-name="${item.name}">Quitar</button>
-          </div>
-        </article>
-      `).join("") + discountRow + couponRow;
+        <article class="cart-item"><div><h3>${escapeHtml(item.name)}</h3><p>${formatPrice(item.price)} x ${item.qty}</p><span class="cart-type">${escapeHtml(item.type)}</span></div><div class="qty-row"><button class="qty-btn" type="button" data-action="minus" data-id="${escapeHtml(item.id)}">-</button><strong>${item.qty}</strong><button class="qty-btn" type="button" data-action="plus" data-id="${escapeHtml(item.id)}">+</button><button class="remove-btn" type="button" data-action="remove" data-id="${escapeHtml(item.id)}">Quitar</button></div></article>`).join("");
+      saveCart();
     };
 
-    const addToCart = (name, price) => {
-      const existing = cart.find((item) => item.name === name);
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({ name, price, qty: 1 });
-      }
+    const addToCart = (product) => {
+      const existing = cart.find((item) => item.id === product.id);
+      if (existing) existing.qty += 1;
+      else cart.push({ id: product.id, name: product.name, price: product.price, type: product.type, qty: 1 });
+      orderStatus.textContent = `${product.name} agregado. Podés seguir comprando o finalizar por WhatsApp.`;
       renderCart();
       openCart();
     };
 
-    const renderRewards = () => {
-      if (!rewardGrid) return;
-      const availablePoints = currentProfile?.points || 0;
-
-      rewardGrid.innerHTML = rewards.map((reward) => {
-        const canRedeem = currentUser && availablePoints >= reward.cost;
-        const isActive = activeReward?.id === reward.id;
-        return `
-          <article class="reward-card">
-            <span class="tag">${isActive ? "Activo" : "Descuento"}</span>
-            <h3>${escapeHtml(reward.name)}</h3>
-            <p>${escapeHtml(reward.description)}</p>
-            <strong>${reward.cost} pts</strong>
-            <button class="reward-btn" type="button" data-reward-id="${reward.id}" ${canRedeem ? "" : "disabled"}>
-              ${currentUser ? (isActive ? "Descuento activo" : "Usar en carrito") : "Iniciá sesión"}
-            </button>
-          </article>
-        `;
-      }).join("");
-
-      if (!currentUser) {
-        redeemStatus.textContent = "Iniciá sesión para ver tus puntos disponibles y aplicar descuentos.";
-      } else {
-        redeemStatus.textContent = activeReward
-          ? `Tenés ${availablePoints} puntos. Se aplicó ${activeReward.name}; al confirmar la compra se descuentan ${activeReward.cost} puntos.`
-          : `Tenés ${availablePoints} puntos disponibles. Elegí un descuento y se aplica al carrito.`;
-      }
+    const openProductDetail = (product) => {
+      activeDetailProduct = product;
+      productDetailImage.src = product.image;
+      productDetailImage.alt = product.name;
+      productDetailTitle.textContent = product.name;
+      productDetailType.textContent = product.type;
+      productDetailSection.textContent = `${sectionLabels[product.category] || "Producto"} · ${product.stock}`;
+      productDetailDescription.textContent = product.description;
+      productDetailPrice.textContent = formatPrice(product.price);
+      productDetailModal.classList.add("open");
+      productDetailModal.setAttribute("aria-hidden", "false");
     };
+    const closeProductDetail = () => { productDetailModal.classList.remove("open"); productDetailModal.setAttribute("aria-hidden", "true"); activeDetailProduct = null; };
 
-    const applyRewardDiscount = (rewardId) => {
-      if (!currentUser || !currentProfile) {
-        redeemStatus.textContent = "Iniciá sesión para aplicar un descuento.";
-        return;
-      }
-
-      const reward = rewards.find((item) => item.id === rewardId);
-      if (!reward) return;
-
-      if ((currentProfile.points || 0) < reward.cost) {
-        redeemStatus.textContent = `Te faltan ${reward.cost - (currentProfile.points || 0)} puntos para usar este descuento.`;
-        return;
-      }
-
-      activeReward = reward;
-      redeemStatus.textContent = `${reward.name} aplicado al carrito.`;
+    const applyCoupon = () => {
+      const code = couponInput.value.trim().toUpperCase();
+      if (!code) { activeCoupon = null; couponNote.textContent = "Cupón quitado."; renderCart(); return; }
+      if (!coupons[code]) { activeCoupon = null; couponNote.textContent = "Cupón no válido. Revisá el código y probá de nuevo."; renderCart(); return; }
+      activeCoupon = coupons[code];
+      couponInput.value = code;
+      couponNote.textContent = activeCoupon.amount ? `Cupón ${activeCoupon.label} aplicado: ${money.format(activeCoupon.amount)} de descuento.` : `Cupón ${activeCoupon.label} aplicado: ${activeCoupon.percent}% de descuento.`;
       renderCart();
     };
 
-    document.addEventListener("click", (event) => {
-      const button = event.target.closest(".cart-add");
-      if (!button) return;
-      event.stopPropagation();
-      addToCart(button.dataset.name, Number(button.dataset.price));
-      if (button.id === "product-detail-add") closeProductDetail();
-    });
+    const applyCatalogFilters = () => {
+      const term = catalogSearch.value.trim().toLowerCase();
+      let visible = 0;
+      document.querySelectorAll(".category-card").forEach((card) => {
+        const matchesFilter = activeFilter === "all" || card.dataset.category === activeFilter;
+        const matchesSearch = !term || (card.dataset.search || "").includes(term);
+        const show = matchesFilter && matchesSearch;
+        card.classList.toggle("is-hidden", !show);
+        if (show) visible += 1;
+      });
+      emptyResults.classList.toggle("show", visible === 0);
+    };
+
+    const shareProduct = (product) => {
+      const message = [`Hola 27 Store, quiero consultar por ${product.name}.`, `Tipo: ${product.type}`, `Precio: ${formatPrice(product.price)}`, `Stock: ${product.stock}`].join("\n");
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+    };
+
+    const setActiveLink = () => {
+      const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+      const pageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      const current = pageBottom ? sections[sections.length - 1] : sections.reduce((best, section) => {
+        const distance = Math.abs(section.getBoundingClientRect().top - 120);
+        return distance < best.distance ? { section, distance } : best;
+      }, { section: sections[0], distance: Infinity }).section;
+      navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`));
+    };
 
     document.addEventListener("click", (event) => {
-      if (event.target.closest("button,a,input,select,textarea")) return;
+      const addButton = event.target.closest(".cart-add");
+      if (addButton) { const product = findProduct(addButton.dataset.id); if (product) addToCart(product); return; }
+      const infoButton = event.target.closest(".info-btn");
+      if (infoButton) { const product = findProduct(infoButton.dataset.id); if (product) openProductDetail(product); return; }
       const card = event.target.closest(".category-card");
-      if (!card || !card.querySelector(".cart-add")) return;
-      openProductDetail(getProductFromCard(card));
+      if (card && !event.target.closest("button,a")) { const product = findProduct(card.dataset.id); if (product) openProductDetail(product); }
     });
 
-    rewardGrid.addEventListener("click", async (event) => {
-      const button = event.target.closest("[data-reward-id]");
-      if (!button) return;
-
-      applyRewardDiscount(button.dataset.rewardId);
-      renderRewards();
-    });
-
+    couponBtn.addEventListener("click", applyCoupon);
+    couponInput.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); applyCoupon(); } });
+    catalogSearch.addEventListener("input", applyCatalogFilters);
+    sortSelect.addEventListener("change", () => { renderProductSections(); applyCatalogFilters(); });
+    filterButtons.forEach((button) => button.addEventListener("click", () => { activeFilter = button.dataset.filter; filterButtons.forEach((item) => item.classList.toggle("active", item === button)); applyCatalogFilters(); }));
+    productDetailAdd.addEventListener("click", () => { if (!activeDetailProduct) return; addToCart(activeDetailProduct); closeProductDetail(); });
+    productDetailShare.addEventListener("click", () => { if (activeDetailProduct) shareProduct(activeDetailProduct); });
+    document.querySelector(".product-detail-close").addEventListener("click", closeProductDetail);
+    productDetailModal.addEventListener("click", (event) => { if (event.target === productDetailModal) closeProductDetail(); });
     document.querySelector(".cart-open").addEventListener("click", openCart);
     document.querySelector(".cart-close").addEventListener("click", closeCart);
-    cartModal.addEventListener("click", (event) => {
-      if (event.target === cartModal) closeCart();
-    });
-    document.querySelector(".product-detail-close")?.addEventListener("click", closeProductDetail);
-    productDetailModal?.addEventListener("click", (event) => {
-      if (event.target === productDetailModal) closeProductDetail();
-    });
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeProductDetail();
-      if (event.key === "Escape") closeAccountPanel();
-    });
-
-    accountToggle?.addEventListener("click", () => {
-      if (accountBox.classList.contains("open")) {
-        closeAccountPanel();
-      } else {
-        openAccountPanel();
-      }
-    });
-    accountClose?.addEventListener("click", closeAccountPanel);
-    document.addEventListener("click", (event) => {
-      if (!accountBox?.classList.contains("open")) return;
-      if (event.target.closest("#account-box") || event.target.closest("#account-toggle")) return;
-      closeAccountPanel();
-    });
-
+    clearCartBtn.addEventListener("click", () => { cart.splice(0, cart.length); activeCoupon = null; couponInput.value = ""; couponNote.textContent = "Carrito vacío. Cupón quitado."; renderCart(); });
+    cartModal.addEventListener("click", (event) => { if (event.target === cartModal) closeCart(); });
     cartItems.addEventListener("click", (event) => {
       const button = event.target.closest("button");
       if (!button) return;
-      const item = cart.find((product) => product.name === button.dataset.name);
+      const item = cart.find((product) => product.id === button.dataset.id);
       if (!item) return;
-
       if (button.dataset.action === "plus") item.qty += 1;
       if (button.dataset.action === "minus") item.qty -= 1;
-      if (button.dataset.action === "remove" || item.qty <= 0) {
-        cart.splice(cart.indexOf(item), 1);
-      }
+      if (button.dataset.action === "remove" || item.qty <= 0) cart.splice(cart.indexOf(item), 1);
       renderCart();
     });
-
-    applyCouponBtn?.addEventListener("click", () => {
-      const code = couponCodeInput.value.trim().toUpperCase();
-      const coupon = coupons.find((item) => item.code === code);
-
-      if (!coupon) {
-        activeCoupon = null;
-        couponStatus.textContent = "Cupón inválido o vencido.";
-        renderCart();
-        return;
-      }
-
-      activeCoupon = coupon;
-      couponStatus.textContent = `${coupon.description} aplicado.`;
-      renderCart();
-    });
-
-    saveReferralBtn?.addEventListener("click", async () => {
-      if (!firebaseDb || !currentUser || !currentProfile) {
-        referralStatus.textContent = "Iniciá sesión para guardar un referido.";
-        return;
-      }
-
-      const code = referralInput.value.trim().toUpperCase();
-      if (!code || code === getReferralCode(currentProfile)) {
-        referralStatus.textContent = "Ingresá un código válido de otra cuenta.";
-        return;
-      }
-
-      try {
-        const snapshot = await firebaseDb.collection("profiles").where("referral_code", "==", code).limit(1).get();
-        if (snapshot.empty) {
-          referralStatus.textContent = "No encontramos ese código.";
-          return;
-        }
-
-        await firebaseDb.collection("profiles").doc(currentUser.uid).update({
-          referred_by: code,
-          referred_by_uid: snapshot.docs[0].id
-        });
-        referralStatus.textContent = "Referido guardado. El bonus se acredita cuando hagas una compra pagada.";
-        await loadProfile();
-      } catch (error) {
-        referralStatus.textContent = error.message;
-      }
-    });
-
-    drawGrid?.addEventListener("click", async (event) => {
-      const button = event.target.closest("[data-draw-id]");
-      if (!button || !firebaseDb || !currentUser || !currentProfile) return;
-      const draw = draws.find((item) => item.id === button.dataset.drawId);
-      if (!draw) return;
-
-      try {
-        await firebaseDb.runTransaction(async (transaction) => {
-          const profileRef = firebaseDb.collection("profiles").doc(currentUser.uid);
-          const profileSnap = await transaction.get(profileRef);
-          const availablePoints = profileSnap.data()?.points || 0;
-
-          if (availablePoints < draw.ticketCost) {
-            throw new Error("No tenés puntos suficientes para este ticket.");
-          }
-
-          const ticketRef = firebaseDb.collection("draw_entries").doc();
-          transaction.set(ticketRef, {
-            user_id: currentUser.uid,
-            user_email: currentUser.email,
-            draw_id: draw.id,
-            draw_name: draw.name,
-            points_spent: draw.ticketCost,
-            created_at: firebase.firestore.FieldValue.serverTimestamp()
-          });
-          transaction.update(profileRef, {
-            points: firebase.firestore.FieldValue.increment(-draw.ticketCost)
-          });
-        });
-
-        drawStatus.textContent = `Ticket creado para ${draw.name}.`;
-        await loadProfile();
-      } catch (error) {
-        drawStatus.textContent = error.message;
-      }
-    });
-
-    const loadProfileNow = async () => {
-      if (!firebaseAuth || !firebaseDb) {
-        accountNote.textContent = "Falta conectar Firebase: pegá la configuración web del proyecto en el código.";
-        return;
-      }
-
-      currentUser = firebaseAuth.currentUser || null;
-
-      if (!currentUser) {
-        resetAccountUi("Iniciá sesión para guardar pedidos y puntos.");
-        return;
-      }
-
-      const profileRef = firebaseDb.collection("profiles").doc(currentUser.uid);
-      let profileSnap = await profileRef.get();
-      let profile;
-
-      if (!profileSnap.exists) {
-        profile = {
-          id: currentUser.uid,
-          email: currentUser.email,
-          display_name: currentUser.displayName || currentUser.email.split("@")[0],
-          points: 0,
-          referral_code: currentUser.uid.slice(0, 8).toUpperCase(),
-          referred_by: null,
-          is_admin: false
-        };
-        await profileRef.set({
-          email: profile.email,
-          display_name: profile.display_name,
-          points: profile.points,
-          referral_code: profile.referral_code,
-          referred_by: profile.referred_by,
-          club_level: getClubLevel(profile.points).id,
-          is_admin: profile.is_admin,
-          created_at: firebase.firestore.FieldValue.serverTimestamp()
-        });
-      } else {
-        profile = { id: currentUser.uid, ...profileSnap.data() };
-      }
-
-      currentProfile = profile;
-      accountTitle.textContent = profile.display_name || profile.email;
-      const level = getClubLevel(profile.points || 0);
-      accountStatus.textContent = `${profile.points || 0} puntos · ${level.name}`;
-      updateAccountToggle();
-      authForm.hidden = true;
-      logoutBtn.hidden = false;
-      accountNote.textContent = profile.is_admin ? "Modo admin activo." : "Tus compras quedan pendientes hasta que 27 Store confirme el pago.";
-      renderRewards();
-      renderClubLevels();
-      renderDraws();
-      await loadUserOrders();
-
-      if (profile.is_admin) {
-        adminPanel.classList.add("open");
-        await loadPendingOrders();
-      } else {
-        adminPanel.classList.remove("open");
-      }
-    };
-
-    const loadProfile = () => {
-      if (profileLoadPromise) return profileLoadPromise;
-      profileLoadPromise = loadProfileNow().finally(() => {
-        profileLoadPromise = null;
-      });
-      return profileLoadPromise;
-    };
-
-    const getStatusLabel = (status) => ({
-      pending: "Pendiente",
-      paid: "Pagado",
-      delivered: "Entregado",
-      problem: "Problema",
-      cancelled: "Cancelado",
-      confirmed: "Pagado",
-      rejected: "Cancelado"
-    })[status] || status || "Sin estado";
-
-    const formatOrderDate = (value) => {
-      const date = value?.toDate?.();
-      return date ? date.toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit", year: "numeric" }) : "Sin fecha";
-    };
-
-    const renderPointsHistory = (orders) => {
-      if (!pointsHistoryList) return;
-
-      const confirmedOrders = orders.filter((order) => ["paid", "delivered", "confirmed"].includes(order.status));
-      const pointsEarned = confirmedOrders.reduce((total, order) => total + (order.points_to_add || 0), 0);
-      const pointsRedeemed = confirmedOrders.reduce((total, order) => total + (order.points_to_redeem || 0), 0);
-      const movements = confirmedOrders.flatMap((order) => {
-        const date = formatOrderDate(order.confirmed_at || order.created_at);
-        const items = (order.items || []).map((item) => item.product_name).filter(Boolean).join(", ") || "Compra confirmada";
-        const rows = [];
-
-        if (order.points_to_add) {
-          rows.push({
-            date,
-            title: `+${order.points_to_add} pts`,
-            detail: `${items} · ${money.format(order.total || 0)}`
-          });
-        }
-
-        if (order.points_to_redeem) {
-          rows.push({
-            date,
-            title: `-${order.points_to_redeem} pts`,
-            detail: `${order.discount_percent || 0}% de descuento usado`
-          });
-        }
-
-        return rows;
-      });
-
-      if (!movements.length) {
-        pointsHistoryList.innerHTML = `
-          <article class="admin-order">
-            <strong>${currentProfile?.points || 0} puntos disponibles</strong>
-            <p>Todavía no tenés movimientos confirmados. Cuando una compra se confirme, acá vas a ver los puntos ganados y usados.</p>
-          </article>
-        `;
-        return;
-      }
-
-      pointsHistoryList.innerHTML = `
-        <article class="admin-order">
-          <strong>${currentProfile?.points || 0} puntos disponibles</strong>
-          <p>Ganados: ${pointsEarned} pts · Usados en descuentos: ${pointsRedeemed} pts</p>
-        </article>
-        ${movements.map((movement) => `
-          <article class="admin-order">
-            <strong>${escapeHtml(movement.title)} · ${escapeHtml(movement.date)}</strong>
-            <p>${escapeHtml(movement.detail)}</p>
-          </article>
-        `).join("")}
-      `;
-    };
-
-    const loadUserOrders = async () => {
-      if (!userOrdersList) return;
-
-      if (!firebaseDb || !currentUser) {
-        userOrdersList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tus pedidos.</p>';
-        if (pointsHistoryList) {
-          pointsHistoryList.innerHTML = '<p class="cart-empty">Iniciá sesión para ver tu historial de puntos.</p>';
-        }
-        return;
-      }
-
-      let snapshot;
-      try {
-        snapshot = await firebaseDb
-          .collection("orders")
-          .where("user_id", "==", currentUser.uid)
-          .get();
-      } catch (error) {
-        userOrdersList.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
-        return;
-      }
-
-      const orders = snapshot.docs
-        .map((doc) => ({ id: doc.id, ...doc.data() }))
-        .sort((a, b) => {
-          const dateA = a.created_at?.toMillis?.() || 0;
-          const dateB = b.created_at?.toMillis?.() || 0;
-          return dateB - dateA;
-        });
-
-      if (!orders.length) {
-        userOrdersList.innerHTML = '<p class="cart-empty">Todavía no tenés pedidos guardados.</p>';
-        renderPointsHistory([]);
-        return;
-      }
-
-      renderPointsHistory(orders);
-
-      userOrdersList.innerHTML = orders.map((order) => {
-        const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
-        const discount = order.discount_percent ? ` · ${order.discount_percent}% off · ${order.points_to_redeem || 0} pts usados` : "";
-        const status = getStatusLabel(order.status);
-        const pointsText = ["paid", "delivered", "confirmed"].includes(order.status)
-          ? `${order.points_to_add || 0} pts sumados`
-          : `${order.points_to_add || 0} pts si se confirma`;
-
-        return `
-          <article class="admin-order">
-            <strong>${status} · ${money.format(order.total || 0)} · ${pointsText}${discount}</strong>
-            <p>${items || "Pedido sin items"}${order.subtotal ? ` · Subtotal ${money.format(order.subtotal)}` : ""}</p>
-            <p>ID: ${escapeHtml(order.id)}</p>
-          </article>
-        `;
-      }).join("");
-    };
-
-    const loadPendingOrders = async () => {
-      if (!firebaseDb || !currentProfile?.is_admin) return;
-
-      let ordersSnapshot;
-      let redemptionsSnapshot;
-      try {
-        ordersSnapshot = await firebaseDb
-          .collection("orders")
-          .get();
-        redemptionsSnapshot = await firebaseDb
-          .collection("redemptions")
-          .where("status", "==", "pending")
-          .get();
-      } catch (error) {
-        adminList.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
-        return;
-      }
-
-      const orders = ordersSnapshot.docs
-        .map((doc) => ({ id: doc.id, ...doc.data() }))
-        .sort((a, b) => {
-          const dateA = a.created_at?.toMillis?.() || 0;
-          const dateB = b.created_at?.toMillis?.() || 0;
-          return dateB - dateA;
-        });
-      const redemptions = redemptionsSnapshot.docs
-        .map((doc) => ({ id: doc.id, ...doc.data() }))
-        .sort((a, b) => {
-          const dateA = a.created_at?.toMillis?.() || 0;
-          const dateB = b.created_at?.toMillis?.() || 0;
-          return dateB - dateA;
-        });
-
-      if (!orders.length && !redemptions.length) {
-        adminList.innerHTML = '<p class="cart-empty">No hay pedidos ni canjes pendientes.</p>';
-        return;
-      }
-
-      const userIds = [...new Set([...orders, ...redemptions].map((item) => item.user_id).filter(Boolean))];
-      const profiles = await Promise.all(userIds.map(async (id) => {
-        const profileSnap = await firebaseDb.collection("profiles").doc(id).get();
-        return profileSnap.exists ? { id, ...profileSnap.data() } : { id };
-      }));
-      const profilesById = new Map(profiles.map((profile) => [profile.id, profile]));
-
-      const ordersHtml = orders.map((order) => {
-        const items = (order.items || []).map((item) => `${escapeHtml(item.product_name)} x${item.quantity}`).join(", ");
-        const profile = profilesById.get(order.user_id);
-        const user = escapeHtml(profile?.display_name || profile?.email || "Cliente");
-        const discount = order.discount_percent ? ` · ${order.discount_percent}% off · usa ${order.points_to_redeem || 0} pts` : "";
-        return `
-          <article class="admin-order">
-            <strong>${user} · ${getStatusLabel(order.status)} · ${money.format(order.total)} · suma ${order.points_to_add} pts${discount}</strong>
-            <p>${items}${order.subtotal ? ` · Subtotal ${money.format(order.subtotal)}` : ""}</p>
-            <div class="admin-order-actions">
-              <select class="status-select" data-status-order-id="${order.id}">
-                ${["pending", "paid", "delivered", "problem", "cancelled"].map((status) => `<option value="${status}" ${order.status === status ? "selected" : ""}>${getStatusLabel(status)}</option>`).join("")}
-              </select>
-              <button class="admin-btn" type="button" data-admin-type="order" data-admin-action="set-status" data-order-id="${order.id}">Actualizar estado</button>
-            </div>
-          </article>
-        `;
-      }).join("");
-      const redemptionsHtml = redemptions.map((redemption) => {
-        const profile = profilesById.get(redemption.user_id);
-        const user = escapeHtml(profile?.display_name || profile?.email || "Cliente");
-        return `
-          <article class="admin-order">
-            <strong>${user} · ${escapeHtml(redemption.reward_name)} · ${redemption.reward_cost} pts</strong>
-            <p>Canje solicitado. Puntos actuales: ${profile?.points ?? 0}</p>
-            <div class="admin-order-actions">
-              <button class="admin-btn" type="button" data-admin-type="redemption" data-admin-action="confirm" data-redemption-id="${redemption.id}">Aprobar y descontar puntos</button>
-              <button class="admin-btn reject" type="button" data-admin-type="redemption" data-admin-action="reject" data-redemption-id="${redemption.id}">Rechazar</button>
-            </div>
-          </article>
-        `;
-      }).join("");
-
-      adminList.innerHTML = `
-        <h3 class="admin-subtitle">Compras pendientes</h3>
-        ${ordersHtml || '<p class="cart-empty">No hay compras pendientes.</p>'}
-        <h3 class="admin-subtitle">Canjes pendientes</h3>
-        ${redemptionsHtml || '<p class="cart-empty">No hay canjes pendientes.</p>'}
-      `;
-    };
-
-    const createPendingOrder = async (message) => {
-      if (!firebaseDb || !currentUser) return null;
-      const subtotal = getSubtotal();
-      const total = getTotal();
-      const points = Math.floor(total / POINTS_DIVISOR);
-      const items = cart.map((item) => ({
-        product_name: item.name,
-        price: item.price,
-        quantity: item.qty
-      }));
-
-      const orderRef = await firebaseDb.collection("orders").add({
-        user_id: currentUser.uid,
-        user_email: currentUser.email,
-        subtotal,
-        total,
-        points_to_add: points,
-        points_to_redeem: activeReward?.cost || 0,
-        discount_percent: activeReward?.percent || 0,
-        coupon_code: activeCoupon?.code || null,
-        coupon_percent: activeCoupon?.percent || 0,
-        discount_amount: getDiscountAmount(),
-        reward_id: activeReward?.id || null,
-        reward_name: activeReward?.name || null,
-        referred_by: currentProfile?.referred_by || null,
-        referred_by_uid: currentProfile?.referred_by_uid || null,
-        status: "pending",
-        whatsapp_message: message,
-        items,
-        created_at: firebase.firestore.FieldValue.serverTimestamp(),
-        confirmed_at: null
-      });
-
-      return { id: orderRef.id, total, points_to_add: points, discount_percent: (activeReward?.percent || 0) + (activeCoupon?.percent || 0), status: "pending" };
-    };
-
-    authForm.querySelectorAll("[data-auth-action]").forEach((button) => {
-      button.addEventListener("click", () => {
-        pendingAuthAction = button.dataset.authAction || "login";
-      });
-    });
-
-    authForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      if (!firebaseAuth || !firebaseDb) {
-        accountNote.textContent = "Primero hay que pegar la configuración web de Firebase en el código.";
-        return;
-      }
-      const action = event.submitter?.dataset.authAction || pendingAuthAction;
-      const email = document.querySelector("#auth-email").value.trim().toLowerCase();
-      const password = document.querySelector("#auth-password").value;
-
-      if (!email || !password) {
-        accountNote.textContent = "Completá email y contraseña.";
-        return;
-      }
-
-      const buttons = [...authForm.querySelectorAll("button")];
-      buttons.forEach((button) => button.disabled = true);
-      accountNote.textContent = action === "signup" ? "Creando cuenta..." : "Iniciando sesión...";
-
-      try {
-        const result = await withTimeout(
-          action === "signup" ? signUpWithPassword(email, password) : signInWithPassword(email, password),
-          30000,
-          "Firebase tardó demasiado en responder. Probá recargar con Ctrl + F5. Si sigue igual, revisá que 27-store-club.vercel.app esté en dominios autorizados."
-        );
-
-        if (result.error) {
-          accountNote.textContent = getFriendlyAuthError(result.error);
-          return;
-        }
-
-        if (action === "signup" && !result.data?.session) {
-          accountNote.textContent = "Cuenta creada. Ya podés usar tu cuenta para guardar pedidos y puntos.";
-          return;
-        }
-
-        accountNote.textContent = action === "signup" ? "Cuenta creada. Cargando perfil..." : "Sesión iniciada. Cargando perfil...";
-        await withTimeout(
-          loadProfile(),
-          10000,
-          "La sesión entró, pero el perfil tardó demasiado. Recargá la página."
-        );
-      } catch (error) {
-        accountNote.textContent = getFriendlyAuthError(error);
-      } finally {
-        buttons.forEach((button) => button.disabled = false);
-      }
-    });
-
-    logoutBtn.addEventListener("click", async () => {
-      logoutBtn.disabled = true;
-      accountNote.textContent = "Cerrando sesión...";
-
-      try {
-        if (firebaseAuth) {
-          await firebaseAuth.signOut();
-        }
-      } catch (error) {
-        accountNote.textContent = error.message;
-      }
-
-      clearFirebaseStorage();
-      resetAccountUi();
-    });
-
-    const renderAdminUser = async (email) => {
-      if (!firebaseDb || !currentProfile?.is_admin) return;
-      const cleanEmail = email.trim().toLowerCase();
-      if (!cleanEmail) {
-        adminUserResult.innerHTML = '<p class="cart-empty">Ingresá un email.</p>';
-        return;
-      }
-
-      const profileSnapshot = await firebaseDb.collection("profiles").where("email", "==", cleanEmail).limit(1).get();
-      if (profileSnapshot.empty) {
-        selectedAdminProfile = null;
-        adminUserResult.innerHTML = '<p class="cart-empty">No encontramos ese usuario.</p>';
-        return;
-      }
-
-      selectedAdminProfile = { id: profileSnapshot.docs[0].id, ...profileSnapshot.docs[0].data() };
-      const ordersSnapshot = await firebaseDb.collection("orders").where("user_id", "==", selectedAdminProfile.id).get();
-      const orders = ordersSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      const usedDiscounts = orders.filter((order) => order.discount_amount || order.coupon_code || order.reward_name).length;
-      const totalOrders = orders.length;
-      const lastOrders = orders
-        .sort((a, b) => (b.created_at?.toMillis?.() || 0) - (a.created_at?.toMillis?.() || 0))
-        .slice(0, 4)
-        .map((order) => `<p>${getStatusLabel(order.status)} · ${money.format(order.total || 0)} · ${escapeHtml(order.id)}</p>`)
-        .join("");
-
-      adminUserResult.innerHTML = `
-        <article class="admin-order">
-          <strong>${escapeHtml(selectedAdminProfile.email)} · ${selectedAdminProfile.points || 0} pts · ${getClubLevel(selectedAdminProfile.points || 0).name}</strong>
-          <p>Pedidos: ${totalOrders} · Descuentos usados: ${usedDiscounts} · Referido: ${escapeHtml(selectedAdminProfile.referred_by || "sin referido")}</p>
-          ${lastOrders || "<p>Sin pedidos.</p>"}
-        </article>
-      `;
-    };
-
-    adminSearchUserBtn?.addEventListener("click", async () => {
-      try {
-        await renderAdminUser(adminUserEmail.value);
-      } catch (error) {
-        adminUserResult.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
-      }
-    });
-
-    adminAddPointsBtn?.addEventListener("click", async () => {
-      if (!firebaseDb || !currentProfile?.is_admin) return;
-      if (!selectedAdminProfile) {
-        await renderAdminUser(adminUserEmail.value);
-      }
-      if (!selectedAdminProfile) return;
-
-      const delta = Number(adminPointsDelta.value || 0);
-      const nextPoints = Math.max(0, (selectedAdminProfile.points || 0) + delta);
-      try {
-        await firebaseDb.collection("profiles").doc(selectedAdminProfile.id).update({
-          points: nextPoints,
-          club_level: getClubLevel(nextPoints).id
-        });
-        await renderAdminUser(selectedAdminProfile.email);
-      } catch (error) {
-        adminUserResult.innerHTML = `<p class="cart-empty">${escapeHtml(error.message)}</p>`;
-      }
-    });
-
-    adminSaveProductBtn?.addEventListener("click", async () => {
-      if (!firebaseDb || !currentProfile?.is_admin) return;
-      const name = adminProductName.value.trim();
-      const price = Number(adminProductPrice.value || 0);
-
-      if (!name || price <= 0) {
-        accountNote.textContent = "Completá nombre y precio del producto.";
-        return;
-      }
-
-      try {
-        await firebaseDb.collection("products").add({
-          name,
-          price,
-          image_url: adminProductImage.value.trim(),
-          category: adminProductCategory.value.trim() || "Producto",
-          description: "Producto cargado desde panel admin.",
-          active: true,
-          created_at: firebase.firestore.FieldValue.serverTimestamp()
-        });
-        adminProductName.value = "";
-        adminProductPrice.value = "";
-        adminProductImage.value = "";
-        adminProductCategory.value = "";
-        accountNote.textContent = "Producto guardado en Firebase.";
-      } catch (error) {
-        accountNote.textContent = error.message;
-      }
-    });
-
-    adminList.addEventListener("click", async (event) => {
-      const button = event.target.closest("button");
-      if (!button || !firebaseDb || !currentProfile?.is_admin) return;
-      try {
-        if (button.dataset.adminType === "redemption") {
-          const redemptionRef = firebaseDb.collection("redemptions").doc(button.dataset.redemptionId);
-
-          if (button.dataset.adminAction === "confirm") {
-            await firebaseDb.runTransaction(async (transaction) => {
-              const redemptionSnap = await transaction.get(redemptionRef);
-              if (!redemptionSnap.exists) throw new Error("Canje no encontrado.");
-              const redemption = redemptionSnap.data();
-              if (redemption.status !== "pending") return;
-              const reward = rewards.find((item) => item.id === redemption.reward_id);
-              if (!reward || reward.cost !== redemption.reward_cost) {
-                throw new Error("Este canje no coincide con una recompensa válida.");
-              }
-
-              const profileRef = firebaseDb.collection("profiles").doc(redemption.user_id);
-              const profileSnap = await transaction.get(profileRef);
-              const availablePoints = profileSnap.data()?.points || 0;
-
-              if (availablePoints < redemption.reward_cost) {
-                throw new Error("El cliente no tiene puntos suficientes para aprobar este canje.");
-              }
-
-              transaction.update(redemptionRef, {
-                status: "confirmed",
-                resolved_at: firebase.firestore.FieldValue.serverTimestamp()
-              });
-              transaction.update(profileRef, {
-                points: firebase.firestore.FieldValue.increment(-redemption.reward_cost)
-              });
-            });
-          } else {
-            await redemptionRef.update({
-              status: "rejected",
-              resolved_at: firebase.firestore.FieldValue.serverTimestamp()
-            });
-          }
-        } else {
-          const orderRef = firebaseDb.collection("orders").doc(button.dataset.orderId);
-
-          if (button.dataset.adminAction !== "set-status") return;
-          const select = adminList.querySelector(`[data-status-order-id="${button.dataset.orderId}"]`);
-          const nextStatus = select?.value || "pending";
-
-          await firebaseDb.runTransaction(async (transaction) => {
-            const orderSnap = await transaction.get(orderRef);
-            if (!orderSnap.exists) throw new Error("Pedido no encontrado.");
-            const order = orderSnap.data();
-            const profileRef = firebaseDb.collection("profiles").doc(order.user_id);
-            const wasPending = order.status === "pending";
-            const becomesPaid = ["paid", "delivered"].includes(nextStatus);
-            const pointsToRedeem = order.points_to_redeem || 0;
-
-            if (wasPending && becomesPaid && pointsToRedeem > 0) {
-              const profileSnap = await transaction.get(profileRef);
-              const availablePoints = profileSnap.data()?.points || 0;
-
-              if (availablePoints < pointsToRedeem) {
-                throw new Error("El cliente ya no tiene puntos suficientes para aplicar este descuento.");
-              }
-            }
-
-            transaction.update(orderRef, {
-              status: nextStatus,
-              resolved_at: firebase.firestore.FieldValue.serverTimestamp(),
-              confirmed_at: becomesPaid ? firebase.firestore.FieldValue.serverTimestamp() : (order.confirmed_at || null)
-            });
-
-            if (wasPending && becomesPaid) {
-              const pointDelta = (order.points_to_add || 0) - pointsToRedeem;
-              transaction.update(profileRef, {
-                points: firebase.firestore.FieldValue.increment(pointDelta)
-              });
-
-              if (order.referred_by_uid) {
-                transaction.update(firebaseDb.collection("profiles").doc(order.referred_by_uid), {
-                    points: firebase.firestore.FieldValue.increment(REFERRAL_BONUS_POINTS)
-                });
-              }
-            }
-          });
-        }
-      } catch (error) {
-        accountNote.textContent = error.message;
-        return;
-      }
-      await loadPendingOrders();
-      await loadProfile();
-    });
-
-    checkoutBtn.addEventListener("click", async () => {
+    checkoutBtn.addEventListener("click", () => {
       if (cart.length === 0) return;
-      const lines = cart.map((item) => `- ${item.name} x${item.qty}: ${money.format(item.price * item.qty)}`);
-      const points = Math.floor(getTotal() / POINTS_DIVISOR);
-      const discountLines = activeReward ? [
-        `Subtotal: ${money.format(getSubtotal())}`,
-        `Descuento por puntos: ${activeReward.name} (-${money.format(getPointsDiscountAmount())})`,
-        `Puntos a descontar si se confirma el pago: ${activeReward.cost} pts`
-      ] : [];
-      const couponLines = activeCoupon ? [
-        `Cupón: ${activeCoupon.code} (${activeCoupon.percent}% off, sin usar puntos)`,
-        `Descuento cupón: -${money.format(getCouponDiscountAmount())}`
-      ] : [];
-      const message = [
-        "Hola 27 Store, quiero hacer este pedido:",
-        "",
-        ...lines,
-        "",
-        ...discountLines,
-        ...couponLines,
-        `Total: ${money.format(getTotal())}`,
-        `Puntos a sumar si se confirma el pago: ${points} pts`,
-        currentProfile?.referred_by ? `Referido por: ${currentProfile.referred_by}` : "",
-        currentUser ? `Cuenta: ${currentUser.email}` : "Cuenta: sin iniciar sesión",
-        "",
-        "Me pasas los datos para finalizar?"
-      ].filter(Boolean).join("\n");
-
-      if (firebaseDb && currentUser) {
-        try {
-          const order = await createPendingOrder(message);
-          accountNote.textContent = `Pedido pendiente creado: ${order.id}`;
-          renderReceipt(order);
-          await loadUserOrders();
-        } catch (error) {
-          accountNote.textContent = error.message;
-          return;
-        }
-      } else if (firebaseDb && !currentUser) {
-        accountNote.textContent = "Pedido enviado por WhatsApp sin cuenta. Para sumar puntos, iniciá sesión antes de finalizar.";
-      }
-
+      const lines = cart.map((item) => `- ${item.name} (${item.type}) x${item.qty}: ${item.price > 0 ? money.format(item.price * item.qty) : "A consultar"}`);
+      const message = ["Hola 27 Store, quiero hacer este pedido:", "", ...lines, "", ...(activeCoupon ? [`Cupón: ${activeCoupon.label}`, `Descuento: -${money.format(getDiscountAmount())}`] : []), `Total estimado: ${getTotal() > 0 ? money.format(getFinalTotal()) : "A consultar"}`, "", "Me pasás disponibilidad, datos de pago y entrega?"].join("\n");
+      orderStatus.textContent = "Pedido listo. Se abrió WhatsApp para enviarlo.";
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
     });
+    window.addEventListener("scroll", setActiveLink, { passive: true });
+    window.addEventListener("hashchange", setActiveLink);
 
-    if (firebaseAuth) {
-      firebaseAuth.onAuthStateChanged(() => loadProfile());
-    }
-    loadProfile();
+    renderProductSections();
+    loadCart();
+    applyCatalogFilters();
     renderCart();
-    renderRewards();
-    renderClubLevels();
-    renderDraws();
+    setActiveLink();
   </script>
 </body>
 </html>
+
+
+
+
+
+
