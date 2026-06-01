@@ -349,7 +349,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 17000,
-    "image": "images/K5.png",
+    "image": "images/k5.png",
     "description": "Una llave maestra con un juego de maxima categoria Tier S."
   },
   {
@@ -360,7 +360,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/K6.png",
+    "image": "images/k6.png",
     "description": "5 keys aleatorias de Steam con juegos."
   },
   {
@@ -371,7 +371,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/K7.png",
+    "image": "images/k7.png",
     "description": "5 keys aleatorias de Steam con juegos valorados en mas de 20 euros."
   },
   {
@@ -382,7 +382,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/K8.png",
+    "image": "images/k8.png",
     "description": "Key aleatoria con titulos destacados de juegos del ano."
   },
   {
@@ -393,7 +393,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 5000,
-    "image": "images/K9.png",
+    "image": "images/k9.png",
     "description": "Key aleatoria con juego random."
   },
   {
