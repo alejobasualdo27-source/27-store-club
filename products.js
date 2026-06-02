@@ -1,9 +1,31 @@
 window.STORE_PRODUCTS = [
   {
+    "id": "gt7",
+    "category": "ps",
+    "name": "Gran Turismo 7",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 35000,
+    "image": "images/psgt7.png",
+    "description": "La experiencia definitiva de carreras en PS5, con autos increíbles, conducción realista y gráficos espectaculares."
+  },
+  {
+    "id": "cyberpunk-2077",
+    "category": "ps",
+    "name": "Cyberpunk 2077",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 32000,
+    "image": "images/cyberps.png",
+    "description": "Un mundo futurista enorme lleno de acción, tecnología, decisiones y misiones intensas en la ciudad de Night City."
+  },
+  {
     "id": "psplus-3meses",
     "category": "suscripciones",
-    "name": "Ps Plus 3Meses",
-    "tag": "Ps5/ps5",
+    "name": "PS Plus 3 meses",
+    "tag": "PS4/PS5",
     "type": "Cuenta",
     "stock": "Disponible",
     "price": 35000,
@@ -38,7 +60,7 @@ window.STORE_PRODUCTS = [
   {
     "id": "canva-pro-1-ano",
     "category": "suscripciones",
-    "name": "Canva Pro 1 ano",
+    "name": "Canva Pro 1 año",
     "tag": "Suscripciones",
     "type": "Cuenta",
     "stock": "Disponible",
@@ -92,7 +114,7 @@ window.STORE_PRODUCTS = [
     "description": "30 dias de acceso Premium con garantia oficial de 27 Store."
   },
   {
-    "id": "cyberpunk-2077",
+    "id": "cyberpunk-2077-pc",
     "category": "juegos",
     "name": "Cyberpunk 2077",
     "tag": "PC",
@@ -241,28 +263,6 @@ window.STORE_PRODUCTS = [
     "description": "Una aventura épica junto a Kratos y Atreus, con combates impresionantes, mitología nórdica y una historia llena de acción."
   },
   {
-    "id": "cyberpunk-2077-ps",
-    "category": "ps",
-    "name": "Cyberpunk 2077",
-    "tag": "PS4/PS5",
-    "type": "Cuenta",
-    "stock": "Disponible",
-    "price": 32000,
-    "image": "images/cyberps.png",
-    "description": "Un mundo futurista enorme lleno de acción, tecnología, decisiones y misiones intensas en la ciudad de Night City."
-  },
-  {
-    "id": "gt7",
-    "category": "ps",
-    "name": "Gran Turismo 7",
-    "tag": "ps5/ps5",
-    "type": "Cuenta",
-    "stock": "Disponible",
-    "price": 35000,
-    "image": "images/psgt7.png",
-    "description": "La experiencia definitiva de carreras en PS5, con autos increíbles, conducción realista y gráficos espectaculares."
-  },
-  {
     "id": "the-last-of-us-part",
     "category": "ps",
     "name": "The Last of Us Part I",
@@ -287,13 +287,13 @@ window.STORE_PRODUCTS = [
   {
     "id": "juego-ps-a-pedido",
     "category": "ps",
-    "name": "Pedi tu juego PS4/PS5",
+    "name": "Pedí tu juego PS4/PS5",
     "tag": "A pedido",
     "type": "Cuenta",
     "stock": "A cotizar",
     "price": 0,
     "image": "images/atencion.png",
-    "description": "Mandanos el titulo, edicion y consola. Te respondemos precio, stock y forma de activacion."
+    "description": "Mandanos el título, edición y consola. Te respondemos precio, stock y forma de activación."
   },
   {
     "id": "re-requiem-random-1-key",
@@ -349,7 +349,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 17000,
-    "image": "images/K5.png",
+    "image": "images/k5.png",
     "description": "Una llave maestra con un juego de maxima categoria Tier S."
   },
   {
@@ -360,7 +360,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/K6.png",
+    "image": "images/k6.png",
     "description": "5 keys aleatorias de Steam con juegos."
   },
   {
@@ -371,7 +371,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/K7.png",
+    "image": "images/k7.png",
     "description": "5 keys aleatorias de Steam con juegos valorados en mas de 20 euros."
   },
   {
@@ -382,8 +382,8 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/K8.png",
-    "description": "Key aleatoria con titulos destacados de juegos del ano."
+    "image": "images/k8.png",
+    "description": "Key aleatoria con títulos destacados de juegos del año."
   },
   {
     "id": "1-key-random-grand",
@@ -393,30 +393,8 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 5000,
-    "image": "images/K9.png",
+    "image": "images/k9.png",
     "description": "Key aleatoria con juego random."
-  },
-  {
-    "id": "vistas-tiktok",
-    "category": "social",
-    "name": "Vistas Tiktok",
-    "tag": "Social",
-    "type": "Servicio",
-    "stock": "Disponible",
-    "price": 1500,
-    "image": "images/F11.png",
-    "description": "Vistas para Tiktok. Minima compra 1000."
-  },
-  {
-    "id": "espectadores-tw",
-    "category": "social",
-    "name": "Espectadores Twitch",
-    "tag": "Social",
-    "type": "Servicio",
-    "stock": "Disponible",
-    "price": 3000,
-    "image": "images/F9.png",
-    "description": "Espectadores para twitch. Minima compra 10."
   },
   {
     "id": "seguidores-ig",
@@ -428,17 +406,6 @@ window.STORE_PRODUCTS = [
     "price": 2500,
     "image": "images/F1.png",
     "description": "Seguidores de alta calidad. Minima compra 100."
-  },
-  {
-    "id": "espectadores-k",
-    "category": "social",
-    "name": "Espectadores Kick",
-    "tag": "Social",
-    "type": "Servicio",
-    "stock": "Disponible",
-    "price": 3000,
-    "image": "images/F10.png",
-    "description": "Espectadores para Kick. Mínima compra 10."
   },
   {
     "id": "likes-ig",
@@ -520,8 +487,9 @@ window.STORE_PRODUCTS = [
 ];
 
 window.STORE_COUPONS = {
-  "27STORE": {
-    "label": "27STORE",
-    "percent": 10
-  }
+  "27STORE": { "label": "27STORE", "percent": 10 },
+  "AMIGO27": { "label": "AMIGO27", "percent": 15 },
+  "STREAMING": { "label": "STREAMING", "percent": 5 },
+  "MILOFF": { "label": "MILOFF", "amount": 1000 },
+  "5000OFF": { "label": "5000OFF", "amount": 5000 }
 };
