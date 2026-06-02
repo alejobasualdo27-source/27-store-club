@@ -1,36 +1,14 @@
 window.STORE_PRODUCTS = [
   {
-    "id": "gt7",
-    "category": "ps",
-    "name": "Gran Turismo 7",
-    "tag": "PS4/PS5",
-    "type": "Cuenta",
-    "stock": "Disponible",
-    "price": 35000,
-    "image": "images/psgt7.png",
-    "description": "La experiencia definitiva de carreras en PS5, con autos increíbles, conducción realista y gráficos espectaculares."
-  },
-  {
-    "id": "cyberpunk-2077",
-    "category": "ps",
-    "name": "Cyberpunk 2077",
-    "tag": "PS4/PS5",
-    "type": "Cuenta",
-    "stock": "Disponible",
-    "price": 32000,
-    "image": "images/cyberps.png",
-    "description": "Un mundo futurista enorme lleno de acción, tecnología, decisiones y misiones intensas en la ciudad de Night City."
-  },
-  {
     "id": "psplus-3meses",
     "category": "suscripciones",
-    "name": "PS Plus 3 meses",
-    "tag": "PS4/PS5",
+    "name": "Ps Plus 3Meses",
+    "tag": "Ps5/ps5",
     "type": "Cuenta",
     "stock": "Disponible",
     "price": 35000,
     "image": "images/psplus.png",
-    "description": "🔹 Essential✔️ Juegos del mes✔️ Juego online\n\n🔹 Extra✔️ Juegos del mes✔️ Catálogo de juegos✔️ Juego online\n\n🔹 Deluxe✔️ Juegos del mes✔️ Catálogo de juegos✔️ Juego online✔️ Juegos exclusivos",
+    "description": "🔹 Essential✔️ Juegos del mes✔️ Juego online",
     "oldPrice": 45000
   },
   {
@@ -60,7 +38,7 @@ window.STORE_PRODUCTS = [
   {
     "id": "canva-pro-1-ano",
     "category": "suscripciones",
-    "name": "Canva Pro 1 año",
+    "name": "Canva Pro 1 ano",
     "tag": "Suscripciones",
     "type": "Cuenta",
     "stock": "Disponible",
@@ -114,17 +92,42 @@ window.STORE_PRODUCTS = [
     "description": "30 dias de acceso Premium con garantia oficial de 27 Store."
   },
   {
-    "id": "cyberpunk-2077-pc",
+    "id": "pragmata-deluxe",
     "category": "juegos",
-    "name": "Cyberpunk 2077",
+    "name": "PRAGMATA Deluxe",
     "tag": "PC",
-    "type": "Key",
+    "type": "Cuenta",
     "stock": "Disponible",
-    "price": 75000,
-    "image": "images/Cyberpunk2077pc.png",
-    "description": "Metete de lleno en Night City, una megalopolis futurista obsesionada con el poder y las modificaciones corporales.",
+    "price": 35000,
+    "image": "images/PCPRAG.png",
+    "description": "✅ Recibís una cuenta de Steam lista para usar con el juego instalado.\n✅ Acceso ilimitado – Ingresá y jugá cuando quieras, sin restricciones de tiempo.\n✅ Progreso guardado – Tus partidas estarán siempre a salvo.\n✅ Tiempo de juego libre – Disfrutá sin límites ni interrupciones.",
+    "oldPrice": 50000
+  },
+  {
+    "id": "the-last-of-us",
+    "category": "juegos",
+    "name": "The Last of Us Bundle PC Steam",
+    "tag": "PC",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 35000,
+    "image": "images/PCTHE12.png",
+    "description": "✅ Recibís una cuenta de Steam lista para usar con el juego instalado.\n✅ Acceso ilimitado – Ingresá y jugá cuando quieras, sin restricciones de tiempo.\n✅ Progreso guardado – Tus partidas estarán siempre a salvo.\n✅ Tiempo de juego libre – Disfrutá sin límites ni interrupciones.",
     "oldPrice": 90000,
-    "featured": true
+    "bestSeller": true
+  },
+  {
+    "id": "god-of-war-bundle",
+    "category": "juegos",
+    "name": "God of War Bundle",
+    "tag": "PC",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 35000,
+    "image": "images/PCWOG.png",
+    "description": "✅ Recibís una cuenta de Steam lista para usar con el juego instalado.\n✅ Acceso ilimitado – Ingresá y jugá cuando quieras, sin restricciones de tiempo.\n✅ Progreso guardado – Tus partidas estarán siempre a salvo.\n✅ Tiempo de juego libre – Disfrutá sin límites ni interrupciones.",
+    "oldPrice": 70000,
+    "bestSeller": true
   },
   {
     "id": "ea-sports-fc-26",
@@ -140,7 +143,7 @@ window.STORE_PRODUCTS = [
     "featured": true
   },
   {
-    "id": "the-last-of-us-part-i",
+    "id": "the-last-of-us-part",
     "category": "juegos",
     "name": "The Last Of Us Part I",
     "tag": "PC",
@@ -252,6 +255,17 @@ window.STORE_PRODUCTS = [
     "description": "Una obra maestra de Rockstar en el salvaje oeste, con mundo abierto e historia memorable."
   },
   {
+    "id": "tomb-raider-definitive-edition-copia",
+    "category": "ps",
+    "name": "TOMB RAIDER: DEFINITIVE EDITION copia",
+    "tag": "ps5/ps5",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 10000,
+    "image": "images/PSTOMB.jpg",
+    "description": "Seguís a una joven Lara Croft en una isla llena de peligros, donde debe sobrevivir, explorar tumbas, resolver puzzles y enfrentarse a enemigos en intensas batallas. Acción, aventura y supervivencia en tercera persona."
+  },
+  {
     "id": "ps-gow",
     "category": "ps",
     "name": "God of War Ragnarök",
@@ -261,6 +275,39 @@ window.STORE_PRODUCTS = [
     "price": 35000,
     "image": "images/gowrps.png",
     "description": "Una aventura épica junto a Kratos y Atreus, con combates impresionantes, mitología nórdica y una historia llena de acción."
+  },
+  {
+    "id": "resident-evil",
+    "category": "ps",
+    "name": "Resident Evil Remake Trilogy",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "DISPONIBLE",
+    "price": 30000,
+    "image": "images/PSREMAKETRI.png",
+    "description": "Una colección que reúne los remakes de los clásicos juegos de terror y acción de Resident Evil, con gráficos modernizados, atmósfera intensa y jugabilidad mejorada"
+  },
+  {
+    "id": "cyberpunk-2077-ps",
+    "category": "ps",
+    "name": "Cyberpunk 2077",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 32000,
+    "image": "images/cyberps.png",
+    "description": "Un mundo futurista enorme lleno de acción, tecnología, decisiones y misiones intensas en la ciudad de Night City."
+  },
+  {
+    "id": "gt7",
+    "category": "ps",
+    "name": "Gran Turismo 7",
+    "tag": "ps5/ps5",
+    "type": "Cuenta",
+    "stock": "Disponible",
+    "price": 35000,
+    "image": "images/psgt7.png",
+    "description": "La experiencia definitiva de carreras en PS5, con autos increíbles, conducción realista y gráficos espectaculares."
   },
   {
     "id": "the-last-of-us-part",
@@ -274,6 +321,50 @@ window.STORE_PRODUCTS = [
     "description": "Una historia intensa de supervivencia, emoción y acción en un mundo destruido, con gráficos renovados y una experiencia cinematográfica brutal."
   },
   {
+    "id": "the-last-of-us-part",
+    "category": "ps",
+    "name": "THE LAST OF US PART II",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Consultar stock",
+    "price": 35000,
+    "image": "images/PSTHELOUD2.png",
+    "description": "Una aventura épica junto a Kratos y Atreus, con combates impresionantes, mitología nórdica y una historia llena de acción."
+  },
+  {
+    "id": "nba-2k26",
+    "category": "ps",
+    "name": "NBA 2K26",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Consultar stock",
+    "price": 22000,
+    "image": "images/PSNBA.png",
+    "description": "NBA 2K26 es el mejor simulador de básquetbol. Juegabilidad realista, modos como MyCAREER, MyTEAM y MyNBA, gráficos impresionantes y online. Perfecto para fans del NBA."
+  },
+  {
+    "id": "ghost-of-yotei",
+    "category": "ps",
+    "name": "GHOST OF YOTEI",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Consultar stock",
+    "price": 50000,
+    "image": "images/PSGHOSTOFYOTEI.png",
+    "description": "Ghost of Yōtei es un juego de acción y aventura de mundo abierto desarrollado por Sucker Punch. Secuela espiritual de Ghost of Tsushima, ambientada en el Japón de 1603 (norte de Ezo)."
+  },
+  {
+    "id": "residen-evil-requiem",
+    "category": "ps",
+    "name": "RESIDEN EVIL REQUIEM",
+    "tag": "PS4/PS5",
+    "type": "Cuenta",
+    "stock": "Consultar stock",
+    "price": 55000,
+    "image": "images/PSRESIDENT.png",
+    "description": "Seguís a la analista del FBI Grace Ashcroft y a Leon S. Kennedy en una aterradora investigación en las ruinas de Raccoon City. Terror, acción, escasez de recursos y una historia intensa que cierra varias tramas de la saga. Pura tensión y clásicos sustos de Resident Evil."
+  },
+  {
     "id": "rdr2",
     "category": "ps",
     "name": "Red Dead Redemption 2",
@@ -283,17 +374,6 @@ window.STORE_PRODUCTS = [
     "price": 25000,
     "image": "images/rdr2ps.png",
     "description": "Una obra maestra de mundo abierto ambientada en el viejo oeste, con una historia profunda, libertad total y una experiencia cinematográfica increíble."
-  },
-  {
-    "id": "juego-ps-a-pedido",
-    "category": "ps",
-    "name": "Pedí tu juego PS4/PS5",
-    "tag": "A pedido",
-    "type": "Cuenta",
-    "stock": "A cotizar",
-    "price": 0,
-    "image": "images/atencion.png",
-    "description": "Mandanos el título, edición y consola. Te respondemos precio, stock y forma de activación."
   },
   {
     "id": "re-requiem-random-1-key",
@@ -349,7 +429,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 17000,
-    "image": "images/k5.png",
+    "image": "images/K5.png",
     "description": "Una llave maestra con un juego de maxima categoria Tier S."
   },
   {
@@ -360,7 +440,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/k6.png",
+    "image": "images/K6.png",
     "description": "5 keys aleatorias de Steam con juegos."
   },
   {
@@ -371,7 +451,7 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/k7.png",
+    "image": "images/K7.png",
     "description": "5 keys aleatorias de Steam con juegos valorados en mas de 20 euros."
   },
   {
@@ -382,8 +462,8 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 15000,
-    "image": "images/k8.png",
-    "description": "Key aleatoria con títulos destacados de juegos del año."
+    "image": "images/K8.png",
+    "description": "Key aleatoria con titulos destacados de juegos del ano."
   },
   {
     "id": "1-key-random-grand",
@@ -393,8 +473,30 @@ window.STORE_PRODUCTS = [
     "type": "Key",
     "stock": "Disponible",
     "price": 5000,
-    "image": "images/k9.png",
+    "image": "images/K9.png",
     "description": "Key aleatoria con juego random."
+  },
+  {
+    "id": "vistas-tiktok",
+    "category": "social",
+    "name": "Vistas Tiktok",
+    "tag": "Social",
+    "type": "Servicio",
+    "stock": "Disponible",
+    "price": 1500,
+    "image": "images/F11.png",
+    "description": "Vistas para Tiktok. Minima compra 1000."
+  },
+  {
+    "id": "espectadores-tw",
+    "category": "social",
+    "name": "Espectadores Twitch",
+    "tag": "Social",
+    "type": "Servicio",
+    "stock": "Disponible",
+    "price": 3000,
+    "image": "images/F9.png",
+    "description": "Espectadores para twitch. Minima compra 10."
   },
   {
     "id": "seguidores-ig",
@@ -406,6 +508,17 @@ window.STORE_PRODUCTS = [
     "price": 2500,
     "image": "images/F1.png",
     "description": "Seguidores de alta calidad. Minima compra 100."
+  },
+  {
+    "id": "espectadores-k",
+    "category": "social",
+    "name": "Espectadores Kick",
+    "tag": "Social",
+    "type": "Servicio",
+    "stock": "Disponible",
+    "price": 3000,
+    "image": "images/F10.png",
+    "description": "Espectadores para Kick. Mínima compra 10."
   },
   {
     "id": "likes-ig",
@@ -487,9 +600,8 @@ window.STORE_PRODUCTS = [
 ];
 
 window.STORE_COUPONS = {
-  "27STORE": { "label": "27STORE", "percent": 10 },
-  "AMIGO27": { "label": "AMIGO27", "percent": 15 },
-  "STREAMING": { "label": "STREAMING", "percent": 5 },
-  "MILOFF": { "label": "MILOFF", "amount": 1000 },
-  "5000OFF": { "label": "5000OFF", "amount": 5000 }
+  "27STORE": {
+    "label": "27STORE",
+    "percent": 10
+  }
 };
