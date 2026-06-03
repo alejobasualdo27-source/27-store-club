@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -6,8 +6,9 @@
   <title>Editor 27 Store</title>
   <style>
     :root{--bg:#07080a;--panel:#101216;--line:rgba(255,255,255,.1);--text:#f4f7f2;--muted:#8b948e;--accent:#52ff73;--blue:#21c7ff;--danger:#ff7a7a}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{width:min(1220px,calc(100% - 28px));margin:0 auto;padding:26px 0 44px}.top{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}.eyebrow{margin:0 0 8px;color:var(--accent);font-size:12px;font-weight:1000;text-transform:uppercase}.top h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:.95}.top p{margin:10px 0 0;max-width:680px;color:var(--muted);line-height:1.45}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{min-height:42px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:12px;font-weight:1000;text-transform:uppercase}.btn.secondary{border:1px solid var(--line);background:rgba(255,255,255,.055);color:var(--text)}.btn.danger{background:var(--danger);color:#170707}.grid{display:grid;grid-template-columns:280px minmax(0,1fr) 330px;gap:14px}.panel{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;border-bottom:1px solid var(--line)}.panel-head h2{margin:0;font-size:18px}.small{color:var(--muted);font-size:12px}.list-tools{display:grid;gap:8px;padding:12px;border-bottom:1px solid var(--line)}.field{display:grid;gap:6px}.field label{color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.field textarea{min-height:96px;padding:10px;resize:vertical}.product-list{max-height:680px;overflow:auto;padding:8px}.product-row{width:100%;display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;border:1px solid transparent;border-radius:9px;padding:8px;background:transparent;color:var(--text);text-align:left}.product-row:hover,.product-row.active{border-color:rgba(82,255,115,.35);background:rgba(82,255,115,.08)}.product-row img{width:42px;height:42px;border-radius:7px;object-fit:contain;background:#080a0d}.product-row strong{display:block;font-size:13px}.product-row span{display:block;margin-top:2px;color:var(--muted);font-size:11px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:14px}.field.wide{grid-column:1 / -1}.check-row{display:flex;align-items:center;gap:8px;min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.035);padding:0 10px;color:var(--text);font-size:13px;font-weight:800}.check-row input{accent-color:var(--accent)}.form-actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 14px 14px}.preview{padding:14px}.card{position:relative;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.card img{width:100%;height:160px;object-fit:contain;object-position:center;border:1px solid var(--line);border-radius:8px;background:#0b0d11;padding:7px}.tag,.type,.stock{display:inline-flex;width:max-content;border-radius:999px;font-size:10px;font-weight:1000;text-transform:uppercase}.tag{margin-top:12px;color:var(--accent)}.type{border:1px solid rgba(82,255,115,.28);padding:6px 9px;background:rgba(82,255,115,.08);color:var(--accent)}.stock{position:absolute;top:22px;left:22px;border:1px solid rgba(255,255,255,.16);padding:5px 9px;background:rgba(5,6,8,.82);color:var(--accent)}.card h3{margin:7px 0;font-size:24px}.card p{margin:0;color:var(--muted);line-height:1.45}.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}.price{color:var(--blue);font-size:18px;font-weight:1000}.old{margin-left:6px;color:var(--muted);font-size:12px;text-decoration:line-through}.output{display:grid;gap:10px;padding:14px;border-top:1px solid var(--line)}.output textarea{width:100%;min-height:240px;border:1px solid var(--line);border-radius:8px;background:#050608;color:var(--text);padding:10px;font-family:Consolas,monospace;font-size:12px;resize:vertical}.status{min-height:18px;color:var(--muted);font-size:12px}.hint{margin:0;color:var(--muted);font-size:12px;line-height:1.45}.image-note{color:var(--muted);font-size:12px;line-height:1.35}@media (max-width:1020px){.grid{grid-template-columns:1fr}.product-list{max-height:320px}.top{display:grid}.form-grid{grid-template-columns:1fr}}@media (max-width:560px){.wrap{width:min(100% - 20px,1220px);padding-top:18px}.top-actions,.form-actions{display:grid}.btn{width:100%}}
-  </style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{width:min(1220px,calc(100% - 28px));margin:0 auto;padding:26px 0 44px}.top{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}.eyebrow{margin:0 0 8px;color:var(--accent);font-size:12px;font-weight:1000;text-transform:uppercase}.top h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:.95}.top p{margin:10px 0 0;max-width:680px;color:var(--muted);line-height:1.45}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{min-height:42px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:12px;font-weight:1000;text-transform:uppercase}.btn.secondary{border:1px solid var(--line);background:rgba(255,255,255,.055);color:var(--text)}.btn.danger{background:var(--danger);color:#170707}.grid{display:grid;grid-template-columns:280px minmax(0,1fr) 330px;gap:14px}.panel{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;border-bottom:1px solid var(--line)}.panel-head h2{margin:0;font-size:18px}.small{color:var(--muted);font-size:12px}.list-tools{display:grid;gap:8px;padding:12px;border-bottom:1px solid var(--line)}.list-tools select{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.field{display:grid;gap:6px}.field label{color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.field textarea{min-height:96px;padding:10px;resize:vertical}.product-list{max-height:680px;overflow:auto;padding:8px}.product-row{width:100%;display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;border:1px solid transparent;border-radius:9px;padding:8px;background:transparent;color:var(--text);text-align:left}.product-row:hover,.product-row.active{border-color:rgba(82,255,115,.35);background:rgba(82,255,115,.08)}.product-row img{width:42px;height:42px;border-radius:7px;object-fit:contain;background:#080a0d}.product-row strong{display:block;font-size:13px}.product-row span{display:block;margin-top:2px;color:var(--muted);font-size:11px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:14px}.field.wide{grid-column:1 / -1}.check-row{display:flex;align-items:center;gap:8px;min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.035);padding:0 10px;color:var(--text);font-size:13px;font-weight:800}.check-row input{accent-color:var(--accent)}.form-actions,.quick-actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 14px 14px}.quick-actions{padding-top:0}.preview{padding:14px}.card{position:relative;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.card img{width:100%;height:160px;object-fit:contain;object-position:center;border:1px solid var(--line);border-radius:8px;background:#0b0d11;padding:7px}.tag,.type,.stock{display:inline-flex;width:max-content;border-radius:999px;font-size:10px;font-weight:1000;text-transform:uppercase}.tag{margin-top:12px;color:var(--accent)}.type{border:1px solid rgba(82,255,115,.28);padding:6px 9px;background:rgba(82,255,115,.08);color:var(--accent)}.stock{position:absolute;top:22px;left:22px;border:1px solid rgba(255,255,255,.16);padding:5px 9px;background:rgba(5,6,8,.82);color:var(--accent)}.card h3{margin:7px 0;font-size:24px}.card p{margin:0;color:var(--muted);line-height:1.45}.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}.price{color:var(--blue);font-size:18px;font-weight:1000}.old{margin-left:6px;color:var(--muted);font-size:12px;text-decoration:line-through}.output{display:grid;gap:10px;padding:14px;border-top:1px solid var(--line)}.output textarea{width:100%;min-height:240px;border:1px solid var(--line);border-radius:8px;background:#050608;color:var(--text);padding:10px;font-family:Consolas,monospace;font-size:12px;resize:vertical}.status{min-height:18px;color:var(--muted);font-size:12px}.hint{margin:0;color:var(--muted);font-size:12px;line-height:1.45}.image-note{color:var(--muted);font-size:12px;line-height:1.35}.coupon-panel,.validation-panel{margin-top:14px}.coupon-grid{display:grid;grid-template-columns:1fr 140px 140px auto;gap:10px;align-items:end;padding:14px}.coupon-list,.validation-list{display:grid;gap:8px;padding:0 14px 14px}.coupon-row,.validation-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:9px;padding:10px;background:rgba(255,255,255,.035)}.validation-row{grid-template-columns:1fr}.validation-row.ok{border-color:rgba(82,255,115,.35);color:var(--accent)}.validation-row.warn{border-color:rgba(255,206,82,.35);color:var(--warn)}.coupon-row strong{display:block}.coupon-row span,.validation-row span{color:var(--muted);font-size:12px}.coupon-row button{min-height:34px;border-radius:8px;padding:0 10px;background:var(--danger);color:#170707;font-size:11px;font-weight:1000;text-transform:uppercase}@media (max-width:1020px){.grid{grid-template-columns:1fr}.product-list{max-height:320px}.top{display:grid}.form-grid,.coupon-grid{grid-template-columns:1fr}}@media (max-width:560px){.wrap{width:min(100% - 20px,1220px);padding-top:18px}.top-actions,.form-actions,.quick-actions{display:grid}.btn{width:100%}.coupon-row{grid-template-columns:1fr}}
+    .admin-tabs{position:sticky;top:0;z-index:10;display:flex;gap:8px;margin:0 0 14px;padding:10px;border:1px solid var(--line);border-radius:12px;background:rgba(5,6,8,.92);backdrop-filter:blur(12px)}.admin-tabs a{min-height:38px;display:inline-flex;align-items:center;border-radius:8px;padding:0 12px;background:rgba(255,255,255,.055);color:var(--text);font-size:12px;font-weight:1000;text-decoration:none;text-transform:uppercase}.admin-tabs a:hover{background:rgba(82,255,115,.12);color:var(--accent)}.panel{scroll-margin-top:76px}.card p{white-space:pre-line}.price-now{color:var(--blue);font-weight:1000}.price-before{display:inline-block;margin-left:6px;color:var(--muted);font-size:12px;font-weight:900;text-decoration:line-through;text-decoration-thickness:2px;opacity:.78}@media (max-width:560px){.admin-tabs{overflow-x:auto}.admin-tabs a{white-space:nowrap}}
+  .coupon-panel,.side-nav a[href="#cupones-admin"]{display:none!important}</style>
 </head>
 <body>
   <main class="wrap">
@@ -24,7 +25,14 @@
       </div>
     </header>
 
-    <section class="grid">
+    <nav class="admin-tabs" aria-label="Secciones del admin">
+      <a href="#productos-admin">Productos</a>
+      <a href="#cupones-admin">Cupones</a>
+      <a href="#validacion-admin">ValidaciÃ³n</a>
+      <a href="#exportar-admin">Exportar</a>
+    </nav>
+
+    <section class="grid" id="productos-admin">
       <aside class="panel">
         <div class="panel-head">
           <h2>Catalogo</h2>
@@ -35,6 +43,12 @@
             <label for="search">Buscar</label>
             <input id="search" type="search" placeholder="Netflix, GTA, Key...">
           </div>
+          <select id="sort-by" aria-label="Ordenar productos">
+            <option value="order">Orden actual</option>
+            <option value="name">Nombre A-Z</option>
+            <option value="price-asc">Precio menor</option>
+            <option value="price-desc">Precio mayor</option>
+          </select>
           <button class="btn" id="new-product" type="button">Nuevo producto</button>
         </div>
         <div class="product-list" id="product-list"></div>
@@ -101,11 +115,26 @@
             <input id="featured" name="featured" type="checkbox">
             Mostrar tambien en Ofertas destacadas
           </label>
+          <label class="check-row field wide">
+            <input id="bestSeller" name="bestSeller" type="checkbox">
+            Mostrar badge Mas vendido
+          </label>
+          <label class="check-row field wide">
+            <input id="dailyDeal" name="dailyDeal" type="checkbox">
+            Usar como Destacado del dia
+          </label>
         </form>
         <div class="form-actions">
           <button class="btn" id="save-product" type="button">Guardar cambios</button>
           <button class="btn secondary" id="duplicate-product" type="button">Duplicar</button>
+          <button class="btn secondary" id="move-up" type="button">Subir</button>
+          <button class="btn secondary" id="move-down" type="button">Bajar</button>
           <button class="btn danger" id="delete-product" type="button">Eliminar</button>
+        </div>
+        <div class="quick-actions" aria-label="Stock rapido">
+          <button class="btn secondary" type="button" data-stock-value="Disponible">Disponible</button>
+          <button class="btn secondary" type="button" data-stock-value="Consultar stock">Consultar stock</button>
+          <button class="btn secondary" type="button" data-stock-value="Sin stock">Sin stock</button>
         </div>
       </section>
 
@@ -129,12 +158,46 @@
             </div>
           </article>
         </div>
-        <div class="output">
+        <div class="output" id="exportar-admin">
           <p class="hint">Guardar cambios ya actualiza la tienda en este navegador. Para publicarlo online, reemplaza products.js con este contenido.</p>
           <textarea id="output" spellcheck="false"></textarea>
           <div class="status" id="status"></div>
         </div>
       </aside>
+    </section>
+
+    <section class="panel coupon-panel" id="cupones-admin">
+      <div class="panel-head">
+        <h2>Cupones</h2>
+        <span class="small" id="coupon-count"></span>
+      </div>
+      <div class="coupon-grid">
+        <div class="field">
+          <label for="coupon-code">Codigo</label>
+          <input id="coupon-code" placeholder="27STORE">
+        </div>
+        <div class="field">
+          <label for="coupon-kind">Tipo</label>
+          <select id="coupon-kind">
+            <option value="percent">Porcentaje</option>
+            <option value="amount">Monto fijo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="coupon-value">Valor</label>
+          <input id="coupon-value" type="number" min="0" step="1" placeholder="10">
+        </div>
+        <button class="btn" id="save-coupon" type="button">Guardar cupÃ³n</button>
+      </div>
+      <div class="coupon-list" id="coupon-list"></div>
+    </section>
+
+    <section class="panel validation-panel" id="validacion-admin">
+      <div class="panel-head">
+        <h2>ValidaciÃ³n del catÃ¡logo</h2>
+        <span class="small" id="validation-count"></span>
+      </div>
+      <div class="validation-list" id="validation-list"></div>
     </section>
   </main>
 
@@ -142,6 +205,14 @@
   <script>
     const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
     const PRODUCTS_KEY = "27store-products-v1";
+    const COUPONS_KEY = "27store-coupons-v1";
+    const DEFAULT_COUPONS = window.STORE_COUPONS || {
+      "27STORE": { label: "27STORE", percent: 10 },
+      "AMIGO27": { label: "AMIGO27", percent: 15 },
+      "STREAMING": { label: "STREAMING", percent: 5 },
+      "MILOFF": { label: "MILOFF", amount: 1000 },
+      "5000OFF": { label: "5000OFF", amount: 5000 }
+    };
     const loadSavedProducts = () => {
       try {
         const savedProducts = JSON.parse(localStorage.getItem(PRODUCTS_KEY) || "null");
@@ -150,35 +221,120 @@
       return window.STORE_PRODUCTS || [];
     };
     const products = loadSavedProducts().map((product) => ({ ...product }));
+    const loadSavedCoupons = () => {
+      try {
+        const savedCoupons = JSON.parse(localStorage.getItem(COUPONS_KEY) || "null");
+        if (savedCoupons && typeof savedCoupons === "object") return savedCoupons;
+      } catch { localStorage.removeItem(COUPONS_KEY); }
+      return { ...DEFAULT_COUPONS };
+    };
+    const coupons = loadSavedCoupons();
     const fields = ["id", "category", "name", "tag", "type", "stock", "price", "oldPrice", "image", "description"];
+    const booleanFields = ["featured", "bestSeller", "dailyDeal"];
     let selectedIndex = 0;
+    let activeSort = "order";
 
     const list = document.querySelector("#product-list");
     const form = document.querySelector("#product-form");
     const search = document.querySelector("#search");
+    const sortBy = document.querySelector("#sort-by");
     const output = document.querySelector("#output");
     const status = document.querySelector("#status");
     const countLabel = document.querySelector("#count-label");
     const selectedLabel = document.querySelector("#selected-label");
+    const couponList = document.querySelector("#coupon-list");
+    const couponCount = document.querySelector("#coupon-count");
+    const couponCode = document.querySelector("#coupon-code");
+    const couponKind = document.querySelector("#coupon-kind");
+    const couponValue = document.querySelector("#coupon-value");
+    const validationList = document.querySelector("#validation-list");
+    const validationCount = document.querySelector("#validation-count");
 
     const slugify = (value) => String(value || "producto").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "producto";
     const formatPrice = (value) => Number(value) > 0 ? money.format(Number(value)) : "A consultar";
+    const priceTemplate = (product) => `<span class="price-now">${formatPrice(product.price)}</span>${product.oldPrice ? ` <span class="price-before">${formatPrice(product.oldPrice)}</span>` : ""}`;
     const current = () => products[selectedIndex] || products[0];
     const safeNumber = (value) => Math.max(0, Number(value) || 0);
+    const sortEntries = () => {
+      const entries = products.map((product, index) => ({ product, index }));
+      if (activeSort === "name") return entries.sort((a, b) => (a.product.name || "").localeCompare(b.product.name || "", "es"));
+      if (activeSort === "price-asc") return entries.sort((a, b) => (Number(a.product.price) || 0) - (Number(b.product.price) || 0) || (a.product.name || "").localeCompare(b.product.name || "", "es"));
+      if (activeSort === "price-desc") return entries.sort((a, b) => (Number(b.product.price) || 0) - (Number(a.product.price) || 0) || (a.product.name || "").localeCompare(b.product.name || "", "es"));
+      return entries;
+    };
 
-    const makeExport = () => `window.STORE_PRODUCTS = ${JSON.stringify(products, null, 2)};\n`;
+    const makeExport = () => `window.STORE_PRODUCTS = ${JSON.stringify(products, null, 2)};\n\nwindow.STORE_COUPONS = ${JSON.stringify(coupons, null, 2)};\n`;
     const persistProducts = () => {
       localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+    };
+    const persistCoupons = () => {
+      localStorage.setItem(COUPONS_KEY, JSON.stringify(coupons));
     };
 
     const updateOutput = () => {
       output.value = makeExport();
       countLabel.textContent = `${products.length} productos`;
+      renderValidation();
+    };
+
+    const renderValidation = () => {
+      const issues = [];
+      const ids = products.map((product) => product.id).filter(Boolean);
+      const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
+      duplicateIds.forEach((id) => issues.push({ level: "warn", title: `ID duplicado: ${id}`, detail: "Cambialo para que carrito y admin no confundan productos." }));
+      products.forEach((product, index) => {
+        const label = product.name || `Producto ${index + 1}`;
+        if (!product.id) issues.push({ level: "warn", title: `${label}: falta ID`, detail: "El ID interno es necesario para carrito, ediciÃ³n y enlaces." });
+        if (!product.name) issues.push({ level: "warn", title: `${label}: falta nombre`, detail: "AgregÃ¡ un nombre visible para el catÃ¡logo." });
+        if (!product.image || product.image === "images/") issues.push({ level: "warn", title: `${label}: falta imagen`, detail: "UsÃ¡ una ruta como images/producto.png." });
+        if (Number(product.oldPrice) > 0 && Number(product.oldPrice) <= Number(product.price || 0)) issues.push({ level: "warn", title: `${label}: precio anterior bajo`, detail: "El precio anterior deberÃ­a ser mayor que el precio actual." });
+        if (Number(product.price) <= 0 && product.stock === "Disponible") issues.push({ level: "warn", title: `${label}: precio a consultar con stock disponible`, detail: "RevisÃ¡ si deberÃ­a tener precio o stock 'Consultar stock'." });
+      });
+      Object.entries(coupons).forEach(([code, coupon]) => {
+        if (!code || !coupon.label) issues.push({ level: "warn", title: `CupÃ³n invÃ¡lido: ${code || "sin cÃ³digo"}`, detail: "Todo cupÃ³n necesita cÃ³digo y label." });
+        if (!coupon.amount && !coupon.percent) issues.push({ level: "warn", title: `CupÃ³n ${code}: sin descuento`, detail: "AsignÃ¡ porcentaje o monto fijo." });
+      });
+      validationCount.textContent = issues.length ? `${issues.length} avisos` : "Sin avisos";
+      validationList.innerHTML = issues.length
+        ? issues.map((issue) => `<div class="validation-row ${issue.level}"><strong>${issue.title}</strong><span>${issue.detail}</span></div>`).join("")
+        : '<div class="validation-row ok"><strong>CatÃ¡logo sin avisos importantes.</strong><span>Productos y cupones pasan las validaciones bÃ¡sicas.</span></div>';
+    };
+
+    const renderCoupons = () => {
+      const entries = Object.entries(coupons);
+      couponCount.textContent = `${entries.length} cupones`;
+      couponList.innerHTML = entries.map(([code, coupon]) => {
+        const detail = coupon.amount ? `${money.format(coupon.amount)} de descuento` : `${coupon.percent || 0}% de descuento`;
+        return `
+          <div class="coupon-row">
+            <div><strong>${code}</strong><span>${detail}</span></div>
+            <button type="button" data-edit-coupon="${code}">Editar</button>
+            <button type="button" data-delete-coupon="${code}">Eliminar</button>
+          </div>`;
+      }).join("") || '<p class="hint">Todavia no hay cupones creados.</p>';
+    };
+
+    const saveCoupon = () => {
+      const code = couponCode.value.trim().toUpperCase().replace(/[^A-Z0-9_-]/g, "");
+      const value = safeNumber(couponValue.value);
+      if (!code || value <= 0) {
+        status.textContent = "Completa codigo y valor para guardar el cupon.";
+        return;
+      }
+      coupons[code] = couponKind.value === "amount"
+        ? { label: code, amount: value }
+        : { label: code, percent: value };
+      persistCoupons();
+      couponCode.value = "";
+      couponValue.value = "";
+      renderCoupons();
+      updateOutput();
+      status.textContent = `Cupon ${code} guardado.`;
     };
 
     const renderList = () => {
       const term = search.value.trim().toLowerCase();
-      list.innerHTML = products.map((product, index) => ({ product, index }))
+      list.innerHTML = sortEntries()
         .filter(({ product }) => !term || `${product.name} ${product.category} ${product.type} ${product.tag}`.toLowerCase().includes(term))
         .map(({ product, index }) => `
           <button class="product-row ${index === selectedIndex ? "active" : ""}" type="button" data-index="${index}">
@@ -191,7 +347,7 @@
       const product = current();
       if (!product) return;
       fields.forEach((name) => { form.elements[name].value = product[name] ?? ""; });
-      form.elements.featured.checked = Boolean(product.featured);
+      booleanFields.forEach((name) => { form.elements[name].checked = Boolean(product[name]); });
       selectedLabel.textContent = product.name || "Producto nuevo";
       renderPreview();
     };
@@ -210,7 +366,9 @@
       };
       const oldPrice = safeNumber(form.elements.oldPrice.value);
       if (oldPrice > 0) product.oldPrice = oldPrice;
-      if (form.elements.featured.checked) product.featured = true;
+      booleanFields.forEach((name) => {
+        if (form.elements[name].checked) product[name] = true;
+      });
       return product;
     };
 
@@ -222,12 +380,17 @@
       document.querySelector("#preview-tag").textContent = product.tag;
       document.querySelector("#preview-name").textContent = product.name;
       document.querySelector("#preview-description").textContent = product.description || "Sin descripcion.";
-      document.querySelector("#preview-price").innerHTML = `${formatPrice(product.price)}${product.oldPrice ? ` <span class="old">${formatPrice(product.oldPrice)}</span>` : ""}`;
+      document.querySelector("#preview-price").innerHTML = priceTemplate(product);
       document.querySelector("#preview-type").textContent = product.type;
     };
 
     const saveCurrent = () => {
       const updatedProduct = readForm();
+      if (updatedProduct.dailyDeal) {
+        products.forEach((product, index) => {
+          if (index !== selectedIndex) delete product.dailyDeal;
+        });
+      }
       products[selectedIndex] = updatedProduct;
       selectedIndex = products.findIndex((product) => product === updatedProduct);
       if (selectedIndex < 0) selectedIndex = 0;
@@ -235,7 +398,26 @@
       renderList();
       fillForm();
       updateOutput();
-      status.textContent = "Cambios guardados. Si abris la tienda en este navegador, ya aparecen.";
+      status.textContent = updatedProduct.dailyDeal ? "Cambios guardados. Este producto quedo como Destacado del dia." : "Cambios guardados. Si abris la tienda en este navegador, ya aparecen.";
+    };
+
+    const moveSelected = (direction) => {
+      const nextIndex = selectedIndex + direction;
+      if (nextIndex < 0 || nextIndex >= products.length) return;
+      const [product] = products.splice(selectedIndex, 1);
+      products.splice(nextIndex, 0, product);
+      selectedIndex = nextIndex;
+      persistProducts();
+      renderList();
+      fillForm();
+      updateOutput();
+      status.textContent = direction < 0 ? "Producto subido en el orden." : "Producto bajado en el orden.";
+    };
+
+    const applyQuickStock = (stock) => {
+      form.elements.stock.value = stock;
+      renderPreview();
+      status.textContent = `Stock rapido aplicado: ${stock}. Toca Guardar cambios.`;
     };
 
     const selectProduct = (index) => {
@@ -249,11 +431,38 @@
       const row = event.target.closest("[data-index]");
       if (row) selectProduct(Number(row.dataset.index));
     });
+    couponList.addEventListener("click", (event) => {
+      const editButton = event.target.closest("[data-edit-coupon]");
+      const deleteButton = event.target.closest("[data-delete-coupon]");
+      if (editButton) {
+        const code = editButton.dataset.editCoupon;
+        const coupon = coupons[code];
+        couponCode.value = code;
+        couponKind.value = coupon.amount ? "amount" : "percent";
+        couponValue.value = coupon.amount || coupon.percent || 0;
+        status.textContent = `Editando cupon ${code}.`;
+      }
+      if (deleteButton) {
+        const code = deleteButton.dataset.deleteCoupon;
+        delete coupons[code];
+        persistCoupons();
+        renderCoupons();
+        updateOutput();
+        status.textContent = `Cupon ${code} eliminado.`;
+      }
+    });
     search.addEventListener("input", renderList);
+    sortBy.addEventListener("change", () => { activeSort = sortBy.value; renderList(); });
     form.addEventListener("input", () => { renderPreview(); status.textContent = "Tenes cambios sin guardar."; });
+    document.querySelector("#save-coupon").addEventListener("click", saveCoupon);
     document.querySelector("#save-product").addEventListener("click", saveCurrent);
+    document.querySelector("#move-up").addEventListener("click", () => moveSelected(-1));
+    document.querySelector("#move-down").addEventListener("click", () => moveSelected(1));
+    document.querySelectorAll("[data-stock-value]").forEach((button) => {
+      button.addEventListener("click", () => applyQuickStock(button.dataset.stockValue));
+    });
     document.querySelector("#new-product").addEventListener("click", () => {
-      products.unshift({ id: "producto-nuevo", category: "juegos", name: "Producto nuevo", tag: "PC", type: "Key", stock: "Disponible", price: 0, image: "images/", description: "Descripcion del producto." });
+      products.unshift({ id: "producto-nuevo", category: "juegos", name: "Producto nuevo", tag: "PC", type: "Key", stock: "Disponible", price: 0, image: "images/peditujuego.jpg", description: "Descripcion del producto." });
       selectedIndex = 0;
       search.value = "";
       renderList();
@@ -298,6 +507,7 @@
 
     renderList();
     fillForm();
+    renderCoupons();
     updateOutput();
   </script>
 </body>

@@ -1,24 +1,31 @@
-# 27 Store
+﻿# 27 Store
 
-Pagina estatica de 27 Store con catalogo, carrito y pedido directo por WhatsApp.
+Tienda estatica con catalogo, carrito y pedido por WhatsApp.
 
-## Configuracion
+## Edicion rapida
 
-- No usa login, Supabase ni Firebase.
-- El archivo principal es `index.html`.
-- Los productos, precios, imagenes, stock y tipo se editan en `products.js`.
-- Tambien podes abrir `admin.html` para editar productos con una pantalla visual y exportar el nuevo `products.js`.
+- `index.html`: tienda principal.
+- `products.js`: productos, precios, imagenes y textos.
+- `admin.html`: editor local para ordenar, crear, duplicar y exportar productos.
 
-## Editor de productos
+## Flujo de trabajo
 
-1. Abrir `admin.html` en el navegador.
-2. Elegir o crear un producto.
-3. Cambiar nombre, precio, imagen, categoria, stock y tipo visible: Cuenta, Key o Servicio.
-4. Tocar "Guardar cambios". En ese navegador la tienda ya toma esos productos.
-5. Para publicarlo online o dejarlo permanente, tocar "Copiar products.js" o "Descargar" y reemplazar el archivo `products.js`.
+1. Abrir `admin.html`.
+2. Editar producto, imagen, precio, stock y tipo.
+3. Guardar cambios.
+4. Copiar o descargar `products.js` para publicar la version final.
 
 ## Publicacion
 
-Se puede publicar con GitHub Pages, Netlify o cualquier hosting estatico. Para publicar la tienda, subir `index.html`, `products.js` y la carpeta `images`.
+Se puede subir tal cual a Netlify, GitHub Pages o cualquier hosting estatico.
 
-Mantené `admin.html` como herramienta local para editar productos y cupones. No hace falta publicarlo online.
+Archivos necesarios:
+
+- `index.html`
+- `products.js`
+- carpeta `images`
+
+## Notas
+
+- El admin guarda cambios locales en el navegador.
+- Si una imagen no existe, la tienda usa una imagen de respaldo local.
