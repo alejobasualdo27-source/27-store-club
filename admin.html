@@ -1,514 +1,378 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor 27 Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin productos | Bassal Store</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
-    :root{--bg:#07080a;--panel:#101216;--line:rgba(255,255,255,.1);--text:#f4f7f2;--muted:#8b948e;--accent:#52ff73;--blue:#21c7ff;--danger:#ff7a7a}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.wrap{width:min(1220px,calc(100% - 28px));margin:0 auto;padding:26px 0 44px}.top{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}.eyebrow{margin:0 0 8px;color:var(--accent);font-size:12px;font-weight:1000;text-transform:uppercase}.top h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:.95}.top p{margin:10px 0 0;max-width:680px;color:var(--muted);line-height:1.45}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{min-height:42px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:12px;font-weight:1000;text-transform:uppercase}.btn.secondary{border:1px solid var(--line);background:rgba(255,255,255,.055);color:var(--text)}.btn.danger{background:var(--danger);color:#170707}.grid{display:grid;grid-template-columns:280px minmax(0,1fr) 330px;gap:14px}.panel{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px;border-bottom:1px solid var(--line)}.panel-head h2{margin:0;font-size:18px}.small{color:var(--muted);font-size:12px}.list-tools{display:grid;gap:8px;padding:12px;border-bottom:1px solid var(--line)}.list-tools select{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.field{display:grid;gap:6px}.field label{color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.field textarea{min-height:96px;padding:10px;resize:vertical}.product-list{max-height:680px;overflow:auto;padding:8px}.product-row{width:100%;display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;border:1px solid transparent;border-radius:9px;padding:8px;background:transparent;color:var(--text);text-align:left}.product-row:hover,.product-row.active{border-color:rgba(82,255,115,.35);background:rgba(82,255,115,.08)}.product-row img{width:42px;height:42px;border-radius:7px;object-fit:contain;background:#080a0d}.product-row strong{display:block;font-size:13px}.product-row span{display:block;margin-top:2px;color:var(--muted);font-size:11px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:14px}.field.wide{grid-column:1 / -1}.check-row{display:flex;align-items:center;gap:8px;min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.035);padding:0 10px;color:var(--text);font-size:13px;font-weight:800}.check-row input{accent-color:var(--accent)}.form-actions,.quick-actions{display:flex;gap:8px;flex-wrap:wrap;padding:0 14px 14px}.quick-actions{padding-top:0}.preview{padding:14px}.card{position:relative;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:10px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.card img{width:100%;height:160px;object-fit:contain;object-position:center;border:1px solid var(--line);border-radius:8px;background:#0b0d11;padding:7px}.tag,.type,.stock{display:inline-flex;width:max-content;border-radius:999px;font-size:10px;font-weight:1000;text-transform:uppercase}.tag{margin-top:12px;color:var(--accent)}.type{border:1px solid rgba(82,255,115,.28);padding:6px 9px;background:rgba(82,255,115,.08);color:var(--accent)}.stock{position:absolute;top:22px;left:22px;border:1px solid rgba(255,255,255,.16);padding:5px 9px;background:rgba(5,6,8,.82);color:var(--accent)}.card h3{margin:7px 0;font-size:24px}.card p{margin:0;color:var(--muted);line-height:1.45}.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}.price{color:var(--blue);font-size:18px;font-weight:1000}.old{margin-left:6px;color:var(--muted);font-size:12px;text-decoration:line-through}.output{display:grid;gap:10px;padding:14px;border-top:1px solid var(--line)}.output textarea{width:100%;min-height:240px;border:1px solid var(--line);border-radius:8px;background:#050608;color:var(--text);padding:10px;font-family:Consolas,monospace;font-size:12px;resize:vertical}.status{min-height:18px;color:var(--muted);font-size:12px}.hint{margin:0;color:var(--muted);font-size:12px;line-height:1.45}.image-note{color:var(--muted);font-size:12px;line-height:1.35}.coupon-panel,.validation-panel{margin-top:14px}.coupon-grid{display:grid;grid-template-columns:1fr 140px 140px auto;gap:10px;align-items:end;padding:14px}.coupon-list,.validation-list{display:grid;gap:8px;padding:0 14px 14px}.coupon-row,.validation-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:9px;padding:10px;background:rgba(255,255,255,.035)}.validation-row{grid-template-columns:1fr}.validation-row.ok{border-color:rgba(82,255,115,.35);color:var(--accent)}.validation-row.warn{border-color:rgba(255,206,82,.35);color:var(--warn)}.coupon-row strong{display:block}.coupon-row span,.validation-row span{color:var(--muted);font-size:12px}.coupon-row button{min-height:34px;border-radius:8px;padding:0 10px;background:var(--danger);color:#170707;font-size:11px;font-weight:1000;text-transform:uppercase}@media (max-width:1020px){.grid{grid-template-columns:1fr}.product-list{max-height:320px}.top{display:grid}.form-grid,.coupon-grid{grid-template-columns:1fr}}@media (max-width:560px){.wrap{width:min(100% - 20px,1220px);padding-top:18px}.top-actions,.form-actions,.quick-actions{display:grid}.btn{width:100%}.coupon-row{grid-template-columns:1fr}}
-    .admin-tabs{position:sticky;top:0;z-index:10;display:flex;gap:8px;margin:0 0 14px;padding:10px;border:1px solid var(--line);border-radius:12px;background:rgba(5,6,8,.92);backdrop-filter:blur(12px)}.admin-tabs a{min-height:38px;display:inline-flex;align-items:center;border-radius:8px;padding:0 12px;background:rgba(255,255,255,.055);color:var(--text);font-size:12px;font-weight:1000;text-decoration:none;text-transform:uppercase}.admin-tabs a:hover{background:rgba(82,255,115,.12);color:var(--accent)}.panel{scroll-margin-top:76px}.card p{white-space:pre-line}.price-now{color:var(--blue);font-weight:1000}.price-before{display:inline-block;margin-left:6px;color:var(--muted);font-size:12px;font-weight:900;text-decoration:line-through;text-decoration-thickness:2px;opacity:.78}@media (max-width:560px){.admin-tabs{overflow-x:auto}.admin-tabs a{white-space:nowrap}}
-  .coupon-panel,.side-nav a[href="#cupones-admin"]{display:none!important}</style>
+    :root{--bg:#070909;--panel:#101314;--panel2:#15191b;--line:#273035;--text:#f4f7f8;--muted:#9aa7ad;--red:#d6112b;--cyan:#37d8ff;--lime:#9cff38}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#080909,#050606);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:min(1280px,calc(100% - 28px));margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(5,6,6,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(214,17,43,.55)}
+    .top{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:46px;height:46px;border-radius:9px;object-fit:cover;border:1px solid rgba(255,255,255,.16)}
+    .brand b{display:block;font-size:20px}
+    .brand span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{border:1px solid var(--line);background:#111719;color:#fff;border-radius:8px;min-height:42px;padding:0 14px;font-weight:900;cursor:pointer}
+    .btn.primary{background:var(--red);border-color:var(--red)}
+    .btn.good{background:var(--lime);border-color:var(--lime);color:#061006}
+    main{padding:26px 0 50px}
+    .notice{border:1px solid rgba(55,216,255,.2);background:rgba(55,216,255,.06);border-radius:10px;padding:14px;color:#d9f8ff;margin-bottom:18px}
+    .toolbar{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:14px}
+    .search{width:100%;height:44px;border:1px solid var(--line);border-radius:8px;background:#0c1012;color:#fff;padding:0 13px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+    .tab{border:1px solid var(--line);background:#0c1012;color:#d8e0e4;border-radius:999px;min-height:38px;padding:0 13px;font-weight:900;cursor:pointer}
+    .tab.active{background:var(--red);border-color:var(--red);color:#fff}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:18px;align-items:start}
+    .table-card,.editor{border:1px solid var(--line);background:var(--panel);border-radius:10px;overflow:hidden}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;vertical-align:middle}
+    th{font-size:12px;color:#b9c4ca;text-transform:uppercase;background:#0c1012}
+    td{font-size:14px}
+    tr{cursor:pointer}
+    tr:hover{background:rgba(255,255,255,.035)}
+    tr.active{background:rgba(214,17,43,.16)}
+    .cover{width:48px;height:58px;border-radius:6px;object-fit:cover;background:#050505;border:1px solid rgba(255,255,255,.12)}
+    .status{display:inline-flex;border-radius:999px;padding:5px 8px;background:#172126;color:#9cff38;font-size:11px;font-weight:900}
+    .status.off{background:#2c2224;color:#ff9ca9}
+    .editor{position:sticky;top:92px;padding:16px}
+    .editor h2{font-size:20px;margin:0 0 14px}
+    .form{display:grid;gap:11px}
+    label{display:grid;gap:6px;color:#b8c3c8;font-size:12px;font-weight:900;text-transform:uppercase}
+    input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;background:#080b0c;color:#fff;padding:10px}
+    textarea{min-height:84px;resize:vertical}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .preview{width:100%;aspect-ratio:4/5;border-radius:8px;object-fit:cover;background:#050505;border:1px solid rgba(255,255,255,.12)}
+    .editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+    .danger{background:#2a0d12;border-color:#5b1722;color:#ffb8c2}
+    .empty{padding:30px;text-align:center;color:var(--muted)}
+    .small{font-size:12px;color:var(--muted);line-height:1.45}
+    @media(max-width:980px){.layout{grid-template-columns:1fr}.editor{position:static}.toolbar{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column;padding:14px 0}}
+  </style>
 </head>
 <body>
+  <header>
+    <div class="wrap top">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Bassal Store">
+        <span><b>Bassal Store</b><span>Admin productos</span></span>
+      </a>
+      <div class="actions">
+        <a class="btn" href="index.html">Ver tienda</a>
+        <button class="btn" id="loadFileBtn" type="button">Cargar script.js</button>
+        <input id="scriptFileInput" type="file" accept=".js" hidden>
+        <button class="btn" id="reloadBtn" type="button">Recargar</button>
+        <button class="btn good" id="downloadBtn" type="button">Descargar script.js</button>
+      </div>
+    </div>
+  </header>
+
   <main class="wrap">
-    <header class="top">
-      <div>
-        <p class="eyebrow">Editor local</p>
-        <h1>Productos 27 Store</h1>
-        <p>Edita nombre, precio, imagen, stock y si el producto es Cuenta, Key o Servicio. Al guardar, la tienda lo toma en este navegador. Para subirlo permanente, copia o descarga products.js.</p>
+    <div class="notice">
+Edita productos sin tocar codigo. Si aparece error al abrirlo como archivo, toca <b>Cargar script.js</b> y elegi el archivo script.js de esta carpeta. Cuando termines, descarga el nuevo <b>script.js</b> y reemplaza el actual.
+    </div>
+
+    <div class="toolbar">
+      <input class="search" id="search" placeholder="Buscar por nombre, plataforma o genero...">
+      <button class="btn primary" id="addBtn" type="button">Agregar producto</button>
+    </div>
+    <div class="tabs" id="tabs"></div>
+
+    <section class="layout">
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Producto</th>
+              <th>Plataforma</th>
+              <th>Precio</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
       </div>
-      <div class="top-actions">
-        <a class="btn secondary" href="index.html">Ver tienda</a>
-        <button class="btn" id="copy-output" type="button">Copiar products.js</button>
-        <button class="btn secondary" id="download-output" type="button">Descargar</button>
-      </div>
-    </header>
 
-    <nav class="admin-tabs" aria-label="Secciones del admin">
-      <a href="#productos-admin">Productos</a>
-      <a href="#cupones-admin">Cupones</a>
-      <a href="#validacion-admin">ValidaciÃ³n</a>
-      <a href="#exportar-admin">Exportar</a>
-    </nav>
-
-    <section class="grid" id="productos-admin">
-      <aside class="panel">
-        <div class="panel-head">
-          <h2>Catalogo</h2>
-          <span class="small" id="count-label"></span>
-        </div>
-        <div class="list-tools">
-          <div class="field">
-            <label for="search">Buscar</label>
-            <input id="search" type="search" placeholder="Netflix, GTA, Key...">
+      <aside class="editor">
+        <h2 id="editorTitle">Selecciona un producto</h2>
+        <div class="form" id="form" hidden>
+          <img class="preview" id="preview" alt="Preview">
+          <label>Nombre<input id="nameInput"></label>
+          <div class="two">
+            <label>Plataforma<select id="platformInput"><option>PS4</option><option>PS5</option><option>PS PLUS</option><option>STEAM</option></select></label>
+            <label>Genero<input id="genreInput"></label>
           </div>
-          <select id="sort-by" aria-label="Ordenar productos">
-            <option value="order">Orden actual</option>
-            <option value="name">Nombre A-Z</option>
-            <option value="price-asc">Precio menor</option>
-            <option value="price-desc">Precio mayor</option>
-          </select>
-          <button class="btn" id="new-product" type="button">Nuevo producto</button>
-        </div>
-        <div class="product-list" id="product-list"></div>
-      </aside>
-
-      <section class="panel">
-        <div class="panel-head">
-          <h2>Datos del producto</h2>
-          <span class="small" id="selected-label"></span>
-        </div>
-        <form class="form-grid" id="product-form">
-          <div class="field">
-            <label for="id">ID interno</label>
-            <input id="id" name="id" required>
+          <div class="two">
+            <label>Precio<input id="priceInput" type="number" min="0" step="100"></label>
+            <label>Etiqueta<select id="tagInput"><option>COMPRAR</option><option>SIN STOCK</option><option>-10%</option><option>-15%</option><option>-20%</option><option>-25%</option><option>-30%</option><option>-40%</option></select></label>
           </div>
-          <div class="field">
-            <label for="category">Categoria</label>
-            <select id="category" name="category">
-              <option value="suscripciones">Suscripciones</option>
-              <option value="juegos">PC</option>
-              <option value="ps">PS4/PS5</option>
-              <option value="keys">Keys</option>
-              <option value="social">Social</option>
-            </select>
+          <div class="two" id="psPlusPrices">
+            <label>Precio PS5<input id="pricePs5Input" type="number" min="0" step="100"></label>
+            <label>Precio PS4<input id="pricePs4Input" type="number" min="0" step="100"></label>
           </div>
-          <div class="field">
-            <label for="name">Nombre</label>
-            <input id="name" name="name" required>
+          <label>Imagen URL<textarea id="imgInput"></textarea></label>
+          <label>Descripcion<textarea id="descriptionInput"></textarea></label>
+          <p class="small">Para Steam, el precio se muestra como Codigo de Steam. Para PS Plus se usan Precio PS5 y Precio PS4.</p>
+          <div class="editor-actions">
+            <button class="btn primary" id="saveBtn" type="button">Guardar</button>
+            <button class="btn danger" id="deleteBtn" type="button">Borrar</button>
           </div>
-          <div class="field">
-            <label for="tag">Etiqueta</label>
-            <input id="tag" name="tag" placeholder="OFERTA, PC, PS5...">
-          </div>
-          <div class="field">
-            <label for="type">Tipo visible</label>
-            <select id="type" name="type">
-              <option>Cuenta</option>
-              <option>Key</option>
-              <option>Servicio</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="stock">Stock</label>
-            <input id="stock" name="stock" placeholder="Disponible">
-          </div>
-          <div class="field">
-            <label for="price">Precio</label>
-            <input id="price" name="price" type="number" min="0" step="1">
-          </div>
-          <div class="field">
-            <label for="oldPrice">Precio anterior</label>
-            <input id="oldPrice" name="oldPrice" type="number" min="0" step="1">
-          </div>
-          <div class="field wide">
-            <label for="image">Imagen</label>
-            <input id="image" name="image" placeholder="images/mi-imagen.png">
-            <span class="image-note">Tip: si guardas imagenes en la carpeta images, aca va algo como images/GTA.png.</span>
-          </div>
-          <div class="field wide">
-            <label for="description">Descripcion</label>
-            <textarea id="description" name="description"></textarea>
-          </div>
-          <label class="check-row field wide">
-            <input id="featured" name="featured" type="checkbox">
-            Mostrar tambien en Ofertas destacadas
-          </label>
-          <label class="check-row field wide">
-            <input id="bestSeller" name="bestSeller" type="checkbox">
-            Mostrar badge Mas vendido
-          </label>
-          <label class="check-row field wide">
-            <input id="dailyDeal" name="dailyDeal" type="checkbox">
-            Usar como Destacado del dia
-          </label>
-        </form>
-        <div class="form-actions">
-          <button class="btn" id="save-product" type="button">Guardar cambios</button>
-          <button class="btn secondary" id="duplicate-product" type="button">Duplicar</button>
-          <button class="btn secondary" id="move-up" type="button">Subir</button>
-          <button class="btn secondary" id="move-down" type="button">Bajar</button>
-          <button class="btn danger" id="delete-product" type="button">Eliminar</button>
-        </div>
-        <div class="quick-actions" aria-label="Stock rapido">
-          <button class="btn secondary" type="button" data-stock-value="Disponible">Disponible</button>
-          <button class="btn secondary" type="button" data-stock-value="Consultar stock">Consultar stock</button>
-          <button class="btn secondary" type="button" data-stock-value="Sin stock">Sin stock</button>
-        </div>
-      </section>
-
-      <aside class="panel">
-        <div class="panel-head">
-          <h2>Vista previa</h2>
-          <span class="small">Como se ve en la tienda</span>
-        </div>
-        <div class="preview">
-          <article class="card">
-            <span class="stock" id="preview-stock">Disponible</span>
-            <img id="preview-image" src="" alt="">
-            <div>
-              <span class="tag" id="preview-tag">OFERTA</span>
-              <h3 id="preview-name">Producto</h3>
-              <p id="preview-description">Descripcion del producto.</p>
-            </div>
-            <div class="price-row">
-              <strong class="price" id="preview-price">$0</strong>
-              <span class="type" id="preview-type">Cuenta</span>
-            </div>
-          </article>
-        </div>
-        <div class="output" id="exportar-admin">
-          <p class="hint">Guardar cambios ya actualiza la tienda en este navegador. Para publicarlo online, reemplaza products.js con este contenido.</p>
-          <textarea id="output" spellcheck="false"></textarea>
-          <div class="status" id="status"></div>
         </div>
       </aside>
-    </section>
-
-    <section class="panel coupon-panel" id="cupones-admin">
-      <div class="panel-head">
-        <h2>Cupones</h2>
-        <span class="small" id="coupon-count"></span>
-      </div>
-      <div class="coupon-grid">
-        <div class="field">
-          <label for="coupon-code">Codigo</label>
-          <input id="coupon-code" placeholder="27STORE">
-        </div>
-        <div class="field">
-          <label for="coupon-kind">Tipo</label>
-          <select id="coupon-kind">
-            <option value="percent">Porcentaje</option>
-            <option value="amount">Monto fijo</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="coupon-value">Valor</label>
-          <input id="coupon-value" type="number" min="0" step="1" placeholder="10">
-        </div>
-        <button class="btn" id="save-coupon" type="button">Guardar cupÃ³n</button>
-      </div>
-      <div class="coupon-list" id="coupon-list"></div>
-    </section>
-
-    <section class="panel validation-panel" id="validacion-admin">
-      <div class="panel-head">
-        <h2>ValidaciÃ³n del catÃ¡logo</h2>
-        <span class="small" id="validation-count"></span>
-      </div>
-      <div class="validation-list" id="validation-list"></div>
     </section>
   </main>
 
-  <script src="products.js"></script>
   <script>
-    const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
-    const PRODUCTS_KEY = "27store-products-v1";
-    const COUPONS_KEY = "27store-coupons-v1";
-    const DEFAULT_COUPONS = window.STORE_COUPONS || {
-      "27STORE": { label: "27STORE", percent: 10 },
-      "AMIGO27": { label: "AMIGO27", percent: 15 },
-      "STREAMING": { label: "STREAMING", percent: 5 },
-      "MILOFF": { label: "MILOFF", amount: 1000 },
-      "5000OFF": { label: "5000OFF", amount: 5000 }
-    };
-    const loadSavedProducts = () => {
-      try {
-        const savedProducts = JSON.parse(localStorage.getItem(PRODUCTS_KEY) || "null");
-        if (Array.isArray(savedProducts) && savedProducts.length > 0) return savedProducts;
-      } catch { localStorage.removeItem(PRODUCTS_KEY); }
-      return window.STORE_PRODUCTS || [];
-    };
-    const products = loadSavedProducts().map((product) => ({ ...product }));
-    const loadSavedCoupons = () => {
-      try {
-        const savedCoupons = JSON.parse(localStorage.getItem(COUPONS_KEY) || "null");
-        if (savedCoupons && typeof savedCoupons === "object") return savedCoupons;
-      } catch { localStorage.removeItem(COUPONS_KEY); }
-      return { ...DEFAULT_COUPONS };
-    };
-    const coupons = loadSavedCoupons();
-    const fields = ["id", "category", "name", "tag", "type", "stock", "price", "oldPrice", "image", "description"];
-    const booleanFields = ["featured", "bestSeller", "dailyDeal"];
-    let selectedIndex = 0;
-    let activeSort = "order";
+    const GROUPS = [
+      { label:"PS4", variable:"ps4Products", platform:"PS4" },
+      { label:"PS5", variable:"ps5Products", platform:"PS5" },
+      { label:"PS Plus", variable:"psPlusProducts", platform:"PS PLUS" },
+      { label:"Steam", variable:"steamProducts", platform:"STEAM" }
+    ];
 
-    const list = document.querySelector("#product-list");
-    const form = document.querySelector("#product-form");
+    const state = { source:"", groups:{}, active:"ps4Products", selected:-1 };
+    const money = value => "$" + Number(value || 0).toLocaleString("es-AR");
+    const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
+
+    const tabs = document.querySelector("#tabs");
+    const rows = document.querySelector("#rows");
     const search = document.querySelector("#search");
-    const sortBy = document.querySelector("#sort-by");
-    const output = document.querySelector("#output");
-    const status = document.querySelector("#status");
-    const countLabel = document.querySelector("#count-label");
-    const selectedLabel = document.querySelector("#selected-label");
-    const couponList = document.querySelector("#coupon-list");
-    const couponCount = document.querySelector("#coupon-count");
-    const couponCode = document.querySelector("#coupon-code");
-    const couponKind = document.querySelector("#coupon-kind");
-    const couponValue = document.querySelector("#coupon-value");
-    const validationList = document.querySelector("#validation-list");
-    const validationCount = document.querySelector("#validation-count");
-
-    const slugify = (value) => String(value || "producto").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "producto";
-    const formatPrice = (value) => Number(value) > 0 ? money.format(Number(value)) : "A consultar";
-    const priceTemplate = (product) => `<span class="price-now">${formatPrice(product.price)}</span>${product.oldPrice ? ` <span class="price-before">${formatPrice(product.oldPrice)}</span>` : ""}`;
-    const current = () => products[selectedIndex] || products[0];
-    const safeNumber = (value) => Math.max(0, Number(value) || 0);
-    const sortEntries = () => {
-      const entries = products.map((product, index) => ({ product, index }));
-      if (activeSort === "name") return entries.sort((a, b) => (a.product.name || "").localeCompare(b.product.name || "", "es"));
-      if (activeSort === "price-asc") return entries.sort((a, b) => (Number(a.product.price) || 0) - (Number(b.product.price) || 0) || (a.product.name || "").localeCompare(b.product.name || "", "es"));
-      if (activeSort === "price-desc") return entries.sort((a, b) => (Number(b.product.price) || 0) - (Number(a.product.price) || 0) || (a.product.name || "").localeCompare(b.product.name || "", "es"));
-      return entries;
+    const form = document.querySelector("#form");
+    const editorTitle = document.querySelector("#editorTitle");
+    const preview = document.querySelector("#preview");
+    const fields = {
+      name: document.querySelector("#nameInput"),
+      platform: document.querySelector("#platformInput"),
+      genre: document.querySelector("#genreInput"),
+      price: document.querySelector("#priceInput"),
+      tag: document.querySelector("#tagInput"),
+      pricePs5: document.querySelector("#pricePs5Input"),
+      pricePs4: document.querySelector("#pricePs4Input"),
+      img: document.querySelector("#imgInput"),
+      description: document.querySelector("#descriptionInput")
     };
 
-    const makeExport = () => `window.STORE_PRODUCTS = ${JSON.stringify(products, null, 2)};\n\nwindow.STORE_COUPONS = ${JSON.stringify(coupons, null, 2)};\n`;
-    const persistProducts = () => {
-      localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
-    };
-    const persistCoupons = () => {
-      localStorage.setItem(COUPONS_KEY, JSON.stringify(coupons));
-    };
-
-    const updateOutput = () => {
-      output.value = makeExport();
-      countLabel.textContent = `${products.length} productos`;
-      renderValidation();
-    };
-
-    const renderValidation = () => {
-      const issues = [];
-      const ids = products.map((product) => product.id).filter(Boolean);
-      const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
-      duplicateIds.forEach((id) => issues.push({ level: "warn", title: `ID duplicado: ${id}`, detail: "Cambialo para que carrito y admin no confundan productos." }));
-      products.forEach((product, index) => {
-        const label = product.name || `Producto ${index + 1}`;
-        if (!product.id) issues.push({ level: "warn", title: `${label}: falta ID`, detail: "El ID interno es necesario para carrito, ediciÃ³n y enlaces." });
-        if (!product.name) issues.push({ level: "warn", title: `${label}: falta nombre`, detail: "AgregÃ¡ un nombre visible para el catÃ¡logo." });
-        if (!product.image || product.image === "images/") issues.push({ level: "warn", title: `${label}: falta imagen`, detail: "UsÃ¡ una ruta como images/producto.png." });
-        if (Number(product.oldPrice) > 0 && Number(product.oldPrice) <= Number(product.price || 0)) issues.push({ level: "warn", title: `${label}: precio anterior bajo`, detail: "El precio anterior deberÃ­a ser mayor que el precio actual." });
-        if (Number(product.price) <= 0 && product.stock === "Disponible") issues.push({ level: "warn", title: `${label}: precio a consultar con stock disponible`, detail: "RevisÃ¡ si deberÃ­a tener precio o stock 'Consultar stock'." });
-      });
-      Object.entries(coupons).forEach(([code, coupon]) => {
-        if (!code || !coupon.label) issues.push({ level: "warn", title: `CupÃ³n invÃ¡lido: ${code || "sin cÃ³digo"}`, detail: "Todo cupÃ³n necesita cÃ³digo y label." });
-        if (!coupon.amount && !coupon.percent) issues.push({ level: "warn", title: `CupÃ³n ${code}: sin descuento`, detail: "AsignÃ¡ porcentaje o monto fijo." });
-      });
-      validationCount.textContent = issues.length ? `${issues.length} avisos` : "Sin avisos";
-      validationList.innerHTML = issues.length
-        ? issues.map((issue) => `<div class="validation-row ${issue.level}"><strong>${issue.title}</strong><span>${issue.detail}</span></div>`).join("")
-        : '<div class="validation-row ok"><strong>CatÃ¡logo sin avisos importantes.</strong><span>Productos y cupones pasan las validaciones bÃ¡sicas.</span></div>';
-    };
-
-    const renderCoupons = () => {
-      const entries = Object.entries(coupons);
-      couponCount.textContent = `${entries.length} cupones`;
-      couponList.innerHTML = entries.map(([code, coupon]) => {
-        const detail = coupon.amount ? `${money.format(coupon.amount)} de descuento` : `${coupon.percent || 0}% de descuento`;
-        return `
-          <div class="coupon-row">
-            <div><strong>${code}</strong><span>${detail}</span></div>
-            <button type="button" data-edit-coupon="${code}">Editar</button>
-            <button type="button" data-delete-coupon="${code}">Eliminar</button>
-          </div>`;
-      }).join("") || '<p class="hint">Todavia no hay cupones creados.</p>';
-    };
-
-    const saveCoupon = () => {
-      const code = couponCode.value.trim().toUpperCase().replace(/[^A-Z0-9_-]/g, "");
-      const value = safeNumber(couponValue.value);
-      if (!code || value <= 0) {
-        status.textContent = "Completa codigo y valor para guardar el cupon.";
-        return;
+    function findArrayLiteral(source, variable){
+      const startToken = "const " + variable + " =";
+      const start = source.indexOf(startToken);
+      if (start < 0) throw new Error("No encontre " + variable);
+      const open = source.indexOf("[", start);
+      let depth = 0, quote = "", escaped = false;
+      for (let i = open; i < source.length; i++) {
+        const ch = source[i];
+        if (quote) {
+          if (escaped) escaped = false;
+          else if (ch === "\\") escaped = true;
+          else if (ch === quote) quote = "";
+          continue;
+        }
+        if (ch === '"' || ch === "'" || ch === "`") { quote = ch; continue; }
+        if (ch === "[") depth++;
+        if (ch === "]") {
+          depth--;
+          if (depth === 0) return { start: open, end: i + 1, text: source.slice(open, i + 1) };
+        }
       }
-      coupons[code] = couponKind.value === "amount"
-        ? { label: code, amount: value }
-        : { label: code, percent: value };
-      persistCoupons();
-      couponCode.value = "";
-      couponValue.value = "";
-      renderCoupons();
-      updateOutput();
-      status.textContent = `Cupon ${code} guardado.`;
-    };
+      throw new Error("No pude leer " + variable);
+    }
 
-    const renderList = () => {
-      const term = search.value.trim().toLowerCase();
-      list.innerHTML = sortEntries()
-        .filter(({ product }) => !term || `${product.name} ${product.category} ${product.type} ${product.tag}`.toLowerCase().includes(term))
-        .map(({ product, index }) => `
-          <button class="product-row ${index === selectedIndex ? "active" : ""}" type="button" data-index="${index}">
-            <img src="${product.image || ""}" alt="">
-            <span><strong>${product.name || "Sin nombre"}</strong><span>${product.category} - ${product.type || "Sin tipo"}</span></span>
-          </button>`).join("") || '<p class="hint">No hay productos con esa busqueda.</p>';
-    };
+    function hydrateProducts(source){
+      state.source = source;
+      state.groups = {};
+      state.selected = -1;
+      GROUPS.forEach(group => {
+        const found = findArrayLiteral(state.source, group.variable);
+        const products = Function("\"use strict\";return (" + found.text + ");")();
+        state.groups[group.variable] = { ...group, ...found, products };
+      });
+      renderTabs();
+      renderRows();
+    }
 
-    const fillForm = () => {
-      const product = current();
-      if (!product) return;
-      fields.forEach((name) => { form.elements[name].value = product[name] ?? ""; });
-      booleanFields.forEach((name) => { form.elements[name].checked = Boolean(product[name]); });
-      selectedLabel.textContent = product.name || "Producto nuevo";
-      renderPreview();
-    };
+    async function loadProducts(){
+      const source = await fetch("script.js?admin=" + Date.now()).then(response => {
+        if (!response.ok) throw new Error("No se pudo leer script.js");
+        return response.text();
+      });
+      hydrateProducts(source);
+    }
 
-    const readForm = () => {
-      const product = {
-        id: slugify(form.elements.id.value || form.elements.name.value),
-        category: form.elements.category.value,
-        name: form.elements.name.value.trim() || "Producto nuevo",
-        tag: form.elements.tag.value.trim() || form.elements.category.value,
-        type: form.elements.type.value,
-        stock: form.elements.stock.value.trim() || "Disponible",
-        price: safeNumber(form.elements.price.value),
-        image: form.elements.image.value.trim(),
-        description: form.elements.description.value.trim()
+    function loadProductsFromFile(file){
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          hydrateProducts(String(reader.result || ""));
+        } catch (error) {
+          rows.innerHTML = `<tr><td colspan="5" class="empty">No pude leer ese archivo: ${esc(error.message)}</td></tr>`;
+        }
       };
-      const oldPrice = safeNumber(form.elements.oldPrice.value);
-      if (oldPrice > 0) product.oldPrice = oldPrice;
-      booleanFields.forEach((name) => {
-        if (form.elements[name].checked) product[name] = true;
+      reader.onerror = () => {
+        rows.innerHTML = `<tr><td colspan="5" class="empty">No pude abrir el archivo seleccionado.</td></tr>`;
+      };
+      reader.readAsText(file, "utf-8");
+    }
+
+    function renderTabs(){
+      tabs.innerHTML = GROUPS.map(group => {
+        const count = state.groups[group.variable]?.products.length || 0;
+        return `<button class="tab ${state.active === group.variable ? "active" : ""}" data-group="${group.variable}">${group.label} (${count})</button>`;
+      }).join("");
+    }
+
+    function currentProducts(){
+      return state.groups[state.active].products;
+    }
+
+    function renderRows(){
+      const q = search.value.trim().toLowerCase();
+      const list = currentProducts();
+      const filtered = list.map((product, index) => ({ product, index })).filter(({ product }) => {
+        return [product.name, product.platform, product.genre].join(" ").toLowerCase().includes(q);
       });
+      rows.innerHTML = filtered.map(({ product, index }) => `
+        <tr class="${index === state.selected ? "active" : ""}" data-index="${index}">
+          <td><img class="cover" src="${esc(product.img)}" alt=""></td>
+          <td><b>${esc(product.name)}</b><br><small>${esc(product.genre || "")}</small></td>
+          <td>${esc(product.platform)}</td>
+          <td>${money(product.pricePs5 || product.price)}</td>
+          <td><span class="status ${product.tag === "SIN STOCK" ? "off" : ""}">${esc(product.tag || "COMPRAR")}</span></td>
+        </tr>
+      `).join("") || `<tr><td colspan="5" class="empty">No hay productos para mostrar.</td></tr>`;
+    }
+
+    function selectProduct(index){
+      state.selected = index;
+      const product = currentProducts()[index];
+      if (!product) return;
+      form.hidden = false;
+      editorTitle.textContent = "Editar producto";
+      fields.name.value = product.name || "";
+      fields.platform.value = product.platform || state.groups[state.active].platform;
+      fields.genre.value = product.genre || "";
+      fields.price.value = product.price || 0;
+      fields.tag.value = product.tag || "COMPRAR";
+      fields.pricePs5.value = product.pricePs5 || "";
+      fields.pricePs4.value = product.pricePs4 || "";
+      fields.img.value = product.img || "";
+      fields.description.value = product.description || "";
+      preview.src = product.img || "";
+      document.querySelector("#psPlusPrices").hidden = fields.platform.value !== "PS PLUS";
+      renderRows();
+    }
+
+    function readForm(){
+      const product = {
+        name: fields.name.value.trim(),
+        platform: fields.platform.value,
+        genre: fields.genre.value.trim(),
+        price: Number(fields.price.value || 0),
+        tag: fields.tag.value,
+        img: fields.img.value.trim()
+      };
+      if (fields.description.value.trim()) product.description = fields.description.value.trim();
+      if (product.platform === "PS PLUS") {
+        product.pricePs5 = Number(fields.pricePs5.value || product.price || 0);
+        product.pricePs4 = Number(fields.pricePs4.value || product.price || 0);
+      }
       return product;
-    };
+    }
 
-    const renderPreview = () => {
-      const product = readForm();
-      document.querySelector("#preview-stock").textContent = product.stock;
-      document.querySelector("#preview-image").src = product.image;
-      document.querySelector("#preview-image").alt = product.name;
-      document.querySelector("#preview-tag").textContent = product.tag;
-      document.querySelector("#preview-name").textContent = product.name;
-      document.querySelector("#preview-description").textContent = product.description || "Sin descripcion.";
-      document.querySelector("#preview-price").innerHTML = priceTemplate(product);
-      document.querySelector("#preview-type").textContent = product.type;
-    };
+    function saveProduct(){
+      if (state.selected < 0) return;
+      currentProducts()[state.selected] = readForm();
+      renderTabs();
+      renderRows();
+      selectProduct(state.selected);
+    }
 
-    const saveCurrent = () => {
-      const updatedProduct = readForm();
-      if (updatedProduct.dailyDeal) {
-        products.forEach((product, index) => {
-          if (index !== selectedIndex) delete product.dailyDeal;
-        });
-      }
-      products[selectedIndex] = updatedProduct;
-      selectedIndex = products.findIndex((product) => product === updatedProduct);
-      if (selectedIndex < 0) selectedIndex = 0;
-      persistProducts();
-      renderList();
-      fillForm();
-      updateOutput();
-      status.textContent = updatedProduct.dailyDeal ? "Cambios guardados. Este producto quedo como Destacado del dia." : "Cambios guardados. Si abris la tienda en este navegador, ya aparecen.";
-    };
+    function addProduct(){
+      const group = state.groups[state.active];
+      const product = {
+        name:"Nuevo producto",
+        platform:group.platform,
+        genre:"Accion",
+        price:0,
+        tag:"COMPRAR",
+        img:""
+      };
+      group.products.unshift(product);
+      renderTabs();
+      selectProduct(0);
+    }
 
-    const moveSelected = (direction) => {
-      const nextIndex = selectedIndex + direction;
-      if (nextIndex < 0 || nextIndex >= products.length) return;
-      const [product] = products.splice(selectedIndex, 1);
-      products.splice(nextIndex, 0, product);
-      selectedIndex = nextIndex;
-      persistProducts();
-      renderList();
-      fillForm();
-      updateOutput();
-      status.textContent = direction < 0 ? "Producto subido en el orden." : "Producto bajado en el orden.";
-    };
+    function deleteProduct(){
+      if (state.selected < 0) return;
+      if (!confirm("Borrar este producto?")) return;
+      currentProducts().splice(state.selected, 1);
+      state.selected = -1;
+      form.hidden = true;
+      editorTitle.textContent = "Selecciona un producto";
+      renderTabs();
+      renderRows();
+    }
 
-    const applyQuickStock = (stock) => {
-      form.elements.stock.value = stock;
-      renderPreview();
-      status.textContent = `Stock rapido aplicado: ${stock}. Toca Guardar cambios.`;
-    };
+    function buildScript(){
+      let output = state.source;
+      const replacements = GROUPS.map(group => {
+        const data = state.groups[group.variable];
+        return { ...data, nextText: JSON.stringify(data.products, null, 4) };
+      }).sort((a,b) => b.start - a.start);
+      replacements.forEach(item => {
+        output = output.slice(0, item.start) + item.nextText + output.slice(item.end);
+      });
+      return output;
+    }
 
-    const selectProduct = (index) => {
-      selectedIndex = index;
-      renderList();
-      fillForm();
-      status.textContent = "";
-    };
-
-    list.addEventListener("click", (event) => {
-      const row = event.target.closest("[data-index]");
-      if (row) selectProduct(Number(row.dataset.index));
-    });
-    couponList.addEventListener("click", (event) => {
-      const editButton = event.target.closest("[data-edit-coupon]");
-      const deleteButton = event.target.closest("[data-delete-coupon]");
-      if (editButton) {
-        const code = editButton.dataset.editCoupon;
-        const coupon = coupons[code];
-        couponCode.value = code;
-        couponKind.value = coupon.amount ? "amount" : "percent";
-        couponValue.value = coupon.amount || coupon.percent || 0;
-        status.textContent = `Editando cupon ${code}.`;
-      }
-      if (deleteButton) {
-        const code = deleteButton.dataset.deleteCoupon;
-        delete coupons[code];
-        persistCoupons();
-        renderCoupons();
-        updateOutput();
-        status.textContent = `Cupon ${code} eliminado.`;
-      }
-    });
-    search.addEventListener("input", renderList);
-    sortBy.addEventListener("change", () => { activeSort = sortBy.value; renderList(); });
-    form.addEventListener("input", () => { renderPreview(); status.textContent = "Tenes cambios sin guardar."; });
-    document.querySelector("#save-coupon").addEventListener("click", saveCoupon);
-    document.querySelector("#save-product").addEventListener("click", saveCurrent);
-    document.querySelector("#move-up").addEventListener("click", () => moveSelected(-1));
-    document.querySelector("#move-down").addEventListener("click", () => moveSelected(1));
-    document.querySelectorAll("[data-stock-value]").forEach((button) => {
-      button.addEventListener("click", () => applyQuickStock(button.dataset.stockValue));
-    });
-    document.querySelector("#new-product").addEventListener("click", () => {
-      products.unshift({ id: "producto-nuevo", category: "juegos", name: "Producto nuevo", tag: "PC", type: "Key", stock: "Disponible", price: 0, image: "images/peditujuego.jpg", description: "Descripcion del producto." });
-      selectedIndex = 0;
-      search.value = "";
-      renderList();
-      fillForm();
-      persistProducts();
-      updateOutput();
-      status.textContent = "Producto nuevo creado. Completa los datos y toca Guardar cambios.";
-    });
-    document.querySelector("#duplicate-product").addEventListener("click", () => {
-      const copy = { ...readForm(), id: `${slugify(form.elements.name.value)}-copia`, name: `${form.elements.name.value || "Producto"} copia` };
-      products.splice(selectedIndex + 1, 0, copy);
-      selectProduct(selectedIndex + 1);
-      persistProducts();
-      updateOutput();
-      status.textContent = "Producto duplicado. Ajusta los datos y toca Guardar cambios.";
-    });
-    document.querySelector("#delete-product").addEventListener("click", () => {
-      if (products.length <= 1) return;
-      products.splice(selectedIndex, 1);
-      selectedIndex = Math.max(0, selectedIndex - 1);
-      renderList();
-      fillForm();
-      persistProducts();
-      updateOutput();
-      status.textContent = "Producto eliminado del editor.";
-    });
-    document.querySelector("#copy-output").addEventListener("click", async () => {
-      saveCurrent();
-      await navigator.clipboard.writeText(output.value);
-      status.textContent = "products.js copiado al portapapeles.";
-    });
-    document.querySelector("#download-output").addEventListener("click", () => {
-      saveCurrent();
-      const blob = new Blob([output.value], { type: "text/javascript" });
+    function downloadScript(){
+      saveProduct();
+      const blob = new Blob([buildScript()], { type:"text/javascript;charset=utf-8" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "products.js";
+      link.download = "script.js";
       link.click();
       URL.revokeObjectURL(link.href);
-      status.textContent = "Archivo descargado como products.js.";
-    });
+    }
 
-    renderList();
-    fillForm();
-    renderCoupons();
-    updateOutput();
+    tabs.addEventListener("click", event => {
+      const button = event.target.closest("[data-group]");
+      if (!button) return;
+      state.active = button.dataset.group;
+      state.selected = -1;
+      form.hidden = true;
+      editorTitle.textContent = "Selecciona un producto";
+      renderTabs();
+      renderRows();
+    });
+    rows.addEventListener("click", event => {
+      const tr = event.target.closest("[data-index]");
+      if (tr) selectProduct(Number(tr.dataset.index));
+    });
+    search.addEventListener("input", renderRows);
+    fields.platform.addEventListener("change", () => {
+      document.querySelector("#psPlusPrices").hidden = fields.platform.value !== "PS PLUS";
+    });
+    fields.img.addEventListener("input", () => preview.src = fields.img.value.trim());
+    document.querySelector("#saveBtn").addEventListener("click", saveProduct);
+    document.querySelector("#deleteBtn").addEventListener("click", deleteProduct);
+    document.querySelector("#addBtn").addEventListener("click", addProduct);
+    document.querySelector("#downloadBtn").addEventListener("click", downloadScript);
+    document.querySelector("#loadFileBtn").addEventListener("click", () => document.querySelector("#scriptFileInput").click());
+    document.querySelector("#scriptFileInput").addEventListener("change", event => {
+      const file = event.target.files && event.target.files[0];
+      if (file) loadProductsFromFile(file);
+    });
+    document.querySelector("#reloadBtn").addEventListener("click", () => location.reload());
+
+    loadProducts().catch(error => {
+      rows.innerHTML = `<tr><td colspan="5" class="empty">No pude cargar script.js automaticamente. Toca "Cargar script.js" y elegi el archivo script.js de esta carpeta.</td></tr>`;
+    });
   </script>
 </body>
 </html>

@@ -1,936 +1,236 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>27 Store | Cuentas, Keys y Juegos</title>
-  <meta name="description" content="27 Store: cuentas, keys, juegos y servicios digitales con stock confirmado, precios claros y compra directa por WhatsApp."><link rel="canonical" href="https://27sttore.netlify.app/"><meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#07080a">
-  <link rel="icon" type="image/png" href="images/logo.jpeg">
-  <link rel="apple-touch-icon" href="images/logo.jpeg">
-  <meta property="og:title" content="27 Store | Cuentas, Keys y Juegos">
-  <meta property="og:description" content="Cuentas, keys, juegos y servicios digitales con stock confirmado y compra directa por WhatsApp.">
-  <meta property="og:image" content="images/logo.jpeg">
-  <link rel="preconnect" href="https://27sttore.netlify.app">
-  <style>
-    :root{--bg:#07080a;--line:rgba(255,255,255,.09);--text:#f4f7f2;--muted:#8b948e;--accent:#52ff73;--blue:#21c7ff;--warn:#ffce52}
-    [hidden]{display:none!important}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.side-nav{position:fixed;inset:0 auto 0 0;z-index:20;width:240px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#050608;padding:18px 14px}.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 16px;border-bottom:1px solid var(--line);font-weight:900;text-transform:uppercase}.brand img{width:34px;height:34px;border-radius:8px;border:1px solid rgba(82,255,115,.45);object-fit:cover}.brand span span,h1 span,.eyebrow,.stats span,.section-title span,.tag{color:var(--accent)}.side-nav nav{display:grid;gap:4px}.side-nav nav a,.side-cta{border-radius:8px;padding:10px 12px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase}.side-nav nav a:hover,.side-nav nav a.active{background:rgba(82,255,115,.1);color:var(--accent)}.side-cta{margin-top:auto;text-align:center;color:#071008;background:var(--accent)}main{margin-left:240px}.hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:72px 24px 116px;text-align:center;background:radial-gradient(circle at 50% 38%,rgba(82,255,115,.2),transparent 28%),radial-gradient(circle at 20% 80%,rgba(33,199,255,.14),transparent 26%),linear-gradient(180deg,#090b0d 0%,#07080a 100%)}.hero:before{content:"";position:absolute;inset:0;background:url("images/logo.png") center/140% no-repeat;opacity:.08;filter:saturate(.95) contrast(1.05);image-rendering:pixelated}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(circle at center,#000 0,transparent 70%)}.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.035) 8px);pointer-events:none}.corner{position:absolute;width:25px;height:25px;border-color:rgba(82,255,115,.7)}.top-left{top:24px;left:24px;border-top:2px solid;border-left:2px solid}.top-right{top:24px;right:24px;border-top:2px solid;border-right:2px solid}.bottom-left{bottom:24px;left:24px;border-bottom:2px solid;border-left:2px solid}.bottom-right{bottom:24px;right:24px;border-bottom:2px solid;border-right:2px solid}.hero-content{position:relative;z-index:1;max-width:820px}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px;font-weight:900;text-transform:uppercase}.eyebrow span{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}h1{margin:0;font-size:clamp(64px,12vw,150px);line-height:.82;font-weight:1000;text-shadow:0 14px 45px rgba(0,0,0,.65)}h1 span{font-size:.36em;vertical-align:top}.hero-copy{max-width:680px;margin:28px auto 0;color:rgba(244,247,242,.78);font-size:clamp(16px,2vw,21px);line-height:1.45}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;padding:0 22px;font-size:13px;font-weight:950;text-transform:uppercase}.btn.primary{background:var(--text);color:#071008}.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.04)}.stats{width:min(860px,calc(100% - 40px));margin:-64px auto 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);backdrop-filter:blur(16px)}.stats article{padding:28px;border-right:1px solid var(--line)}.stats article:last-child{border-right:0}.stats span,.section-title span,.tag{font-size:11px;font-weight:900;text-transform:uppercase}.stats strong{display:block;margin-top:8px;font-size:42px;font-weight:1000}.stats p,.category-card p,details p{margin:0;color:var(--muted);line-height:1.55}.section{width:min(1080px,calc(100% - 48px));margin:0 auto 86px;scroll-margin-top:30px}.section-title{display:grid;gap:10px;margin-bottom:24px}.section-title h2{margin:0;max-width:760px;font-size:clamp(30px,5vw,56px);line-height:.98}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category-card{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.category-card.wide{grid-column:span 2}.category-card img{width:100%;height:130px;object-fit:contain;border-radius:10px;margin-bottom:16px;background:rgba(255,255,255,.04)}.category-card h3{margin:6px 0 8px;font-size:24px}.category-card strong{display:inline-flex;width:max-content;margin-top:16px;color:var(--blue);font-size:13px;font-weight:900}.offer-card{min-height:360px;background:linear-gradient(180deg,rgba(7,8,10,.05),rgba(7,8,10,.92)),url("images/peditujuego.jpg") center/contain no-repeat,#151820}.ticker-section{overflow:hidden;border-block:1px solid var(--line);margin-bottom:86px}.ticker{display:flex;gap:38px;width:max-content;padding:18px 0;animation:ticker 18s linear infinite}.ticker span{color:rgba(244,247,242,.78);font-size:13px;font-weight:1000;text-transform:uppercase}@keyframes ticker{to{transform:translateX(-35%)}}.leaderboard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.leaderboard div{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;min-height:68px;padding:0 22px;border-bottom:1px solid var(--line)}.leaderboard div:last-child{border-bottom:0}.leaderboard strong{color:var(--warn)}.leaderboard span{font-weight:900}.leaderboard em{color:var(--accent);font-style:normal;font-weight:800}details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}summary{cursor:pointer;font-weight:900}details p{padding-top:12px}.bottom-nav{display:none}@media (max-width:860px){.side-nav{display:none}main{margin-left:0;padding-bottom:74px}.hero{min-height:70vh;padding-top:52px}.stats,.category-grid{grid-template-columns:1fr}.stats article{border-right:0;border-bottom:1px solid var(--line);padding:22px}.stats article:last-child{border-bottom:0}.category-card.wide{grid-column:auto}.leaderboard div{grid-template-columns:1fr}.bottom-nav{position:fixed;inset:auto 0 0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);background:rgba(5,6,8,.94);backdrop-filter:blur(14px)}.bottom-nav a{min-height:58px;display:grid;place-items:center;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}.bottom-nav a:last-child{color:var(--accent)}}@media (max-width:520px){.section{width:min(100% - 28px,1080px);margin-bottom:64px}.hero-actions{display:grid}.stats{width:calc(100% - 28px)}h1{font-size:68px}.category-card img{height:112px}}
-    .product-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px}.product-actions strong{margin-top:0}.product-actions small{margin-left:6px;color:var(--muted);font-size:11px;text-decoration:line-through}.cart-add,.cart-open,.cart-close,.qty-btn,.remove-btn,.checkout-btn,.account-btn,.admin-btn{border:0;cursor:pointer;font:inherit}.cart-add,.account-btn,.admin-btn{min-height:38px;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:11px;font-weight:950;text-transform:uppercase}.account-box{position:fixed;top:18px;right:18px;z-index:45;width:min(360px,calc(100% - 36px));border:1px solid var(--line);border-radius:14px;background:rgba(5,6,8,.92);backdrop-filter:blur(14px);padding:14px;box-shadow:0 12px 34px rgba(0,0,0,.35)}.account-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.account-info strong{display:block;font-size:13px}.account-info span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.account-form{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.account-form input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);padding:0 10px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.account-note{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.admin-panel{display:none;width:min(1080px,calc(100% - 48px));margin:0 auto 86px;border:1px solid var(--line);border-radius:14px;background:rgba(16,18,22,.94);padding:18px}.admin-panel.open{display:block}.admin-panel h2{margin:0 0 12px}.admin-list{display:grid;gap:10px}.admin-order{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.admin-order p{margin:0;color:var(--muted);font-size:13px}.admin-order-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-btn.reject{background:#ff7a7a;color:#170707}.cart-open{position:fixed;right:22px;bottom:22px;z-index:40;min-height:54px;border-radius:14px;padding:0 18px;background:var(--accent);color:#071008;font-size:13px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.42)}.cart-count{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:8px;border-radius:999px;background:#071008;color:var(--accent);font-size:12px}.cart-modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.72);backdrop-filter:blur(12px)}.cart-modal.open{display:flex}.cart-panel{width:min(520px,100%);max-height:88vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.55);overflow:hidden}.cart-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}.cart-head h2{margin:0;font-size:24px}.cart-close{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);font-size:24px}.cart-items{display:grid;gap:10px;padding:16px 20px;overflow:auto}.cart-empty{color:var(--muted);font-size:14px}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.035)}.cart-item h3{margin:0 0 4px;font-size:15px}.cart-item p{margin:0;color:var(--muted);font-size:12px}.qty-row{display:flex;align-items:center;gap:8px}.qty-btn,.remove-btn{border-radius:8px;background:rgba(255,255,255,.07);color:var(--text);font-weight:900}.qty-btn{width:30px;height:30px}.remove-btn{padding:7px 9px;color:#ff7a7a}.cart-foot{display:grid;gap:12px;padding:20px;border-top:1px solid var(--line);background:rgba(255,255,255,.035)}.cart-total{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px;font-size:22px;font-weight:1000}.checkout-btn{width:100%;min-height:52px;border-radius:10px;background:var(--accent);color:#071008;font-size:14px;font-weight:1000;text-transform:uppercase}.checkout-btn:disabled{opacity:.45;cursor:not-allowed}@media (max-width:860px){.account-box{position:static;width:calc(100% - 28px);margin:14px auto 0}.cart-open{right:12px;bottom:72px}.product-actions{align-items:stretch;flex-direction:column}.cart-add{width:100%}.admin-panel{width:calc(100% - 28px)}}
-    .reward-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reward-card{display:grid;gap:14px;border:1px solid var(--line);border-radius:12px;padding:18px;background:linear-gradient(180deg,rgba(82,255,115,.08),rgba(255,255,255,.018))}.reward-card h3{margin:0;font-size:22px}.reward-card p{margin:0;color:var(--muted);line-height:1.45}.reward-card strong{color:var(--warn);font-size:26px}.reward-btn{min-height:42px;border:0;border-radius:8px;background:var(--accent);color:#071008;cursor:pointer;font:inherit;font-size:12px;font-weight:950;text-transform:uppercase}.reward-btn:disabled{opacity:.45;cursor:not-allowed}.admin-subtitle{margin:16px 0 8px;color:var(--accent);font-size:12px;text-transform:uppercase}.redeem-status{margin-top:8px;color:var(--muted);font-size:13px}@media (max-width:860px){.reward-grid{grid-template-columns:1fr}}
-    .delivery-options{display:grid;gap:8px;margin:0 0 14px}.delivery-options label{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:rgba(255,255,255,.035);color:var(--text);font-size:13px;font-weight:800}.delivery-options input{accent-color:var(--accent);margin-top:2px}.delivery-options span{display:block;color:var(--muted);font-size:12px;font-weight:600;line-height:1.35}.order-status{margin:0 0 12px;color:var(--muted);font-size:12px;line-height:1.4}
-    .category-card{padding:12px;border-radius:10px}.category-card img{height:148px;padding:7px;object-fit:contain;object-position:center;border:1px solid var(--line);border-radius:8px;background:#0b0d11}.category-card.wide img{height:170px}.product-actions{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:8px}.product-type{justify-self:start;display:inline-flex;align-items:center;min-height:26px;border:1px solid rgba(82,255,115,.28);border-radius:999px;padding:0 9px;background:rgba(82,255,115,.08);color:var(--accent);font-size:10px;font-weight:1000;text-transform:uppercase;letter-spacing:.04em}.cart-type{display:inline-flex;margin-top:4px;border:1px solid rgba(82,255,115,.24);border-radius:999px;padding:3px 8px;color:var(--accent);font-size:10px;font-weight:900;text-transform:uppercase}@media (max-width:860px){.product-actions{grid-template-columns:1fr 1fr}.product-type{grid-column:1 / 2}.info-btn{grid-column:2 / 3}.cart-add{grid-column:1 / -1}.category-card img{height:138px}.category-card.wide img{height:150px}}
-    .category-card{cursor:pointer;transition:border-color .18s ease,transform .18s ease,background .18s ease}.category-card:hover{border-color:rgba(82,255,115,.36);transform:translateY(-2px);background:linear-gradient(180deg,rgba(82,255,115,.07),rgba(255,255,255,.02))}.product-detail-modal{position:fixed;inset:0;z-index:65;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.76);backdrop-filter:blur(12px)}.product-detail-modal.open{display:flex}.product-detail-panel{width:min(760px,100%);max-height:90vh;display:grid;grid-template-columns:minmax(220px,320px) 1fr;border:1px solid var(--line);border-radius:16px;background:#0c0e12;box-shadow:0 30px 80px rgba(0,0,0,.58);overflow:hidden}.product-detail-media{display:grid;place-items:center;background:#080a0d;padding:18px}.product-detail-media img{width:100%;max-height:360px;object-fit:contain;object-position:center;border-radius:10px}.product-detail-body{padding:20px;display:flex;flex-direction:column;gap:12px}.product-detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.product-detail-head h2{margin:0;font-size:28px;line-height:1}.product-detail-close{width:36px;height:36px;border:0;border-radius:8px;background:rgba(255,255,255,.06);color:var(--text);cursor:pointer;font-size:24px}.product-detail-description{margin:0;color:var(--muted);line-height:1.55}.product-detail-meta{display:flex;gap:8px;flex-wrap:wrap}.product-detail-meta span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--accent);font-size:11px;font-weight:1000;text-transform:uppercase}.product-detail-actions{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.product-detail-price{color:var(--blue);font-size:20px;font-weight:1000}.product-detail-add{min-height:44px;border:0;border-radius:9px;padding:0 16px;background:var(--accent);color:#071008;cursor:pointer;font:inherit;font-size:12px;font-weight:1000;text-transform:uppercase}@media (max-width:700px){.product-detail-panel{grid-template-columns:1fr}.product-detail-media img{max-height:260px}.product-detail-head h2{font-size:24px}}
-    .catalog-tools{width:min(1080px,calc(100% - 48px));margin:0 auto 44px;display:grid;gap:12px}.catalog-search,.catalog-sort{min-height:48px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.055);color:var(--text);padding:0 14px;font:inherit}.catalog-search::placeholder{color:var(--muted)}.catalog-sort{cursor:pointer}.filter-row{display:flex;gap:8px;flex-wrap:wrap}.filter-btn,.info-btn{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);color:var(--muted);cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase}.filter-btn{min-height:34px;padding:0 12px}.filter-btn.active{border-color:rgba(82,255,115,.5);background:rgba(82,255,115,.12);color:var(--accent)}.info-btn{justify-self:end;min-height:30px;padding:0 10px;color:var(--text)}.stock-badge{position:absolute;top:20px;left:20px;z-index:1;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 9px;background:rgba(5,6,8,.82);color:var(--accent);font-size:10px;font-weight:1000;text-transform:uppercase}.category-card{position:relative}.category-card.is-hidden{display:none}.empty-results{display:none;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:16px;background:rgba(255,255,255,.035)}.empty-results.show{display:block}.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.how-step{border:1px solid var(--line);border-radius:10px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.how-step strong{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:999px;background:var(--accent);color:#071008;font-weight:1000}.how-step h3{margin:14px 0 8px}.how-step p{margin:0;color:var(--muted);line-height:1.45}.coupon-box{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:12px}.coupon-box input{min-height:40px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.055);color:var(--text);padding:0 10px}.coupon-box button{border:0;border-radius:8px;background:var(--text);color:#071008;cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase;padding:0 12px}.coupon-note{margin:0 0 12px;color:var(--muted);font-size:12px}.cart-discount{display:flex;align-items:center;justify-content:space-between;margin:-4px 0 12px;color:var(--accent);font-size:13px;font-weight:900}@media (max-width:860px){.catalog-tools{width:calc(100% - 28px);margin-bottom:34px}.catalog-search,.catalog-sort{min-height:42px}.how-grid{grid-template-columns:1fr}.info-btn{grid-column:1 / -1;justify-self:stretch}.coupon-box{grid-template-columns:1fr}.coupon-box button{min-height:40px}}
-    .trust-row{display:flex;justify-content:center;gap:10px;margin-top:22px;flex-wrap:wrap}.trust-row span{border:1px solid rgba(82,255,115,.22);border-radius:999px;padding:8px 12px;background:rgba(5,6,8,.48);color:rgba(244,247,242,.82);font-size:12px;font-weight:900;text-transform:uppercase}.cart-toast{position:fixed;right:22px;bottom:88px;z-index:70;max-width:min(320px,calc(100% - 28px));border:1px solid rgba(82,255,115,.35);border-radius:10px;padding:12px 14px;background:rgba(5,6,8,.94);color:var(--text);box-shadow:0 18px 46px rgba(0,0,0,.45);font-size:13px;font-weight:800;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .18s ease,transform .18s ease}.cart-toast.show{opacity:1;transform:translateY(0)}@media (max-width:520px){.trust-row{justify-content:flex-start}.trust-row span{font-size:11px}.cart-toast{right:14px;bottom:132px}}
-    .daily-deal{display:grid;grid-template-columns:minmax(180px,280px) 1fr;gap:22px;align-items:center;border:1px solid rgba(82,255,115,.28);border-radius:14px;padding:18px;background:linear-gradient(135deg,rgba(82,255,115,.12),rgba(255,255,255,.025) 42%,rgba(33,199,255,.08));box-shadow:0 18px 60px rgba(0,0,0,.24)}.daily-deal img{width:100%;height:220px;object-fit:contain;border:1px solid var(--line);border-radius:10px;background:#080a0d;padding:10px}.daily-deal-body{display:grid;gap:10px}.daily-deal-kicker{color:var(--accent);font-size:11px;font-weight:1000;text-transform:uppercase}.daily-deal h3{margin:0;font-size:clamp(28px,5vw,48px);line-height:1}.daily-deal p{margin:0;color:var(--muted);line-height:1.5}.daily-deal-price{color:var(--blue);font-size:26px;font-weight:1000}.daily-deal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.empty-cart-box{display:grid;gap:10px;justify-items:start}.empty-cart-box strong{font-size:18px}.empty-cart-box p{margin:0;color:var(--muted);line-height:1.45}.empty-cart-box a{min-height:38px;display:inline-flex;align-items:center;border-radius:8px;padding:0 13px;background:var(--accent);color:#071008;font-size:11px;font-weight:1000;text-transform:uppercase}@media (max-width:700px){.daily-deal{grid-template-columns:1fr}.daily-deal img{height:180px}.daily-deal-actions{display:grid}.daily-deal-actions .btn{width:100%}}
-    .buy-now{min-height:38px;border:0;border-radius:8px;padding:0 13px;background:var(--text);color:#071008;cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase}.product-actions{grid-template-columns:auto 1fr auto auto}.image-fallback{object-fit:contain!important;padding:18px!important;background:#080a0d!important}@media (max-width:860px){.buy-now{grid-column:1 / -1;width:100%}}
-    @media (max-width:860px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.category-card{min-height:auto;padding:10px}.category-card img{height:112px;margin-bottom:10px;padding:5px}.category-card h3{font-size:17px;line-height:1.05}.category-card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12px;line-height:1.35}.stock-badge{top:14px;left:14px;font-size:9px}.product-actions{grid-template-columns:1fr;gap:7px}.product-actions strong{font-size:14px}.product-type{width:100%;justify-self:stretch;text-align:center;justify-content:center}.cart-add,.buy-now{width:100%;justify-self:stretch;white-space:nowrap}.cart-add,.buy-now{min-height:34px;padding:0 6px;font-size:9px;line-height:1.05}.section-title h2{font-size:30px}}@media (max-width:360px){.category-grid{gap:8px}.category-card{padding:8px}.category-card img{height:98px}.category-card h3{font-size:15px}.cart-add,.buy-now{font-size:8px}}
-    .coupon-banner{width:min(1080px,calc(100% - 48px));margin:0 auto 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid rgba(82,255,115,.32);border-radius:12px;padding:14px 16px;background:linear-gradient(90deg,rgba(82,255,115,.14),rgba(33,199,255,.08));box-shadow:0 16px 44px rgba(0,0,0,.22)}.coupon-banner strong{font-size:14px;text-transform:uppercase}.coupon-banner span{color:var(--muted);font-size:13px}.coupon-code{display:inline-flex;align-items:center;min-height:34px;border:1px dashed rgba(82,255,115,.55);border-radius:8px;padding:0 12px;background:rgba(5,6,8,.55);color:var(--accent);cursor:pointer;font:inherit;font-weight:1000}.coupon-code.copied{background:var(--accent);color:#071008}.result-count{margin:0;color:var(--muted);font-size:13px;font-weight:800}.price-filter-row{display:flex;gap:8px;flex-wrap:wrap}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.trust-card{border:1px solid var(--line);border-radius:10px;padding:16px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}.trust-card strong{display:block;margin-bottom:8px;color:var(--accent);font-size:13px;text-transform:uppercase}.trust-card p{margin:0;color:var(--muted);line-height:1.45}.whatsapp-float{position:fixed;right:22px;bottom:88px;z-index:39;min-height:48px;display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:0 16px;background:#25d366;color:#06130a;font-size:12px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.42)}@media (max-width:860px){.coupon-banner{width:calc(100% - 28px);display:grid}.trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.whatsapp-float{right:12px;bottom:132px;min-height:44px;padding:0 13px;font-size:11px}}@media (max-width:420px){.trust-grid{grid-template-columns:1fr}.coupon-banner span{font-size:12px}}
-    .hours-note{width:min(1080px,calc(100% - 48px));margin:-54px auto 54px;color:var(--muted);font-size:13px;font-weight:800;text-align:center}.top-btn{position:fixed;right:22px;bottom:150px;z-index:38;min-height:42px;border:1px solid var(--line);border-radius:12px;padding:0 13px;background:rgba(5,6,8,.92);color:var(--text);cursor:pointer;font:inherit;font-size:12px;font-weight:1000;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.38);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease}.top-btn.show{opacity:1;transform:translateY(0);pointer-events:auto}.product-badge{position:absolute;top:20px;right:20px;z-index:1;border-radius:999px;padding:5px 9px;background:var(--warn);color:#170f02;font-size:10px;font-weight:1000;text-transform:uppercase}.cart-add.added,.buy-now.opened{background:var(--warn)!important;color:#170f02!important}.product-detail-note{border:1px solid rgba(82,255,115,.24);border-radius:10px;padding:10px 12px;background:rgba(82,255,115,.07);color:var(--muted);font-size:13px;line-height:1.4}.product-detail-buy{min-height:44px;border:0;border-radius:9px;padding:0 16px;background:var(--text);color:#071008;cursor:pointer;font:inherit;font-size:12px;font-weight:1000;text-transform:uppercase}@media (max-width:860px){.hours-note{width:calc(100% - 28px);margin:-42px auto 42px}.filter-row,.price-filter-row{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}.filter-row::-webkit-scrollbar,.price-filter-row::-webkit-scrollbar{display:none}.filter-btn{white-space:nowrap}.top-btn{right:12px;bottom:184px;min-height:40px;font-size:11px}.product-badge{top:14px;right:14px;font-size:9px}.product-detail-actions{display:grid}.product-detail-buy,.product-detail-add{width:100%}}
-    .hero:after{content:"";position:absolute;inset:auto 50% 40px auto;width:190px;height:190px;background:url("images/logo.jpeg") center/contain no-repeat;opacity:.08;transform:translateX(50%);pointer-events:none}.btn,.cart-add,.buy-now,.checkout-btn,.coupon-code,.filter-btn{transition:transform .16s ease,filter .16s ease,border-color .16s ease}.btn:hover,.cart-add:hover,.buy-now:hover,.checkout-btn:hover,.coupon-code:hover,.filter-btn:hover{transform:translateY(-1px);filter:brightness(1.05)}.section-title h2{letter-spacing:0}.category-card{box-shadow:0 12px 34px rgba(0,0,0,.18)}.category-card:hover{box-shadow:0 18px 42px rgba(0,0,0,.28)}@media (min-width:861px){.cart-modal.open{align-items:stretch;justify-content:flex-end;padding:0;background:rgba(0,0,0,.52)}.cart-panel{height:100vh;max-height:none;border-radius:0;width:min(460px,100%);border-block:0;border-right:0}.cart-head{padding-top:24px}.cart-items{flex:1}.product-detail-panel{width:min(820px,calc(100% - 48px))}}@media (max-width:860px){.hero:after{width:120px;height:120px;bottom:28px}.cart-open{font-size:12px}.whatsapp-float{max-width:116px;justify-content:center}.bottom-nav a{font-size:10px}.product-detail-note{font-size:12px}}
-    @media (max-width:640px){.hero{min-height:auto;padding:34px 14px 64px}.corner,.scanlines{display:none}.hero-grid{opacity:.45}h1{font-size:54px;line-height:.9}.hero-copy{margin-top:18px;font-size:14px;line-height:1.42}.hero-actions{gap:8px;margin-top:22px}.btn{min-height:42px;border-radius:8px;font-size:11px;padding:0 14px}.trust-row{margin-top:14px;gap:6px}.trust-row span{padding:7px 9px;font-size:10px}.stats{margin:-34px auto 38px}.stats article{padding:15px}.stats strong{font-size:29px}.hours-note{margin:-20px auto 34px;font-size:12px}.section{width:calc(100% - 20px);margin-bottom:46px}.section-title{gap:7px;margin-bottom:15px}.section-title h2{font-size:25px;line-height:1.02}.daily-deal{padding:12px;gap:12px}.daily-deal img{height:128px}.daily-deal h3{font-size:25px}.daily-deal p{font-size:12px}.daily-deal-price{font-size:20px}.daily-deal-actions{gap:8px}.coupon-banner{width:calc(100% - 20px);margin-bottom:16px;padding:12px}.coupon-code{width:100%;justify-content:center}.catalog-tools{width:calc(100% - 20px);gap:8px;margin-bottom:28px}.catalog-search,.catalog-sort{min-height:42px;font-size:13px}.filter-btn{min-height:31px;font-size:10px;padding:0 10px}.result-count{font-size:12px}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.category-card{padding:8px;border-radius:8px}.category-card img{height:94px;margin-bottom:8px}.category-card h3{font-size:15px;line-height:1.08}.category-card p{font-size:11px;-webkit-line-clamp:2}.tag{font-size:9px}.stock-badge,.product-badge{font-size:8px;padding:4px 7px}.stock-badge{top:10px;left:10px}.product-badge{top:10px;right:10px}.product-actions{gap:6px;margin-top:10px}.product-actions strong{font-size:12px}.product-type{min-height:24px;font-size:9px}.cart-add,.buy-now{min-height:31px;font-size:8px}.cart-open{right:10px;bottom:66px;min-height:42px;border-radius:11px;padding:0 12px}.whatsapp-float{right:10px;bottom:112px;min-height:40px;border-radius:11px;padding:0 11px}.top-btn{right:10px;bottom:158px}.bottom-nav a{min-height:54px}.cart-modal{padding:10px}.cart-panel{max-height:92vh;border-radius:12px}.cart-head{padding:14px 15px}.cart-items{padding:12px 14px}.cart-foot{padding:14px;gap:10px}.cart-item{grid-template-columns:1fr;gap:10px}.qty-row{justify-content:space-between}.product-detail-modal{padding:10px}.product-detail-body{padding:15px}.product-detail-media{padding:12px}.product-detail-media img{max-height:190px}.product-detail-head h2{font-size:21px}.trust-grid{grid-template-columns:1fr}.how-grid{gap:8px}.how-step,.trust-card,details{padding:13px}.ticker-section{margin-bottom:46px}}
-    .special-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.special-actions a{min-height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;background:var(--accent);color:#071008;font-size:11px;font-weight:1000;text-transform:uppercase}.new-badge{display:inline-flex;border-radius:999px;padding:5px 9px;background:rgba(33,199,255,.14);color:var(--blue);font-size:10px;font-weight:1000;text-transform:uppercase}.mobile-filter-toggle{display:none}.filter-groups{display:grid;gap:8px}@media (min-width:861px){.daily-deal.compact{grid-template-columns:140px 1fr auto}.daily-deal.compact img{height:118px}.daily-deal.compact h3{font-size:30px}.daily-deal.compact p{display:none}.daily-deal.compact .daily-deal-actions{min-width:180px}}@media (max-width:640px){.hero-copy{max-width:330px}.hero-actions .btn.ghost{display:none}.daily-deal{grid-template-columns:96px 1fr!important}.daily-deal img{height:96px}.daily-deal-body{gap:6px}.daily-deal h3{font-size:18px}.daily-deal p{display:none}.daily-deal-price{font-size:16px}.daily-deal-actions{grid-column:1 / -1}.mobile-filter-toggle{display:inline-flex;min-height:38px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.055);color:var(--text);cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase}.filter-groups{display:none}.filter-groups.open{display:grid}.special-actions{grid-template-columns:1fr}.cart-total{font-size:19px;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.checkout-btn{min-height:46px}.cart-item h3{font-size:14px}.qty-btn{width:34px;height:34px}.remove-btn{min-height:34px}.new-badge{font-size:9px}}
-    .empty-cart-box{min-height:180px;align-content:center;justify-items:center;text-align:center}.empty-cart-box strong{font-size:20px}.empty-cart-box a{width:auto;min-width:132px;min-height:40px;justify-content:center}@media (max-width:640px){.empty-cart-box{min-height:190px;padding:10px 0}.empty-cart-box strong{font-size:17px;line-height:1.25}.empty-cart-box p{font-size:13px}.empty-cart-box a{width:auto!important;min-width:130px;min-height:38px!important;padding:0 14px!important;font-size:10px!important}.cart-foot .checkout-btn{width:100%}.cart-foot #clear-cart-btn{background:rgba(255,255,255,.08);color:var(--text)}.coupon-box{grid-template-columns:1fr auto!important}.coupon-box button{min-height:40px!important}}
-    .daily-deal-slot .daily-deal{min-height:auto}.daily-deal.compact{padding:18px;background:linear-gradient(90deg,rgba(82,255,115,.1),rgba(33,199,255,.06));border-color:rgba(82,255,115,.34)}.daily-deal.compact img{height:220px}.daily-deal.compact .daily-deal-media-label{display:none}.daily-deal.compact .daily-deal-kicker{font-size:10px}.daily-deal.compact h3{font-size:30px}.daily-deal.compact .daily-deal-price{font-size:25px}.daily-deal.compact .daily-deal-actions{display:flex;gap:8px}.daily-deal.compact .buy-now{background:var(--accent);color:#071008}.daily-deal.compact .cart-add{background:var(--text);color:#071008}@media (min-width:861px){.daily-deal.compact{grid-template-columns:260px 1fr auto}}@media (max-width:640px){#destacado .section-title h2{font-size:28px}.daily-deal.compact{grid-template-columns:138px 1fr!important;padding:12px}.daily-deal.compact img{height:138px;padding:6px}.daily-deal.compact h3{font-size:18px}.daily-deal.compact .daily-deal-price{font-size:16px}.daily-deal.compact .daily-deal-actions{display:grid;grid-template-columns:1fr 1fr}.daily-deal.compact .cart-add,.daily-deal.compact .buy-now{min-height:34px;font-size:8px}}
-    .pack-builder{position:relative}.pack-layout{display:grid;grid-template-columns:1fr 340px;gap:14px;align-items:start}.pack-shop,.pack-summary{border:1px solid rgba(82,255,115,.26);border-radius:14px;background:linear-gradient(180deg,rgba(82,255,115,.07),rgba(255,255,255,.018));box-shadow:0 18px 60px rgba(0,0,0,.25)}.pack-shop{padding:16px}.pack-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.pack-tab{min-height:36px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:var(--muted);cursor:pointer;font:inherit;font-size:11px;font-weight:1000;text-transform:uppercase;padding:0 12px}.pack-tab.active{border-color:rgba(82,255,115,.55);background:rgba(82,255,115,.15);color:var(--accent)}.pack-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.pack-option{display:grid;grid-template-columns:72px 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px;background:rgba(5,6,8,.42);cursor:pointer;text-align:left;color:var(--text);font:inherit}.pack-option.selected{border-color:rgba(82,255,115,.65);background:rgba(82,255,115,.12)}.pack-option img{width:72px;height:64px;object-fit:contain;border-radius:8px;background:#080a0d;padding:5px}.pack-option span{display:block;color:var(--accent);font-size:9px;font-weight:1000;text-transform:uppercase}.pack-option strong{display:block;margin:3px 0;font-size:15px;line-height:1.05}.pack-option em{display:block;color:var(--blue);font-style:normal;font-size:12px;font-weight:1000}.pack-check{width:28px;height:28px;display:grid;place-items:center;border-radius:999px;background:rgba(255,255,255,.08);color:var(--muted);font-weight:1000}.pack-option.selected .pack-check{background:var(--accent);color:#071008}.pack-summary{position:sticky;top:18px;padding:18px;display:grid;gap:12px}.pack-summary-kicker{color:var(--accent);font-size:11px;font-weight:1000;text-transform:uppercase}.pack-summary>strong{font-size:23px;line-height:1.05}.pack-selected{display:grid;gap:8px;min-height:78px}.pack-empty{color:var(--muted);font-size:13px;line-height:1.45}.pack-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:rgba(255,255,255,.04);font-size:12px;font-weight:900}.pack-chip button{border:0;background:transparent;color:#ff7a7a;cursor:pointer;font:inherit;font-weight:1000}.pack-total{display:flex;align-items:center;justify-content:space-between;border-block:1px solid var(--line);padding:12px 0}.pack-total span{color:var(--muted);font-size:12px}.pack-total strong{color:var(--blue);font-size:24px}.pack-whatsapp,.pack-clear{min-height:44px;border:0;border-radius:9px;cursor:pointer;font:inherit;font-size:12px;font-weight:1000;text-transform:uppercase}.pack-whatsapp{background:var(--accent);color:#071008}.pack-clear{background:rgba(255,255,255,.08);color:var(--text)}.pack-whatsapp:disabled,.pack-clear:disabled{opacity:.45;cursor:not-allowed}.pack-summary p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}@media (max-width:860px){.pack-layout{grid-template-columns:1fr}.pack-summary{position:static}.pack-options{grid-template-columns:1fr}.pack-option{grid-template-columns:64px 1fr auto}.pack-option img{width:64px;height:58px}}@media (max-width:520px){.pack-shop,.pack-summary{border-radius:10px;padding:12px}.pack-tabs{overflow:auto;flex-wrap:nowrap;padding-bottom:3px}.pack-tab{white-space:nowrap}.pack-option strong{font-size:14px}.pack-summary>strong{font-size:20px}}
-    .daily-deal p,.product-detail-description{white-space:pre-line}.category-card p{display:none!important}.price-now{color:var(--blue);font-size:inherit;font-weight:1000}.price-before{display:block;width:max-content;margin-top:3px;color:var(--muted);font-size:.72em;font-weight:900;text-decoration:line-through;text-decoration-thickness:2px;opacity:.78}.product-actions .price-before,.daily-deal-price .price-before{display:inline;margin:0 0 0 6px;font-size:.82em}.product-detail-price{display:grid;gap:2px}.save-badge{position:absolute;right:20px;bottom:96px;z-index:1;border-radius:999px;padding:6px 9px;background:var(--accent);color:#071008;font-size:10px;font-weight:1000;text-transform:uppercase;box-shadow:0 8px 22px rgba(0,0,0,.28)}@media (max-width:860px){.save-badge{right:12px;bottom:88px;font-size:8px;padding:5px 7px}}
-  .coupon-banner,.coupon-box,.coupon-note,.cart-discount{display:none!important}
-    .hero{min-height:84vh;padding:86px 24px 132px;text-align:left}.hero-content{max-width:920px;margin:0 auto;display:grid;justify-items:start;text-align:left}.hero-copy{max-width:720px;margin:24px 0 0}.hero-actions{justify-content:flex-start}.trust-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.trust-row span{display:inline-flex;align-items:center;min-height:34px;border:1px solid var(--line);border-radius:999px;padding:0 12px;background:rgba(255,255,255,.04);color:var(--text);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:0}.hero:before{opacity:.07;background-position:center;background-size:150%;filter:saturate(.95) contrast(1.08)}.hero:after{content:"";position:absolute;right:6%;bottom:6%;width:min(34vw,360px);height:min(34vw,360px);background:url("images/logo.jpeg") center/contain no-repeat;opacity:.06;pointer-events:none;transform:none}.category-card{padding:14px;border-radius:12px;box-shadow:0 16px 38px rgba(0,0,0,.22);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02))}.category-card:hover{transform:translateY(-3px);border-color:rgba(82,255,115,.38);background:linear-gradient(180deg,rgba(82,255,115,.08),rgba(255,255,255,.02));box-shadow:0 22px 48px rgba(0,0,0,.3)}.category-card img{height:156px;padding:10px;border-radius:10px;background:rgba(11,13,17,.95)}.category-card h3{margin:8px 0 10px;font-size:22px;line-height:1.03}.product-actions{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center}.product-actions strong{grid-column:1 / -1;display:flex;align-items:baseline;gap:6px}.product-type{justify-self:start;min-height:28px;padding:0 10px}.cart-add,.buy-now{min-height:40px;padding:0 14px;white-space:nowrap}.cart-panel{width:min(560px,100%);height:100vh;max-height:none;border-radius:0;border-block:0;border-right:0}.cart-head{padding:20px 24px}.cart-items{flex:1;padding:18px 24px}.cart-foot{padding:20px 24px 24px;gap:10px}.cart-item{padding:14px;border-radius:10px}.cart-total{font-size:24px}.qty-btn{width:34px;height:34px}.remove-btn{min-height:34px}.cart-open{right:24px;bottom:24px}.product-detail-panel{width:min(860px,calc(100% - 32px))}.product-detail-media{padding:22px}.product-detail-body{padding:24px}.product-detail-head h2{font-size:30px}.product-detail-price{font-size:22px}.product-detail-note{font-size:13px}.cart-modal{align-items:stretch;justify-content:flex-end;padding:0}.cart-modal.open{display:flex}.whatsapp-float{bottom:88px}@media (max-width:860px){main{margin-left:0;padding-bottom:82px}.side-nav{display:none}.hero{min-height:auto;padding:40px 14px 66px}.hero-content{max-width:none;width:100%}.hero-copy{max-width:none;font-size:15px;line-height:1.42}.hero-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}.hero-actions .btn{width:100%}.trust-row{width:100%;justify-content:flex-start}.stats{width:calc(100% - 20px);margin:-30px auto 34px}.stats article{padding:18px}.stats strong{font-size:32px}.section{width:calc(100% - 20px)}.section-title h2{font-size:30px}.category-grid{grid-template-columns:1fr;gap:10px}.category-card{padding:10px}.category-card img{height:128px}.category-card h3{font-size:18px}.product-actions{grid-template-columns:1fr 1fr}.product-actions strong{grid-column:1 / -1}.product-type,.info-btn{grid-column:auto}.cart-open{right:12px;bottom:72px;min-height:44px}.whatsapp-float{right:12px;bottom:126px}.top-btn{right:12px;bottom:178px}.cart-panel{width:100%;border-radius:0}.cart-head{padding:16px}.cart-items{padding:14px 16px}.cart-foot{padding:16px}.product-detail-panel{width:100%;max-height:92vh;border-radius:12px}.product-detail-body{padding:16px}.product-detail-media{padding:14px}}@media (max-width:520px){h1{font-size:clamp(44px,16vw,64px)}.hero{padding:34px 12px 58px}.hero-copy{font-size:14px}.hero-actions{grid-template-columns:1fr;gap:8px}.btn{min-height:42px;border-radius:8px;font-size:11px;padding:0 14px}.trust-row span{min-height:32px;padding:0 10px;font-size:10px}.stats{width:calc(100% - 16px);margin:-24px auto 28px}.stats article{padding:16px}.stats strong{font-size:28px}.section-title h2{font-size:26px;line-height:1.02}.category-card img{height:118px}.category-card h3{font-size:16px}.product-actions{gap:7px}.cart-item{grid-template-columns:1fr;gap:10px}.qty-row{justify-content:space-between}.cart-total{font-size:20px}.checkout-btn{min-height:48px}.product-detail-head h2{font-size:22px}.product-detail-actions{display:grid}.product-detail-buy,.product-detail-add{width:100%}.daily-deal.compact{grid-template-columns:112px 1fr!important}.daily-deal.compact img{height:112px}.pack-option{grid-template-columns:56px 1fr auto}.pack-option img{width:56px;height:52px}.pack-shop,.pack-summary{border-radius:10px;padding:12px}}@media (max-width:420px){.category-grid{gap:8px}.category-card{padding:8px}.category-card img{height:104px}.top-btn{bottom:162px}.cart-open{bottom:64px}.whatsapp-float{bottom:112px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bassal Store | Gaming digital</title>
+  <meta name="description" content="Bassal Store: juegos digitales, cuentas primarias/secundarias, PS Plus, gift cards y accesorios con entrega rapida por WhatsApp.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <meta name="theme-color" content="#090c0d">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <aside class="side-nav" aria-label="Navegacion principal">
-    <a class="brand" href="#inicio" aria-label="27 Store Club">
-      <img src="images/logo.jpeg" alt="27 Store">
-      <span>27 <span>Sttore</span></span>
-    </a>
-    <nav>
-      <a class="active" href="#inicio">Inicio</a>
-      <a href="#arma-pack">Armá tu pack</a>
-      <a href="#ofertas">Ofertas</a>
-      <a href="#suscripciones">Suscripciones</a>
-      <a href="#juegos">PC</a>
-      <a href="#ps">PS4/PS5</a>
-      <a href="#keys">Keys</a>
-      <a href="#social">Social</a>
-      <a href="#pedi-tu-juego">Pedí tu juego</a>
-      <a href="#como-comprar">Cómo comprar</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <a class="side-cta" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Entrar por WhatsApp</a>
-  </aside>
-
-  <main>
-    <section id="inicio" class="hero">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="scanlines" aria-hidden="true"></div>
-      <div class="corner top-left" aria-hidden="true"></div>
-      <div class="corner top-right" aria-hidden="true"></div>
-      <div class="corner bottom-left" aria-hidden="true"></div>
-      <div class="corner bottom-right" aria-hidden="true"></div>
-
-      <div class="hero-content">
-        <p class="eyebrow"><span></span> Tienda digital con atención directa</p>
-        <h1>27 Store</h1>
-        <p class="hero-copy">Cuentas, keys, juegos y servicios digitales con stock confirmado, precio claro y respuesta rapida por WhatsApp. Elegis, armás tu pedido y cerramos todo sin vueltas.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#ofertas">Ver ofertas</a>
-          <a class="btn ghost" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Comprar por WhatsApp</a>
-        </div>
-        <div class="trust-row" aria-label="Beneficios de compra">
-          <span>Stock confirmado</span>
-          <span>Soporte directo</span>
-          <span>Entrega digital</span>
-        </div>
+  <nav class="nav" id="nav">
+    <div class="wrap">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark"><img class="brand-logo" src="logo.png" alt="Bassal Store"></span>
+        <span><b>Bassal Store</b><span>Gaming digital</span></span>
+      </a>
+      <div class="links" aria-label="Categorías principales">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo" data-nav-category="PS4">PS4</a>
+        <a href="#catalogo" data-nav-category="PS5">PS5</a>
+        <a href="#catalogo" data-nav-category="PS PLUS">PS Plus</a>
+        <a href="#catalogo" data-nav-category="STEAM">Steam</a>
       </div>
-    </section>
-
-    <section class="stats" aria-label="Resumen del club">
-      <article>
-        <span>Clientes Satisfechos</span>
-        <strong>+1.2k</strong>
-        <p>Personas</p>
-      </article>
-      <article>
-        <span>Entregas</span>
-        <strong>24/7</strong>
-        <p>atención por WhatsApp</p>
-      </article>
-      <article>
-        <span>Sorteos Activos</span>
-        <strong>0</strong>
-        <p>Se vienen nuevos sorteos</p>
-      </article>
-    </section>
-    <p class="hours-note">Atención por WhatsApp todos los días. Confirmamos stock y entrega antes de que pagues.</p>
-
-    <section id="destacado" class="section" aria-label="Producto destacado del dia">
-      <div class="section-title">
-        <span>› Destacado del día</span>
-        <h2>Destacado del día</h2>
-      </div>
-      <div id="daily-deal" class="daily-deal-slot"></div>
-    </section>
-
-    <div class="coupon-banner" aria-label="Cupón activo">
-      <div>
-        <strong>Cupón activo</strong>
-        <span>Usalo en el carrito antes de finalizar tu pedido.</span>
-      </div>
-      <button class="coupon-code" id="copy-coupon-btn" type="button" data-code="27STORE">27STORE · 10% OFF</button>
-    </div>
-
-    <section id="arma-pack" class="section pack-builder" aria-label="Armar pack personalizado">
-      <div class="section-title">
-        <span>› Armá tu pack</span>
-        <h2>Elegí varios productos y consultá un combo por WhatsApp</h2>
-      </div>
-      <div class="pack-layout">
-        <div class="pack-shop">
-          <div class="pack-tabs" id="pack-tabs" aria-label="Categorías para armar pack"></div>
-          <div class="pack-options" id="pack-options"></div>
-        </div>
-        <aside class="pack-summary" aria-label="Resumen del pack">
-          <span class="pack-summary-kicker">Tu combo</span>
-          <strong id="pack-count">Todavía no elegiste productos</strong>
-          <div class="pack-selected" id="pack-selected"></div>
-          <div class="pack-total">
-            <span>Total estimado</span>
-            <strong id="pack-total">$0</strong>
-          </div>
-          <button class="pack-whatsapp" id="pack-whatsapp" type="button" disabled>Consultar mi pack</button>
-          <button class="pack-clear" id="pack-clear" type="button" disabled>Limpiar selección</button>
-          <p>El precio final y stock se confirman por WhatsApp antes de pagar.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="catalog-tools" aria-label="Buscar y filtrar catálogo">
-      <input class="catalog-search" id="catalog-search" type="search" placeholder="Buscar Netflix, GTA, PS5, Canva..."><select class="catalog-sort" id="catalog-sort" aria-label="Ordenar catálogo"><option value="featured">Destacados primero</option><option value="price-asc">Precio menor</option><option value="price-desc">Precio mayor</option><option value="name-asc">Nombre A-Z</option></select>
-      <button class="mobile-filter-toggle" id="mobile-filter-toggle" type="button">Mostrar filtros</button>
-      <div class="filter-groups" id="filter-groups">
-        <div class="filter-row" id="filter-row">
-          <button class="filter-btn active" type="button" data-filter="all">Todo</button>
-          <button class="filter-btn" type="button" data-filter="ofertas">Ofertas</button>
-          <button class="filter-btn" type="button" data-filter="suscripciones">Streaming</button>
-          <button class="filter-btn" type="button" data-filter="juegos">PC</button>
-          <button class="filter-btn" type="button" data-filter="ps">PS4/PS5</button>
-          <button class="filter-btn" type="button" data-filter="keys">Keys</button>
-          <button class="filter-btn" type="button" data-filter="social">Social</button>
-        </div>
-        <div class="price-filter-row" id="price-filter-row" aria-label="Filtrar por precio">
-          <button class="filter-btn active" type="button" data-price-filter="all">Todos los precios</button>
-          <button class="filter-btn" type="button" data-price-filter="under-5000">Hasta $5.000</button>
-          <button class="filter-btn" type="button" data-price-filter="5000-20000">$5.000 a $20.000</button>
-          <button class="filter-btn" type="button" data-price-filter="over-20000">Más de $20.000</button>
-          <button class="filter-btn" type="button" data-price-filter="consult">A consultar</button>
-        </div>
-      </div>
-      <p class="result-count" id="result-count">Mostrando productos.</p>
-      <p class="empty-results" id="empty-results">No encontré productos con ese filtro. Probá con otro nombre o categoría.</p>
-    </section>
-
-    <section id="ofertas" class="section">
-      <div class="section-title">
-        <span>› Ofertas destacadas</span>
-        <h2>Ofertas activas para comprar directo por WhatsApp</h2>
-      </div>
-      <div class="category-grid" data-products="ofertas"></div>
-    </section>
-
-    <section id="suscripciones" class="section">
-      <div class="section-title">
-        <span>› Suscripciones</span>
-        <h2>Streaming y herramientas digitales</h2>
-      </div>
-      <div class="category-grid" data-products="suscripciones"></div>
-    </section>
-
-    <section id="juegos" class="section">
-      <div class="section-title">
-        <span>› PC</span>
-        <h2>Juegos para PC y lanzamientos</h2>
-      </div>
-      <div class="category-grid" data-products="juegos"></div>
-    </section>
-
-    <section id="ps" class="section">
-      <div class="section-title">
-        <span>› PS4/PS5</span>
-        <h2>Juegos y cuentas para PlayStation</h2>
-      </div>
-      <div class="category-grid" data-products="ps"></div>
-    </section>
-
-    <section id="keys" class="section">
-      <div class="section-title">
-        <span>› Random keys</span>
-        <h2>Llaves sorpresa y drops especiales</h2>
-      </div>
-      <div class="category-grid" data-products="keys"></div>
-    </section>
-
-    <section id="social" class="section">
-      <div class="section-title">
-        <span>› Social</span>
-        <h2>Boosts para perfiles y creadores</h2>
-      </div>
-      <div class="category-grid" data-products="social"></div>
-    </section>
-
-    <section id="pedi-tu-juego" class="section">
-      <div class="section-title">
-        <span>› Pedido especial</span>
-        <h2>¿No encontraste lo que buscabas?</h2>
-      </div>
-      <div class="category-grid">
-        <article class="category-card">
-          <img src="images/peditujuego.jpg" alt="PEDI TU JUEGO AQUI">
-          <div>
-            <span class="tag">A pedido</span>
-            <h3>PEDÍ TU JUEGO ACÁ</h3>
-            <p>¿Buscás un título específico? 27 Store te lo consigue.</p>
-          </div>
-          <div class="product-actions">
-            <a class="btn primary" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Consultar</a>
-          </div>
-          <div class="special-actions">
-            <a href="https://wa.me/5493513743859?text=Hola%2027%20Store%2C%20quiero%20pedir%20un%20juego%20para%20PC." target="_blank" rel="noreferrer">PC</a>
-            <a href="https://wa.me/5493513743859?text=Hola%2027%20Store%2C%20quiero%20pedir%20un%20juego%20para%20PS4%2FPS5." target="_blank" rel="noreferrer">PS4/PS5</a>
-            <a href="https://wa.me/5493513743859?text=Hola%2027%20Store%2C%20quiero%20consultar%20por%20una%20suscripci%C3%B3n%20o%20servicio%20especial." target="_blank" rel="noreferrer">Servicio</a>
-          </div>
-        </article>
-        <article class="category-card">
-          <img src="images/peditujuego.jpg" alt="Pedido especial">
-          <div>
-            <span class="tag">Soporte</span>
-            <h3>Atención directa</h3>
-            <p>Mandanos el nombre por WhatsApp o Instagram y te respondemos con disponibilidad, precio y entrega.</p>
-          </div>
-          <strong>Respuesta por WhatsApp</strong>
-        </article>
-      </div>
-    </section>
-    <section class="ticker-section" aria-label="Categorías disponibles">
-      <div class="ticker">
-        <span>Streaming</span>
-        <span>PC</span>
-        <span>PS4/PS5</span>
-        <span>Keys</span>
-        <span>Social</span>
-        <span>Pedidos especiales</span>
-      </div>
-    </section>
-
-    <section id="como-comprar" class="section">
-      <div class="section-title">
-        <span>› Cómo comprar</span>
-        <h2>Elegís, consultás stock y cerramos por WhatsApp</h2>
-      </div>
-      <div class="how-grid">
-        <article class="how-step">
-          <strong>1</strong>
-          <h3>Elegí productos</h3>
-          <p>Buscá por nombre, filtrá por categoría y tocá una tarjeta para ver más información.</p>
-        </article>
-        <article class="how-step">
-          <strong>2</strong>
-          <h3>Armá el carrito</h3>
-          <p>Agregá productos, revisá cantidades y cargá un cupón si tenés uno.</p>
-        </article>
-        <article class="how-step">
-          <strong>3</strong>
-          <h3>Confirmamos stock</h3>
-          <p>Te respondemos disponibilidad, modalidad de entrega y precio final.</p>
-        </article>
-        <article class="how-step">
-          <strong>4</strong>
-          <h3>Pagás y recibís</h3>
-          <p>Coordinamos pago, entrega y soporte por el mismo chat.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Como recibo mi compra">
-      <div class="section-title">
-        <span>› Entrega</span>
-        <h2>Cómo recibís cada tipo de producto</h2>
-      </div>
-      <div class="trust-grid">
-        <article class="trust-card">
-          <strong>Cuentas</strong>
-          <p>Te decimos qué incluye, cómo entra y qué soporte queda disponible antes de confirmar.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Keys</strong>
-          <p>Te avisamos plataforma, activación y estado de stock para evitar sorpresas al final.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Servicios</strong>
-          <p>Te pedimos solo lo necesario por WhatsApp y te pasamos tiempos estimados claros.</p>
-        </article>
-        <article class="trust-card">
-          <strong>A pedido</strong>
-          <p>Nos pasás título, edición y plataforma; devolvemos precio, disponibilidad y alternativas.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Por que comprar en 27 Sttore">
-      <div class="section-title">
-        <span>› Confianza</span>
-        <h2>Compra digital, rápida y con soporte directo</h2>
-      </div>
-      <div class="trust-grid">
-        <article class="trust-card">
-          <strong>Confirmación previa</strong>
-          <p>Antes de pagar te confirmamos stock, precio final y forma de entrega por el mismo chat.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Seguimiento simple</strong>
-          <p>Todo queda en WhatsApp para que tengas el pedido, el pago y la entrega en un solo hilo.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Soporte directo</strong>
-          <p>Si algo requiere revisión, respondemos donde hiciste la compra para resolverlo rápido.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Pedidos especiales</strong>
-          <p>Si no aparece en el catálogo, nos pasás nombre, plataforma y edición para cotizarlo.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Lo que suele preguntar la gente">
-      <div class="section-title">
-        <span>› Lo que aclaramos</span>
-        <h2>Lo esencial antes de cerrar la compra</h2>
-      </div>
-      <div class="trust-grid">
-        <article class="trust-card">
-          <strong>Stock real</strong>
-          <p>No pagás hasta tener confirmación de disponibilidad y modalidad de entrega.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Precio final</strong>
-          <p>El total queda cerrado antes de pagar, así evitás cambios de último minuto.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Entrega clara</strong>
-          <p>Te explicamos si va como cuenta, key o servicio y qué recibís exactamente.</p>
-        </article>
-        <article class="trust-card">
-          <strong>Seguimiento</strong>
-          <p>Si necesitás ayuda después, seguimos por el mismo chat del pedido.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="section-title">
-        <span>› Preguntas</span>
-        <h2>Todo claro antes de comprar</h2>
-      </div>
-      <details open>
-        <summary>¿Cuánto tarda la entrega?</summary>
-        <p>Depende del producto y del stock, pero siempre te avisamos el tiempo estimado antes de cerrar la compra. Si requiere más preparación, queda aclarado por WhatsApp.</p>
-      </details>
-      <details>
-        <summary>¿Qué garantía tengo?</summary>
-        <p>Tenés soporte por el mismo chat donde hiciste el pedido. Guardá el comprobante y el mensaje de compra para revisar cualquier inconveniente más rápido.</p>
-      </details>
-      <details>
-        <summary>¿Cómo se paga?</summary>
-        <p>Después de enviar el pedido por WhatsApp te pasamos los medios de pago disponibles y confirmamos el total final antes de que pagues.</p>
-      </details>
-      <details>
-        <summary>¿Qué diferencia hay entre cuenta y key?</summary>
-        <p>Key significa una activación o clave para usar en tu cuenta. Cuenta significa que te entregamos acceso listo para usar, según disponibilidad del producto.</p>
-      </details>
-      <details>
-        <summary>¿Puedo consultar stock antes de pagar?</summary>
-        <p>Sí. Todo pedido pasa primero por WhatsApp para confirmar disponibilidad, modalidad de entrega y precio final.</p>
-      </details>
-      <details>
-        <summary>¿Los precios pueden cambiar?</summary>
-        <p>Puede pasar en productos digitales, keys o cuentas con stock limitado. El precio final siempre se confirma antes de pagar.</p>
-      </details>
-      <details>
-        <summary>¿Puedo pedir un juego que no aparece?</summary>
-        <p>Sí. Usá “Pedí tu juego” o escribinos por WhatsApp con nombre, plataforma y edición que buscás.</p>
-      </details>
-      <details>
-        <summary>¿Necesito registrarme?</summary>
-        <p>No. Agregás productos al carrito o tocás “Comprar ahora”, y el pedido se arma directo por WhatsApp.</p>
-      </details>
-    </section>
-  </main>
-
-  <button class="cart-open" type="button" aria-label="Abrir carrito">
-    Carrito <span class="cart-count">0</span>
-  </button>
-  <button class="top-btn" id="top-btn" type="button" aria-label="Volver arriba">Arriba</button>
-  <a class="whatsapp-float" href="https://wa.me/5493513743859" target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">WhatsApp</a>
-  <div class="cart-toast" id="cart-toast" role="status" aria-live="polite"></div>
-
-  <div class="cart-modal" id="cart-modal" aria-hidden="true">
-    <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
-      <div class="cart-head">
-        <h2 id="cart-title">Tu pedido</h2>
-        <button class="cart-close" type="button" aria-label="Cerrar carrito">&times;</button>
-      </div>
-      <div class="cart-items" id="cart-items"></div>
-      <div class="cart-foot">
-        <p class="order-status" id="order-status">Cada producto ya indica si se entrega como cuenta, key o servicio.</p>
-        <div class="coupon-box">
-          <input id="coupon-input" type="text" placeholder="Cupón de descuento" autocomplete="off">
-          <button id="coupon-btn" type="button">Aplicar</button>
-        </div>
-        <p class="coupon-note" id="coupon-note">Si tenés un cupón, escribilo antes de finalizar.</p>
-        <div class="cart-discount" id="cart-discount" hidden>
-          <span>Descuento</span>
-          <strong id="cart-discount-amount">-$0</strong>
-        </div>
-        <div class="cart-total">
-          <span>Total</span>
-          <strong id="cart-total">$0</strong>
-        </div>
-        <button class="checkout-btn" id="clear-cart-btn" type="button" disabled>Vaciar carrito</button>
-        <button class="checkout-btn" id="checkout-btn" type="button" disabled>Finalizar por WhatsApp</button>
+      <div class="actions">
+        <button class="icon-btn menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+        <a class="ghost" href="#catalogo">Ver catálogo</a>
+        <button class="icon-btn" id="cartBtn" aria-label="Abrir carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
       </div>
     </div>
-  </div>
-
-  <div class="product-detail-modal" id="product-detail-modal" aria-hidden="true">
-    <div class="product-detail-panel" role="dialog" aria-modal="true" aria-labelledby="product-detail-title">
-      <div class="product-detail-media">
-        <img id="product-detail-image" src="" alt="">
-      </div>
-      <div class="product-detail-body">
-        <div class="product-detail-head">
-          <h2 id="product-detail-title"></h2>
-          <button class="product-detail-close" type="button" aria-label="Cerrar detalle">&times;</button>
-        </div>
-        <div class="product-detail-meta">
-          <span id="product-detail-type"></span>
-          <span id="product-detail-section"></span>
-        </div>
-        <p class="product-detail-description" id="product-detail-description"></p>
-        <p class="product-detail-note" id="product-detail-note">Compra con stock confirmado, entrega digital y soporte por WhatsApp.</p>
-        <div class="product-detail-actions">
-          <strong class="product-detail-price" id="product-detail-price"></strong>
-          <button class="product-detail-buy" id="product-detail-buy" type="button">Comprar por WhatsApp</button>
-          <button class="product-detail-add" id="product-detail-share" type="button">Compartir</button>
-          <button class="product-detail-add" id="product-detail-add" type="button">Agregar al carrito</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <nav class="bottom-nav" aria-label="Navegacion movil">
-    <a href="#inicio">Inicio</a>
-    <a href="#arma-pack">Pack</a>
-    <a href="#juegos">PC</a>
-    <a href="#ps">PS</a>
-    <a href="https://wa.me/5493513743859" target="_blank" rel="noreferrer">Entrar</a>
   </nav>
 
-  <script src="products.js"></script>
-  <script>
-    const PRODUCTS_KEY = "27store-products-v1";
-    const loadProducts = () => {
-      try {
-        const savedProducts = JSON.parse(localStorage.getItem(PRODUCTS_KEY) || "null");
-        if (Array.isArray(savedProducts) && savedProducts.length > 0) return savedProducts;
-      } catch { localStorage.removeItem(PRODUCTS_KEY); }
-      return window.STORE_PRODUCTS || [];
-    };
-    const PRODUCTS = loadProducts();
-    const WHATSAPP_NUMBER = "5493513743859";
-    const CART_KEY = "27store-cart-v2";
-    const COUPON_KEY = "27store-coupon-v1";
-    const COUPONS_KEY = "27store-coupons-v1";
-    const money = new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS", maximumFractionDigits: 0 });
-    const DEFAULT_COUPONS = window.STORE_COUPONS || {
-      "27STORE": { label: "27STORE", percent: 10 },
-      "AMIGO27": { label: "AMIGO27", percent: 15 },
-      "STREAMING": { label: "STREAMING", percent: 5 },
-      "MILOFF": { label: "MILOFF", amount: 1000 },
-      "5000OFF": { label: "5000OFF", amount: 5000 }
-    };
-    const loadCoupons = () => {
-      try {
-        const savedCoupons = JSON.parse(localStorage.getItem(COUPONS_KEY) || "null");
-        if (savedCoupons && typeof savedCoupons === "object") return savedCoupons;
-      } catch { localStorage.removeItem(COUPONS_KEY); }
-      return DEFAULT_COUPONS;
-    };
-    const coupons = loadCoupons();
-
-    const cart = [];
-    let activeDetailProduct = null;
-    let activeFilter = "all";
-    let activePriceFilter = "all";
-    let activeCoupon = null;
-    let couponCopyTimer = 0;
-    let activePackCategory = "suscripciones";
-    const packSelection = [];
-
-    const navLinks = [...document.querySelectorAll(".side-nav nav a")];
-    const cartModal = document.querySelector("#cart-modal");
-    const cartItems = document.querySelector("#cart-items");
-    const cartTotal = document.querySelector("#cart-total");
-    const cartCount = document.querySelector(".cart-count");
-    const checkoutBtn = document.querySelector("#checkout-btn");
-    const clearCartBtn = document.querySelector("#clear-cart-btn");
-    const orderStatus = document.querySelector("#order-status");
-    const couponInput = document.querySelector("#coupon-input");
-    const couponBtn = document.querySelector("#coupon-btn");
-    const couponNote = document.querySelector("#coupon-note");
-    const cartDiscount = document.querySelector("#cart-discount");
-    const cartDiscountAmount = document.querySelector("#cart-discount-amount");
-    const cartToast = document.querySelector("#cart-toast");
-    const catalogSearch = document.querySelector("#catalog-search");
-    const catalogSort = document.querySelector("#catalog-sort");
-    const filterButtons = [...document.querySelectorAll(".filter-btn")];
-    const categoryFilterButtons = [...document.querySelectorAll("[data-filter]")];
-    const priceFilterButtons = [...document.querySelectorAll("[data-price-filter]")];
-    const emptyResults = document.querySelector("#empty-results");
-    const resultCount = document.querySelector("#result-count");
-    const copyCouponBtn = document.querySelector("#copy-coupon-btn");
-    const mobileFilterToggle = document.querySelector("#mobile-filter-toggle");
-    const filterGroups = document.querySelector("#filter-groups");
-    const productDetailModal = document.querySelector("#product-detail-modal");
-    const productDetailImage = document.querySelector("#product-detail-image");
-    const productDetailTitle = document.querySelector("#product-detail-title");
-    const productDetailType = document.querySelector("#product-detail-type");
-    const productDetailSection = document.querySelector("#product-detail-section");
-    const productDetailDescription = document.querySelector("#product-detail-description");
-    const productDetailPrice = document.querySelector("#product-detail-price");
-    const productDetailAdd = document.querySelector("#product-detail-add");
-    const productDetailBuy = document.querySelector("#product-detail-buy");
-    const productDetailShare = document.querySelector("#product-detail-share");
-    const topBtn = document.querySelector("#top-btn");
-    const packTabs = document.querySelector("#pack-tabs");
-    const packOptions = document.querySelector("#pack-options");
-    const packSelected = document.querySelector("#pack-selected");
-    const packCount = document.querySelector("#pack-count");
-    const packTotal = document.querySelector("#pack-total");
-    const packWhatsapp = document.querySelector("#pack-whatsapp");
-    const packClear = document.querySelector("#pack-clear");
-
-    const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[char]);
-    const formatPrice = (value) => value > 0 ? money.format(value) : "A consultar";
-    const getSavings = (product) => Math.max(0, Number(product.oldPrice || 0) - Number(product.price || 0));
-    const priceTemplate = (product) => `<span class="price-now">${formatPrice(product.price)}</span>${product.oldPrice ? ` <span class="price-before">${formatPrice(product.oldPrice)}</span>` : ""}`;
-    const getTotal = () => cart.reduce((total, item) => total + item.price * item.qty, 0);
-    const getCount = () => cart.reduce((total, item) => total + item.qty, 0);
-    const getDiscountAmount = () => 0;
-    const getFinalTotal = () => getTotal();
-    const priceMatches = (product) => {
-      const price = Number(product.price) || 0;
-      if (activePriceFilter === "under-5000") return price > 0 && price <= 5000;
-      if (activePriceFilter === "5000-20000") return price >= 5000 && price <= 20000;
-      if (activePriceFilter === "over-20000") return price > 20000;
-      if (activePriceFilter === "consult") return price <= 0;
-      return true;
-    };
-    let toastTimer = 0;
-    const showToast = (message) => {
-      clearTimeout(toastTimer);
-      cartToast.textContent = message;
-      cartToast.classList.add("show");
-      toastTimer = setTimeout(() => cartToast.classList.remove("show"), 2200);
-    };
-
-    const sectionLabels = { ofertas: "Ofertas destacadas", suscripciones: "Suscripciones", juegos: "PC", ps: "PS4/PS5", keys: "Random keys", social: "Social" };
-    const orderRank = (product) => (product.dailyDeal ? 0 : product.featured ? 1 : product.bestSeller ? 2 : 3);
-    const sortProducts = (items) => {
-      const list = [...items];
-      if (activeSort === "price-asc") return list.sort((a, b) => (Number(a.price) || 0) - (Number(b.price) || 0) || a.name.localeCompare(b.name, "es"));
-      if (activeSort === "price-desc") return list.sort((a, b) => (Number(b.price) || 0) - (Number(a.price) || 0) || a.name.localeCompare(b.name, "es"));
-      if (activeSort === "name-asc") return list.sort((a, b) => a.name.localeCompare(b.name, "es"));
-      return list.sort((a, b) => orderRank(a) - orderRank(b) || Number(!!b.oldPrice) - Number(!!a.oldPrice) || (Number(a.price) || 0) - (Number(b.price) || 0) || a.name.localeCompare(b.name, "es"));
-    };
-    const packCategoryLabels = { suscripciones: "Streaming", juegos: "PC", ps: "PS4/PS5", keys: "Keys", social: "Social" };
-    const bestSellerIds = new Set(["netflix-premium", "paramount", "disney-premium", "psplus-3meses", "ea-sports-fc-26", "5-random-keys-elite"]);
-    const findProduct = (id) => PRODUCTS.find((product) => product.id === id);
-    const isBestSeller = (product) => Boolean(product.bestSeller) || bestSellerIds.has(product.id);
-    const dealProduct = PRODUCTS.find((product) => product.dailyDeal) || PRODUCTS.find((product) => product.id === "netflix-premium") || PRODUCTS.find((product) => product.featured) || PRODUCTS[0];
-    const packCategories = Object.keys(packCategoryLabels).filter((category) => PRODUCTS.some((product) => product.category === category));
-    let activeSort = "featured";
-
-    const getProductsForGrid = (gridName) => {
-      const list = gridName === "ofertas" ? PRODUCTS.filter((product) => product.featured) : PRODUCTS.filter((product) => product.category === gridName);
-      return [...list];
-    };
-
-    const productCardTemplate = (product, gridName) => `
-      <article class="category-card" data-id="${escapeHtml(product.id)}" data-category="${escapeHtml(gridName)}" data-search="${escapeHtml(`${product.name} ${product.description} ${product.tag} ${product.type}`.toLowerCase())}" data-stock="${escapeHtml(product.stock)}">
-        <span class="stock-badge">${escapeHtml(product.stock)}</span>
-        ${isBestSeller(product) ? '<span class="product-badge">Más vendido</span>' : ""}
-        ${getSavings(product) > 0 ? `<span class="save-badge">Ahorrás ${formatPrice(getSavings(product))}</span>` : ""}
-        <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
-        <div><span class="tag">${escapeHtml(product.tag)}</span><h3>${escapeHtml(product.name)}</h3><p>${escapeHtml(product.description)}</p></div>
-        <div class="product-actions">
-          <strong>${priceTemplate(product)}</strong>
-          <span class="product-type">${escapeHtml(product.type)}</span>
-          <button class="cart-add" data-id="${escapeHtml(product.id)}" type="button">Agregar</button>
-          <button class="buy-now" data-id="${escapeHtml(product.id)}" type="button">Comprar ahora</button>
-        </div>
-      </article>`;
-
-    const renderProductSections = () => {
-      document.querySelectorAll("[data-products]").forEach((grid) => {
-        const gridName = grid.dataset.products;
-        grid.innerHTML = getProductsForGrid(gridName).map((product) => productCardTemplate(product, gridName)).join("");
-      });
-    };
-
-    const renderDailyDeal = () => {
-      const deal = document.querySelector("#daily-deal");
-      if (!deal || !dealProduct) return;
-      deal.innerHTML = `
-        <article class="daily-deal compact">
-          <img src="${escapeHtml(dealProduct.image)}" alt="${escapeHtml(dealProduct.name)}" loading="lazy" decoding="async">
-          <div class="daily-deal-body">
-            <span class="daily-deal-kicker">${escapeHtml(dealProduct.tag)} · ${escapeHtml(dealProduct.stock)}</span>
-            <h3>${escapeHtml(dealProduct.name)}</h3>
-            <p>${escapeHtml(dealProduct.description)}</p>
-            <strong class="daily-deal-price">${priceTemplate(dealProduct)}</strong>
-            <div class="daily-deal-actions">
-              <button class="cart-add btn primary" data-id="${escapeHtml(dealProduct.id)}" type="button">Agregar al carrito</button>
-              <button class="buy-now btn ghost" data-id="${escapeHtml(dealProduct.id)}" type="button">Comprar ahora</button>
-            </div>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap promo-shell">
+        <button class="promo-arrow" id="promoPrev" type="button" aria-label="Banner anterior">‹</button>
+        <a class="promo-banner" id="promoBanner" href="#catalogo" aria-label="Ver catálogo de juegos digitales">
+          <img id="promoImage" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop" alt="Setup PC gamer con monitor y luces">
+          <div class="promo-copy">
+            <span id="promoKicker">PC · Steam · Keys digitales</span>
+            <h1 id="promoTitle">Juegos para PC y Steam</h1>
+            <p id="promoText">Codigos digitales, juegos tendencia y atencion directa para activar tu compra sin vueltas.</p>
+            <strong id="promoCta">Ver Steam</strong>
           </div>
-        </article>`;
-    };
+        </a>
+        <button class="promo-arrow" id="promoNext" type="button" aria-label="Banner siguiente">›</button>
+        <div class="promo-dots" id="promoDots" aria-label="Indicadores del banner">
+          <button class="active" type="button" aria-label="Ver banner 1"></button>
+          <button type="button" aria-label="Ver banner 2"></button>
+          <button type="button" aria-label="Ver banner 3"></button>
+          <button type="button" aria-label="Ver banner 4"></button>
+        </div>
+      </div>
+    </section>
+<section class="trust" id="confianza">
+      <div class="trust-band" aria-hidden="true">
+        <div><img alt="" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1100&auto=format&fit=crop"></div>
+        <div><img alt="" src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=1100&auto=format&fit=crop"></div>
+        <div><img alt="" src="https://res.cloudinary.com/dltl3cge3/image/upload/v1764339588/SPIDERMAN2_npjhpp_anfakw.avif"></div>
+      </div>
+      <div class="trust-inner">
+        <div class="trust-title">
+          <span class="eyebrow">¿Por qué elegirnos?</span>
+          <h2>Calidad, respaldo y experiencia en cada compra</h2>
+          <p>Mas de 2 años en el mercado, miles de clientes satisfechos y un servicio de atencion que no para. Compra con confianza, respaldo y beneficios reales.</p>
+        </div>
+        <div class="trust-showcase">
+          <article class="feature-card"><div><b>10K+</b><span>Ventas concretadas</span><small>2+ años · 2K+ reseñas</small></div></article>
+          <article class="feature-text"><span>Experiencia comprobada</span><h3>Trayectoria verificada con numeros reales</h3><p>Mas de 10.000 ventas concretadas y soporte directo para cada operacion digital o fisica.</p></article>
 
-    const getPackProducts = (category) => {
-      const selectedIds = new Set(packSelection);
-      return PRODUCTS
-        .filter((product) => product.category === category)
-        .sort((a, b) => Number(selectedIds.has(b.id)) - Number(selectedIds.has(a.id)) || Number(isBestSeller(b)) - Number(isBestSeller(a)) || a.price - b.price)
-        .slice(0, 6);
-    };
+          <article class="feature-text"><span>Sin bots · Sin demoras</span><h3>Soporte real, todos los dias de la semana</h3><p>Atendemos de 9 a 23 hs por WhatsApp, con seguimiento personalizado y respuesta humana.</p></article>
+          <article class="feature-card blue"><div><b>9.23</b><span>Todos los dias</span><div class="week"><i>L</i><i>M</i><i>X</i><i>J</i><i>V</i><i>S</i><i>D</i></div></div></article>
 
-    const renderPackBuilder = () => {
-      if (!packTabs || !packOptions) return;
-      if (!packCategories.includes(activePackCategory)) activePackCategory = packCategories[0] || "suscripciones";
-      packTabs.innerHTML = packCategories.map((category) => `<button class="pack-tab ${category === activePackCategory ? "active" : ""}" type="button" data-pack-category="${escapeHtml(category)}">${escapeHtml(packCategoryLabels[category])}</button>`).join("");
-      const selectedIds = new Set(packSelection);
-      packOptions.innerHTML = getPackProducts(activePackCategory).map((product) => `
-        <button class="pack-option ${selectedIds.has(product.id) ? "selected" : ""}" type="button" data-pack-id="${escapeHtml(product.id)}">
-          <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
-          <span><span>${escapeHtml(product.tag)}</span><strong>${escapeHtml(product.name)}</strong><em>${formatPrice(product.price)}</em></span>
-          <b class="pack-check">${selectedIds.has(product.id) ? "✓" : "+"}</b>
-        </button>`).join("");
-      renderPackSummary();
-    };
+          <article class="feature-card gold"><div><b>⚡</b><span>Procesamos al instante</span><small>Juegos digitales · Entrega inmediata</small></div></article>
+          <article class="feature-text"><span>Sin esperas</span><h3>Entrega inmediata</h3><p>Los juegos digitales y gift cards se entregan al instante cuando el pago se acredita.</p></article>
 
-    const renderPackSummary = () => {
-      if (!packSelected) return;
-      const selectedProducts = packSelection.map(findProduct).filter(Boolean);
-      const total = selectedProducts.reduce((sum, product) => sum + product.price, 0);
-      packCount.textContent = selectedProducts.length === 0 ? "Todavía no elegiste productos" : selectedProducts.length === 1 ? "1 producto seleccionado" : `${selectedProducts.length} productos seleccionados`;
-      packTotal.textContent = total > 0 ? money.format(total) : "A consultar";
-      packWhatsapp.disabled = selectedProducts.length === 0;
-      packClear.disabled = selectedProducts.length === 0;
-      packSelected.innerHTML = selectedProducts.length === 0
-        ? '<p class="pack-empty">Tocá productos de la izquierda para armar tu combo. Podés mezclar streaming, PC, Play y servicios.</p>'
-        : selectedProducts.map((product) => `<div class="pack-chip"><span>${escapeHtml(product.name)}</span><button type="button" data-pack-remove="${escapeHtml(product.id)}">Quitar</button></div>`).join("");
-    };
+          <article class="feature-text"><span>Sin letra chica</span><h3>Garantia permanente, sin vencimiento</h3><p>Todas las ventas quedan respaldadas. Si hay un problema, lo resolvemos sin vueltas.</p></article>
+          <article class="feature-card green"><div><b>∞</b><span>Garantia permanente</span><small>Sin vencimiento · Sin letra chica</small></div></article>
 
-    const togglePackProduct = (id) => {
-      const product = findProduct(id);
-      if (!product) return;
-      const index = packSelection.indexOf(id);
-      if (index >= 0) packSelection.splice(index, 1);
-      else packSelection.push(id);
-      renderPackBuilder();
-    };
+          <article class="feature-card violet"><div><b>ARG</b><span>Argentina</span><small>Productos fisicos · Juegos digitales</small></div></article>
+          <article class="feature-text"><span>A todo el pais</span><h3>Enviamos a cualquier punto de Argentina</h3><p>Productos fisicos, accesorios, juegos digitales y gift cards con informacion clara antes de comprar.</p></article>
 
-    const sendPackToWhatsapp = () => {
-      const selectedProducts = packSelection.map(findProduct).filter(Boolean);
-      if (selectedProducts.length === 0) return;
-      const lines = selectedProducts.map((product) => `- ${product.name} (${product.type}): ${formatPrice(product.price)}`);
-      const total = selectedProducts.reduce((sum, product) => sum + product.price, 0);
-      const message = ["Hola 27 Store, quiero consultar este pack:", "", ...lines, "", `Total estimado: ${total > 0 ? money.format(total) : "A consultar"}`, "", "Si se puede, pasame stock confirmado, precio final y la mejor opción para llevar más de uno."].join("\n");
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
-    };
+        </div>
+      </div>
+    </section>
 
-    const saveCart = () => {
-      localStorage.setItem(CART_KEY, JSON.stringify(cart.map(({ id, qty }) => ({ id, qty }))));
-      localStorage.setItem(COUPON_KEY, activeCoupon?.label || "");
-    };
+    <section id="catalogo">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <small>Más vendidos</small>
+            <h2>Catálogo destacado</h2>
+          </div>
+          <p>Filtra por plataforma, busca por nombre o arma tu pedido. Al agregar productos, el carrito prepara el mensaje listo para enviar por WhatsApp.</p>
+        </div>
+        <div class="toolbar">
+          <label class="search">⌕<input id="search" type="search" placeholder="Buscar juegos, gift cards o accesorios"></label>
+          <div class="filters" id="filters" aria-label="Filtros de catálogo"></div>
+        </div>
+        <div class="grid" id="products"></div>
+        <div class="load-more-row">
+          <button class="load-more" id="loadMore" type="button">Cargar más productos</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-shell">
+      <div class="footer-topline">
+        <span>Entrega digital rapida</span>
+        <span>Atencion de 9 a 23 hs</span>
+        <span>Compra protegida</span>
+      </div>
 
-    const loadCart = () => {
-      try {
-        JSON.parse(localStorage.getItem(CART_KEY) || "[]").forEach((item) => {
-          const product = findProduct(item.id);
-          if (product) cart.push({ id: product.id, name: product.name, price: product.price, type: product.type, qty: Math.max(1, Number(item.qty) || 1) });
-        });
-        const savedCoupon = localStorage.getItem(COUPON_KEY);
-        if (savedCoupon && coupons[savedCoupon]) {
-          activeCoupon = coupons[savedCoupon];
-          couponInput.value = savedCoupon;
-          couponNote.textContent = activeCoupon.amount ? `Cupón ${activeCoupon.label} aplicado: ${money.format(activeCoupon.amount)} de descuento.` : `Cupón ${activeCoupon.label} aplicado: ${activeCoupon.percent}% de descuento.`;
-        }
-      } catch { localStorage.removeItem(CART_KEY); }
-    };
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#inicio">
+            <span class="brand-mark"><img class="brand-logo" src="logo.png" alt="Bassal Store"></span>
+            <span><b>Bassal Store</b><span>Gaming digital</span></span>
+          </a>
+          <p>Juegos digitales, PS Plus y codigos de Steam con entrega por WhatsApp, soporte real y seguimiento despues de la compra.</p>
+          <a class="footer-whatsapp" href="https://wa.me/5493513743859">
+            <span>Comprar por WhatsApp</span>
+            <b>+54 9 351 374-3859</b>
+          </a>
+        </div>
 
-    const openCart = () => { cartModal.classList.add("open"); cartModal.setAttribute("aria-hidden", "false"); };
-    const closeCart = () => { cartModal.classList.remove("open"); cartModal.setAttribute("aria-hidden", "true"); };
+        <div class="footer-column">
+          <h3>Catalogo</h3>
+          <a href="#catalogo" data-nav-category="PS4">Juegos PS4</a>
+          <a href="#catalogo" data-nav-category="PS5">Juegos PS5</a>
+          <a href="#catalogo" data-nav-category="PS PLUS">PS Plus</a>
+          <a href="#catalogo" data-nav-category="STEAM">Codigos Steam</a>
+        </div>
 
-    const renderCart = () => {
-      cartCount.textContent = getCount();
-      const discount = getDiscountAmount();
-      cartTotal.textContent = getTotal() > 0 ? money.format(getFinalTotal()) : "A consultar";
-      cartDiscount.hidden = discount <= 0;
-      cartDiscountAmount.textContent = `-${money.format(discount)}`;
-      checkoutBtn.disabled = cart.length === 0;
-      clearCartBtn.disabled = cart.length === 0;
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<div class="empty-cart-box"><strong>Tu carrito está esperando su primer producto.</strong><p>Podés arrancar por las ofertas destacadas o buscar algo puntual en el catálogo.</p><a href="#ofertas" class="empty-shop-link">Ver ofertas</a></div>';
-        saveCart();
-        return;
-      }
-      cartItems.innerHTML = cart.map((item) => `
-        <article class="cart-item"><div><h3>${escapeHtml(item.name)}</h3><p>${formatPrice(item.price)} x ${item.qty}</p><span class="cart-type">${escapeHtml(item.type)}</span></div><div class="qty-row"><button class="qty-btn" type="button" data-action="minus" data-id="${escapeHtml(item.id)}">-</button><strong>${item.qty}</strong><button class="qty-btn" type="button" data-action="plus" data-id="${escapeHtml(item.id)}">+</button><button class="remove-btn" type="button" data-action="remove" data-id="${escapeHtml(item.id)}">Quitar</button></div></article>`).join("");
-      saveCart();
-    };
+        <div class="footer-column">
+          <h3>Soporte</h3>
+          <a href="https://wa.me/5493513743859">Consultar stock</a>
+          <a href="https://wa.me/5493513743859">Como comprar</a>
+          <a href="https://wa.me/5493513743859">Garantia</a>
+          <a href="mailto:hola@bassalstore.com">Email</a>
+          <a href="admin.html">Admin productos</a>
+        </div>
 
-    const addToCart = (product) => {
-      const existing = cart.find((item) => item.id === product.id);
-      if (existing) existing.qty += 1;
-      else cart.push({ id: product.id, name: product.name, price: product.price, type: product.type, qty: 1 });
-      orderStatus.textContent = `${product.name} agregado. Podés seguir comprando o finalizar por WhatsApp.`;
-      renderCart();
-      showToast(`${product.name} agregado al carrito.`);
-      openCart();
-    };
+        <div class="footer-contact">
+          <h3>Pagos y entrega</h3>
+          <div class="footer-mini-grid">
+            <span>Transferencia</span>
+            <span>Mercado Pago</span>
+            <span>Efectivo</span>
+            <span>Tarjetas</span>
+          </div>
+          <p>Envia tu pedido por el carrito y coordinamos la entrega digital por WhatsApp.</p>
+        </div>
+      </div>
 
-    const markButton = (button, text) => {
-      if (!button) return;
-      const originalText = button.textContent;
-      button.textContent = text;
-      button.classList.add(text.includes("WhatsApp") ? "opened" : "added");
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.classList.remove("added", "opened");
-      }, 1400);
-    };
+      <div class="footer-bottom">
+        <span>Bassal Store</span>
+        <span>Soporte post-compra</span>
+        <span>Garantia permanente</span>
+        <span>Gaming digital Argentina</span>
+      </div>
+    </div>
+  </footer>
 
-    const openProductDetail = (product) => {
-      activeDetailProduct = product;
-      productDetailImage.src = product.image;
-      productDetailImage.alt = product.name;
-      productDetailTitle.textContent = product.name;
-      productDetailType.textContent = product.type;
-      productDetailSection.textContent = getSavings(product) > 0 ? `${sectionLabels[product.category] || "Producto"} · ${product.stock} · Ahorrás ${formatPrice(getSavings(product))}` : `${sectionLabels[product.category] || "Producto"} · ${product.stock}`;
-      productDetailDescription.textContent = product.description;
-      productDetailPrice.innerHTML = priceTemplate(product);
-      productDetailModal.classList.add("open");
-      productDetailModal.setAttribute("aria-hidden", "false");
-    };
-    const closeProductDetail = () => { productDetailModal.classList.remove("open"); productDetailModal.setAttribute("aria-hidden", "true"); activeDetailProduct = null; };
+  <section class="game-detail" id="gameDetail" hidden aria-label="Detalle del juego">
+    <div class="game-detail-shell">
+      <button class="ghost-button detail-back" type="button" id="detailBack">&larr; Volver al catalogo</button>
 
-    const applyCoupon = () => {
-      const code = couponInput.value.trim().toUpperCase();
-      if (!code) { activeCoupon = null; couponNote.textContent = "Cupón quitado."; renderCart(); return; }
-      if (!coupons[code]) { activeCoupon = null; couponNote.textContent = "Cupón no válido. Revisá el código y probá de nuevo."; renderCart(); return; }
-      activeCoupon = coupons[code];
-      couponInput.value = code;
-      couponNote.textContent = activeCoupon.amount ? `Cupón ${activeCoupon.label} aplicado: ${money.format(activeCoupon.amount)} de descuento.` : `Cupón ${activeCoupon.label} aplicado: ${activeCoupon.percent}% de descuento.`;
-      renderCart();
-    };
+      <div class="detail-hero-card">
+        <div class="detail-left">
+          <div class="detail-cover-box">
+            <img id="detailImg" src="" alt="Portada del juego">
+          </div>
+          <div class="detail-tags" id="detailTags"></div>
+        </div>
 
-    const applyCatalogFilters = () => {
-      const term = catalogSearch.value.trim().toLowerCase();
-      let visible = 0;
-      document.querySelectorAll(".category-card").forEach((card) => {
-        const product = findProduct(card.dataset.id);
-        const matchesFilter = activeFilter === "all" || card.dataset.category === activeFilter;
-        const matchesSearch = !term || (card.dataset.search || "").includes(term);
-        const matchesPrice = !product || priceMatches(product);
-        const show = matchesFilter && matchesSearch && matchesPrice;
-        card.classList.toggle("is-hidden", !show);
-        if (show) visible += 1;
-      });
-      emptyResults.classList.toggle("show", visible === 0);
-      resultCount.textContent = visible === 1 ? "Mostrando 1 producto." : `Mostrando ${visible} productos.`;
-    };
+        <div class="detail-info">
+          <span class="detail-kicker" id="detailPlatform">PS4</span>
+          <h1 id="detailName">Nombre del juego</h1>
+          <p class="detail-description" id="detailGenre">Juego digital con entrega rapida y soporte por WhatsApp.</p>
 
-    const copyCouponCode = async () => {
-      const code = copyCouponBtn.dataset.code;
-      try {
-        await navigator.clipboard.writeText(code);
-        copyCouponBtn.textContent = "Cupón copiado";
-      } catch {
-        couponInput.value = code;
-        copyCouponBtn.textContent = "Cupón cargado";
-      }
-      copyCouponBtn.classList.add("copied");
-      clearTimeout(couponCopyTimer);
-      couponCopyTimer = setTimeout(() => {
-        copyCouponBtn.textContent = "27STORE · 10% OFF";
-        copyCouponBtn.classList.remove("copied");
-      }, 1800);
-    };
+          <div class="detail-notes">
+            <span>Se requiere PS Plus para jugar online</span>
+            <span>Compra protegida</span>
+          </div>
 
-    const shareProduct = (product) => {
-      const message = [`Hola 27 Store, quiero consultar por ${product.name}.`, `Tipo: ${product.type}`, `Precio: ${formatPrice(product.price)}`, `Stock: ${product.stock}`].join("\n");
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
-    };
+          <h3 class="detail-subtitle">Selecciona tu tipo de cuenta:</h3>
+          <div class="detail-account-list">
+            <button class="account-option" type="button" data-account="Primaria">
+              <span>
+                <b>Cuenta Primaria</b>
+                <small>Juga con tu usuario personal.</small>
+              </span>
+              <strong id="primaryPrice">$0</strong>
+            </button>
+            <button class="account-option" type="button" data-account="Secundaria">
+              <span>
+                <b>Cuenta Secundaria</b>
+                <small>Conexion a internet obligatoria, desde la cuenta que otorgamos.</small>
+              </span>
+              <strong id="secondaryPrice">$0</strong>
+            </button>
+          </div>
 
-    const buyNowProduct = (product) => {
-      const message = [
-        "Hola 27 Store, quiero comprar este producto:",
-        "",
-        `Producto: ${product.name}`,
-        `Tipo: ${product.type}`,
-        `Precio: ${formatPrice(product.price)}`,
-        `Stock: ${product.stock}`,
-        "",
-        "Me confirmás disponibilidad, medio de pago y tiempo de entrega?"
-      ].join("\n");
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
-    };
+          <button class="detail-add" type="button" id="detailAdd">Selecciona una cuenta</button>
+        </div>
+      </div>
 
-    const setImageFallback = (image) => {
-      if (!image || image.dataset.fallbackApplied) return;
-      image.dataset.fallbackApplied = "true";
-      image.src = "images/logo.jpeg";
-      image.alt = image.alt ? `${image.alt} - imagen no disponible` : "27 Store";
-      image.classList.add("image-fallback");
-    };
+      <div class="detail-tabs">
+        <button type="button" class="detail-tab active" data-detail-tab="description">Descripcion</button>
+        <button type="button" class="detail-tab" data-detail-tab="details">Detalles</button>
+      </div>
+      <div class="detail-tab-panel active" id="detailDescription"></div>
+      <div class="detail-tab-panel" id="detailSpecs"></div>
+    </div>
+  </section>
 
-    const setActiveLink = () => {
-      const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
-      const pageBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
-      const current = pageBottom ? sections[sections.length - 1] : sections.reduce((best, section) => {
-        const distance = Math.abs(section.getBoundingClientRect().top - 120);
-        return distance < best.distance ? { section, distance } : best;
-      }, { section: sections[0], distance: Infinity }).section;
-      navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`));
-      topBtn.classList.toggle("show", window.scrollY > 680);
-    };
+  <aside class="drawer" id="drawer" aria-label="Carrito">
+    <div class="drawer-head">
+      <h3>Tu pedido</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">x</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><span id="total">$0</span></div>
+      <button class="checkout" id="checkout">Enviar pedido por WhatsApp</button>
+    </div>
+  </aside>
 
-    document.addEventListener("click", (event) => {
-      if (event.target.closest(".empty-shop-link")) { closeCart(); return; }
-      const packTab = event.target.closest("[data-pack-category]");
-      if (packTab) { activePackCategory = packTab.dataset.packCategory; renderPackBuilder(); return; }
-      const packOption = event.target.closest("[data-pack-id]");
-      if (packOption) { togglePackProduct(packOption.dataset.packId); return; }
-      const packRemove = event.target.closest("[data-pack-remove]");
-      if (packRemove) { togglePackProduct(packRemove.dataset.packRemove); return; }
-      const addButton = event.target.closest(".cart-add");
-      if (addButton) { const product = findProduct(addButton.dataset.id); if (product) { addToCart(product); markButton(addButton, "Agregado"); } return; }
-      const buyButton = event.target.closest(".buy-now");
-      if (buyButton) { const product = findProduct(buyButton.dataset.id); if (product) { buyNowProduct(product); markButton(buyButton, "WhatsApp"); } return; }
-      const infoButton = event.target.closest(".info-btn");
-      if (infoButton) { const product = findProduct(infoButton.dataset.id); if (product) openProductDetail(product); return; }
-      const card = event.target.closest(".category-card");
-      if (card && !event.target.closest("button,a")) { const product = findProduct(card.dataset.id); if (product) openProductDetail(product); }
-    });
-
-    couponBtn.addEventListener("click", applyCoupon);
-    copyCouponBtn.addEventListener("click", copyCouponCode);
-    couponInput.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); applyCoupon(); } });
-    catalogSearch.addEventListener("input", applyCatalogFilters);
-    catalogSort.addEventListener("change", () => { activeSort = catalogSort.value; renderProductSections(); applyCatalogFilters(); });
-    mobileFilterToggle.addEventListener("click", () => {
-      filterGroups.classList.toggle("open");
-      mobileFilterToggle.textContent = filterGroups.classList.contains("open") ? "Ocultar filtros" : "Mostrar filtros";
-    });
-    categoryFilterButtons.forEach((button) => button.addEventListener("click", () => { activeFilter = button.dataset.filter; categoryFilterButtons.forEach((item) => item.classList.toggle("active", item === button)); applyCatalogFilters(); }));
-    priceFilterButtons.forEach((button) => button.addEventListener("click", () => { activePriceFilter = button.dataset.priceFilter; priceFilterButtons.forEach((item) => item.classList.toggle("active", item === button)); applyCatalogFilters(); }));
-    productDetailAdd.addEventListener("click", () => { if (!activeDetailProduct) return; addToCart(activeDetailProduct); closeProductDetail(); });
-    productDetailBuy.addEventListener("click", () => { if (activeDetailProduct) buyNowProduct(activeDetailProduct); });
-    productDetailShare.addEventListener("click", () => { if (activeDetailProduct) shareProduct(activeDetailProduct); });
-    packWhatsapp.addEventListener("click", sendPackToWhatsapp);
-    packClear.addEventListener("click", () => { packSelection.splice(0, packSelection.length); renderPackBuilder(); });
-    topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-    document.querySelector(".product-detail-close").addEventListener("click", closeProductDetail);
-    productDetailModal.addEventListener("click", (event) => { if (event.target === productDetailModal) closeProductDetail(); });
-    document.querySelector(".cart-open").addEventListener("click", openCart);
-    document.querySelector(".cart-close").addEventListener("click", closeCart);
-    clearCartBtn.addEventListener("click", () => { cart.splice(0, cart.length); activeCoupon = null; couponInput.value = ""; couponNote.textContent = "Carrito vacío. Cupón quitado."; renderCart(); });
-    cartModal.addEventListener("click", (event) => { if (event.target === cartModal) closeCart(); });
-    cartItems.addEventListener("click", (event) => {
-      const button = event.target.closest("button");
-      if (!button) return;
-      const item = cart.find((product) => product.id === button.dataset.id);
-      if (!item) return;
-      if (button.dataset.action === "plus") item.qty += 1;
-      if (button.dataset.action === "minus") item.qty -= 1;
-      if (button.dataset.action === "remove" || item.qty <= 0) cart.splice(cart.indexOf(item), 1);
-      renderCart();
-    });
-    checkoutBtn.addEventListener("click", () => {
-      if (cart.length === 0) return;
-      const lines = cart.map((item) => `- ${item.name} (${item.type}) x${item.qty}: ${item.price > 0 ? money.format(item.price * item.qty) : "A consultar"}`);
-      const message = ["Hola 27 Store, quiero hacer este pedido:", "", ...lines, "", `Total estimado: ${getTotal() > 0 ? money.format(getFinalTotal()) : "A consultar"}`, "", "Me confirmás stock, datos de pago y entrega?"].join("\n");
-      orderStatus.textContent = "Pedido listo. Se abrió WhatsApp con el resumen completo.";
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
-    });
-    window.addEventListener("scroll", setActiveLink, { passive: true });
-    window.addEventListener("hashchange", setActiveLink);
-    document.addEventListener("error", (event) => { if (event.target?.tagName === "IMG") setImageFallback(event.target); }, true);
-    window.addEventListener("keydown", (event) => {
-      if (event.key !== "Escape") return;
-      closeCart();
-      closeProductDetail();
-    });
-
-    renderProductSections();
-    renderDailyDeal();
-    renderPackBuilder();
-    loadCart();
-    applyCatalogFilters();
-    renderCart();
-    setActiveLink();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
