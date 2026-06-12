@@ -3,11 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bassal Store | Gaming digital</title>
-  <meta name="description" content="Bassal Store: juegos digitales, cuentas primarias/secundarias, PS Plus, gift cards y accesorios con entrega rapida por WhatsApp.">
+  <title>Bassal Store | Juegos digitales PS4, PS5, PS Plus y Steam</title>
+  <meta name="description" content="Compra juegos digitales PS4 y PS5, PS Plus y codigos de Steam en Bassal Store. Entrega rapida por WhatsApp, soporte real y garantia post-compra.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="robots" content="index,follow">
+  <meta property="og:site_name" content="Bassal Store">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bassal Store | Juegos digitales y PS Plus">
+  <meta property="og:description" content="Juegos PS4/PS5, PS Plus y codigos de Steam con entrega por WhatsApp.">
+  <meta property="og:image" content="logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bassal Store | Gaming digital">
+  <meta name="twitter:description" content="Juegos digitales, PS Plus y Steam con entrega rapida por WhatsApp.">
+  <meta name="twitter:image" content="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://images.pexels.com">
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <meta name="theme-color" content="#090c0d">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -38,7 +50,7 @@
       <div class="wrap promo-shell">
         <button class="promo-arrow" id="promoPrev" type="button" aria-label="Banner anterior">‹</button>
         <a class="promo-banner" id="promoBanner" href="#catalogo" aria-label="Ver catálogo de juegos digitales">
-          <img id="promoImage" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop" alt="Setup PC gamer con monitor y luces">
+          <img id="promoImage" fetchpriority="high" decoding="async" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1800&auto=format&fit=crop" alt="Setup PC gamer con monitor y luces">
           <div class="promo-copy">
             <span id="promoKicker">PC · Steam · Keys digitales</span>
             <h1 id="promoTitle">Juegos para PC y Steam</h1>
@@ -57,9 +69,9 @@
     </section>
 <section class="trust" id="confianza">
       <div class="trust-band" aria-hidden="true">
-        <div><img alt="" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1100&auto=format&fit=crop"></div>
-        <div><img alt="" src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=1100&auto=format&fit=crop"></div>
-        <div><img alt="" src="https://res.cloudinary.com/dltl3cge3/image/upload/v1764339588/SPIDERMAN2_npjhpp_anfakw.avif"></div>
+        <div><img loading="lazy" decoding="async" alt="" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1100&auto=format&fit=crop"></div>
+        <div><img loading="lazy" decoding="async" alt="" src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=1100&auto=format&fit=crop"></div>
+        <div><img loading="lazy" decoding="async" alt="" src="https://res.cloudinary.com/dltl3cge3/image/upload/v1764339588/SPIDERMAN2_npjhpp_anfakw.avif"></div>
       </div>
       <div class="trust-inner">
         <div class="trust-title">
@@ -86,8 +98,7 @@
         </div>
       </div>
     </section>
-
-    <section id="catalogo">
+<section id="catalogo">
       <div class="wrap">
         <div class="section-head">
           <div>
@@ -166,6 +177,14 @@
     </div>
   </footer>
 
+
+  <div class="product-loader" id="productLoader" hidden aria-live="polite" aria-label="Cargando producto">
+    <div class="loader-ring">
+      <span class="loader-orbit"></span>
+      <img src="logo.png" alt="Bassal Store">
+    </div>
+    <p>Cargando producto</p>
+  </div>
   <section class="game-detail" id="gameDetail" hidden aria-label="Detalle del juego">
     <div class="game-detail-shell">
       <button class="ghost-button detail-back" type="button" id="detailBack">&larr; Volver al catalogo</button>
@@ -173,7 +192,7 @@
       <div class="detail-hero-card">
         <div class="detail-left">
           <div class="detail-cover-box">
-            <img id="detailImg" src="" alt="Portada del juego">
+            <img id="detailImg" decoding="async" src="" alt="Portada del juego">
           </div>
           <div class="detail-tags" id="detailTags"></div>
         </div>
@@ -231,6 +250,6 @@
     </div>
   </aside>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -4265,9 +4265,9 @@ const whatsappNumber = "5493513743859";
         "name":  "PlayStation Plus Essential 12 Meses",
         "platform":  "PS PLUS",
         "genre":  "PS5 / PS4",
-        "price":  125100,
-        "pricePs5":  125100,
-        "pricePs4":  107300,
+        "price":  60000,
+        "pricePs5":  60000,
+        "pricePs4":  60000,
         "tag":  "COMPRAR",
         "img":  "https://res.cloudinary.com/dlzxpobvr/image/upload/v1764507921/img_05161-4cd38076167b27e5ae16935122796578-1024-1024_uwnjvv_1_ovzt86_txkemr.webp",
         "sourceUrl":  "https://www.lepritastore.com/detail/33"
@@ -4276,9 +4276,9 @@ const whatsappNumber = "5493513743859";
         "name":  "PlayStation Plus Essential 3 Meses",
         "platform":  "PS PLUS",
         "genre":  "PS5 / PS4",
-        "price":  48400,
-        "pricePs5":  48400,
-        "pricePs4":  48400,
+        "price":  25000,
+        "pricePs5":  25000,
+        "pricePs4":  25000,
         "tag":  "COMPRAR",
         "img":  "https://res.cloudinary.com/dlzxpobvr/image/upload/v1764507921/img_3980-19aebbba92f234ab8517018890090408-1024-1024_g5skxr_1_yscg76_mdz5bu.webp",
         "sourceUrl":  "https://www.lepritastore.com/detail/32"
@@ -4295,23 +4295,12 @@ const whatsappNumber = "5493513743859";
         "sourceUrl":  "https://www.lepritastore.com/detail/30"
     },
     {
-        "name":  "PlayStation Plus Essential 14 Dias",
-        "platform":  "PS PLUS",
-        "genre":  "PS5 / PS4",
-        "price":  27100,
-        "pricePs5":  27100,
-        "pricePs4":  27100,
-        "tag":  "COMPRAR",
-        "img":  "https://res.cloudinary.com/dlzxpobvr/image/upload/v1764507920/eqws0hf193nuzrkby6dx_crccdm_yd3hnx_qlipra.webp",
-        "sourceUrl":  "https://www.lepritastore.com/detail/31"
-    },
-    {
         "name":  "PlayStation Plus Deluxe 12 Meses",
         "platform":  "PS PLUS",
         "genre":  "PS5 / PS4",
-        "price":  199800,
-        "pricePs5":  199800,
-        "pricePs4":  147200,
+        "price":  70000,
+        "pricePs5":  70000,
+        "pricePs4":  70000,
         "tag":  "-17%",
         "img":  "https://res.cloudinary.com/dlzxpobvr/image/upload/v1764507921/img_24421-324a48b09b1ee32b9a16935123918990-1024-1024_mspdrs_1_omle4d_sollez.webp",
         "sourceUrl":  "https://www.lepritastore.com/detail/35"
@@ -4320,10 +4309,10 @@ const whatsappNumber = "5493513743859";
         "name":  "PlayStation Plus Deluxe 12 Meses",
         "platform":  "PS PLUS",
         "genre":  "PS5 / PS4",
-        "price":  195500,
-        "pricePs5":  195500,
-        "pricePs4":  164000,
-        "tag":  "SIN STOCK",
+        "price":  80000,
+        "pricePs5":  80000,
+        "pricePs4":  80000,
+        "tag":  "COMPRAR",
         "img":  "https://res.cloudinary.com/dlkrgovxt/image/upload/v1732294017/img_24571-b582a4714a459e642b16935123433981-1024-1024_ibbuun_1_rwupkq.webp",
         "sourceUrl":  "https://www.lepritastore.com/detail/29"
     },
@@ -4331,9 +4320,9 @@ const whatsappNumber = "5493513743859";
         "name":  "PlayStation Plus Deluxe 3 Meses",
         "platform":  "PS PLUS",
         "genre":  "PS5 / PS4",
-        "price":  98900,
-        "pricePs5":  98900,
-        "pricePs4":  77700,
+        "price":  45000,
+        "pricePs5":  45000,
+        "pricePs4":  45000,
         "tag":  "COMPRAR",
         "img":  "https://res.cloudinary.com/dlzxpobvr/image/upload/v1764507947/WhatsApp_Image_2024-11-22_at_16.05.43_guvctl_kyalrw.webp",
         "sourceUrl":  "https://www.lepritastore.com/detail/36"
@@ -4342,9 +4331,9 @@ const whatsappNumber = "5493513743859";
         "name":  "PlayStation Plus Extra 3 Meses",
         "platform":  "PS PLUS",
         "genre":  "PS5 / PS4",
-        "price":  79900,
-        "pricePs5":  79900,
-        "pricePs4":  67300,
+        "price":  40000,
+        "pricePs5":  40000,
+        "pricePs4":  40000,
         "tag":  "COMPRAR",
         "img":  "https://res.cloudinary.com/dlzxpobvr/image/upload/v1764507921/img_3983-7781756f6fe8eb3a8e17018891780921-1024-1024_atbt00_1_yaiutb_ltvene.webp",
         "sourceUrl":  "https://www.lepritastore.com/detail/5"
@@ -4820,6 +4809,7 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
     const reviewImage = document.querySelector("#reviewImage");
     const fileName = document.querySelector("#fileName");
     const gameDetail = document.querySelector("#gameDetail");
+    const productLoader = document.querySelector("#productLoader");
     const detailBack = document.querySelector("#detailBack");
     const detailImg = document.querySelector("#detailImg");
     const detailName = document.querySelector("#detailName");
@@ -4865,6 +4855,44 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
     ];
     let customerReviews = reviewStorage.get();
 
+
+    function setupScrollReveal(){
+      const revealItems = document.querySelectorAll([
+        ".trust-title",
+        ".feature-card",
+        ".feature-text",
+        ".section-head",
+        ".toolbar",
+        ".product",
+        ".site-footer"
+      ].join(","));
+
+      revealItems.forEach((item, index) => {
+        item.classList.add("reveal-on-scroll");
+        item.style.setProperty("--reveal-delay", `${Math.min(index % 8, 7) * 70}ms`);
+      });
+
+      if (!("IntersectionObserver" in window)) {
+        revealItems.forEach(item => item.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = window.__bassalRevealObserver || new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold:0.14,
+        rootMargin:"0px 0px -8% 0px"
+      });
+
+      window.__bassalRevealObserver = observer;
+      revealItems.forEach(item => {
+        if (!item.classList.contains("is-visible")) observer.observe(item);
+      });
+    }
     function renderFilters(){
       filtersEl.innerHTML = categories.map(category => `<button class="chip ${category === activeCategory ? "active" : ""}" data-category="${category}">${category}</button>`).join("");
     }
@@ -4905,7 +4933,7 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
       productsEl.innerHTML = visibleSlice.map((product, index) => `
         <article class="product ${product.tag === "SIN STOCK" ? "unavailable" : ""}" data-detail="${products.indexOf(product)}">
           <div class="product-media">
-            <img loading="lazy" alt="${escapeHtml(product.name)}" src="${product.img}">
+            <img loading="lazy" decoding="async" alt="${escapeHtml(product.name)}" src="${product.img}">
             <span class="badge ${product.tag.includes("%") ? "sale" : product.tag === "SIN STOCK" ? "out" : "buy"}">${product.tag}</span>
           </div>
           <div class="product-body">
@@ -4924,12 +4952,35 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
       loadMoreBtn.textContent = `Cargar más productos (${Math.max(0, visible.length - visibleProductCount)} restantes)`;
     }
 
+
+    function openProductWithLoader(product){
+      if (!product) return;
+      if (!productLoader) {
+        openProductDetail(product);
+        return;
+      }
+
+      productLoader.hidden = false;
+      productLoader.classList.remove("closing");
+      productLoader.classList.add("active");
+      document.body.style.overflow = "hidden";
+
+      window.setTimeout(() => {
+        productLoader.classList.add("closing");
+        window.setTimeout(() => {
+          productLoader.classList.remove("active", "closing");
+          productLoader.hidden = true;
+          openProductDetail(product);
+        }, 180);
+      }, 650);
+    }
     function openProductDetail(product){
       selectedDetailProduct = product;
       selectedAccountType = "";
       const isSteam = product.platform === "STEAM";
-      const primary = product.platform === "PS PLUS" ? (product.pricePs5 || product.price) : product.price;
-      const secondary = product.platform === "PS PLUS" ? (product.pricePs4 || product.price) : Math.round(product.price * 0.6 / 100) * 100;
+      const isPsPlus = product.platform === "PS PLUS";
+      const primary = isPsPlus ? (product.pricePs5 || product.price) : product.price;
+      const secondary = isPsPlus ? (product.pricePs4 || product.price) : Math.round(product.price * 0.6 / 100) * 100;
 
       detailImg.src = product.img;
       detailImg.alt = product.name;
@@ -4938,10 +4989,16 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
       detailGenre.textContent = `${product.genre} · Entrega digital rápida con soporte por WhatsApp.`;
             primaryPrice.textContent = money(primary);
       secondaryPrice.textContent = isSteam ? "" : money(secondary);
-      document.querySelector('[data-account="Primaria"] b').textContent = isSteam ? "Codigo de Steam" : "Cuenta Primaria";
-      document.querySelector('[data-account="Primaria"] small').textContent = isSteam ? "Codigo original para activar en tu cuenta." : "Juga con tu usuario personal.";
+      document.querySelector('[data-account="Primaria"] b').textContent = isSteam ? "Codigo de Steam" : (isPsPlus ? "PlayStation 5" : "Cuenta Primaria");
+      document.querySelector('[data-account="Primaria"] small').textContent = isSteam ? "Codigo original para activar en tu cuenta." : (isPsPlus ? "Precio para PS5." : "Juga con tu usuario personal.");
+      document.querySelector('[data-account="Secundaria"] b').textContent = isPsPlus ? "PlayStation 4" : "Cuenta Secundaria";
+      document.querySelector('[data-account="Secundaria"] small').textContent = isPsPlus ? "Precio para PS4." : "Conexion a internet obligatoria, desde la cuenta que otorgamos.";
       document.querySelector('[data-account="Secundaria"]').hidden = isSteam;
       detailTags.innerHTML = `<span>${escapeHtml(product.platform)}</span><span>${escapeHtml(product.genre)}</span>`;
+      const detailSubtitle = document.querySelector(".detail-subtitle");
+      if (detailSubtitle) {
+        detailSubtitle.textContent = isSteam ? "Codigo disponible:" : (isPsPlus ? "Selecciona tu plataforma:" : "Selecciona tu tipo de cuenta:");
+      }
 
       const description = product.description || `${product.name} en formato digital para ${product.platform}. Compra con entrega rápida, soporte personalizado por WhatsApp y respaldo post-compra. Si necesitás información extra sobre instalación, disponibilidad o tipo de cuenta, consultanos antes de comprar.`;
       detailDescription.innerHTML = `<p>${escapeHtml(description)}</p>`;
@@ -4959,8 +5016,9 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
           <div><dt>Tipo de producto</dt><dd>Digital</dd></div>
           <div><dt>Genero</dt><dd>${escapeHtml(product.genre)}</dd></div>
           <div><dt>Entrega</dt><dd>Por WhatsApp</dd></div>
-          <div><dt>Cuenta primaria</dt><dd>${money(primary)}</dd></div>
-          <div><dt>Cuenta secundaria</dt><dd>${money(secondary)}</dd></div>
+          ${isPsPlus ? `<div><dt>PlayStation 5</dt><dd>${money(primary)}</dd></div>
+          <div><dt>PlayStation 4</dt><dd>${money(secondary)}</dd></div>` : `<div><dt>Cuenta primaria</dt><dd>${money(primary)}</dd></div>
+          <div><dt>Cuenta secundaria</dt><dd>${money(secondary)}</dd></div>`}
         </dl>
       `;
       document.querySelectorAll("[data-detail-tab]").forEach((tab, index) => tab.classList.toggle("active", index === 0));
@@ -4988,7 +5046,7 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
       totalEl.textContent = money(total);
       cartItems.innerHTML = cart.length ? cart.map((product, index) => `
         <div class="cart-line">
-          <img alt="${product.name}" src="${product.img}">
+          <img loading="lazy" decoding="async" alt="${product.name}" src="${product.img}">
           <div><b>${product.name}</b><span>${money(product.price)}</span></div>
           <button class="remove" data-remove="${index}" aria-label="Quitar ${product.name}">×</button>
         </div>
@@ -5022,7 +5080,12 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
       if (button) {
         if (button.disabled) return;
         event.stopPropagation();
-        cart.push(products[Number(button.dataset.index)]);
+        const product = products[Number(button.dataset.index)];
+        if (product.platform === "PS PLUS") {
+          openProductWithLoader(product);
+          return;
+        }
+        cart.push(product);
         renderCart();
         drawer.classList.add("open");
         return;
@@ -5030,7 +5093,7 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
 
       const card = event.target.closest("[data-detail]");
       if (!card) return;
-      openProductDetail(products[Number(card.dataset.detail)]);
+      openProductWithLoader(products[Number(card.dataset.detail)]);
     });
 
     accountOptions.forEach(option => {
@@ -5039,17 +5102,23 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
         accountOptions.forEach(item => item.classList.remove("active"));
         option.classList.add("active");
         detailAdd.classList.add("ready");
-        detailAdd.textContent = selectedDetailProduct?.platform === "STEAM" ? "Agregar codigo de Steam" : `Agregar cuenta ${selectedAccountType}`;
+        const selectedLabel = selectedDetailProduct?.platform === "PS PLUS"
+          ? (selectedAccountType === "Primaria" ? "PS5" : "PS4")
+          : `cuenta ${selectedAccountType}`;
+        detailAdd.textContent = selectedDetailProduct?.platform === "STEAM" ? "Agregar codigo de Steam" : `Agregar ${selectedLabel}`;
       });
     });
 
     detailAdd.addEventListener("click", () => {
       if (!selectedDetailProduct || !selectedAccountType) return;
-            const price = selectedAccountType === "Primaria"
-        ? (selectedDetailProduct.platform === "PS PLUS" ? (selectedDetailProduct.pricePs5 || selectedDetailProduct.price) : selectedDetailProduct.price)
-        : (selectedDetailProduct.platform === "PS PLUS" ? (selectedDetailProduct.pricePs4 || selectedDetailProduct.price) : Math.round(selectedDetailProduct.price * 0.6 / 100) * 100);
+      const isSelectedPsPlus = selectedDetailProduct.platform === "PS PLUS";
+      const price = selectedAccountType === "Primaria"
+        ? (isSelectedPsPlus ? (selectedDetailProduct.pricePs5 || selectedDetailProduct.price) : selectedDetailProduct.price)
+        : (isSelectedPsPlus ? (selectedDetailProduct.pricePs4 || selectedDetailProduct.price) : Math.round(selectedDetailProduct.price * 0.6 / 100) * 100);
 
-      const accountLabel = selectedDetailProduct.platform === "STEAM" ? "Codigo de Steam" : `Cuenta ${selectedAccountType}`;
+      const accountLabel = selectedDetailProduct.platform === "STEAM"
+        ? "Codigo de Steam"
+        : (selectedDetailProduct.platform === "PS PLUS" ? (selectedAccountType === "Primaria" ? "PS5" : "PS4") : `Cuenta ${selectedAccountType}`);
       cart.push({
         ...selectedDetailProduct,
         name: `${selectedDetailProduct.name} - ${accountLabel}`,
@@ -5117,12 +5186,18 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
     });
     document.querySelector("#cartBtn").addEventListener("click", () => drawer.classList.add("open"));
     document.querySelector("#closeCart").addEventListener("click", () => drawer.classList.remove("open"));
-    document.querySelector("#menuBtn").addEventListener("click", () => document.querySelector("#nav").classList.toggle("open"));
+        const navEl = document.querySelector("#nav");
+    const closeMobileNav = () => navEl?.classList.remove("open");
+    document.querySelector("#menuBtn").addEventListener("click", () => navEl.classList.toggle("open"));
+    document.querySelectorAll(".links a, .ghost, .brand").forEach(link => {
+      link.addEventListener("click", closeMobileNav);
+    });
     document.querySelector("#checkout").addEventListener("click", () => {
       if (!cart.length) return;
-      const lines = cart.map(product => `- ${product.name}: ${money(product.price)}`).join("%0A");
+      const lines = cart.map((product, index) => `${index + 1}. ${product.name} - ${money(product.price)}`).join("\n");
       const total = money(cart.reduce((sum, product) => sum + product.price, 0));
-      window.open(`https://wa.me/${whatsappNumber}?text=Hola,%20quiero%20hacer%20este%20pedido:%0A${lines}%0ATotal:%20${total}`, "_blank");
+      const message = `Hola Bassal Store! Quiero hacer este pedido:\n\n${lines}\n\nTotal: ${total}\n\nMe decis disponibilidad y formas de pago?`;
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
     });
 
     if (document.querySelector("#reviewForm")) {
@@ -5167,6 +5242,7 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
         });
         reviewStorage.set(customerReviews);
         if (reviewWall) renderReviews();
+    setupScrollReveal();
         reviewComment.value = "";
         charCount.textContent = "0/1200";
         reviewImage.value = "";
@@ -5179,3 +5255,4 @@ const categories = ["Todos", "PS4", "PS5", "PS PLUS", "STEAM"];
     renderProducts();
     renderCart();
     if (reviewWall) renderReviews();
+    setupScrollReveal();
